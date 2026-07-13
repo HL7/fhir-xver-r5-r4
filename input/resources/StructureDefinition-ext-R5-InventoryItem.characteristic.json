@@ -1,0 +1,265 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-InventoryItem.characteristic",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.characteristic",
+  "version": "0.1.1",
+  "name": "ExtensionInventoryItem_Characteristic",
+  "title": "R5: Characteristic of the item (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `InventoryItem.characteristic` (new:BackboneElement)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `InventoryItem.characteristic` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`InventoryItem.characteristic` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n* R5 `InventoryItem.characteristic` 0..* `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `InventoryItem.characteristic` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Basic"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Characteristic of the item (new)",
+        "definition": "R5: `InventoryItem.characteristic` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.characteristic` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 2,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:characteristicType",
+        "path": "Extension.extension",
+        "sliceName": "characteristicType",
+        "short": "R5: The characteristic that is being defined (new)",
+        "definition": "R5: `InventoryItem.characteristic.characteristicType` (new:CodeableConcept)",
+        "comment": "Element `InventoryItem.characteristic.characteristicType` is part of an existing definition because parent element `InventoryItem.characteristic` requires a cross-version extension.\nElement `InventoryItem.characteristic.characteristicType` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic.characteristicType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `InventoryItem.characteristic.characteristicType` is part of an existing definition because parent element `InventoryItem.characteristic` requires a cross-version extension.\nElement `InventoryItem.characteristic.characteristicType` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic.characteristicType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:characteristicType.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "characteristicType"
+      },
+      {
+        "id": "Extension.extension:characteristicType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "The characteristic that is being defined",
+        "definition": "The type of characteristic that is being defined.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:value",
+        "path": "Extension.extension",
+        "sliceName": "value",
+        "short": "R5: The value of the attribute (new)",
+        "definition": "R5: `InventoryItem.characteristic.value[x]` (new:Address, Annotation, boolean, CodeableConcept, dateTime, decimal, Duration, integer, Quantity, Range, Ratio, string, url)",
+        "comment": "Element `InventoryItem.characteristic.value[x]` is part of an existing definition because parent element `InventoryItem.characteristic` requires a cross-version extension.\nElement `InventoryItem.characteristic.value[x]` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe string value is used for characteristics that are descriptive and not codeable information. CodeableConcept.text is used when the characteristic is discrete and could otherwise be coded but for which there is no code available.",
+        "requirements": "Element `InventoryItem.characteristic.value[x]` is part of an existing definition because parent element `InventoryItem.characteristic` requires a cross-version extension.\nElement `InventoryItem.characteristic.value[x]` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:value.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "value"
+      },
+      {
+        "id": "Extension.extension:value.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "The value of the attribute",
+        "definition": "The value of the attribute.",
+        "comment": "The string value is used for characteristics that are descriptive and not codeable information. CodeableConcept.text is used when the characteristic is discrete and could otherwise be coded but for which there is no code available.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "url"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "Annotation"
+          },
+          {
+            "code": "Address"
+          },
+          {
+            "code": "Duration"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.characteristic"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

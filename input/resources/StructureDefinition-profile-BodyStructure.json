@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-BodyStructure",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-BodyStructure",
+  "version": "0.1.1",
+  "name": "Profile_R5_BodyStructure_R4",
+  "title": "Cross-version Profile for R5.BodyStructure resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.47422-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 BodyStructure resource content to be represented via FHIR R4 BodyStructure resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "BodyStructure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/BodyStructure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "BodyStructure",
+        "path": "BodyStructure",
+        "short": "Cross-version Profile for R5.BodyStructure resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 BodyStructure resource content to be represented via FHIR R4 BodyStructure resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BodyStructure.extension",
+        "path": "BodyStructure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "BodyStructure.extension:includedStructure",
+        "path": "BodyStructure.extension",
+        "sliceName": "includedStructure",
+        "short": "R5: Included anatomic location(s) (new)",
+        "definition": "R5: `BodyStructure.includedStructure` (new:BackboneElement)",
+        "comment": "Element `BodyStructure.includedStructure` has a context of BodyStructure based on following the parent source element upwards and mapping to `BodyStructure`.\nElement `BodyStructure.includedStructure` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

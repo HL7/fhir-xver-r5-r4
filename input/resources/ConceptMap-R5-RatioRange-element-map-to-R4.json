@@ -1,0 +1,538 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-RatioRange-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-RatioRange-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5RatioRangeElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 RatioRange to FHIR R4 no direct target type",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2641482-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 RatioRange to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.defaultValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.fixed",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.pattern",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.example.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Extension.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RatioRange",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.substance",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:strength.extension:presentation.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            },
+            {
+              "code": "Extension.extension:strength.extension:concentration.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            },
+            {
+              "code": "Extension.extension:strength.extension:referenceStrength.extension:strength.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:strength.extension:presentation.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            },
+            {
+              "code": "Extension.extension:strength.extension:concentration.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            },
+            {
+              "code": "Extension.extension:strength.extension:referenceStrength.extension:strength.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension.extension:strength.extension:presentation.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            },
+            {
+              "code": "Extension.extension:strength.extension:concentration.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            },
+            {
+              "code": "Extension.extension:strength.extension:referenceStrength.extension:strength.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Parameters.parameter.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.input.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.output.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.input",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RatioRange",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.output",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RatioRange.lowNumerator",
+          "display": "lowNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:lowNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.highNumerator",
+          "display": "highNumerator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:highNumerator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "RatioRange.denominator",
+          "display": "denominator",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueRatioRange.extension:denominator",
+              "equivalence": "wider",
+              "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

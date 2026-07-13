@@ -1,0 +1,338 @@
+{
+  "resourceType": "ValueSet",
+  "id": "R5-languages-for-R4",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/xver/ValueSet/R5-languages-for-R4",
+  "version": "0.1.1",
+  "name": "R5LanguagesForR4",
+  "title": "Cross-version ValueSet R5.CommonLanguages for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version ValueSet represents content from http://hl7.org/fhir/ValueSet/languages|5.0.0 for use in FHIR R4 that is appropriate for use but unavailable in `http://hl7.org/fhir/ValueSet/languages|4.0.1`.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "purpose": "This value set is part of the cross-version definitions generated to enable use of the\r\nvalue set `http://hl7.org/fhir/ValueSet/languages|5.0.0` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source value set is bound to the following FHIR R5 elements:\r\n* `Citation.citedArtifact.abstract.language` as Preferred\n* `Citation.citedArtifact.publicationForm.language` as Preferred\n* `Citation.citedArtifact.title.language` as Preferred\n* `InventoryItem.description.language` as Required\n* `InventoryItem.name.language` as Required\n* `TerminologyCapabilities.codeSystem.version.language` as Required\r\n\r\nAcross FHIR versions, the value set has been mapped as:\r\n* `http://hl7.org/fhir/ValueSet/languages|5.0.0`\n* `http://hl7.org/fhir/ValueSet/languages|4.3.0`\n* `http://hl7.org/fhir/ValueSet/languages|4.0.1`\r\n\r\nNote that there are 56 concepts not included in this cross-version definition because they have valid representations.\r\n\r\nFollowing are the generation technical comments:\r\nAll concepts in the comparison are have code literals listed as identical.\nThe source value set has more active concepts (82) than the target (56), so the source is broader than the target.\nAll concepts in the comparison are have code literals listed as identical.\nThe source and target value sets have the same number of active concepts (56).",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "concept": [
+          {
+            "code": "bg",
+            "display": "Bulgarian"
+          },
+          {
+            "code": "bg-BG",
+            "display": "Bulgarian (Bulgaria)"
+          },
+          {
+            "code": "bs",
+            "display": "Bosnian"
+          },
+          {
+            "code": "bs-BA",
+            "display": "Bosnian (Bosnia and Herzegovina))"
+          },
+          {
+            "code": "cs-CZ",
+            "display": "Czech (Czechia)"
+          },
+          {
+            "code": "da-DK",
+            "display": "Danish (Denmark)"
+          },
+          {
+            "code": "el-GR",
+            "display": "Greek (Greece)"
+          },
+          {
+            "code": "et",
+            "display": "Estonian"
+          },
+          {
+            "code": "et-EE",
+            "display": "Estonian (Estonia)"
+          },
+          {
+            "code": "fi-FI",
+            "display": "Finnish (Finland)"
+          },
+          {
+            "code": "fr-CA",
+            "display": "French (Canada)"
+          },
+          {
+            "code": "hr-HR",
+            "display": "Croatian (Croatia)"
+          },
+          {
+            "code": "is",
+            "display": "Icelandic"
+          },
+          {
+            "code": "is-IS",
+            "display": "Icelandic (Iceland)"
+          },
+          {
+            "code": "lt",
+            "display": "Lithuanian"
+          },
+          {
+            "code": "lt-LT",
+            "display": "Lithuanian (Lithuania)"
+          },
+          {
+            "code": "lv",
+            "display": "Latvian"
+          },
+          {
+            "code": "lv-LV",
+            "display": "Latvian (Latvia)"
+          },
+          {
+            "code": "pl-PL",
+            "display": "Polish (Poland)"
+          },
+          {
+            "code": "pt-PT",
+            "display": "Portuguese (Portugal)"
+          },
+          {
+            "code": "ro",
+            "display": "Romanian"
+          },
+          {
+            "code": "ro-RO",
+            "display": "Romanian (Romania)"
+          },
+          {
+            "code": "sk",
+            "display": "Slovakian"
+          },
+          {
+            "code": "sk-SK",
+            "display": "Slovakian (Slovakia)"
+          },
+          {
+            "code": "sl",
+            "display": "Slovenian"
+          },
+          {
+            "code": "sl-SI",
+            "display": "Slovenian (Slovenia)"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-06-12T21:41:14.2230772+00:00",
+    "contains": [
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "bg",
+        "display": "Bulgarian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "bg-BG",
+        "display": "Bulgarian (Bulgaria)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "bs",
+        "display": "Bosnian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "bs-BA",
+        "display": "Bosnian (Bosnia and Herzegovina))"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "cs-CZ",
+        "display": "Czech (Czechia)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "da-DK",
+        "display": "Danish (Denmark)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "el-GR",
+        "display": "Greek (Greece)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "et",
+        "display": "Estonian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "et-EE",
+        "display": "Estonian (Estonia)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "fi-FI",
+        "display": "Finnish (Finland)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "fr-CA",
+        "display": "French (Canada)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "hr-HR",
+        "display": "Croatian (Croatia)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "is",
+        "display": "Icelandic"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "is-IS",
+        "display": "Icelandic (Iceland)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "lt",
+        "display": "Lithuanian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "lt-LT",
+        "display": "Lithuanian (Lithuania)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "lv",
+        "display": "Latvian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "lv-LV",
+        "display": "Latvian (Latvia)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "pl-PL",
+        "display": "Polish (Poland)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "pt-PT",
+        "display": "Portuguese (Portugal)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "ro",
+        "display": "Romanian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "ro-RO",
+        "display": "Romanian (Romania)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "sk",
+        "display": "Slovakian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "sk-SK",
+        "display": "Slovakian (Slovakia)"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "sl",
+        "display": "Slovenian"
+      },
+      {
+        "system": "urn:ietf:bcp:47",
+        "version": "2.0.1",
+        "code": "sl-SI",
+        "display": "Slovenian (Slovenia)"
+      }
+    ]
+  }
+}

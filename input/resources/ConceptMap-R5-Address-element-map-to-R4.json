@@ -1,0 +1,204 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Address-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Address-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5AddressElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Address to FHIR R4 Address",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.1158537-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Address to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Address",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Address",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Address.use",
+          "display": "use",
+          "target": [
+            {
+              "code": "Address.use",
+              "display": "Address.use",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.use` is mapped to FHIR R4 element `Address.use` as `Equivalent`.\nApplications can assume that an address is current unless it explicitly says that it is temporary or old."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.use` is mapped to FHIR R4 element `Address.use` as `Equivalent`.\nApplications can assume that an address is current unless it explicitly says that it is temporary or old."
+            }
+          ]
+        },
+        {
+          "code": "Address.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Address.type",
+              "display": "Address.type",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.type` is mapped to FHIR R4 element `Address.type` as `Equivalent`.\nThe definition of Address states that \"address is intended to describe postal addresses, not physical locations\". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](https://hl7.org/fhir/l.html#) resource)."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.type` is mapped to FHIR R4 element `Address.type` as `Equivalent`.\nThe definition of Address states that \"address is intended to describe postal addresses, not physical locations\". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](https://hl7.org/fhir/l.html#) resource)."
+            }
+          ]
+        },
+        {
+          "code": "Address.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "Address.text",
+              "display": "Address.text",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.text` is mapped to FHIR R4 element `Address.text` as `Equivalent`.\nCan provide both a text representation and parts. Applications updating an address SHALL ensure that  when both text and parts are present,  no content is included in the text that isn't found in a part."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.text` is mapped to FHIR R4 element `Address.text` as `Equivalent`.\nCan provide both a text representation and parts. Applications updating an address SHALL ensure that  when both text and parts are present,  no content is included in the text that isn't found in a part."
+            }
+          ]
+        },
+        {
+          "code": "Address.line",
+          "display": "line",
+          "target": [
+            {
+              "code": "Address.line",
+              "display": "Address.line",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.line` is mapped to FHIR R4 element `Address.line` as `Equivalent`."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.line` is mapped to FHIR R4 element `Address.line` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Address.city",
+          "display": "city",
+          "target": [
+            {
+              "code": "Address.city",
+              "display": "Address.city",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.city` is mapped to FHIR R4 element `Address.city` as `Equivalent`."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.city` is mapped to FHIR R4 element `Address.city` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Address.district",
+          "display": "district",
+          "target": [
+            {
+              "code": "Address.district",
+              "display": "Address.district",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.district` is mapped to FHIR R4 element `Address.district` as `Equivalent`.\nDistrict is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.district` is mapped to FHIR R4 element `Address.district` as `Equivalent`.\nDistrict is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead."
+            }
+          ]
+        },
+        {
+          "code": "Address.state",
+          "display": "state",
+          "target": [
+            {
+              "code": "Address.state",
+              "display": "Address.state",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.state` is mapped to FHIR R4 element `Address.state` as `Equivalent`."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.state` is mapped to FHIR R4 element `Address.state` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Address.postalCode",
+          "display": "postalCode",
+          "target": [
+            {
+              "code": "Address.postalCode",
+              "display": "Address.postalCode",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.postalCode` is mapped to FHIR R4 element `Address.postalCode` as `Equivalent`."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.postalCode` is mapped to FHIR R4 element `Address.postalCode` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Address.country",
+          "display": "country",
+          "target": [
+            {
+              "code": "Address.country",
+              "display": "Address.country",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.country` is mapped to FHIR R4 element `Address.country` as `Equivalent`.\nISO 3166 2- or 3- letter codes MAY be used in place of a human readable country name."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.country` is mapped to FHIR R4 element `Address.country` as `Equivalent`.\nISO 3166 2- or 3- letter codes MAY be used in place of a human readable country name."
+            }
+          ]
+        },
+        {
+          "code": "Address.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Address.period",
+              "display": "Address.period",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.period` is mapped to FHIR R4 element `Address.period` as `Equivalent`."
+            },
+            {
+              "code": "Address",
+              "display": "Address",
+              "equivalence": "equivalent",
+              "comment": "Element `Address.period` is mapped to FHIR R4 element `Address.period` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

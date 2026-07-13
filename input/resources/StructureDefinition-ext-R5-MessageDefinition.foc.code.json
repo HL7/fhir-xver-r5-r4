@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MessageDefinition.foc.code",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MessageDefinition.focus.code",
+  "version": "0.1.1",
+  "name": "ExtensionMessageDefinition_Focus_Code",
+  "title": "R5: code additional codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MessageDefinition.focus.code` additional codes",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MessageDefinition.focus.code` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MessageDefinition.focus.code` 1..1 `code`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MessageDefinition.focus.code` 1..1 `code`\n*  R4B: `MessageDefinition.focus.code` 1..1 `code`\n*  R4: `MessageDefinition.focus.code` 1..1 `code`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MessageDefinition.focus.code` is mapped to FHIR R4 element `MessageDefinition.focus.code` as `RelatedTo`.\nThe mappings for `MessageDefinition.focus.code` do not allow expression of the necessary codes, per the bindings on the source and target.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MessageDefinition.focus.code"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: code additional codes",
+        "definition": "R5: `MessageDefinition.focus.code` additional codes",
+        "comment": "Element `MessageDefinition.focus.code` is mapped to FHIR R4 element `MessageDefinition.focus.code` as `RelatedTo`.\nThe mappings for `MessageDefinition.focus.code` do not allow expression of the necessary codes, per the bindings on the source and target.\nMultiple focuses addressing different resources may occasionally occur.  E.g. to link or unlink a resource from a particular account or encounter, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MessageDefinition.focus.code"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Type of resource",
+        "definition": "The kind of resource that must be the focus for this message.",
+        "comment": "Multiple focuses addressing different resources may occasionally occur.  E.g. to link or unlink a resource from a particular account or encounter, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "One of the resource types defined as part of this version of FHIR.",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-resource-types-for-R4"
+        }
+      }
+    ]
+  }
+}

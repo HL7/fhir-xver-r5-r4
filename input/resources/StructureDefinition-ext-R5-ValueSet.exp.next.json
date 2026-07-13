@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ValueSet.exp.next",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.next",
+  "version": "0.1.1",
+  "name": "ExtensionValueSet_Expansion_Next",
+  "title": "R5: Opaque urls for paging through expansion results (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ValueSet.expansion.next` (new:uri)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ValueSet.expansion.next` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ValueSet.expansion.next` 0..1 `uri`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ValueSet.expansion.next` 0..1 `uri`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ValueSet.expansion.next` has a context of ValueSet.expansion based on following the parent source element upwards and mapping to `ValueSet`.\nElement `ValueSet.expansion.next` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ValueSet.expansion"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Opaque urls for paging through expansion results (new)",
+        "definition": "R5: `ValueSet.expansion.next` (new:uri)",
+        "comment": "Element `ValueSet.expansion.next` has a context of ValueSet.expansion based on following the parent source element upwards and mapping to `ValueSet`.\nElement `ValueSet.expansion.next` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nClients SHOULD use the next link, if present, to page through expansion results in preference to using the offset and count parameters. Due to the optional nature of the next link, its absence does not necessarily indicate that it is the last page of results. Instead, as the offset and count parameters SHALL be populated when paging, clients can reliably use the count/offset parameters to determine whether the whole expansion is returned.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.next"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Opaque urls for paging through expansion results",
+        "definition": "As per paging Search results, the next URLs are opaque to the client, have no dictated structure, and only the server understands them.",
+        "comment": "Clients SHOULD use the next link, if present, to page through expansion results in preference to using the offset and count parameters. Due to the optional nature of the next link, its absence does not necessarily indicate that it is the last page of results. Instead, as the offset and count parameters SHALL be populated when paging, clients can reliably use the count/offset parameters to determine whether the whole expansion is returned.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      }
+    ]
+  }
+}

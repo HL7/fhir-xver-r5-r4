@@ -1,0 +1,79 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Extension-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Extension-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ExtensionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Extension to FHIR R4 Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.0215685-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Extension to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Extension.url",
+          "display": "url",
+          "target": [
+            {
+              "code": "Extension.url",
+              "display": "Extension.url",
+              "equivalence": "equivalent",
+              "comment": "Element `Extension.url` is mapped to FHIR R4 element `Extension.url` as `Equivalent`.\nThe definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."
+            },
+            {
+              "code": "Extension",
+              "display": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Extension.url` is mapped to FHIR R4 element `Extension.url` as `Equivalent`.\nThe definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."
+            }
+          ]
+        },
+        {
+          "code": "Extension.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "Extension.value[x]",
+              "display": "Extension.value[x]",
+              "equivalence": "wider",
+              "comment": "Element `Extension.value[x]` is mapped to FHIR R4 element `Extension.value[x]` as `RelatedTo`.\nThe mappings for `Extension.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Extension.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Extension`."
+            },
+            {
+              "code": "Extension",
+              "display": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `Extension.value[x]` is mapped to FHIR R4 element `Extension.value[x]` as `RelatedTo`.\nThe mappings for `Extension.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Extension.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Extension`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Extension.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Extension.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Extension.value[x]` is mapped to FHIR R4 element `Extension.value[x]` as `RelatedTo`.\nThe mappings for `Extension.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Extension.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Extension`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

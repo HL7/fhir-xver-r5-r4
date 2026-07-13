@@ -1,0 +1,69 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-detectedissue-status-for-R4-observation-status",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-detectedissue-status-for-R4-observation-status",
+  "version": "0.1.1",
+  "name": "MapR5DetectedissueStatusForR4ObservationStatus",
+  "title": "Cross-version ConceptMap for ValueSet R5-detectedissue-status-for-R4-observation-status from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.3103544-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/detectedissue-status|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/detectedissue-status|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/observation-status|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/observation-status",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/observation-status",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "entered-in-error",
+          "display": "Entered in Error",
+          "target": [
+            {
+              "code": "entered-in-error",
+              "display": "Entered in Error",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/detectedissue-status|5.0.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DetectedissueStatus-R4B-ObservationStatus` (`ConceptMap-R5-DetectedissueStatus-R4B-ObservationStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ObservationStatus-R4-ObservationStatus` (`ConceptMap-R4B-ObservationStatus-R4-ObservationStatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "final",
+          "display": "Final",
+          "target": [
+            {
+              "code": "final",
+              "display": "Final",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/detectedissue-status|5.0.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DetectedissueStatus-R4B-ObservationStatus` (`ConceptMap-R5-DetectedissueStatus-R4B-ObservationStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ObservationStatus-R4-ObservationStatus` (`ConceptMap-R4B-ObservationStatus-R4-ObservationStatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "preliminary",
+          "display": "Preliminary",
+          "target": [
+            {
+              "code": "preliminary",
+              "display": "Preliminary",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/detectedissue-status|5.0.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DetectedissueStatus-R4B-ObservationStatus` (`ConceptMap-R5-DetectedissueStatus-R4B-ObservationStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/observation-status|4.3.0` to `http://hl7.org/fhir/ValueSet/observation-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ObservationStatus-R4-ObservationStatus` (`ConceptMap-R4B-ObservationStatus-R4-ObservationStatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "mitigated",
+          "display": "Mitigated",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

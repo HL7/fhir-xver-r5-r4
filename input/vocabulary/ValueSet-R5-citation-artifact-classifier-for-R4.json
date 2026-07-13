@@ -1,0 +1,388 @@
+{
+  "resourceType": "ValueSet",
+  "id": "R5-citation-artifact-classifier-for-R4",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/xver/ValueSet/R5-citation-artifact-classifier-for-R4",
+  "version": "0.1.1",
+  "name": "R5CitationArtifactClassifierForR4",
+  "title": "Cross-version ValueSet R5.CitationArtifactClassifier for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version ValueSet represents content from `http://hl7.org/fhir/ValueSet/citation-artifact-classifier|5.0.0` for use in FHIR R4.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "purpose": "This value set is part of the cross-version definitions generated to enable use of the\r\nvalue set `http://hl7.org/fhir/ValueSet/citation-artifact-classifier|5.0.0` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source value set is bound to the following FHIR R5 elements:\r\n* `Citation.citedArtifact.classification.classifier` as Example\n* `Citation.citedArtifact.relatesTo.classifier` as Extensible\n* `Citation.classification.classifier` as Example\n* `RelatedArtifact.classifier` as Example\r\n\r\nAcross FHIR versions, the value set has been mapped as:\r\n* `http://hl7.org/fhir/ValueSet/citation-artifact-classifier|5.0.0`\n* `http://hl7.org/fhir/ValueSet/citation-artifact-classifier|4.3.0`\r\n\r\nNote that all concepts are included in this cross-version definition because no concepts have compatible representations\r\n\r\nFollowing are the generation technical comments:\r\nAll concepts in the comparison are listed as identical.\nThe source value set has more active concepts (31) than the target (24), so the source is broader than the target.\nFHIR ValueSet `http://hl7.org/fhir/ValueSet/citation-artifact-classifier|5.0.0`, defined in FHIR R5 does not have any mapping to FHIR R4",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "concept": [
+          {
+            "code": "D000076942",
+            "display": "Preprint"
+          },
+          {
+            "code": "D001877",
+            "display": "Book"
+          },
+          {
+            "code": "D016420",
+            "display": "Comment"
+          },
+          {
+            "code": "D016422",
+            "display": "Letter"
+          },
+          {
+            "code": "D016425",
+            "display": "Published Erratum"
+          },
+          {
+            "code": "D016428",
+            "display": "Journal Article"
+          },
+          {
+            "code": "D019991",
+            "display": "Database"
+          },
+          {
+            "code": "D059040",
+            "display": "Video-Audio Media"
+          },
+          {
+            "code": "D064886",
+            "display": "Dataset"
+          },
+          {
+            "code": "Electronic",
+            "display": "Electronic"
+          },
+          {
+            "code": "Electronic-Print",
+            "display": "Electronic-Print"
+          },
+          {
+            "code": "Electronic-eCollection",
+            "display": "Electronic-eCollection"
+          },
+          {
+            "code": "Print",
+            "display": "Print"
+          },
+          {
+            "code": "Print-Electronic",
+            "display": "Print Electronic"
+          },
+          {
+            "code": "audio",
+            "display": "Audio file"
+          },
+          {
+            "code": "cds-artifact",
+            "display": "Clinical Decision Support Artifact"
+          },
+          {
+            "code": "common-share",
+            "display": "Common Share"
+          },
+          {
+            "code": "dataset-unpublished",
+            "display": "Dataset Unpublished"
+          },
+          {
+            "code": "executable-app",
+            "display": "Executable app"
+          },
+          {
+            "code": "fhir-resource",
+            "display": "FHIR Resource"
+          },
+          {
+            "code": "image",
+            "display": "Image file"
+          },
+          {
+            "code": "interactive-form",
+            "display": "Interactive Form"
+          },
+          {
+            "code": "machine-code",
+            "display": "Machine code"
+          },
+          {
+            "code": "medline-base",
+            "display": "Medline Base"
+          },
+          {
+            "code": "prediction-model",
+            "display": "Prediction Model"
+          },
+          {
+            "code": "project-specific",
+            "display": "Project Specific"
+          },
+          {
+            "code": "protocol",
+            "display": "Protocol"
+          },
+          {
+            "code": "pseudocode",
+            "display": "PseudoCode"
+          },
+          {
+            "code": "standard-specification",
+            "display": "Standard Specification"
+          },
+          {
+            "code": "terminology",
+            "display": "Terminology"
+          },
+          {
+            "code": "webpage",
+            "display": "Webpage"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-06-12T21:41:14.2230772+00:00",
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D000076942",
+        "display": "Preprint"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D001877",
+        "display": "Book"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D016420",
+        "display": "Comment"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D016422",
+        "display": "Letter"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D016425",
+        "display": "Published Erratum"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D016428",
+        "display": "Journal Article"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D019991",
+        "display": "Database"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D059040",
+        "display": "Video-Audio Media"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "D064886",
+        "display": "Dataset"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "Electronic",
+        "display": "Electronic"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "Electronic-Print",
+        "display": "Electronic-Print"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "Electronic-eCollection",
+        "display": "Electronic-eCollection"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "Print",
+        "display": "Print"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "Print-Electronic",
+        "display": "Print Electronic"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "audio",
+        "display": "Audio file"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "cds-artifact",
+        "display": "Clinical Decision Support Artifact"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "common-share",
+        "display": "Common Share"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "dataset-unpublished",
+        "display": "Dataset Unpublished"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "executable-app",
+        "display": "Executable app"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "fhir-resource",
+        "display": "FHIR Resource"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "image",
+        "display": "Image file"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "interactive-form",
+        "display": "Interactive Form"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "machine-code",
+        "display": "Machine code"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "medline-base",
+        "display": "Medline Base"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "prediction-model",
+        "display": "Prediction Model"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "project-specific",
+        "display": "Project Specific"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "protocol",
+        "display": "Protocol"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "pseudocode",
+        "display": "PseudoCode"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "standard-specification",
+        "display": "Standard Specification"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "terminology",
+        "display": "Terminology"
+      },
+      {
+        "system": "http://hl7.org/fhir/citation-artifact-classifier",
+        "version": "5.0.0",
+        "code": "webpage",
+        "display": "Webpage"
+      }
+    ]
+  }
+}

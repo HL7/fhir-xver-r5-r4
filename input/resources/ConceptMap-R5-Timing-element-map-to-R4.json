@@ -1,0 +1,367 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Timing-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Timing-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5TimingElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Timing to FHIR R4 Timing",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.5718942-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Timing to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Timing",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Timing",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Timing.event",
+          "display": "event",
+          "target": [
+            {
+              "code": "Timing.event",
+              "display": "Timing.event",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.event` is mapped to FHIR R4 element `Timing.event` as `Equivalent`."
+            },
+            {
+              "code": "Timing",
+              "display": "Timing",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.event` is mapped to FHIR R4 element `Timing.event` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat",
+          "display": "repeat",
+          "target": [
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "wider",
+              "comment": "Element `Timing.repeat` is mapped to FHIR R4 element `Timing.repeat` as `Equivalent`."
+            },
+            {
+              "code": "Timing",
+              "display": "Timing",
+              "equivalence": "wider",
+              "comment": "Element `Timing.repeat` is mapped to FHIR R4 element `Timing.repeat` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.bounds[x]",
+          "display": "bounds[x]",
+          "target": [
+            {
+              "code": "Timing.repeat.bounds[x]",
+              "display": "Timing.repeat.bounds[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.bounds[x]` is mapped to FHIR R4 element `Timing.repeat.bounds[x]` as `Equivalent`.\nThe target context `Timing.repeat.bounds[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Timing.repeat`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.bounds[x]` is mapped to FHIR R4 element `Timing.repeat.bounds[x]` as `Equivalent`.\nThe target context `Timing.repeat.bounds[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Timing.repeat`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.count",
+          "display": "count",
+          "target": [
+            {
+              "code": "Timing.repeat.count",
+              "display": "Timing.repeat.count",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.count` is mapped to FHIR R4 element `Timing.repeat.count` as `Equivalent`.\nIf you have both bounds and count, then this should be understood as within the bounds period, until count times happens."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.count` is mapped to FHIR R4 element `Timing.repeat.count` as `Equivalent`.\nIf you have both bounds and count, then this should be understood as within the bounds period, until count times happens."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.countMax",
+          "display": "countMax",
+          "target": [
+            {
+              "code": "Timing.repeat.countMax",
+              "display": "Timing.repeat.countMax",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.countMax` is mapped to FHIR R4 element `Timing.repeat.countMax` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.countMax` is mapped to FHIR R4 element `Timing.repeat.countMax` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.duration",
+          "display": "duration",
+          "target": [
+            {
+              "code": "Timing.repeat.duration",
+              "display": "Timing.repeat.duration",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.duration` is mapped to FHIR R4 element `Timing.repeat.duration` as `Equivalent`.\nFor some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.duration` is mapped to FHIR R4 element `Timing.repeat.duration` as `Equivalent`.\nFor some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.durationMax",
+          "display": "durationMax",
+          "target": [
+            {
+              "code": "Timing.repeat.durationMax",
+              "display": "Timing.repeat.durationMax",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.durationMax` is mapped to FHIR R4 element `Timing.repeat.durationMax` as `Equivalent`.\nFor some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.durationMax` is mapped to FHIR R4 element `Timing.repeat.durationMax` as `Equivalent`.\nFor some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.durationUnit",
+          "display": "durationUnit",
+          "target": [
+            {
+              "code": "Timing.repeat.durationUnit",
+              "display": "Timing.repeat.durationUnit",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.durationUnit` is mapped to FHIR R4 element `Timing.repeat.durationUnit` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.durationUnit` is mapped to FHIR R4 element `Timing.repeat.durationUnit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.frequency",
+          "display": "frequency",
+          "target": [
+            {
+              "code": "Timing.repeat.frequency",
+              "display": "Timing.repeat.frequency",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.frequency` is mapped to FHIR R4 element `Timing.repeat.frequency` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.frequency` is mapped to FHIR R4 element `Timing.repeat.frequency` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.frequencyMax",
+          "display": "frequencyMax",
+          "target": [
+            {
+              "code": "Timing.repeat.frequencyMax",
+              "display": "Timing.repeat.frequencyMax",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.frequencyMax` is mapped to FHIR R4 element `Timing.repeat.frequencyMax` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.frequencyMax` is mapped to FHIR R4 element `Timing.repeat.frequencyMax` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Timing.repeat.period",
+              "display": "Timing.repeat.period",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.period` is mapped to FHIR R4 element `Timing.repeat.period` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.period` is mapped to FHIR R4 element `Timing.repeat.period` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.periodMax",
+          "display": "periodMax",
+          "target": [
+            {
+              "code": "Timing.repeat.periodMax",
+              "display": "Timing.repeat.periodMax",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.periodMax` is mapped to FHIR R4 element `Timing.repeat.periodMax` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.periodMax` is mapped to FHIR R4 element `Timing.repeat.periodMax` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.periodUnit",
+          "display": "periodUnit",
+          "target": [
+            {
+              "code": "Timing.repeat.periodUnit",
+              "display": "Timing.repeat.periodUnit",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.periodUnit` is mapped to FHIR R4 element `Timing.repeat.periodUnit` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.periodUnit` is mapped to FHIR R4 element `Timing.repeat.periodUnit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.dayOfWeek",
+          "display": "dayOfWeek",
+          "target": [
+            {
+              "code": "Timing.repeat.dayOfWeek",
+              "display": "Timing.repeat.dayOfWeek",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.dayOfWeek` is mapped to FHIR R4 element `Timing.repeat.dayOfWeek` as `Equivalent`.\nIf no days are specified, the action is assumed to happen every day as otherwise specified."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.dayOfWeek` is mapped to FHIR R4 element `Timing.repeat.dayOfWeek` as `Equivalent`.\nIf no days are specified, the action is assumed to happen every day as otherwise specified."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.timeOfDay",
+          "display": "timeOfDay",
+          "target": [
+            {
+              "code": "Timing.repeat.timeOfDay",
+              "display": "Timing.repeat.timeOfDay",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.timeOfDay` is mapped to FHIR R4 element `Timing.repeat.timeOfDay` as `Equivalent`.\nWhen time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. If there's a timeOfDay, there cannot be a when, or vice versa."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.timeOfDay` is mapped to FHIR R4 element `Timing.repeat.timeOfDay` as `Equivalent`.\nWhen time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. If there's a timeOfDay, there cannot be a when, or vice versa."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.when",
+          "display": "when",
+          "target": [
+            {
+              "code": "Timing.repeat.when",
+              "display": "Timing.repeat.when",
+              "equivalence": "wider",
+              "comment": "Element `Timing.repeat.when` is mapped to FHIR R4 element `Timing.repeat.when` as `SourceIsBroaderThanTarget`.\nWhen more than one event is listed, the event is tied to the union of the specified events."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "wider",
+              "comment": "Element `Timing.repeat.when` is mapped to FHIR R4 element `Timing.repeat.when` as `SourceIsBroaderThanTarget`.\nWhen more than one event is listed, the event is tied to the union of the specified events."
+            }
+          ]
+        },
+        {
+          "code": "Timing.repeat.offset",
+          "display": "offset",
+          "target": [
+            {
+              "code": "Timing.repeat.offset",
+              "display": "Timing.repeat.offset",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.offset` is mapped to FHIR R4 element `Timing.repeat.offset` as `Equivalent`."
+            },
+            {
+              "code": "Timing.repeat",
+              "display": "Timing.repeat",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.offset` is mapped to FHIR R4 element `Timing.repeat.offset` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Timing.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Timing.code",
+              "display": "Timing.code",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.code` is mapped to FHIR R4 element `Timing.code` as `Equivalent`.\nBID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is \"always at 7am and 6pm\".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times)."
+            },
+            {
+              "code": "Timing",
+              "display": "Timing",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.code` is mapped to FHIR R4 element `Timing.code` as `Equivalent`.\nBID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is \"always at 7am and 6pm\".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Timing",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Timing.repeat.when",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Timing.repeat.when",
+          "display": "when",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Timing.repeat.when` is mapped to FHIR R4 element `Timing.repeat.when` as `SourceIsBroaderThanTarget`.\nWhen more than one event is listed, the event is tied to the union of the specified events."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

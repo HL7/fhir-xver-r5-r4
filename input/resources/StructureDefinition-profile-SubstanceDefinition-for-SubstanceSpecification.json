@@ -1,0 +1,1287 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-SubstanceDefinition-for-SubstanceSpecification",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-SubstanceDefinition-for-SubstanceSpecification",
+  "version": "0.1.1",
+  "name": "Profile_R5_SubstanceDefinition_R4_SubstanceSpecification",
+  "title": "Cross-version Profile for R5.SubstanceDefinition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0777126-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 SubstanceDefinition resource content to be represented via FHIR R4 SubstanceSpecification resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "SubstanceSpecification",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "SubstanceSpecification",
+        "path": "SubstanceSpecification",
+        "short": "Cross-version Profile for R5.SubstanceDefinition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 SubstanceDefinition resource content to be represented via FHIR R4 SubstanceSpecification resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-SubstanceDefinition-identifier",
+            "requirements": "Cardinality constraints for identifier from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "SubstanceSpecification.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.identifier').exists() implies SubstanceSpecification.identifier.exists()"
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension",
+        "path": "SubstanceSpecification.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.extension:identifier",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "identifier",
+        "short": "R5: identifier",
+        "definition": "R5: `SubstanceDefinition.identifier`",
+        "comment": "Element `SubstanceDefinition.identifier` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `SubstanceDefinition.identifier` is mapped to FHIR R4 element `SubstanceSpecification.identifier` as `SourceIsBroaderThanTarget`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.identifier"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-SubstanceDefinition-identifier"
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:version",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "version",
+        "short": "R5: A business level version identifier of the substance (new)",
+        "definition": "R5: `SubstanceDefinition.version` (new:string)",
+        "comment": "Element `SubstanceDefinition.version` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.version` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.version`: `http://hl7.org/fhir/StructureDefinition/artifact-version`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-version"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:classification",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "classification",
+        "short": "R5: A categorization, high level e.g. polymer or nucleic acid, or food, chemical, biological, or lower e.g. polymer linear or branch chain, or type of impurity (new)",
+        "definition": "R5: `SubstanceDefinition.classification` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.classification` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.classification` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.classification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:grade",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "grade",
+        "short": "R5: The quality standard, established benchmark, to which substance complies (e.g. USP/NF, BP) (new)",
+        "definition": "R5: `SubstanceDefinition.grade` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.grade` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.grade` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.grade"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:informationSource",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "informationSource",
+        "short": "R5: Supporting literature (new)",
+        "definition": "R5: `SubstanceDefinition.informationSource` (new:Reference(Citation))",
+        "comment": "Element `SubstanceDefinition.informationSource` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.informationSource` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.informationSource"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:note",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "note",
+        "short": "R5: Textual comment about the substance's catalogue or registry record (new)",
+        "definition": "R5: `SubstanceDefinition.note` (new:Annotation)",
+        "comment": "Element `SubstanceDefinition.note` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:manufacturer",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "manufacturer",
+        "short": "R5: The entity that creates, makes, produces or fabricates the substance (new)",
+        "definition": "R5: `SubstanceDefinition.manufacturer` (new:Reference(Organization))",
+        "comment": "Element `SubstanceDefinition.manufacturer` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.manufacturer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.manufacturer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:supplier",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "supplier",
+        "short": "R5: An entity that is the source for the substance. It may be different from the manufacturer (new)",
+        "definition": "R5: `SubstanceDefinition.supplier` (new:Reference(Organization))",
+        "comment": "Element `SubstanceDefinition.supplier` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.supplier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.supplier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:characterization",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "characterization",
+        "short": "R5: General specifications for this substance (new)",
+        "definition": "R5: `SubstanceDefinition.characterization` (new:BackboneElement)",
+        "comment": "Element `SubstanceDefinition.characterization` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.characterization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.characterization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:referenceInformation",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "referenceInformation",
+        "short": "R5: General information detailing this substance (new)",
+        "definition": "R5: `SubstanceDefinition.referenceInformation` (new:Reference(SubstanceReferenceInformation))",
+        "comment": "Element `SubstanceDefinition.referenceInformation` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.referenceInformation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.referenceInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:nucleicAcid",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "nucleicAcid",
+        "short": "R5: Data items specific to nucleic acids (new)",
+        "definition": "R5: `SubstanceDefinition.nucleicAcid` (new:Reference(SubstanceNucleicAcid))",
+        "comment": "Element `SubstanceDefinition.nucleicAcid` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.nucleicAcid` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.nucleicAcid"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:polymer",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "polymer",
+        "short": "R5: Data items specific to polymers (new)",
+        "definition": "R5: `SubstanceDefinition.polymer` (new:Reference(SubstancePolymer))",
+        "comment": "Element `SubstanceDefinition.polymer` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.polymer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.polymer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.extension:protein",
+        "path": "SubstanceSpecification.extension",
+        "sliceName": "protein",
+        "short": "R5: Data items specific to proteins (new)",
+        "definition": "R5: `SubstanceDefinition.protein` (new:Reference(SubstanceProtein))",
+        "comment": "Element `SubstanceDefinition.protein` has a context of SubstanceSpecification based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.protein` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.protein"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.identifier.extension",
+        "path": "SubstanceSpecification.identifier.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.identifier.extension:identifier",
+        "path": "SubstanceSpecification.identifier.extension",
+        "sliceName": "identifier",
+        "short": "R5: identifier",
+        "definition": "R5: `SubstanceDefinition.identifier`",
+        "comment": "Element `SubstanceDefinition.identifier` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `SubstanceDefinition.identifier` is mapped to FHIR R4 element `SubstanceSpecification.identifier` as `SourceIsBroaderThanTarget`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.status.extension",
+        "path": "SubstanceSpecification.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.status.extension:status",
+        "path": "SubstanceSpecification.status.extension",
+        "sliceName": "status",
+        "short": "R5: Status of substance within the catalogue e.g. active, retired",
+        "definition": "R5: `SubstanceDefinition.status`",
+        "comment": "Element `SubstanceDefinition.status` is mapped to FHIR R4 element `SubstanceSpecification.status` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.status`: `http://hl7.org/fhir/StructureDefinition/artifact-status`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.description.extension",
+        "path": "SubstanceSpecification.description.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.description.extension:description",
+        "path": "SubstanceSpecification.description.extension",
+        "sliceName": "description",
+        "short": "R5: description",
+        "definition": "R5: `SubstanceDefinition.description`",
+        "comment": "Element `SubstanceDefinition.description` is mapped to FHIR R4 element `SubstanceSpecification.description` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.description`: `http://hl7.org/fhir/StructureDefinition/artifact-description`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.moiety.extension",
+        "path": "SubstanceSpecification.moiety.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.moiety.extension:measurementType",
+        "path": "SubstanceSpecification.moiety.extension",
+        "sliceName": "measurementType",
+        "short": "R5: The measurement type of the quantitative value (new)",
+        "definition": "R5: `SubstanceDefinition.moiety.measurementType` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.moiety.measurementType` has a context of SubstanceSpecification.moiety based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.moiety.measurementType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.moiety.measurementType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.property.extension",
+        "path": "SubstanceSpecification.property.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.property.extension:type",
+        "path": "SubstanceSpecification.property.extension",
+        "sliceName": "type",
+        "short": "R5: A code expressing the type of property (new)",
+        "definition": "R5: `SubstanceDefinition.property.type` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.property.type` has a context of SubstanceSpecification.property based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.property.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.property.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.property.extension:value",
+        "path": "SubstanceSpecification.property.extension",
+        "sliceName": "value",
+        "short": "R5: A value for the property (new)",
+        "definition": "R5: `SubstanceDefinition.property.value[x]` (new:Attachment, boolean, CodeableConcept, date, Quantity)",
+        "comment": "Element `SubstanceDefinition.property.value[x]` has a context of SubstanceSpecification.property based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.property.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.property.value"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.structure.extension",
+        "path": "SubstanceSpecification.structure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.structure.extension:technique",
+        "path": "SubstanceSpecification.structure.extension",
+        "sliceName": "technique",
+        "short": "R5: The method used to find the structure e.g. X-ray, NMR (new)",
+        "definition": "R5: `SubstanceDefinition.structure.technique` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.structure.technique` has a context of SubstanceSpecification.structure based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.structure.technique` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.structure.technique"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.structure.extension:sourceDocument",
+        "path": "SubstanceSpecification.structure.extension",
+        "sliceName": "sourceDocument",
+        "short": "R5: Source of information for the structure (new)",
+        "definition": "R5: `SubstanceDefinition.structure.sourceDocument` (new:Reference(DocumentReference))",
+        "comment": "Element `SubstanceDefinition.structure.sourceDocument` has a context of SubstanceSpecification.structure based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.structure.sourceDocument` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.structure.sourceDocument"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.structure.representation.extension",
+        "path": "SubstanceSpecification.structure.representation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.structure.representation.extension:format",
+        "path": "SubstanceSpecification.structure.representation.extension",
+        "sliceName": "format",
+        "short": "R5: The format of the representation e.g. InChI, SMILES, MOLFILE (note: not the physical file format) (new)",
+        "definition": "R5: `SubstanceDefinition.structure.representation.format` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.structure.representation.format` has a context of SubstanceSpecification.structure.representation based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.structure.representation.format` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.structure.representation.format"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.structure.representation.extension:document",
+        "path": "SubstanceSpecification.structure.representation.extension",
+        "sliceName": "document",
+        "short": "R5: An attachment with the structural representation e.g. a structure graphic or AnIML file (new)",
+        "definition": "R5: `SubstanceDefinition.structure.representation.document` (new:Reference(DocumentReference))",
+        "comment": "Element `SubstanceDefinition.structure.representation.document` has a context of SubstanceSpecification.structure.representation based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.structure.representation.document` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.structure.representation.document"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.code.extension",
+        "path": "SubstanceSpecification.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.code.extension:note",
+        "path": "SubstanceSpecification.code.extension",
+        "sliceName": "note",
+        "short": "R5: Any comment can be provided in this field (new)",
+        "definition": "R5: `SubstanceDefinition.code.note` (new:Annotation)",
+        "comment": "Element `SubstanceDefinition.code.note` has a context of SubstanceSpecification.code based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.code.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.code.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.code.source.extension",
+        "path": "SubstanceSpecification.code.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.code.source.extension:source",
+        "path": "SubstanceSpecification.code.source.extension",
+        "sliceName": "source",
+        "short": "R5: source additional types",
+        "definition": "R5: `SubstanceDefinition.code.source` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `SubstanceDefinition.code.source` is mapped to FHIR R4 element `SubstanceSpecification.code.source` as `SourceIsBroaderThanTarget`.\nThe mappings for `SubstanceDefinition.code.source` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SubstanceDefinition.code.source` with unmapped reference targets: DocumentReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.name.extension",
+        "path": "SubstanceSpecification.name.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.name.extension:name",
+        "path": "SubstanceSpecification.name.extension",
+        "sliceName": "name",
+        "short": "R5: name",
+        "definition": "R5: `SubstanceDefinition.name`",
+        "comment": "Element `SubstanceDefinition.name` is mapped to FHIR R4 element `SubstanceSpecification.name` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `SubstanceDefinition.name`: `http://hl7.org/fhir/StructureDefinition/artifact-name`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.name.language.extension",
+        "path": "SubstanceSpecification.name.language.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.name.language.extension:language",
+        "path": "SubstanceSpecification.name.language.extension",
+        "sliceName": "language",
+        "short": "R5: Human language that the name is written in",
+        "definition": "R5: `SubstanceDefinition.name.language`",
+        "comment": "Element `SubstanceDefinition.name.language` is mapped to FHIR R4 element `SubstanceSpecification.name.language` as `Equivalent`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.name.language"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.name.source.extension",
+        "path": "SubstanceSpecification.name.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.name.source.extension:source",
+        "path": "SubstanceSpecification.name.source.extension",
+        "sliceName": "source",
+        "short": "R5: source additional types",
+        "definition": "R5: `SubstanceDefinition.name.source` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `SubstanceDefinition.name.source` is mapped to FHIR R4 element `SubstanceSpecification.name.source` as `SourceIsBroaderThanTarget`.\nThe mappings for `SubstanceDefinition.name.source` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SubstanceDefinition.name.source` with unmapped reference targets: DocumentReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.molecularWeight.extension",
+        "path": "SubstanceSpecification.molecularWeight.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.molecularWeight.extension:method",
+        "path": "SubstanceSpecification.molecularWeight.extension",
+        "sliceName": "method",
+        "short": "R5: The method by which the weight was determined (new)",
+        "definition": "R5: `SubstanceDefinition.molecularWeight.method` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.molecularWeight.method` has a context of SubstanceSpecification.molecularWeight based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.molecularWeight.method` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.molecularWeight.method"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.molecularWeight.extension:type",
+        "path": "SubstanceSpecification.molecularWeight.extension",
+        "sliceName": "type",
+        "short": "R5: Type of molecular weight e.g. exact, average, weight average (new)",
+        "definition": "R5: `SubstanceDefinition.molecularWeight.type` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.molecularWeight.type` has a context of SubstanceSpecification.molecularWeight based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.molecularWeight.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.molecularWeight.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.molecularWeight.extension:amount",
+        "path": "SubstanceSpecification.molecularWeight.extension",
+        "sliceName": "amount",
+        "short": "R5: Used to capture quantitative values for a variety of elements (new)",
+        "definition": "R5: `SubstanceDefinition.molecularWeight.amount` (new:Quantity)",
+        "comment": "Element `SubstanceDefinition.molecularWeight.amount` has a context of SubstanceSpecification.molecularWeight based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.molecularWeight.amount` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.molecularWeight.amount"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.relationship.extension",
+        "path": "SubstanceSpecification.relationship.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.relationship.extension:substanceDefinition",
+        "path": "SubstanceSpecification.relationship.extension",
+        "sliceName": "substanceDefinition",
+        "short": "R5: A pointer to another substance, as a resource or a representational code (new)",
+        "definition": "R5: `SubstanceDefinition.relationship.substanceDefinition[x]` (new:CodeableConcept, Reference(SubstanceDefinition))",
+        "comment": "Element `SubstanceDefinition.relationship.substanceDefinition[x]` has a context of SubstanceSpecification.relationship based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.relationship.substanceDefinition[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.relationship.substanceDefinition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.relationship.extension:type",
+        "path": "SubstanceSpecification.relationship.extension",
+        "sliceName": "type",
+        "short": "R5: For example \"salt to parent\", \"active moiety\" (new)",
+        "definition": "R5: `SubstanceDefinition.relationship.type` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.relationship.type` has a context of SubstanceSpecification.relationship based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.relationship.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.relationship.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.relationship.extension:ratioHighLimitAmount",
+        "path": "SubstanceSpecification.relationship.extension",
+        "sliceName": "ratioHighLimitAmount",
+        "short": "R5: For use when the numeric has an uncertain range (new)",
+        "definition": "R5: `SubstanceDefinition.relationship.ratioHighLimitAmount` (new:Ratio)",
+        "comment": "Element `SubstanceDefinition.relationship.ratioHighLimitAmount` has a context of SubstanceSpecification.relationship based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.relationship.ratioHighLimitAmount` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.relationship.ratioHighLimitAmount"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.relationship.extension:comparator",
+        "path": "SubstanceSpecification.relationship.extension",
+        "sliceName": "comparator",
+        "short": "R5: An operator for the amount, for example \"average\", \"approximately\", \"less than\" (new)",
+        "definition": "R5: `SubstanceDefinition.relationship.comparator` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.relationship.comparator` has a context of SubstanceSpecification.relationship based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.relationship.comparator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.relationship.comparator"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.relationship.source.extension",
+        "path": "SubstanceSpecification.relationship.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.relationship.source.extension:source",
+        "path": "SubstanceSpecification.relationship.source.extension",
+        "sliceName": "source",
+        "short": "R5: source additional types",
+        "definition": "R5: `SubstanceDefinition.relationship.source` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `SubstanceDefinition.relationship.source` is mapped to FHIR R4 element `SubstanceSpecification.relationship.source` as `SourceIsBroaderThanTarget`.\nThe mappings for `SubstanceDefinition.relationship.source` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SubstanceDefinition.relationship.source` with unmapped reference targets: DocumentReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension:type",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "sliceName": "type",
+        "short": "R5: Classification of the origin of the raw material. e.g. cat hair is an Animal source type (new)",
+        "definition": "R5: `SubstanceDefinition.sourceMaterial.type` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.sourceMaterial.type` has a context of SubstanceSpecification.sourceMaterial based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.sourceMaterial.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.sourceMaterial.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension:genus",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "sliceName": "genus",
+        "short": "R5: The genus of an organism e.g. the Latin epithet of the plant/animal scientific name (new)",
+        "definition": "R5: `SubstanceDefinition.sourceMaterial.genus` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.sourceMaterial.genus` has a context of SubstanceSpecification.sourceMaterial based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.sourceMaterial.genus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.sourceMaterial.genus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension:species",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "sliceName": "species",
+        "short": "R5: The species of an organism e.g. the Latin epithet of the species of the plant/animal (new)",
+        "definition": "R5: `SubstanceDefinition.sourceMaterial.species` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.sourceMaterial.species` has a context of SubstanceSpecification.sourceMaterial based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.sourceMaterial.species` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.sourceMaterial.species"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension:part",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "sliceName": "part",
+        "short": "R5: An anatomical origin of the source material within an organism (new)",
+        "definition": "R5: `SubstanceDefinition.sourceMaterial.part` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.sourceMaterial.part` has a context of SubstanceSpecification.sourceMaterial based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.sourceMaterial.part` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.sourceMaterial.part"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SubstanceSpecification.sourceMaterial.extension:countryOfOrigin",
+        "path": "SubstanceSpecification.sourceMaterial.extension",
+        "sliceName": "countryOfOrigin",
+        "short": "R5: The country or countries where the material is harvested (new)",
+        "definition": "R5: `SubstanceDefinition.sourceMaterial.countryOfOrigin` (new:CodeableConcept)",
+        "comment": "Element `SubstanceDefinition.sourceMaterial.countryOfOrigin` has a context of SubstanceSpecification.sourceMaterial based on following the parent source element upwards and mapping to `SubstanceSpecification`.\nElement `SubstanceDefinition.sourceMaterial.countryOfOrigin` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceDefinition.sourceMaterial.countryOfOrigin"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

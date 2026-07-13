@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Questionnaire.subjectType",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.subjectType",
+  "version": "0.1.1",
+  "name": "ExtensionQuestionnaire_SubjectType",
+  "title": "R5: subjectType additional codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Questionnaire.subjectType` additional codes",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Questionnaire.subjectType` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Questionnaire.subjectType` 0..* `code`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Questionnaire.subjectType` 0..* `code`\n*  R4B: `Questionnaire.subjectType` 0..* `code`\n*  R4: `Questionnaire.subjectType` 0..* `code`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Questionnaire.subjectType` is mapped to FHIR R4 element `Questionnaire.subjectType` as `RelatedTo`.\nThe mappings for `Questionnaire.subjectType` do not allow expression of the necessary codes, per the bindings on the source and target.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Questionnaire.subjectType"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: subjectType additional codes",
+        "definition": "R5: `Questionnaire.subjectType` additional codes",
+        "comment": "Element `Questionnaire.subjectType` is mapped to FHIR R4 element `Questionnaire.subjectType` as `RelatedTo`.\nThe mappings for `Questionnaire.subjectType` do not allow expression of the necessary codes, per the bindings on the source and target.\nIf none are specified, then the subject is unlimited.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.subjectType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Resource that can be subject of QuestionnaireResponse",
+        "definition": "The types of subjects that can be the subject of responses created for the questionnaire.",
+        "comment": "If none are specified, then the subject is unlimited.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "One of the resource types defined as part of this version of FHIR.",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-resource-types-for-R4"
+        }
+      }
+    ]
+  }
+}

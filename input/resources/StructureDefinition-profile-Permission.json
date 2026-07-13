@@ -1,0 +1,310 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Permission",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Permission",
+  "version": "0.1.1",
+  "name": "Profile_R5_Permission_R4",
+  "title": "Cross-version Profile for R5.Permission resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.971969-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Permission resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.Permission resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Permission resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:status",
+        "path": "Basic.extension",
+        "sliceName": "status",
+        "short": "R5: active | entered-in-error | draft | rejected (new)",
+        "definition": "R5: `Permission.status` (new:code)",
+        "comment": "Element `Permission.status` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:asserter",
+        "path": "Basic.extension",
+        "sliceName": "asserter",
+        "short": "R5: The person or entity that asserts the permission (new)",
+        "definition": "R5: `Permission.asserter` (new:Reference(Practitioner,PractitionerRole,Organization,CareTeam,Patient,RelatedPerson,HealthcareService))",
+        "comment": "Element `Permission.asserter` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.asserter` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.asserter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:date",
+        "path": "Basic.extension",
+        "sliceName": "date",
+        "short": "R5: The date that permission was asserted (new)",
+        "definition": "R5: `Permission.date` (new:dateTime)",
+        "comment": "Element `Permission.date` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.date` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.date"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:validity",
+        "path": "Basic.extension",
+        "sliceName": "validity",
+        "short": "R5: The period in which the permission is active (new)",
+        "definition": "R5: `Permission.validity` (new:Period)",
+        "comment": "Element `Permission.validity` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.validity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.validity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:justification",
+        "path": "Basic.extension",
+        "sliceName": "justification",
+        "short": "R5: The asserted justification for using the data (new)",
+        "definition": "R5: `Permission.justification` (new:BackboneElement)",
+        "comment": "Element `Permission.justification` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.justification` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.justification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension",
+        "path": "Basic.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.modifierExtension:combining",
+        "path": "Basic.modifierExtension",
+        "sliceName": "combining",
+        "short": "R5: deny-overrides | permit-overrides | ordered-deny-overrides | ordered-permit-overrides | deny-unless-permit | permit-unless-deny (new)",
+        "definition": "R5: `Permission.combining` (new:code)",
+        "comment": "Element `Permission.combining` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.combining` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nsee [XACML Combining Rules](http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-cos01-en.html#_Toc325047267)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.combining"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension:rule",
+        "path": "Basic.modifierExtension",
+        "sliceName": "rule",
+        "short": "R5: Constraints to the Permission (new)",
+        "definition": "R5: `Permission.rule` (new:BackboneElement)",
+        "comment": "Element `Permission.rule` is not mapped to FHIR R4, since FHIR R5 `Permission` is not mapped.\nElement `Permission.rule` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Permission.rule"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "Permission"
+      }
+    ]
+  }
+}

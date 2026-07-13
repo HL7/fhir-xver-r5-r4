@@ -1,0 +1,81 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-appointmentresponse-status-for-R4-participationstatus",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-appointmentresponse-status-for-R4-participationstatus",
+  "version": "0.1.1",
+  "name": "MapR5AppointmentresponseStatusForR4Participationstatus",
+  "title": "Cross-version ConceptMap for ValueSet R5-appointmentresponse-status-for-R4-participationstatus from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.2409479-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/participationstatus|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/participationstatus",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/participationstatus",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "accepted",
+          "display": "Accepted",
+          "target": [
+            {
+              "code": "accepted",
+              "display": "Accepted",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-AppointmentresponseStatus-R4B-Participationstatus` (`ConceptMap-R5-AppointmentresponseStatus-R4B-Participationstatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-Participationstatus-R4-Participationstatus` (`ConceptMap-R4B-Participationstatus-R4-Participationstatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "declined",
+          "display": "Declined",
+          "target": [
+            {
+              "code": "declined",
+              "display": "Declined",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-AppointmentresponseStatus-R4B-Participationstatus` (`ConceptMap-R5-AppointmentresponseStatus-R4B-Participationstatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-Participationstatus-R4-Participationstatus` (`ConceptMap-R4B-Participationstatus-R4-Participationstatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "needs-action",
+          "display": "Needs Action",
+          "target": [
+            {
+              "code": "needs-action",
+              "display": "Needs Action",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-AppointmentresponseStatus-R4B-Participationstatus` (`ConceptMap-R5-AppointmentresponseStatus-R4B-Participationstatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-Participationstatus-R4-Participationstatus` (`ConceptMap-R4B-Participationstatus-R4-Participationstatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "tentative",
+          "display": "Tentative",
+          "target": [
+            {
+              "code": "tentative",
+              "display": "Tentative",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/appointmentresponse-status|5.0.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-AppointmentresponseStatus-R4B-Participationstatus` (`ConceptMap-R5-AppointmentresponseStatus-R4B-Participationstatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/participationstatus|4.3.0` to `http://hl7.org/fhir/ValueSet/participationstatus|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-Participationstatus-R4-Participationstatus` (`ConceptMap-R4B-Participationstatus-R4-Participationstatus.json`)"
+            }
+          ]
+        },
+        {
+          "code": "entered-in-error",
+          "display": "Entered in error",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

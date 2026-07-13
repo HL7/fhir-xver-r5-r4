@@ -1,0 +1,150 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-GuidanceResponse",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-GuidanceResponse",
+  "version": "0.1.1",
+  "name": "Profile_R5_GuidanceResponse_R4",
+  "title": "Cross-version Profile for R5.GuidanceResponse resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.7791614-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 GuidanceResponse resource content to be represented via FHIR R4 GuidanceResponse resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "GuidanceResponse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/GuidanceResponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "GuidanceResponse",
+        "path": "GuidanceResponse",
+        "short": "Cross-version Profile for R5.GuidanceResponse resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 GuidanceResponse resource content to be represented via FHIR R4 GuidanceResponse resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-GuidanceResponse-result",
+            "requirements": "Cardinality constraints for result from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "GuidanceResponse.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-GuidanceResponse.result').exists() implies GuidanceResponse.result.exists()"
+          }
+        ]
+      },
+      {
+        "id": "GuidanceResponse.extension",
+        "path": "GuidanceResponse.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "GuidanceResponse.extension:result",
+        "path": "GuidanceResponse.extension",
+        "sliceName": "result",
+        "short": "R5: result",
+        "definition": "R5: `GuidanceResponse.result`",
+        "comment": "Element `GuidanceResponse.result` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `GuidanceResponse.result` is mapped to FHIR R4 element `GuidanceResponse.result` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `GuidanceResponse.result` with unmapped reference targets: Appointment, AppointmentResponse, Claim, CommunicationRequest, Contract, CoverageEligibilityRequest, DeviceRequest, EnrollmentRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest, SupplyRequest, Task, VisionPrescription.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-GuidanceResponse.result"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-GuidanceResponse-result"
+        ]
+      },
+      {
+        "id": "GuidanceResponse.result.extension",
+        "path": "GuidanceResponse.result.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "GuidanceResponse.result.extension:result",
+        "path": "GuidanceResponse.result.extension",
+        "sliceName": "result",
+        "short": "R5: result",
+        "definition": "R5: `GuidanceResponse.result`",
+        "comment": "Element `GuidanceResponse.result` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `GuidanceResponse.result` is mapped to FHIR R4 element `GuidanceResponse.result` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `GuidanceResponse.result` with unmapped reference targets: Appointment, AppointmentResponse, Claim, CommunicationRequest, Contract, CoverageEligibilityRequest, DeviceRequest, EnrollmentRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest, SupplyRequest, Task, VisionPrescription.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

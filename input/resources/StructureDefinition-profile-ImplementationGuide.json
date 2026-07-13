@@ -1,0 +1,501 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ImplementationGuide",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ImplementationGuide",
+  "version": "0.1.1",
+  "name": "Profile_R5_ImplementationGuide_R4",
+  "title": "Cross-version Profile for R5.ImplementationGuide resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8064178-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ImplementationGuide resource content to be represented via FHIR R4 ImplementationGuide resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImplementationGuide",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImplementationGuide",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImplementationGuide",
+        "path": "ImplementationGuide",
+        "short": "Cross-version Profile for R5.ImplementationGuide resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ImplementationGuide resource content to be represented via FHIR R4 ImplementationGuide resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-ImplementationGuide-profile",
+            "requirements": "Cardinality constraints for profile from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "ImplementationGuide.definition.resource.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.definition.resource.profile').exists() implies ImplementationGuide.definition.resource.example[x].exists()"
+          },
+          {
+            "key": "xvpc-R5-R4-ImplementationGuide-profile",
+            "requirements": "Cardinality constraints for profile from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "ImplementationGuide.manifest.resource.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.manifest.resource.profile').exists() implies ImplementationGuide.manifest.resource.example[x].exists()"
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.extension",
+        "path": "ImplementationGuide.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.extension:identifier",
+        "path": "ImplementationGuide.extension",
+        "sliceName": "identifier",
+        "short": "R5: Additional identifier for the implementation guide (business identifier) (new)",
+        "definition": "R5: `ImplementationGuide.identifier` (new:Identifier)",
+        "comment": "Element `ImplementationGuide.identifier` has a context of ImplementationGuide based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ImplementationGuide.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.extension:versionAlgorithm",
+        "path": "ImplementationGuide.extension",
+        "sliceName": "versionAlgorithm",
+        "short": "R5: How to compare versions (new)",
+        "definition": "R5: `ImplementationGuide.versionAlgorithm[x]` (new:Coding, string)",
+        "comment": "Element `ImplementationGuide.versionAlgorithm[x]` has a context of ImplementationGuide based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.versionAlgorithm[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ImplementationGuide.versionAlgorithm[x]`: `http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm`.\nIf set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can't be successfully be determined.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.extension:purpose",
+        "path": "ImplementationGuide.extension",
+        "sliceName": "purpose",
+        "short": "R5: Why this implementation guide is defined (new)",
+        "definition": "R5: `ImplementationGuide.purpose` (new:markdown)",
+        "comment": "Element `ImplementationGuide.purpose` has a context of ImplementationGuide based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ImplementationGuide.purpose`: `http://hl7.org/fhir/StructureDefinition/artifact-purpose`.\nThis element does not describe the usage of the implementation guide. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this implementation guide.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-purpose"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.extension:copyrightLabel",
+        "path": "ImplementationGuide.extension",
+        "sliceName": "copyrightLabel",
+        "short": "R5: Copyright holder and year(s) (new)",
+        "definition": "R5: `ImplementationGuide.copyrightLabel` (new:string)",
+        "comment": "Element `ImplementationGuide.copyrightLabel` has a context of ImplementationGuide based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.copyrightLabel` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ImplementationGuide.copyrightLabel`: `http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel`.\nThe (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general 'copyright' element.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.fhirVersion.extension",
+        "path": "ImplementationGuide.fhirVersion.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.fhirVersion.extension:fhirVersion",
+        "path": "ImplementationGuide.fhirVersion.extension",
+        "sliceName": "fhirVersion",
+        "short": "R5: fhirVersion",
+        "definition": "R5: `ImplementationGuide.fhirVersion`",
+        "comment": "Element `ImplementationGuide.fhirVersion` is mapped to FHIR R4 element `ImplementationGuide.fhirVersion` as `SourceIsBroaderThanTarget`.\nMost implementation guides target a single version - e.g. they describe how to use a particular version, and the profiles and examples etc. are valid for that version. But some implementation guides describe how to use multiple different versions of FHIR to solve the same problem, or in concert with each other. Typically, the requirement to support multiple versions arises as implementation matures and different implementation communities are stuck at different versions by regulation or market dynamics.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.fhirVersion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.dependsOn.extension",
+        "path": "ImplementationGuide.dependsOn.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.dependsOn.extension:reason",
+        "path": "ImplementationGuide.dependsOn.extension",
+        "sliceName": "reason",
+        "short": "R5: Why dependency exists (new)",
+        "definition": "R5: `ImplementationGuide.dependsOn.reason` (new:markdown)",
+        "comment": "Element `ImplementationGuide.dependsOn.reason` has a context of ImplementationGuide.dependsOn based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.dependsOn.reason` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis doesn't need to enumerate every resource used, but should give some sense of why the dependency exists.  It will be used in the rendered list of dependencies",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.global.type.extension",
+        "path": "ImplementationGuide.global.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.global.type.extension:type",
+        "path": "ImplementationGuide.global.type.extension",
+        "sliceName": "type",
+        "short": "R5: type additional codes",
+        "definition": "R5: `ImplementationGuide.global.type` additional codes",
+        "comment": "Element `ImplementationGuide.global.type` is mapped to FHIR R4 element `ImplementationGuide.global.type` as `RelatedTo`.\nThe mappings for `ImplementationGuide.global.type` do not allow expression of the necessary codes, per the bindings on the source and target.\nThe type must match that of the profile that is referred to but is made explicit here as a denormalization so that a system processing the implementation guide resource knows which resources the profile applies to even if the profile itself is not available.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.global.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.definition.resource.extension",
+        "path": "ImplementationGuide.definition.resource.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.definition.resource.extension:profile",
+        "path": "ImplementationGuide.definition.resource.extension",
+        "sliceName": "profile",
+        "short": "R5: Profile(s) this is an example of",
+        "definition": "R5: `ImplementationGuide.definition.resource.profile`",
+        "comment": "Element `ImplementationGuide.definition.resource.profile` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ImplementationGuide.definition.resource.profile` is mapped to FHIR R4 element `ImplementationGuide.definition.resource.example[x]` as `RelatedTo`.\nThe target context `ImplementationGuide.definition.resource.example[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ImplementationGuide.definition.resource`.\nExamples: \n\n* StructureDefinition -> Any \n* ValueSet -> expansion \n* OperationDefinition -> Parameters \n* Questionnaire -> QuestionnaireResponse.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.definition.resource.profile"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-ImplementationGuide-profile"
+        ]
+      },
+      {
+        "id": "ImplementationGuide.definition.resource.fhirVersion.extension",
+        "path": "ImplementationGuide.definition.resource.fhirVersion.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.definition.resource.fhirVersion.extension:fhirVersion",
+        "path": "ImplementationGuide.definition.resource.fhirVersion.extension",
+        "sliceName": "fhirVersion",
+        "short": "R5: fhirVersion",
+        "definition": "R5: `ImplementationGuide.definition.resource.fhirVersion`",
+        "comment": "Element `ImplementationGuide.definition.resource.fhirVersion` is mapped to FHIR R4 element `ImplementationGuide.definition.resource.fhirVersion` as `SourceIsBroaderThanTarget`.\nThe resource SHALL be valid against all the versions it is specified to apply to. If the resource referred to is a StructureDefinition, the fhirVersion stated in the StructureDefinition cannot disagree with the version specified here; the specified versions SHALL include the version specified by the StructureDefinition, and may include additional versions using the [http://hl7.org/fhir/StructureDefinition/structuredefinition-applicable-version](http://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-applicable-version.html) extension.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.definition.resource.fhirVersion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.definition.page.extension",
+        "path": "ImplementationGuide.definition.page.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.definition.page.extension:source",
+        "path": "ImplementationGuide.definition.page.extension",
+        "sliceName": "source",
+        "short": "R5: Source for page (new)",
+        "definition": "R5: `ImplementationGuide.definition.page.source[x]` (new:markdown, string, url)",
+        "comment": "Element `ImplementationGuide.definition.page.source[x]` has a context of ImplementationGuide.definition.page based on following the parent source element upwards and mapping to `ImplementationGuide`.\nElement `ImplementationGuide.definition.page.source[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf absent and the page isn't a generated page, this may be inferred from the page name by checking input locations.  String is used for XHTML content - sent as an escaped string.  FHIR tooling can't support 'direct' XHTML anywhere other than in narrative.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.definition.page.source"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.definition.parameter.code.extension",
+        "path": "ImplementationGuide.definition.parameter.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.definition.parameter.code.extension:code",
+        "path": "ImplementationGuide.definition.parameter.code.extension",
+        "sliceName": "code",
+        "short": "R5: Code that identifies parameter additional types",
+        "definition": "R5: `ImplementationGuide.definition.parameter.code` additional types (Coding) additional types from child elements (userSelected)",
+        "comment": "Element `ImplementationGuide.definition.parameter.code` is mapped to FHIR R4 element `ImplementationGuide.definition.parameter.code` as `SourceIsBroaderThanTarget`.\nThe mappings for `ImplementationGuide.definition.parameter.code` do not cover the following types: Coding.\nThe mappings for `ImplementationGuide.definition.parameter.code` do not cover the following types based on type expansion: userSelected.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.definition.parameter.code"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImplementationGuide.manifest.resource.extension",
+        "path": "ImplementationGuide.manifest.resource.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImplementationGuide.manifest.resource.extension:profile",
+        "path": "ImplementationGuide.manifest.resource.extension",
+        "sliceName": "profile",
+        "short": "R5: Profile(s) this is an example of",
+        "definition": "R5: `ImplementationGuide.manifest.resource.profile`",
+        "comment": "Element `ImplementationGuide.manifest.resource.profile` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ImplementationGuide.manifest.resource.profile` is mapped to FHIR R4 element `ImplementationGuide.manifest.resource.example[x]` as `SourceIsBroaderThanTarget`.\nThe target context `ImplementationGuide.manifest.resource.example[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ImplementationGuide.manifest.resource`.\nExamples: \n\n* StructureDefinition -> Any \n* ValueSet -> expansion \n* OperationDefinition -> Parameters \n* Questionnaire -> QuestionnaireResponse.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.manifest.resource.profile"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-ImplementationGuide-profile"
+        ]
+      }
+    ]
+  }
+}

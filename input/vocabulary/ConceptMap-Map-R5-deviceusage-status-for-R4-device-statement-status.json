@@ -1,0 +1,105 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-deviceusage-status-for-R4-device-statement-status",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-deviceusage-status-for-R4-device-statement-status",
+  "version": "0.1.1",
+  "name": "MapR5DeviceusageStatusForR4DeviceStatementStatus",
+  "title": "Cross-version ConceptMap for ValueSet R5-deviceusage-status-for-R4-device-statement-status from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.3144502-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/deviceusage-status",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/device-statement-status",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "active",
+          "display": "Active",
+          "target": [
+            {
+              "code": "active",
+              "display": "Active",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#active` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#active` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "completed",
+          "display": "Completed",
+          "target": [
+            {
+              "code": "completed",
+              "display": "Completed",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#completed` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#completed` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "entered-in-error",
+          "display": "Entered in Error",
+          "target": [
+            {
+              "code": "entered-in-error",
+              "display": "Entered in Error",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#entered-in-error` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#entered-in-error` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "intended",
+          "display": "Intended",
+          "target": [
+            {
+              "code": "intended",
+              "display": "Intended",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#intended` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#intended` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "on-hold",
+          "display": "On Hold",
+          "target": [
+            {
+              "code": "on-hold",
+              "display": "On Hold",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#on-hold` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#on-hold` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "stopped",
+          "display": "Stopped",
+          "target": [
+            {
+              "code": "stopped",
+              "display": "Stopped",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DeviceusageStatus-R4B-DeviceStatementStatus` (`ConceptMap-R5-DeviceusageStatus-R4B-DeviceStatementStatus.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/device-statement-status|4.3.0` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DeviceStatementStatus-R4-DeviceStatementStatus` (`ConceptMap-R4B-DeviceStatementStatus-R4-DeviceStatementStatus.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/deviceusage-status|5.0.0#stopped` to `http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1#stopped` as Equivalent in `ConceptMap-R5-DeviceusageStatus-R4-DeviceStatementStatus.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "not-done",
+          "display": "Not done",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

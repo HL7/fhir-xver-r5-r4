@@ -1,0 +1,131 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ArtifactAssessment.artifact",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.artifact",
+  "version": "0.1.1",
+  "name": "ExtensionArtifactAssessment_Artifact",
+  "title": "R5: The artifact assessed, commented upon or rated (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ArtifactAssessment.artifact[x]` (new:canonical, Reference(Resource), uri)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ArtifactAssessment.artifact[x]` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ArtifactAssessment.artifact[x]` 1..1 `canonical, Reference(http://hl7.org/fhir/StructureDefinition/Resource), uri`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n* R5 `ArtifactAssessment.artifact[x]` 1..1 `canonical, Reference(http://hl7.org/fhir/StructureDefinition/Resource), uri`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ArtifactAssessment.artifact[x]` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.artifact[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Basic"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: The artifact assessed, commented upon or rated (new)",
+        "definition": "R5: `ArtifactAssessment.artifact[x]` (new:canonical, Reference(Resource), uri)",
+        "comment": "Element `ArtifactAssessment.artifact[x]` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.artifact[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.artifact"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "The artifact assessed, commented upon or rated",
+        "definition": "A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          },
+          {
+            "code": "canonical"
+          },
+          {
+            "code": "uri"
+          }
+        ]
+      }
+    ]
+  }
+}

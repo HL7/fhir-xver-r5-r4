@@ -1,0 +1,189 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-List",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-List",
+  "version": "0.1.1",
+  "name": "Profile_R5_List_R4",
+  "title": "Cross-version Profile for R5.List resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8423581-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 List resource content to be represented via FHIR R4 List resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "List",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/List",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "List",
+        "path": "List",
+        "short": "Cross-version Profile for R5.List resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 List resource content to be represented via FHIR R4 List resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-List-subject",
+            "requirements": "Cardinality constraints for subject from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "List.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-List.subject').exists() implies List.subject.exists()"
+          }
+        ]
+      },
+      {
+        "id": "List.extension",
+        "path": "List.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "List.extension:subject",
+        "path": "List.extension",
+        "sliceName": "subject",
+        "short": "R5: If all resources have the same subject(s) additional types",
+        "definition": "R5: `List.subject` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `List.subject` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `List.subject` is mapped to FHIR R4 element `List.subject` as `SourceIsBroaderThanTarget`.\nThe mappings for `List.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `List.subject` with unmapped reference targets: Resource.\nSome purely arbitrary lists do not have a common subject, so this is optional. Lists having multiple subjects may raise challenges for systems that base access control or other security considerations on linkages to 'subject'. E.g. if a List is associated with multiple Patient subjects, then it would be nominally part of multiple patient compartments, which might drive access rights.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-List.subject"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-List-subject"
+        ]
+      },
+      {
+        "id": "List.subject.extension",
+        "path": "List.subject.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "List.subject.extension:subject",
+        "path": "List.subject.extension",
+        "sliceName": "subject",
+        "short": "R5: If all resources have the same subject(s) additional types",
+        "definition": "R5: `List.subject` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `List.subject` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `List.subject` is mapped to FHIR R4 element `List.subject` as `SourceIsBroaderThanTarget`.\nThe mappings for `List.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `List.subject` with unmapped reference targets: Resource.\nSome purely arbitrary lists do not have a common subject, so this is optional. Lists having multiple subjects may raise challenges for systems that base access control or other security considerations on linkages to 'subject'. E.g. if a List is associated with multiple Patient subjects, then it would be nominally part of multiple patient compartments, which might drive access rights.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.source.extension",
+        "path": "List.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "List.source.extension:source",
+        "path": "List.source.extension",
+        "sliceName": "source",
+        "short": "R5: source",
+        "definition": "R5: `List.source`",
+        "comment": "Element `List.source` is mapped to FHIR R4 element `List.source` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `List.source` with unmapped reference targets: CareTeam, Organization, RelatedPerson.\nThe primary source is the entity that made the decisions what items are in the list. This may be software or user.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

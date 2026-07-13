@@ -1,0 +1,35 @@
+### Lookup for [FHIR R5](https://hl7.org/fhir/R5/) ValueSet EntityClass:[`http://terminology.hl7.org/ValueSet/v3-EntityClass`](https://hl7.org/fhir/R5/valueset-v3-EntityClass.html) for use in [FHIR R4](https://hl7.org/fhir/R4/)
+
+The FHIR R5 ValueSet EntityClass has no mapping  to FHIR R4.
+
+| Source System | Code | Display | Has XVer | Target System | Code | Display |
+| -------------- | ---- | ------- | -------- | ------------- | ---- | ------- |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `ANM` | animal | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `CER` | certificate representation | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `CHEM` | chemical substance | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `CITY` | city or town | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `CONT` | container | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `COUNTRY` | country | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `COUNTY` | county or parish | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `DEV` | device | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `ENT` | entity | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `FOOD` | food | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `HCE` | health chart entity | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `HOLD` | holder | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `LIV` | living subject | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `MAT` | material | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `MIC` | microorganism | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `MMAT` | manufactured material | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `MODDV` | imaging modality | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `NAT` | Nation | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `NLIV` | non-person living subject | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `ORG` | organization | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `PLC` | place | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `PLNT` | plant | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `PROVINCE` | state or province | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `PSN` | person | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `PUB` | public institution | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `RGRP` | group | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-EntityClass` | `STATE` | state | Yes |  |  |  |
+{: .grid }
+

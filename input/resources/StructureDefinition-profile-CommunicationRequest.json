@@ -1,0 +1,267 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-CommunicationRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-CommunicationRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_CommunicationRequest_R4",
+  "title": "Cross-version Profile for R5.CommunicationRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.5606905-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 CommunicationRequest resource content to be represented via FHIR R4 CommunicationRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CommunicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CommunicationRequest",
+        "path": "CommunicationRequest",
+        "short": "Cross-version Profile for R5.CommunicationRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 CommunicationRequest resource content to be represented via FHIR R4 CommunicationRequest resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-CommunicationRequest-informationProvider",
+            "requirements": "Cardinality constraints for informationProvider from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "CommunicationRequest.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-CommunicationRequest.informationProvider').exists() implies CommunicationRequest.sender.exists()"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.extension",
+        "path": "CommunicationRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CommunicationRequest.extension:informationProvider",
+        "path": "CommunicationRequest.extension",
+        "sliceName": "informationProvider",
+        "short": "R5: Who should share the information",
+        "definition": "R5: `CommunicationRequest.informationProvider`",
+        "comment": "Element `CommunicationRequest.informationProvider` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `CommunicationRequest.informationProvider` is mapped to FHIR R4 element `CommunicationRequest.sender` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `CommunicationRequest.informationProvider` with unmapped reference targets: Endpoint.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CommunicationRequest.informationProvider"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-CommunicationRequest-informationProvider"
+        ]
+      },
+      {
+        "id": "CommunicationRequest.modifierExtension",
+        "path": "CommunicationRequest.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CommunicationRequest.modifierExtension:intent",
+        "path": "CommunicationRequest.modifierExtension",
+        "sliceName": "intent",
+        "short": "R5: proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option (new)",
+        "definition": "R5: `CommunicationRequest.intent` (new:code)",
+        "comment": "Element `CommunicationRequest.intent` has a context of CommunicationRequest based on following the parent source element upwards and mapping to `CommunicationRequest`.\nElement `CommunicationRequest.intent` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis element is expected to be immutable.  E.g. A \"proposal\" instance should never change to be a \"plan\" instance or \"order\" instance.  Instead, a new instance 'basedOn' the prior instance should be created with the new 'intent' value.\n\nOne exception to this is that the granularity of CommunicationRequest.intent is allowed to change.  For example, a Request identified as an \"order\" might later be clarified to be a \"filler-order\".  Or, in rarer cases (to meet recipient constraints), the reverse might also occur.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CommunicationRequest.intent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.payload.extension",
+        "path": "CommunicationRequest.payload.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CommunicationRequest.payload.extension:content",
+        "path": "CommunicationRequest.payload.extension",
+        "sliceName": "content",
+        "short": "R5: content additional types",
+        "definition": "R5: `CommunicationRequest.payload.content[x]` additional types (CodeableConcept)",
+        "comment": "Element `CommunicationRequest.payload.content[x]` is mapped to FHIR R4 element `CommunicationRequest.payload.content[x]` as `SourceIsBroaderThanTarget`.\nThe mappings for `CommunicationRequest.payload.content[x]` do not cover the following types: CodeableConcept.\nThe target context `CommunicationRequest.payload.content[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `CommunicationRequest.payload`.\nThe content can be codified or textual.  As an example of codified content, when working with machine generated communications, the payload may be drawn from a finite, terminology defined set of communications, especially for short, status update kinds of communications where more of a natural language approach isn't appropriate.\n\nIf the content isn't codified, contentCodeableConcept.text can be used.  \n\nWhen using contentCodeableConcept, the CodeableConcept is what is being communicated and is not a categorization of the content.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CommunicationRequest.payload.content"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.recipient.extension",
+        "path": "CommunicationRequest.recipient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CommunicationRequest.recipient.extension:recipient",
+        "path": "CommunicationRequest.recipient.extension",
+        "sliceName": "recipient",
+        "short": "R5: Who to share the information with",
+        "definition": "R5: `CommunicationRequest.recipient`",
+        "comment": "Element `CommunicationRequest.recipient` is mapped to FHIR R4 element `CommunicationRequest.recipient` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `CommunicationRequest.recipient` with unmapped reference targets: Endpoint.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.sender.extension",
+        "path": "CommunicationRequest.sender.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CommunicationRequest.sender.extension:informationProvider",
+        "path": "CommunicationRequest.sender.extension",
+        "sliceName": "informationProvider",
+        "short": "R5: Who should share the information",
+        "definition": "R5: `CommunicationRequest.informationProvider`",
+        "comment": "Element `CommunicationRequest.informationProvider` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `CommunicationRequest.informationProvider` is mapped to FHIR R4 element `CommunicationRequest.sender` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `CommunicationRequest.informationProvider` with unmapped reference targets: Endpoint.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

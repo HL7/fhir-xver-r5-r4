@@ -1,0 +1,628 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ClinicalUseDefinition-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ClinicalUseDefinition-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ClinicalUseDefinitionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ClinicalUseDefinition to FHIR R4 Basic",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:43.1779307-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ClinicalUseDefinition to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Basic",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.meta",
+          "display": "meta",
+          "target": [
+            {
+              "code": "Basic.meta",
+              "display": "Basic.meta",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.meta` (`Resource.meta`), use that element instead.\nElement `ClinicalUseDefinition.meta` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.meta` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.implicitRules",
+          "display": "implicitRules",
+          "target": [
+            {
+              "code": "Basic.implicitRules",
+              "display": "Basic.implicitRules",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.implicitRules` (`Resource.implicitRules`), use that element instead.\nElement `ClinicalUseDefinition.implicitRules` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.implicitRules` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAsserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of its narrative along with other profiles, value sets, etc."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.language",
+          "display": "language",
+          "target": [
+            {
+              "code": "Basic.language",
+              "display": "Basic.language",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.language` (`Resource.language`), use that element instead.\nElement `ClinicalUseDefinition.language` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.language` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nLanguage is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "Basic.text",
+              "display": "Basic.text",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.text` (`DomainResource.text`), use that element instead.\nElement `ClinicalUseDefinition.text` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.text` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nContained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contained",
+          "display": "contained",
+          "target": [
+            {
+              "code": "Basic.contained",
+              "display": "Basic.contained",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.contained` (`DomainResource.contained`), use that element instead.\nElement `ClinicalUseDefinition.contained` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contained` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.identifier",
+          "display": "identifier",
+          "target": [
+            {
+              "code": "Basic.identifier",
+              "display": "Basic.identifier",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.identifier` (`Basic.identifier`), use that element instead.\nElement `ClinicalUseDefinition.identifier` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ClinicalUseDefinition.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.subject",
+          "display": "subject",
+          "target": [
+            {
+              "code": "Basic.subject",
+              "display": "Basic.subject",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.subject` (`Basic.subject`), use that element instead.\nElement `ClinicalUseDefinition.subject` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.subject` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.type",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.type` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.category",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.category",
+          "display": "category",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.category` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.contraindication",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.contraindication",
+          "display": "contraindication",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.diseaseSymptomProcedure",
+          "display": "diseaseSymptomProcedure",
+          "target": [
+            {
+              "code": "Extension.extension:diseaseSymptomProcedure",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.diseaseSymptomProcedure` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.diseaseSymptomProcedure` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.diseaseSymptomProcedure` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.diseaseStatus",
+          "display": "diseaseStatus",
+          "target": [
+            {
+              "code": "Extension.extension:diseaseStatus",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.diseaseStatus` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.diseaseStatus` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.diseaseStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.comorbidity",
+          "display": "comorbidity",
+          "target": [
+            {
+              "code": "Extension.extension:comorbidity",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.comorbidity` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.comorbidity` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.comorbidity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.indication",
+          "display": "indication",
+          "target": [
+            {
+              "code": "Extension.extension:indication",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.indication` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.indication` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.indication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.applicability",
+          "display": "applicability",
+          "target": [
+            {
+              "code": "Extension.extension:applicability",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.applicability` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.applicability` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.applicability` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy",
+          "display": "otherTherapy",
+          "target": [
+            {
+              "code": "Extension.extension:otherTherapy",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy.relationshipType",
+          "display": "relationshipType",
+          "target": [
+            {
+              "code": "Extension.extension:otherTherapy.extension:relationshipType",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication.otherTherapy` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy.treatment",
+          "display": "treatment",
+          "target": [
+            {
+              "code": "Extension.extension:otherTherapy.extension:treatment",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy.treatment` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication.otherTherapy` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.treatment` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.treatment` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.contraindication.otherTherapy",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy",
+          "display": "otherTherapy",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy.relationshipType",
+          "display": "relationshipType",
+          "target": [
+            {
+              "code": "Extension.extension:relationshipType",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication.otherTherapy` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.relationshipType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.contraindication.otherTherapy.treatment",
+          "display": "treatment",
+          "target": [
+            {
+              "code": "Extension.extension:treatment",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy.treatment` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication.otherTherapy` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.treatment` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy.treatment` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.otherTherapy",
+          "display": "otherTherapy",
+          "target": [
+            {
+              "code": "Extension.extension:otherTherapy",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.otherTherapy` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.otherTherapy` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.otherTherapy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.indication",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.indication",
+          "display": "indication",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.diseaseSymptomProcedure",
+          "display": "diseaseSymptomProcedure",
+          "target": [
+            {
+              "code": "Extension.extension:diseaseSymptomProcedure",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.diseaseSymptomProcedure` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.diseaseSymptomProcedure` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.diseaseSymptomProcedure` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.diseaseStatus",
+          "display": "diseaseStatus",
+          "target": [
+            {
+              "code": "Extension.extension:diseaseStatus",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.diseaseStatus` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.diseaseStatus` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.diseaseStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.comorbidity",
+          "display": "comorbidity",
+          "target": [
+            {
+              "code": "Extension.extension:comorbidity",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.comorbidity` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.comorbidity` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.comorbidity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.intendedEffect",
+          "display": "intendedEffect",
+          "target": [
+            {
+              "code": "Extension.extension:intendedEffect",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.intendedEffect` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.intendedEffect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.intendedEffect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.duration[x]",
+          "display": "duration[x]",
+          "target": [
+            {
+              "code": "Extension.extension:duration",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.duration[x]` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.duration[x]` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.duration[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.undesirableEffect",
+          "display": "undesirableEffect",
+          "target": [
+            {
+              "code": "Extension.extension:undesirableEffect",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.undesirableEffect` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.undesirableEffect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.undesirableEffect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.applicability",
+          "display": "applicability",
+          "target": [
+            {
+              "code": "Extension.extension:applicability",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.applicability` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.applicability` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.applicability` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.indication.otherTherapy",
+          "display": "otherTherapy",
+          "target": [
+            {
+              "code": "Extension.extension:otherTherapy",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.indication.otherTherapy` is part of an existing definition because parent element `ClinicalUseDefinition.indication` requires a cross-version extension.\nElement `ClinicalUseDefinition.indication.otherTherapy` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication.otherTherapy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.interaction",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.interaction",
+          "display": "interaction",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.interactant",
+          "display": "interactant",
+          "target": [
+            {
+              "code": "Extension.extension:interactant",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.interactant` is part of an existing definition because parent element `ClinicalUseDefinition.interaction` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.interactant` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.interactant` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.interactant.item[x]",
+          "display": "item[x]",
+          "target": [
+            {
+              "code": "Extension.extension:interactant.extension:item",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.interactant.item[x]` is part of an existing definition because parent element `ClinicalUseDefinition.interaction.interactant` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.interactant.item[x]` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.interactant.item[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:type",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.type` is part of an existing definition because parent element `ClinicalUseDefinition.interaction` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.type` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.effect",
+          "display": "effect",
+          "target": [
+            {
+              "code": "Extension.extension:effect",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.effect` is part of an existing definition because parent element `ClinicalUseDefinition.interaction` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.effect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.effect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.incidence",
+          "display": "incidence",
+          "target": [
+            {
+              "code": "Extension.extension:incidence",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.incidence` is part of an existing definition because parent element `ClinicalUseDefinition.interaction` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.incidence` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.incidence` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.interaction.management",
+          "display": "management",
+          "target": [
+            {
+              "code": "Extension.extension:management",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.interaction.management` is part of an existing definition because parent element `ClinicalUseDefinition.interaction` requires a cross-version extension.\nElement `ClinicalUseDefinition.interaction.management` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction.management` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.population",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.population",
+          "display": "population",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.population` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.population` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.library",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.library",
+          "display": "library",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.library` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.library` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.undesirableEffect",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.undesirableEffect",
+          "display": "undesirableEffect",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.undesirableEffect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.undesirableEffect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.undesirableEffect.symptomConditionEffect",
+          "display": "symptomConditionEffect",
+          "target": [
+            {
+              "code": "Extension.extension:symptomConditionEffect",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.undesirableEffect.symptomConditionEffect` is part of an existing definition because parent element `ClinicalUseDefinition.undesirableEffect` requires a cross-version extension.\nElement `ClinicalUseDefinition.undesirableEffect.symptomConditionEffect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.undesirableEffect.symptomConditionEffect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.undesirableEffect.classification",
+          "display": "classification",
+          "target": [
+            {
+              "code": "Extension.extension:classification",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.undesirableEffect.classification` is part of an existing definition because parent element `ClinicalUseDefinition.undesirableEffect` requires a cross-version extension.\nElement `ClinicalUseDefinition.undesirableEffect.classification` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.undesirableEffect.classification` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.undesirableEffect.frequencyOfOccurrence",
+          "display": "frequencyOfOccurrence",
+          "target": [
+            {
+              "code": "Extension.extension:frequencyOfOccurrence",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.undesirableEffect.frequencyOfOccurrence` is part of an existing definition because parent element `ClinicalUseDefinition.undesirableEffect` requires a cross-version extension.\nElement `ClinicalUseDefinition.undesirableEffect.frequencyOfOccurrence` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.undesirableEffect.frequencyOfOccurrence` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.warning",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ClinicalUseDefinition.warning",
+          "display": "warning",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.warning` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.warning` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.warning.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.warning.description` is part of an existing definition because parent element `ClinicalUseDefinition.warning` requires a cross-version extension.\nElement `ClinicalUseDefinition.warning.description` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.warning.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ClinicalUseDefinition.warning.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `ClinicalUseDefinition.warning.code` is part of an existing definition because parent element `ClinicalUseDefinition.warning` requires a cross-version extension.\nElement `ClinicalUseDefinition.warning.code` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.warning.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-HealthcareService",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-HealthcareService",
+  "version": "0.1.1",
+  "name": "Profile_R5_HealthcareService_R4",
+  "title": "Cross-version Profile for R5.HealthcareService resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.7819178-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 HealthcareService resource content to be represented via FHIR R4 HealthcareService resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService",
+        "path": "HealthcareService",
+        "short": "Cross-version Profile for R5.HealthcareService resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 HealthcareService resource content to be represented via FHIR R4 HealthcareService resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "HealthcareService.extension",
+        "path": "HealthcareService.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "HealthcareService.extension:offeredIn",
+        "path": "HealthcareService.extension",
+        "sliceName": "offeredIn",
+        "short": "R5: The service within which this service is offered (new)",
+        "definition": "R5: `HealthcareService.offeredIn` (new:Reference(HealthcareService))",
+        "comment": "Element `HealthcareService.offeredIn` has a context of HealthcareService based on following the parent source element upwards and mapping to `HealthcareService`.\nElement `HealthcareService.offeredIn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nFor example, if there is a generic Radiology service that offers CT Scans, MRIs, etc.  You could have HealthcareService resources for the CT Scans and MRIs, which have an offeredIn reference to the Radiology HealthcareService.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-HealthcareService.offeredIn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.extension:contact",
+        "path": "HealthcareService.extension",
+        "sliceName": "contact",
+        "short": "R5: Official contact details for the HealthcareService (new)",
+        "definition": "R5: `HealthcareService.contact` (new:ExtendedContactDetail)",
+        "comment": "Element `HealthcareService.contact` has a context of HealthcareService based on following the parent source element upwards and mapping to `HealthcareService`.\nElement `HealthcareService.contact` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe address/telecom use code 'home' are not to be used. Note that these contacts are not the contact details of people who provide the service (that would be through PractitionerRole), these are official contacts for the HealthcareService itself for specific purposes. E.g. Mailing Addresses, Billing Addresses, Contact numbers for Booking or Billing Enquiries, general web address, web address for online bookings etc.\n\nIf this is empty (or the type of interest is empty), refer to the location's contacts.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-HealthcareService.contact"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

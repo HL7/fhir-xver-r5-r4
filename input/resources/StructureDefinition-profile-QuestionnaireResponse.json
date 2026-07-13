@@ -1,0 +1,150 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-QuestionnaireResponse",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-QuestionnaireResponse",
+  "version": "0.1.1",
+  "name": "Profile_R5_QuestionnaireResponse_R4",
+  "title": "Cross-version Profile for R5.QuestionnaireResponse resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0010394-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 QuestionnaireResponse resource content to be represented via FHIR R4 QuestionnaireResponse resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "QuestionnaireResponse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "QuestionnaireResponse",
+        "path": "QuestionnaireResponse",
+        "short": "Cross-version Profile for R5.QuestionnaireResponse resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 QuestionnaireResponse resource content to be represented via FHIR R4 QuestionnaireResponse resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-QuestionnaireResponse-identifier",
+            "requirements": "Cardinality constraints for identifier from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "QuestionnaireResponse.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-QuestionnaireResponse.identifier').exists() implies QuestionnaireResponse.identifier.exists()"
+          }
+        ]
+      },
+      {
+        "id": "QuestionnaireResponse.extension",
+        "path": "QuestionnaireResponse.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "QuestionnaireResponse.extension:identifier",
+        "path": "QuestionnaireResponse.extension",
+        "sliceName": "identifier",
+        "short": "R5: Business identifier for this set of answers",
+        "definition": "R5: `QuestionnaireResponse.identifier`",
+        "comment": "Element `QuestionnaireResponse.identifier` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `QuestionnaireResponse.identifier` is mapped to FHIR R4 element `QuestionnaireResponse.identifier` as `SourceIsBroaderThanTarget`.\nNote: This is a business identifier, not a resource identifier (see [discussion](https://hl7.org/fhir/resource.htm#identifiers)).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-QuestionnaireResponse.identifier"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-QuestionnaireResponse-identifier"
+        ]
+      },
+      {
+        "id": "QuestionnaireResponse.source.extension",
+        "path": "QuestionnaireResponse.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "QuestionnaireResponse.source.extension:source",
+        "path": "QuestionnaireResponse.source.extension",
+        "sliceName": "source",
+        "short": "R5: The individual or device that answered the questions",
+        "definition": "R5: `QuestionnaireResponse.source`",
+        "comment": "Element `QuestionnaireResponse.source` is mapped to FHIR R4 element `QuestionnaireResponse.source` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `QuestionnaireResponse.source` with unmapped reference targets: Device, Organization.\nIf not specified, no inference can be made about who provided the data. Device should only be used if it directly determined the answers, not if it was merely used as a capture tool to record answers provided by others. In the latter case, information about the physical device, software, etc. would be captured using Provenance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

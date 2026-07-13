@@ -1,0 +1,130 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-List.subject",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-List.subject",
+  "version": "0.1.1",
+  "name": "ExtensionList_Subject",
+  "title": "R5: If all resources have the same subject(s) additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `List.subject` additional types from child elements (display, identifier, reference, type)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `List.subject` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`List.subject` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/Resource)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `List.subject` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/Resource)`\n*  R4B: `List.subject` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Patient,http://hl7.org/fhir/StructureDefinition/Group,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/Location)`\n*  R4: `List.subject` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Patient,http://hl7.org/fhir/StructureDefinition/Group,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/Location)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `List.subject` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `List.subject` is mapped to FHIR R4 element `List.subject` as `SourceIsBroaderThanTarget`.\nThe mappings for `List.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `List.subject` with unmapped reference targets: Resource.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "List"
+    },
+    {
+      "type": "element",
+      "expression": "List.subject"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: If all resources have the same subject(s) additional types",
+        "definition": "R5: `List.subject` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `List.subject` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `List.subject` is mapped to FHIR R4 element `List.subject` as `SourceIsBroaderThanTarget`.\nThe mappings for `List.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `List.subject` with unmapped reference targets: Resource.\nSome purely arbitrary lists do not have a common subject, so this is optional. Lists having multiple subjects may raise challenges for systems that base access control or other security considerations on linkages to 'subject'. E.g. if a List is associated with multiple Patient subjects, then it would be nominally part of multiple patient compartments, which might drive access rights.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-List.subject"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "If all resources have the same subject(s)",
+        "definition": "The common subject(s) (or patient(s)) of the resources that are in the list if there is one (or a set of subjects).",
+        "comment": "Some purely arbitrary lists do not have a common subject, so this is optional. Lists having multiple subjects may raise challenges for systems that base access control or other security considerations on linkages to 'subject'. E.g. if a List is associated with multiple Patient subjects, then it would be nominally part of multiple patient compartments, which might drive access rights.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

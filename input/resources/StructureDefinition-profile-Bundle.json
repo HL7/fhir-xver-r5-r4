@@ -1,0 +1,178 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Bundle",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Bundle",
+  "version": "0.1.1",
+  "name": "Profile_R5_Bundle_R4",
+  "title": "Cross-version Profile for R5.Bundle resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.4764209-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Bundle resource content to be represented via FHIR R4 Bundle resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle",
+        "path": "Bundle",
+        "short": "Cross-version Profile for R5.Bundle resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Bundle resource content to be represented via FHIR R4 Bundle resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.extension",
+        "path": "Bundle.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.extension:issues",
+        "path": "Bundle.extension",
+        "sliceName": "issues",
+        "short": "R5: Issues with the Bundle (new)",
+        "definition": "R5: `Bundle.issues` (new:Resource[OperationOutcome])",
+        "comment": "Element `Bundle.issues` has a context of Bundle based on following the parent source element upwards and mapping to `Bundle`.\nElement `Bundle.issues` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nUsage notes: These issues and warnings must apply to the Bundle as a whole, not to individual entries.Messages relating to the processing of individual entries (e.g. in a batch or transaction) SHALL be reported in the entry.response.outcome for that entry.  If there are errors that arise in the creation of the Bundle, then that should be handled by an OperationOutcome being returned instead of the Bundle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Bundle.issues"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.type.extension",
+        "path": "Bundle.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.type.extension:type",
+        "path": "Bundle.type.extension",
+        "sliceName": "type",
+        "short": "R5: document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection | subscription-notification",
+        "definition": "R5: `Bundle.type`",
+        "comment": "Element `Bundle.type` is mapped to FHIR R4 element `Bundle.type` as `SourceIsBroaderThanTarget`.\nIt's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Bundle.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.link.relation.extension",
+        "path": "Bundle.link.relation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.link.relation.extension:relation",
+        "path": "Bundle.link.relation.extension",
+        "sliceName": "relation",
+        "short": "R5: relation",
+        "definition": "R5: `Bundle.link.relation`",
+        "comment": "Element `Bundle.link.relation` is mapped to FHIR R4 element `Bundle.link.relation` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Bundle.link.relation"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

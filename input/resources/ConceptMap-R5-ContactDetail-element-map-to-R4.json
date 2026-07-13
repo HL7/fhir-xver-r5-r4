@@ -1,0 +1,60 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ContactDetail-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ContactDetail-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ContactDetailElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ContactDetail to FHIR R4 ContactDetail",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.696546-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ContactDetail to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/ContactDetail",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "ContactDetail.name",
+              "display": "ContactDetail.name",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactDetail.name` is mapped to FHIR R4 element `ContactDetail.name` as `Equivalent`.\nIf there is no named individual, the telecom information is for the organization as a whole."
+            },
+            {
+              "code": "ContactDetail",
+              "display": "ContactDetail",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactDetail.name` is mapped to FHIR R4 element `ContactDetail.name` as `Equivalent`.\nIf there is no named individual, the telecom information is for the organization as a whole."
+            }
+          ]
+        },
+        {
+          "code": "ContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "ContactDetail.telecom",
+              "display": "ContactDetail.telecom",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactDetail.telecom` is mapped to FHIR R4 element `ContactDetail.telecom` as `Equivalent`."
+            },
+            {
+              "code": "ContactDetail",
+              "display": "ContactDetail",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactDetail.telecom` is mapped to FHIR R4 element `ContactDetail.telecom` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

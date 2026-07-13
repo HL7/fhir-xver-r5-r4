@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-CareTeam",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-CareTeam",
+  "version": "0.1.1",
+  "name": "Profile_R5_CareTeam_R4",
+  "title": "Cross-version Profile for R5.CareTeam resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.496767-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 CareTeam resource content to be represented via FHIR R4 CareTeam resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CareTeam",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CareTeam",
+        "path": "CareTeam",
+        "short": "Cross-version Profile for R5.CareTeam resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 CareTeam resource content to be represented via FHIR R4 CareTeam resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CareTeam.participant.extension",
+        "path": "CareTeam.participant.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CareTeam.participant.extension:coverage",
+        "path": "CareTeam.participant.extension",
+        "sliceName": "coverage",
+        "short": "R5: When the member is generally available within this care team (new)",
+        "definition": "R5: `CareTeam.participant.coverage[x]` (new:Period, Timing)",
+        "comment": "Element `CareTeam.participant.coverage[x]` has a context of CareTeam.participant based on following the parent source element upwards and mapping to `CareTeam`.\nElement `CareTeam.participant.coverage[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis is populated while creating / managing the CareTeam to ensure there is coverage when servicing CarePlan activities from the Schedule.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CareTeam.participant.coverage"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

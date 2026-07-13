@@ -1,0 +1,197 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-AdverseEvent.supportingInfo",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AdverseEvent.supportingInfo",
+  "version": "0.1.1",
+  "name": "ExtensionAdverseEvent_SupportingInfo",
+  "title": "R5: Supporting information relevant to the event (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `AdverseEvent.supportingInfo` (new:BackboneElement)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `AdverseEvent.supportingInfo` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`AdverseEvent.supportingInfo` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `AdverseEvent.supportingInfo` 0..* `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `AdverseEvent.supportingInfo` has a context of AdverseEvent based on following the parent source element upwards and mapping to `AdverseEvent`.\nElement `AdverseEvent.supportingInfo` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "AdverseEvent"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Supporting information relevant to the event (new)",
+        "definition": "R5: `AdverseEvent.supportingInfo` (new:BackboneElement)",
+        "comment": "Element `AdverseEvent.supportingInfo` has a context of AdverseEvent based on following the parent source element upwards and mapping to `AdverseEvent`.\nElement `AdverseEvent.supportingInfo` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:item",
+        "path": "Extension.extension",
+        "sliceName": "item",
+        "short": "R5: Subject medical history or document relevant to this adverse event (new)",
+        "definition": "R5: `AdverseEvent.supportingInfo.item[x]` (new:CodeableConcept, Reference(Condition,Observation,AllergyIntolerance,FamilyMemberHistory,Immunization,Procedure,DocumentReference,MedicationAdministration,MedicationStatement,QuestionnaireResponse))",
+        "comment": "Element `AdverseEvent.supportingInfo.item[x]` is part of an existing definition because parent element `AdverseEvent.supportingInfo` requires a cross-version extension.\nElement `AdverseEvent.supportingInfo.item[x]` has a context of AdverseEvent based on following the parent source element upwards and mapping to `AdverseEvent`.\nElement `AdverseEvent.supportingInfo.item[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `AdverseEvent.supportingInfo.item[x]` is part of an existing definition because parent element `AdverseEvent.supportingInfo` requires a cross-version extension.\nElement `AdverseEvent.supportingInfo.item[x]` has a context of AdverseEvent based on following the parent source element upwards and mapping to `AdverseEvent`.\nElement `AdverseEvent.supportingInfo.item[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:item.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "item"
+      },
+      {
+        "id": "Extension.extension:item.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Subject medical history or document relevant to this adverse event",
+        "definition": "Relevant past history for the subject. In a clinical care context, an example being a patient had an adverse event following a pencillin administration and the patient had a previously documented penicillin allergy. In a clinical trials context, an example is a bunion or rash that was present prior to the study. Additionally, the supporting item can be a document that is relevant to this instance of the adverse event that is not part of the subject's medical history. For example, a clinical note, staff list, or material safety data sheet (MSDS).  Supporting information is not a contributing factor, preventive action, or mitigating action.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+              "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+              "http://hl7.org/fhir/StructureDefinition/Immunization",
+              "http://hl7.org/fhir/StructureDefinition/Procedure",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+            ]
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AdverseEvent.supportingInfo"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

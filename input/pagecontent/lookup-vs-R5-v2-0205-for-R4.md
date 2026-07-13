@@ -1,0 +1,15 @@
+### Lookup for [FHIR R5](https://hl7.org/fhir/R5/) ValueSet Hl7VSPriceType:[`http://terminology.hl7.org/ValueSet/v2-0205`](https://hl7.org/fhir/R5/valueset-v2-0205.html) for use in [FHIR R4](https://hl7.org/fhir/R4/)
+
+The FHIR R5 ValueSet Hl7VSPriceType has no mapping  to FHIR R4.
+
+| Source System | Code | Display | Has XVer | Target System | Code | Display |
+| -------------- | ---- | ------- | -------- | ------------- | ---- | ------- |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `AP` | administrative price or handling fee | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `DC` | direct unit cost | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `IC` | indirect unit cost | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `PF` | professional fee for performing provider | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `TF` | technology fee for use of equipment | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `TP` | total price | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v2-0205` | `UP` | unit price, may be based on length of procedure or service | Yes |  |  |  |
+{: .grid }
+

@@ -1,0 +1,356 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ManufacturedItemDefinition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ManufacturedItemDefinition",
+  "version": "0.1.1",
+  "name": "Profile_R5_ManufacturedItemDefinition_R4",
+  "title": "Cross-version Profile for R5.ManufacturedItemDefinition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8467591-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ManufacturedItemDefinition resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.ManufacturedItemDefinition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ManufacturedItemDefinition resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:name",
+        "path": "Basic.extension",
+        "sliceName": "name",
+        "short": "R5: A descriptive name applied to this item (new)",
+        "definition": "R5: `ManufacturedItemDefinition.name` (new:string)",
+        "comment": "Element `ManufacturedItemDefinition.name` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:manufacturedDoseForm",
+        "path": "Basic.extension",
+        "sliceName": "manufacturedDoseForm",
+        "short": "R5: Dose form as manufactured (before any necessary transformation) (new)",
+        "definition": "R5: `ManufacturedItemDefinition.manufacturedDoseForm` (new:CodeableConcept)",
+        "comment": "Element `ManufacturedItemDefinition.manufacturedDoseForm` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.manufacturedDoseForm` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.manufacturedDoseForm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:unitOfPresentation",
+        "path": "Basic.extension",
+        "sliceName": "unitOfPresentation",
+        "short": "R5: The “real-world” units in which the quantity of the item is described (new)",
+        "definition": "R5: `ManufacturedItemDefinition.unitOfPresentation` (new:CodeableConcept)",
+        "comment": "Element `ManufacturedItemDefinition.unitOfPresentation` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.unitOfPresentation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.unitOfPresentation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:manufacturer",
+        "path": "Basic.extension",
+        "sliceName": "manufacturer",
+        "short": "R5: Manufacturer of the item, one of several possible (new)",
+        "definition": "R5: `ManufacturedItemDefinition.manufacturer` (new:Reference(Organization))",
+        "comment": "Element `ManufacturedItemDefinition.manufacturer` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.manufacturer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.manufacturer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:marketingStatus",
+        "path": "Basic.extension",
+        "sliceName": "marketingStatus",
+        "short": "R5: Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated (new)",
+        "definition": "R5: `ManufacturedItemDefinition.marketingStatus` (new:MarketingStatus)",
+        "comment": "Element `ManufacturedItemDefinition.marketingStatus` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.marketingStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.marketingStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:ingredient",
+        "path": "Basic.extension",
+        "sliceName": "ingredient",
+        "short": "R5: The ingredients of this manufactured item. Only needed if these are not specified by incoming references from the Ingredient resource (new)",
+        "definition": "R5: `ManufacturedItemDefinition.ingredient` (new:CodeableConcept)",
+        "comment": "Element `ManufacturedItemDefinition.ingredient` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.ingredient` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.ingredient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:property",
+        "path": "Basic.extension",
+        "sliceName": "property",
+        "short": "R5: General characteristics of this item (new)",
+        "definition": "R5: `ManufacturedItemDefinition.property` (new:BackboneElement)",
+        "comment": "Element `ManufacturedItemDefinition.property` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.property` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.property"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:component",
+        "path": "Basic.extension",
+        "sliceName": "component",
+        "short": "R5: Physical parts of the manufactured item, that it is intrisically made from. This is distinct from the ingredients that are part of its chemical makeup (new)",
+        "definition": "R5: `ManufacturedItemDefinition.component` (new:BackboneElement)",
+        "comment": "Element `ManufacturedItemDefinition.component` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.component` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.component"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension",
+        "path": "Basic.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.modifierExtension:status",
+        "path": "Basic.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: draft | active | retired | unknown (new)",
+        "definition": "R5: `ManufacturedItemDefinition.status` (new:code)",
+        "comment": "Element `ManufacturedItemDefinition.status` is not mapped to FHIR R4, since FHIR R5 `ManufacturedItemDefinition` is not mapped.\nElement `ManufacturedItemDefinition.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAllows filtering of manufactured items that are appropriate for use versus not.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "ManufacturedItemDefinition"
+      }
+    ]
+  }
+}

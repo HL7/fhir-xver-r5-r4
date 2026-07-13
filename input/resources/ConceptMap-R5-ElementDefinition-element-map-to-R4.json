@@ -1,0 +1,1348 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ElementDefinition-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ElementDefinition-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ElementDefinitionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ElementDefinition to FHIR R4 ElementDefinition",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7348496-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ElementDefinition to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ElementDefinition.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "ElementDefinition.path",
+              "display": "ElementDefinition.path",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.path` is mapped to FHIR R4 element `ElementDefinition.path` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.path` is mapped to FHIR R4 element `ElementDefinition.path` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.representation",
+          "display": "representation",
+          "target": [
+            {
+              "code": "ElementDefinition.representation",
+              "display": "ElementDefinition.representation",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.representation` is mapped to FHIR R4 element `ElementDefinition.representation` as `Equivalent`.\nIn resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.)."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.representation` is mapped to FHIR R4 element `ElementDefinition.representation` as `Equivalent`.\nIn resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.sliceName",
+          "display": "sliceName",
+          "target": [
+            {
+              "code": "ElementDefinition.sliceName",
+              "display": "ElementDefinition.sliceName",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.sliceName` is mapped to FHIR R4 element `ElementDefinition.sliceName` as `Equivalent`.\nThe name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.)."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.sliceName` is mapped to FHIR R4 element `ElementDefinition.sliceName` as `Equivalent`.\nThe name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.sliceIsConstraining",
+          "display": "sliceIsConstraining",
+          "target": [
+            {
+              "code": "ElementDefinition.sliceIsConstraining",
+              "display": "ElementDefinition.sliceIsConstraining",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.sliceIsConstraining` is mapped to FHIR R4 element `ElementDefinition.sliceIsConstraining` as `Equivalent`.\nIf set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.sliceIsConstraining` is mapped to FHIR R4 element `ElementDefinition.sliceIsConstraining` as `Equivalent`.\nIf set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.label",
+          "display": "label",
+          "target": [
+            {
+              "code": "ElementDefinition.label",
+              "display": "ElementDefinition.label",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.label` is mapped to FHIR R4 element `ElementDefinition.label` as `Equivalent`.\nSee also the extension [http://hl7.org/fhir/StructureDefinition/elementdefinition-question](http://hl7.org/fhir/extensions/StructureDefinition-elementdefinition-question.html)."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.label` is mapped to FHIR R4 element `ElementDefinition.label` as `Equivalent`.\nSee also the extension [http://hl7.org/fhir/StructureDefinition/elementdefinition-question](http://hl7.org/fhir/extensions/StructureDefinition-elementdefinition-question.html)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "ElementDefinition.code",
+              "display": "ElementDefinition.code",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.code` is mapped to FHIR R4 element `ElementDefinition.code` as `Equivalent`.\nThe concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.code` is mapped to FHIR R4 element `ElementDefinition.code` as `Equivalent`.\nThe concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing",
+          "display": "slicing",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing",
+              "display": "ElementDefinition.slicing",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing` is mapped to FHIR R4 element `ElementDefinition.slicing` as `Equivalent`.\nThe first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing` is mapped to FHIR R4 element `ElementDefinition.slicing` as `Equivalent`.\nThe first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.discriminator",
+          "display": "discriminator",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.discriminator",
+              "display": "ElementDefinition.slicing.discriminator",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing.discriminator` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator` as `Equivalent`.\nIf there is no discriminator, the content is hard to process, so this should be avoided."
+            },
+            {
+              "code": "ElementDefinition.slicing",
+              "display": "ElementDefinition.slicing",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing.discriminator` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator` as `Equivalent`.\nIf there is no discriminator, the content is hard to process, so this should be avoided."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.discriminator.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.discriminator.type",
+              "display": "ElementDefinition.slicing.discriminator.type",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing.discriminator.type` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator.type` as `SourceIsBroaderThanTarget`.\n'pattern' is deprecated - it works exactly the same as 'value'."
+            },
+            {
+              "code": "ElementDefinition.slicing.discriminator",
+              "display": "ElementDefinition.slicing.discriminator",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.slicing.discriminator.type` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator.type` as `SourceIsBroaderThanTarget`.\n'pattern' is deprecated - it works exactly the same as 'value'."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.discriminator.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.discriminator.path",
+              "display": "ElementDefinition.slicing.discriminator.path",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.discriminator.path` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator.path` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.slicing.discriminator",
+              "display": "ElementDefinition.slicing.discriminator",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.discriminator.path` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator.path` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.description",
+              "display": "ElementDefinition.slicing.description",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.description` is mapped to FHIR R4 element `ElementDefinition.slicing.description` as `Equivalent`.\nIf it's really not possible to differentiate them, the design should be re-evaluated to make the content usable."
+            },
+            {
+              "code": "ElementDefinition.slicing",
+              "display": "ElementDefinition.slicing",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.description` is mapped to FHIR R4 element `ElementDefinition.slicing.description` as `Equivalent`.\nIf it's really not possible to differentiate them, the design should be re-evaluated to make the content usable."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.ordered",
+          "display": "ordered",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.ordered",
+              "display": "ElementDefinition.slicing.ordered",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.ordered` is mapped to FHIR R4 element `ElementDefinition.slicing.ordered` as `Equivalent`.\nOrder should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable."
+            },
+            {
+              "code": "ElementDefinition.slicing",
+              "display": "ElementDefinition.slicing",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.ordered` is mapped to FHIR R4 element `ElementDefinition.slicing.ordered` as `Equivalent`.\nOrder should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.slicing.rules",
+          "display": "rules",
+          "target": [
+            {
+              "code": "ElementDefinition.slicing.rules",
+              "display": "ElementDefinition.slicing.rules",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.rules` is mapped to FHIR R4 element `ElementDefinition.slicing.rules` as `Equivalent`.\nAllowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile."
+            },
+            {
+              "code": "ElementDefinition.slicing",
+              "display": "ElementDefinition.slicing",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.rules` is mapped to FHIR R4 element `ElementDefinition.slicing.rules` as `Equivalent`.\nAllowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.short",
+          "display": "short",
+          "target": [
+            {
+              "code": "ElementDefinition.short",
+              "display": "ElementDefinition.short",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.short` is mapped to FHIR R4 element `ElementDefinition.short` as `Equivalent`.\nIt is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.short` is mapped to FHIR R4 element `ElementDefinition.short` as `Equivalent`.\nIt is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.definition",
+          "display": "definition",
+          "target": [
+            {
+              "code": "ElementDefinition.definition",
+              "display": "ElementDefinition.definition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.definition` is mapped to FHIR R4 element `ElementDefinition.definition` as `Equivalent`.\nIt is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.definition` is mapped to FHIR R4 element `ElementDefinition.definition` as `Equivalent`.\nIt is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.comment",
+          "display": "comment",
+          "target": [
+            {
+              "code": "ElementDefinition.comment",
+              "display": "ElementDefinition.comment",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.comment` is mapped to FHIR R4 element `ElementDefinition.comment` as `Equivalent`.\nIf it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.comment` is mapped to FHIR R4 element `ElementDefinition.comment` as `Equivalent`.\nIf it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.requirements",
+          "display": "requirements",
+          "target": [
+            {
+              "code": "ElementDefinition.requirements",
+              "display": "ElementDefinition.requirements",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.requirements` is mapped to FHIR R4 element `ElementDefinition.requirements` as `Equivalent`.\nThis element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.requirements` is mapped to FHIR R4 element `ElementDefinition.requirements` as `Equivalent`.\nThis element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.alias",
+          "display": "alias",
+          "target": [
+            {
+              "code": "ElementDefinition.alias",
+              "display": "ElementDefinition.alias",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.alias` is mapped to FHIR R4 element `ElementDefinition.alias` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.alias` is mapped to FHIR R4 element `ElementDefinition.alias` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.min",
+          "display": "min",
+          "target": [
+            {
+              "code": "ElementDefinition.min",
+              "display": "ElementDefinition.min",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.min` is mapped to FHIR R4 element `ElementDefinition.min` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.min` is mapped to FHIR R4 element `ElementDefinition.min` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.max",
+          "display": "max",
+          "target": [
+            {
+              "code": "ElementDefinition.max",
+              "display": "ElementDefinition.max",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.max` is mapped to FHIR R4 element `ElementDefinition.max` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.max` is mapped to FHIR R4 element `ElementDefinition.max` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.base",
+          "display": "base",
+          "target": [
+            {
+              "code": "ElementDefinition.base",
+              "display": "ElementDefinition.base",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.base` is mapped to FHIR R4 element `ElementDefinition.base` as `Equivalent`.\nThe base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.base` is mapped to FHIR R4 element `ElementDefinition.base` as `Equivalent`.\nThe base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.base.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "ElementDefinition.base.path",
+              "display": "ElementDefinition.base.path",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.path` is mapped to FHIR R4 element `ElementDefinition.base.path` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.base",
+              "display": "ElementDefinition.base",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.path` is mapped to FHIR R4 element `ElementDefinition.base.path` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.base.min",
+          "display": "min",
+          "target": [
+            {
+              "code": "ElementDefinition.base.min",
+              "display": "ElementDefinition.base.min",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.min` is mapped to FHIR R4 element `ElementDefinition.base.min` as `Equivalent`.\nThis is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this)."
+            },
+            {
+              "code": "ElementDefinition.base",
+              "display": "ElementDefinition.base",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.min` is mapped to FHIR R4 element `ElementDefinition.base.min` as `Equivalent`.\nThis is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.base.max",
+          "display": "max",
+          "target": [
+            {
+              "code": "ElementDefinition.base.max",
+              "display": "ElementDefinition.base.max",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.max` is mapped to FHIR R4 element `ElementDefinition.base.max` as `Equivalent`.\nThis is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max > 1. Also, some forms of code generation may differ."
+            },
+            {
+              "code": "ElementDefinition.base",
+              "display": "ElementDefinition.base",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.base.max` is mapped to FHIR R4 element `ElementDefinition.base.max` as `Equivalent`.\nThis is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max > 1. Also, some forms of code generation may differ."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.contentReference",
+          "display": "contentReference",
+          "target": [
+            {
+              "code": "ElementDefinition.contentReference",
+              "display": "ElementDefinition.contentReference",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.contentReference` is mapped to FHIR R4 element `ElementDefinition.contentReference` as `Equivalent`.\nContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.contentReference` is mapped to FHIR R4 element `ElementDefinition.contentReference` as `Equivalent`.\nContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.type` is mapped to FHIR R4 element `ElementDefinition.type` as `Equivalent`.\nThe Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice)."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.type` is mapped to FHIR R4 element `ElementDefinition.type` as `Equivalent`.\nThe Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "ElementDefinition.type.code",
+              "display": "ElementDefinition.type.code",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.code` is mapped to FHIR R4 element `ElementDefinition.type.code` as `Equivalent`.\nIf the element is a reference to another resource, this element contains \"Reference\", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient)."
+            },
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.code` is mapped to FHIR R4 element `ElementDefinition.type.code` as `Equivalent`.\nIf the element is a reference to another resource, this element contains \"Reference\", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type.profile",
+          "display": "profile",
+          "target": [
+            {
+              "code": "ElementDefinition.type.profile",
+              "display": "ElementDefinition.type.profile",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.profile` is mapped to FHIR R4 element `ElementDefinition.type.profile` as `Equivalent`.\nIt is possible to profile  backbone element (e.g. part of a resource), using the [http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element](http://hl7.org/fhir/extensions/StructureDefinition-elementdefinition-profile-element.html) extension."
+            },
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.profile` is mapped to FHIR R4 element `ElementDefinition.type.profile` as `Equivalent`.\nIt is possible to profile  backbone element (e.g. part of a resource), using the [http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element](http://hl7.org/fhir/extensions/StructureDefinition-elementdefinition-profile-element.html) extension."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type.targetProfile",
+          "display": "targetProfile",
+          "target": [
+            {
+              "code": "ElementDefinition.type.targetProfile",
+              "display": "ElementDefinition.type.targetProfile",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.targetProfile` is mapped to FHIR R4 element `ElementDefinition.type.targetProfile` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.targetProfile` is mapped to FHIR R4 element `ElementDefinition.type.targetProfile` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type.aggregation",
+          "display": "aggregation",
+          "target": [
+            {
+              "code": "ElementDefinition.type.aggregation",
+              "display": "ElementDefinition.type.aggregation",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.aggregation` is mapped to FHIR R4 element `ElementDefinition.type.aggregation` as `Equivalent`.\nSee [Aggregation Rules](https://hl7.org/fhir/elementdefin.html#aggregation) for further clarification."
+            },
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.aggregation` is mapped to FHIR R4 element `ElementDefinition.type.aggregation` as `Equivalent`.\nSee [Aggregation Rules](https://hl7.org/fhir/elementdefin.html#aggregation) for further clarification."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.type.versioning",
+          "display": "versioning",
+          "target": [
+            {
+              "code": "ElementDefinition.type.versioning",
+              "display": "ElementDefinition.type.versioning",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.versioning` is mapped to FHIR R4 element `ElementDefinition.type.versioning` as `Equivalent`.\nThe base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](https://hl7.org/fhir/elementdefin.html#aggregation) for further clarification."
+            },
+            {
+              "code": "ElementDefinition.type",
+              "display": "ElementDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.type.versioning` is mapped to FHIR R4 element `ElementDefinition.type.versioning` as `Equivalent`.\nThe base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](https://hl7.org/fhir/elementdefin.html#aggregation) for further clarification."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.defaultValue[x]",
+          "display": "defaultValue[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.defaultValue[x]",
+              "display": "ElementDefinition.defaultValue[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.defaultValue[x]` is mapped to FHIR R4 element `ElementDefinition.defaultValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.defaultValue[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.defaultValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nSpecifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. \n\nNo default values are ever defined in the FHIR specification, nor can they be defined in constraints (\"profiles\") on data types or resources. This element only exists so that default values may be defined in logical models."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.defaultValue[x]` is mapped to FHIR R4 element `ElementDefinition.defaultValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.defaultValue[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.defaultValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nSpecifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. \n\nNo default values are ever defined in the FHIR specification, nor can they be defined in constraints (\"profiles\") on data types or resources. This element only exists so that default values may be defined in logical models."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.meaningWhenMissing",
+          "display": "meaningWhenMissing",
+          "target": [
+            {
+              "code": "ElementDefinition.meaningWhenMissing",
+              "display": "ElementDefinition.meaningWhenMissing",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.meaningWhenMissing` is mapped to FHIR R4 element `ElementDefinition.meaningWhenMissing` as `Equivalent`.\nImplicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.meaningWhenMissing` is mapped to FHIR R4 element `ElementDefinition.meaningWhenMissing` as `Equivalent`.\nImplicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.orderMeaning",
+          "display": "orderMeaning",
+          "target": [
+            {
+              "code": "ElementDefinition.orderMeaning",
+              "display": "ElementDefinition.orderMeaning",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.orderMeaning` is mapped to FHIR R4 element `ElementDefinition.orderMeaning` as `Equivalent`.\nThis element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.orderMeaning` is mapped to FHIR R4 element `ElementDefinition.orderMeaning` as `Equivalent`.\nThis element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.fixed[x]",
+          "display": "fixed[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.fixed[x]",
+              "display": "ElementDefinition.fixed[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.fixed[x]` is mapped to FHIR R4 element `ElementDefinition.fixed[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.fixed[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.fixed[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nThis is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.fixed[x]` is mapped to FHIR R4 element `ElementDefinition.fixed[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.fixed[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.fixed[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nThis is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.pattern[x]",
+          "display": "pattern[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.pattern[x]",
+              "display": "ElementDefinition.pattern[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.pattern[x]` is mapped to FHIR R4 element `ElementDefinition.pattern[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.pattern[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.pattern[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nMostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x]."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.pattern[x]` is mapped to FHIR R4 element `ElementDefinition.pattern[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.pattern[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.pattern[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nMostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x]."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.example",
+          "display": "example",
+          "target": [
+            {
+              "code": "ElementDefinition.example",
+              "display": "ElementDefinition.example",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.example` is mapped to FHIR R4 element `ElementDefinition.example` as `Equivalent`.\nExamples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.example` is mapped to FHIR R4 element `ElementDefinition.example` as `Equivalent`.\nExamples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.example.label",
+          "display": "label",
+          "target": [
+            {
+              "code": "ElementDefinition.example.label",
+              "display": "ElementDefinition.example.label",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.example.label` is mapped to FHIR R4 element `ElementDefinition.example.label` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.example",
+              "display": "ElementDefinition.example",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.example.label` is mapped to FHIR R4 element `ElementDefinition.example.label` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.example.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.example.value[x]",
+              "display": "ElementDefinition.example.value[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.example.value[x]` is mapped to FHIR R4 element `ElementDefinition.example.value[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.example.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.example.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition.example`."
+            },
+            {
+              "code": "ElementDefinition.example",
+              "display": "ElementDefinition.example",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.example.value[x]` is mapped to FHIR R4 element `ElementDefinition.example.value[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.example.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.example.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition.example`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.minValue[x]",
+          "display": "minValue[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.minValue[x]",
+              "display": "ElementDefinition.minValue[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.minValue[x]` is mapped to FHIR R4 element `ElementDefinition.minValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.minValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.minValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as a canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.minValue[x]` is mapped to FHIR R4 element `ElementDefinition.minValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.minValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.minValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as a canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.maxValue[x]",
+          "display": "maxValue[x]",
+          "target": [
+            {
+              "code": "ElementDefinition.maxValue[x]",
+              "display": "ElementDefinition.maxValue[x]",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.maxValue[x]` is mapped to FHIR R4 element `ElementDefinition.maxValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.maxValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.maxValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as a canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.maxValue[x]` is mapped to FHIR R4 element `ElementDefinition.maxValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.maxValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.maxValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as a canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.maxLength",
+          "display": "maxLength",
+          "target": [
+            {
+              "code": "ElementDefinition.maxLength",
+              "display": "ElementDefinition.maxLength",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.maxLength` is mapped to FHIR R4 element `ElementDefinition.maxLength` as `Equivalent`.\nReceivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.maxLength` is mapped to FHIR R4 element `ElementDefinition.maxLength` as `Equivalent`.\nReceivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.condition",
+          "display": "condition",
+          "target": [
+            {
+              "code": "ElementDefinition.condition",
+              "display": "ElementDefinition.condition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.condition` is mapped to FHIR R4 element `ElementDefinition.condition` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.condition` is mapped to FHIR R4 element `ElementDefinition.condition` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint",
+          "display": "constraint",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.constraint` is mapped to FHIR R4 element `ElementDefinition.constraint` as `Equivalent`.\nConstraints should be declared on the \"context\" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.constraint` is mapped to FHIR R4 element `ElementDefinition.constraint` as `Equivalent`.\nConstraints should be declared on the \"context\" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.key",
+          "display": "key",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.key",
+              "display": "ElementDefinition.constraint.key",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.key` is mapped to FHIR R4 element `ElementDefinition.constraint.key` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.key` is mapped to FHIR R4 element `ElementDefinition.constraint.key` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.requirements",
+          "display": "requirements",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.requirements",
+              "display": "ElementDefinition.constraint.requirements",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.requirements` is mapped to FHIR R4 element `ElementDefinition.constraint.requirements` as `Equivalent`.\nTo be used if the reason for the constraint might not be intuitive to all implementers."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.requirements` is mapped to FHIR R4 element `ElementDefinition.constraint.requirements` as `Equivalent`.\nTo be used if the reason for the constraint might not be intuitive to all implementers."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.severity",
+          "display": "severity",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.severity",
+              "display": "ElementDefinition.constraint.severity",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.severity` is mapped to FHIR R4 element `ElementDefinition.constraint.severity` as `Equivalent`.\nThis allows constraints to be asserted as \"shall\" (error) and \"should\" (warning)."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.severity` is mapped to FHIR R4 element `ElementDefinition.constraint.severity` as `Equivalent`.\nThis allows constraints to be asserted as \"shall\" (error) and \"should\" (warning)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.human",
+          "display": "human",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.human",
+              "display": "ElementDefinition.constraint.human",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.human` is mapped to FHIR R4 element `ElementDefinition.constraint.human` as `Equivalent`.\nShould be expressed in business terms as much as possible."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.human` is mapped to FHIR R4 element `ElementDefinition.constraint.human` as `Equivalent`.\nShould be expressed in business terms as much as possible."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.expression",
+          "display": "expression",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.expression",
+              "display": "ElementDefinition.constraint.expression",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.expression` is mapped to FHIR R4 element `ElementDefinition.constraint.expression` as `Equivalent`.\nIn the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.expression` is mapped to FHIR R4 element `ElementDefinition.constraint.expression` as `Equivalent`.\nIn the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.constraint.source",
+          "display": "source",
+          "target": [
+            {
+              "code": "ElementDefinition.constraint.source",
+              "display": "ElementDefinition.constraint.source",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.source` is mapped to FHIR R4 element `ElementDefinition.constraint.source` as `Equivalent`.\nThis is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot."
+            },
+            {
+              "code": "ElementDefinition.constraint",
+              "display": "ElementDefinition.constraint",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.constraint.source` is mapped to FHIR R4 element `ElementDefinition.constraint.source` as `Equivalent`.\nThis is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mustSupport",
+          "display": "mustSupport",
+          "target": [
+            {
+              "code": "ElementDefinition.mustSupport",
+              "display": "ElementDefinition.mustSupport",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mustSupport` is mapped to FHIR R4 element `ElementDefinition.mustSupport` as `Equivalent`.\n\"Something meaningful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, the mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make mustSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](https://hl7.org/fhir/profiling.ht.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mustSupport` is mapped to FHIR R4 element `ElementDefinition.mustSupport` as `Equivalent`.\n\"Something meaningful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, the mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make mustSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](https://hl7.org/fhir/profiling.ht.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.isModifier",
+          "display": "isModifier",
+          "target": [
+            {
+              "code": "ElementDefinition.isModifier",
+              "display": "ElementDefinition.isModifier",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isModifier` is mapped to FHIR R4 element `ElementDefinition.isModifier` as `Equivalent`.\nOnly the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles (except in the special case of the defining a new extension). An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isModifier` is mapped to FHIR R4 element `ElementDefinition.isModifier` as `Equivalent`.\nOnly the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles (except in the special case of the defining a new extension). An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.isModifierReason",
+          "display": "isModifierReason",
+          "target": [
+            {
+              "code": "ElementDefinition.isModifierReason",
+              "display": "ElementDefinition.isModifierReason",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isModifierReason` is mapped to FHIR R4 element `ElementDefinition.isModifierReason` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isModifierReason` is mapped to FHIR R4 element `ElementDefinition.isModifierReason` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.isSummary",
+          "display": "isSummary",
+          "target": [
+            {
+              "code": "ElementDefinition.isSummary",
+              "display": "ElementDefinition.isSummary",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isSummary` is mapped to FHIR R4 element `ElementDefinition.isSummary` as `Equivalent`.\nSome resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance. When a request is made with _summary=true, serializers only include elements marked as 'isSummary = true'. With a few exceptions (listed below), all datatype properties are included in the summary form. In resource and datatype definitions, if an element has a descendant marked as isSummary=true or if it satisfies both of the following conditions, it must be marked as isSummary=true:\n* is at the root or has a parent that is 'mustSupport'\n* has a minimum cardinality of 1 or is a modifier element\n\nThe following datatype properties are exceptions, and are not marked as isSummary:\n* Attachment.data\n* Signature.data, Signature.targetFormat, Signature.sigFormat\n* Narrative.status, Narrative.div\n* SampledData.data."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.isSummary` is mapped to FHIR R4 element `ElementDefinition.isSummary` as `Equivalent`.\nSome resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance. When a request is made with _summary=true, serializers only include elements marked as 'isSummary = true'. With a few exceptions (listed below), all datatype properties are included in the summary form. In resource and datatype definitions, if an element has a descendant marked as isSummary=true or if it satisfies both of the following conditions, it must be marked as isSummary=true:\n* is at the root or has a parent that is 'mustSupport'\n* has a minimum cardinality of 1 or is a modifier element\n\nThe following datatype properties are exceptions, and are not marked as isSummary:\n* Attachment.data\n* Signature.data, Signature.targetFormat, Signature.sigFormat\n* Narrative.status, Narrative.div\n* SampledData.data."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.binding",
+          "display": "binding",
+          "target": [
+            {
+              "code": "ElementDefinition.binding",
+              "display": "ElementDefinition.binding",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.binding` is mapped to FHIR R4 element `ElementDefinition.binding` as `Equivalent`.\nFor a CodeableConcept, when no codes are allowed - only text, use a binding of strength \"required\" with a description explaining that no coded values are allowed and what sort of information to put in the \"text\" element."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.binding` is mapped to FHIR R4 element `ElementDefinition.binding` as `Equivalent`.\nFor a CodeableConcept, when no codes are allowed - only text, use a binding of strength \"required\" with a description explaining that no coded values are allowed and what sort of information to put in the \"text\" element."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.binding.strength",
+          "display": "strength",
+          "target": [
+            {
+              "code": "ElementDefinition.binding.strength",
+              "display": "ElementDefinition.binding.strength",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.strength` is mapped to FHIR R4 element `ElementDefinition.binding.strength` as `Equivalent`.\nFor further discussion, see [Using Terminologies](https://hl7.org/fhir/terminologies.html)."
+            },
+            {
+              "code": "ElementDefinition.binding",
+              "display": "ElementDefinition.binding",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.strength` is mapped to FHIR R4 element `ElementDefinition.binding.strength` as `Equivalent`.\nFor further discussion, see [Using Terminologies](https://hl7.org/fhir/terminologies.html)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.binding.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "ElementDefinition.binding.description",
+              "display": "ElementDefinition.binding.description",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.description` is mapped to FHIR R4 element `ElementDefinition.binding.description` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.binding",
+              "display": "ElementDefinition.binding",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.description` is mapped to FHIR R4 element `ElementDefinition.binding.description` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.binding.valueSet",
+          "display": "valueSet",
+          "target": [
+            {
+              "code": "ElementDefinition.binding.valueSet",
+              "display": "ElementDefinition.binding.valueSet",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.valueSet` is mapped to FHIR R4 element `ElementDefinition.binding.valueSet` as `Equivalent`.\nThe reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL)."
+            },
+            {
+              "code": "ElementDefinition.binding",
+              "display": "ElementDefinition.binding",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.binding.valueSet` is mapped to FHIR R4 element `ElementDefinition.binding.valueSet` as `Equivalent`.\nThe reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL)."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mapping",
+          "display": "mapping",
+          "target": [
+            {
+              "code": "ElementDefinition.mapping",
+              "display": "ElementDefinition.mapping",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.mapping` is mapped to FHIR R4 element `ElementDefinition.mapping` as `Equivalent`.\nMappings are not necessarily specific enough for safe translation."
+            },
+            {
+              "code": "ElementDefinition",
+              "display": "ElementDefinition",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.mapping` is mapped to FHIR R4 element `ElementDefinition.mapping` as `Equivalent`.\nMappings are not necessarily specific enough for safe translation."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mapping.identity",
+          "display": "identity",
+          "target": [
+            {
+              "code": "ElementDefinition.mapping.identity",
+              "display": "ElementDefinition.mapping.identity",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.identity` is mapped to FHIR R4 element `ElementDefinition.mapping.identity` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.mapping",
+              "display": "ElementDefinition.mapping",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.identity` is mapped to FHIR R4 element `ElementDefinition.mapping.identity` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mapping.language",
+          "display": "language",
+          "target": [
+            {
+              "code": "ElementDefinition.mapping.language",
+              "display": "ElementDefinition.mapping.language",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.language` is mapped to FHIR R4 element `ElementDefinition.mapping.language` as `Equivalent`.\nIf omitted, then there can be no expectation of computational interpretation of the mapping."
+            },
+            {
+              "code": "ElementDefinition.mapping",
+              "display": "ElementDefinition.mapping",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.language` is mapped to FHIR R4 element `ElementDefinition.mapping.language` as `Equivalent`.\nIf omitted, then there can be no expectation of computational interpretation of the mapping."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mapping.map",
+          "display": "map",
+          "target": [
+            {
+              "code": "ElementDefinition.mapping.map",
+              "display": "ElementDefinition.mapping.map",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.map` is mapped to FHIR R4 element `ElementDefinition.mapping.map` as `Equivalent`.\nFor most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies."
+            },
+            {
+              "code": "ElementDefinition.mapping",
+              "display": "ElementDefinition.mapping",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.map` is mapped to FHIR R4 element `ElementDefinition.mapping.map` as `Equivalent`.\nFor most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies."
+            }
+          ]
+        },
+        {
+          "code": "ElementDefinition.mapping.comment",
+          "display": "comment",
+          "target": [
+            {
+              "code": "ElementDefinition.mapping.comment",
+              "display": "ElementDefinition.mapping.comment",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.comment` is mapped to FHIR R4 element `ElementDefinition.mapping.comment` as `Equivalent`."
+            },
+            {
+              "code": "ElementDefinition.mapping",
+              "display": "ElementDefinition.mapping",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.mapping.comment` is mapped to FHIR R4 element `ElementDefinition.mapping.comment` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.slicing.discriminator.type",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.slicing.discriminator.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.slicing.discriminator.type` is mapped to FHIR R4 element `ElementDefinition.slicing.discriminator.type` as `SourceIsBroaderThanTarget`.\n'pattern' is deprecated - it works exactly the same as 'value'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.defaultValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.defaultValue[x]",
+          "display": "defaultValue[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.defaultValue[x]` is mapped to FHIR R4 element `ElementDefinition.defaultValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.defaultValue[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.defaultValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nSpecifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. \n\nNo default values are ever defined in the FHIR specification, nor can they be defined in constraints (\"profiles\") on data types or resources. This element only exists so that default values may be defined in logical models."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.fixed",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.fixed[x]",
+          "display": "fixed[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.fixed[x]` is mapped to FHIR R4 element `ElementDefinition.fixed[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.fixed[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.fixed[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nThis is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.pattern",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.pattern[x]",
+          "display": "pattern[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.pattern[x]` is mapped to FHIR R4 element `ElementDefinition.pattern[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.pattern[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.pattern[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nMostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.example.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.example.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.example.value[x]` is mapped to FHIR R4 element `ElementDefinition.example.value[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.example.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `ElementDefinition.example.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition.example`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.minValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.minValue[x]",
+          "display": "minValue[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.minValue[x]` is mapped to FHIR R4 element `ElementDefinition.minValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.minValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.minValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as a canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.maxValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.maxValue[x]",
+          "display": "maxValue[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `ElementDefinition.maxValue[x]` is mapped to FHIR R4 element `ElementDefinition.maxValue[x]` as `RelatedTo`.\nThe mappings for `ElementDefinition.maxValue[x]` do not cover the following types: integer64.\nThe target context `ElementDefinition.maxValue[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ElementDefinition`.\nExcept for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](https://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as a canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.constraint.suppress",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.constraint.suppress",
+          "display": "suppress",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.constraint.suppress` has a context of ElementDefinition.constraint based on following the parent source element upwards and mapping to `ElementDefinition`.\nElement `ElementDefinition.constraint.suppress` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis element should only be present in a derived profile where a warning or hint has been determined to be spurious/incorrect. E.g. a warning encouraging the inclusion of an element that the profile explicitly prohibits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.mustHaveValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.mustHaveValue",
+          "display": "mustHaveValue",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.mustHaveValue` has a context of ElementDefinition based on following the parent source element upwards and mapping to `ElementDefinition`.\nElement `ElementDefinition.mustHaveValue` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nTypical extensions that can be provided in place of a the value are [http://hl7.org/fhir/StructureDefinition/data-absent-reason](http://hl7.org/fhir/extensions/StructureDefinition-data-absent-reason.html),  [http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor](http://hl7.org/fhir/extensions/StructureDefinition-iso21090-nullFlavor.html),  [http://hl7.org/fhir/StructureDefinition/originalText](http://hl7.org/fhir/extensions/StructureDefinition-originalText.html), and [http://hl7.org/fhir/StructureDefinition/cqf-expression](http://hl7.org/fhir/extensions/StructureDefinition-cqf-expression.html). Note that this element has no meaning when a value is provided, and extensions can be provided in addition to a value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.valueAlternatives",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ElementDefinition.valueAlternatives",
+          "display": "valueAlternatives",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ElementDefinition.valueAlternatives` has a context of ElementDefinition based on following the parent source element upwards and mapping to `ElementDefinition`.\nElement `ElementDefinition.valueAlternatives` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nif mustHaveValue is true, then this element should not be present, since no extensions are allowed in place of the value. Note that this element has no impact if the value is present."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

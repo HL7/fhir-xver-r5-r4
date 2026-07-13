@@ -1,0 +1,366 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-MedicationAdministration",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-MedicationAdministration",
+  "version": "0.1.1",
+  "name": "Profile_R5_MedicationAdministration_R4",
+  "title": "Cross-version Profile for R5.MedicationAdministration resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8720533-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 MedicationAdministration resource content to be represented via FHIR R4 MedicationAdministration resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationAdministration",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationAdministration",
+        "path": "MedicationAdministration",
+        "short": "Cross-version Profile for R5.MedicationAdministration resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 MedicationAdministration resource content to be represented via FHIR R4 MedicationAdministration resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-MedicationAdministration-category",
+            "requirements": "Cardinality constraints for category from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationAdministration.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.category').exists() implies MedicationAdministration.category.exists()"
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension",
+        "path": "MedicationAdministration.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationAdministration.extension:basedOn",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "basedOn",
+        "short": "R5: Plan this is fulfilled by this administration (new)",
+        "definition": "R5: `MedicationAdministration.basedOn` (new:Reference(CarePlan))",
+        "comment": "Element `MedicationAdministration.basedOn` has a context of MedicationAdministration based on following the parent source element upwards and mapping to `MedicationAdministration`.\nElement `MedicationAdministration.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:category",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "category",
+        "short": "R5: Type of medication administration",
+        "definition": "R5: `MedicationAdministration.category`",
+        "comment": "Element `MedicationAdministration.category` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationAdministration.category` is mapped to FHIR R4 element `MedicationAdministration.category` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.category"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationAdministration-category"
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:occurence",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "occurence",
+        "short": "R5: Specific date/time or interval of time during which the administration took place (or did not take place) additional types",
+        "definition": "R5: `MedicationAdministration.occurence[x]` additional types (Timing)",
+        "comment": "Element `MedicationAdministration.occurence[x]` is mapped to FHIR R4 element `MedicationAdministration.effective[x]` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationAdministration.occurence[x]` do not cover the following types: Timing.\nThe target context `MedicationAdministration.effective[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `MedicationAdministration`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.occurence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:recorded",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "recorded",
+        "short": "R5: When the MedicationAdministration was first captured in the subject's record (new)",
+        "definition": "R5: `MedicationAdministration.recorded` (new:dateTime)",
+        "comment": "Element `MedicationAdministration.recorded` has a context of MedicationAdministration based on following the parent source element upwards and mapping to `MedicationAdministration`.\nElement `MedicationAdministration.recorded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.recorded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:isSubPotent",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "isSubPotent",
+        "short": "R5: Full dose was not administered (new)",
+        "definition": "R5: `MedicationAdministration.isSubPotent` (new:boolean)",
+        "comment": "Element `MedicationAdministration.isSubPotent` has a context of MedicationAdministration based on following the parent source element upwards and mapping to `MedicationAdministration`.\nElement `MedicationAdministration.isSubPotent` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.isSubPotent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:subPotentReason",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "subPotentReason",
+        "short": "R5: Reason full dose was not administered (new)",
+        "definition": "R5: `MedicationAdministration.subPotentReason` (new:CodeableConcept)",
+        "comment": "Element `MedicationAdministration.subPotentReason` has a context of MedicationAdministration based on following the parent source element upwards and mapping to `MedicationAdministration`.\nElement `MedicationAdministration.subPotentReason` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.subPotentReason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.extension:reason",
+        "path": "MedicationAdministration.extension",
+        "sliceName": "reason",
+        "short": "R5: Concept, condition or observation that supports why the medication was administered additional types",
+        "definition": "R5: `MedicationAdministration.reason` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport))",
+        "comment": "Element `MedicationAdministration.reason` is mapped to FHIR R4 element `MedicationAdministration.reasonCode` as `SourceIsBroaderThanTarget`.\nElement `MedicationAdministration.reason` is mapped to FHIR R4 element `MedicationAdministration.reasonReference` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationAdministration.reason` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.partOf.extension",
+        "path": "MedicationAdministration.partOf.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationAdministration.partOf.extension:partOf",
+        "path": "MedicationAdministration.partOf.extension",
+        "sliceName": "partOf",
+        "short": "R5: partOf",
+        "definition": "R5: `MedicationAdministration.partOf`",
+        "comment": "Element `MedicationAdministration.partOf` is mapped to FHIR R4 element `MedicationAdministration.partOf` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationAdministration.partOf` with unmapped reference targets: MedicationDispense.\nMedicationDispense will be used to indicate waste.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.performer.actor.extension",
+        "path": "MedicationAdministration.performer.actor.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationAdministration.performer.actor.extension:actor",
+        "path": "MedicationAdministration.performer.actor.extension",
+        "sliceName": "actor",
+        "short": "R5: Who or what performed the medication administration additional types",
+        "definition": "R5: `MedicationAdministration.performer.actor` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Practitioner), CodeableReference(http://hl7.org/fhir/StructureDefinition/PractitionerRole), CodeableReference(http://hl7.org/fhir/StructureDefinition/Patient), CodeableReference(http://hl7.org/fhir/StructureDefinition/RelatedPerson), CodeableReference(http://hl7.org/fhir/StructureDefinition/Device))",
+        "comment": "Element `MedicationAdministration.performer.actor` is mapped to FHIR R4 element `MedicationAdministration.performer.actor` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationAdministration.performer.actor` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.performer.actor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationAdministration.device.extension",
+        "path": "MedicationAdministration.device.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationAdministration.device.extension:device",
+        "path": "MedicationAdministration.device.extension",
+        "sliceName": "device",
+        "short": "R5: device additional types",
+        "definition": "R5: `MedicationAdministration.device` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Device)) additional types from child elements (concept)",
+        "comment": "Element `MedicationAdministration.device` is mapped to FHIR R4 element `MedicationAdministration.device` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationAdministration.device` do not cover the following types: CodeableReference.\nThe mappings for `MedicationAdministration.device` do not cover the following types based on type expansion: concept.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.device"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

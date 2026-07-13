@@ -1,0 +1,224 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MedicationKnowledge.packaging",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.packaging",
+  "version": "0.1.1",
+  "name": "ExtensionMedicationKnowledge_Packaging",
+  "title": "R5: packaging",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MedicationKnowledge.packaging`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MedicationKnowledge.packaging` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MedicationKnowledge.packaging` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MedicationKnowledge.packaging` 0..* `BackboneElement`\n*  R4B: `MedicationKnowledge.packaging` 0..1 `BackboneElement`\n*  R4: `MedicationKnowledge.packaging` 0..1 `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MedicationKnowledge.packaging` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationKnowledge.packaging` is mapped to FHIR R4 element `MedicationKnowledge.packaging` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationKnowledge"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: packaging",
+        "definition": "R5: `MedicationKnowledge.packaging`",
+        "comment": "Element `MedicationKnowledge.packaging` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationKnowledge.packaging` is mapped to FHIR R4 element `MedicationKnowledge.packaging` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:cost",
+        "path": "Extension.extension",
+        "sliceName": "cost",
+        "short": "R5: Cost of the packaged medication (new)",
+        "definition": "R5: `MedicationKnowledge.packaging.cost` (new:MedicationKnowledge.cost)",
+        "comment": "Element `MedicationKnowledge.packaging.cost` is part of an existing definition because parent element `MedicationKnowledge.packaging` requires an extension for additional cardinality.\nElement `MedicationKnowledge.packaging.cost` has a context of MedicationKnowledge.packaging based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.packaging.cost` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MedicationKnowledge.packaging.cost` is part of an existing definition because parent element `MedicationKnowledge.packaging` requires an extension for additional cardinality.\nElement `MedicationKnowledge.packaging.cost` has a context of MedicationKnowledge.packaging based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.packaging.cost` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:cost.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.cost"
+      },
+      {
+        "id": "Extension.extension:cost.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Extension.extension:packagedProduct",
+        "path": "Extension.extension",
+        "sliceName": "packagedProduct",
+        "short": "R5: The packaged medication that is being priced (new)",
+        "definition": "R5: `MedicationKnowledge.packaging.packagedProduct` (new:Reference(PackagedProductDefinition))",
+        "comment": "Element `MedicationKnowledge.packaging.packagedProduct` is part of an existing definition because parent element `MedicationKnowledge.packaging` requires an extension for additional cardinality.\nElement `MedicationKnowledge.packaging.packagedProduct` has a context of MedicationKnowledge.packaging based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.packaging.packagedProduct` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MedicationKnowledge.packaging.packagedProduct` is part of an existing definition because parent element `MedicationKnowledge.packaging` requires an extension for additional cardinality.\nElement `MedicationKnowledge.packaging.packagedProduct` has a context of MedicationKnowledge.packaging based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.packaging.packagedProduct` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:packagedProduct.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "packagedProduct"
+      },
+      {
+        "id": "Extension.extension:packagedProduct.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "The packaged medication that is being priced",
+        "definition": "A reference to a PackagedProductDefinition that provides the details of the product that is in the packaging and is being priced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Basic"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.packaging"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

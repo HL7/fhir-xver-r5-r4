@@ -1,0 +1,139 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-OperationOutcome",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-OperationOutcome",
+  "version": "0.1.1",
+  "name": "Profile_R5_OperationOutcome_R4",
+  "title": "Cross-version Profile for R5.OperationOutcome resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9514768-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 OperationOutcome resource content to be represented via FHIR R4 OperationOutcome resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationOutcome",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationOutcome",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationOutcome",
+        "path": "OperationOutcome",
+        "short": "Cross-version Profile for R5.OperationOutcome resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 OperationOutcome resource content to be represented via FHIR R4 OperationOutcome resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationOutcome.issue.severity.extension",
+        "path": "OperationOutcome.issue.severity.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationOutcome.issue.severity.extension:severity",
+        "path": "OperationOutcome.issue.severity.extension",
+        "sliceName": "severity",
+        "short": "R5: fatal | error | warning | information | success",
+        "definition": "R5: `OperationOutcome.issue.severity`",
+        "comment": "Element `OperationOutcome.issue.severity` is mapped to FHIR R4 element `OperationOutcome.issue.severity` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-OperationOutcome.issue.severity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationOutcome.issue.code.extension",
+        "path": "OperationOutcome.issue.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationOutcome.issue.code.extension:code",
+        "path": "OperationOutcome.issue.code.extension",
+        "sliceName": "code",
+        "short": "R5: code additional codes",
+        "definition": "R5: `OperationOutcome.issue.code` additional codes",
+        "comment": "Element `OperationOutcome.issue.code` is mapped to FHIR R4 element `OperationOutcome.issue.code` as `RelatedTo`.\nThe mappings for `OperationOutcome.issue.code` do not allow expression of the necessary codes, per the bindings on the source and target.\nCode values should align with the severity.  For example, a code of ```forbidden``` generally wouldn't make sense with a severity of ```information``` or ```warning```.  Similarly, a code of ```informational``` would generally not make sense with a severity of ```fatal``` or ```error```.  However, there are no strict rules about what severities must be used with which codes.  For example, ```code-invalid``` might be a ```warning``` or ```error```, depending on the context",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-OperationOutcome.issue.code"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Period-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Period-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5PeriodElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Period to FHIR R4 Period",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2577484-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Period to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Period",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Period",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Period.start",
+          "display": "start",
+          "target": [
+            {
+              "code": "Period.start",
+              "display": "Period.start",
+              "equivalence": "equivalent",
+              "comment": "Element `Period.start` is mapped to FHIR R4 element `Period.start` as `Equivalent`.\nIf the low element is missing, the meaning is that the low boundary is not known."
+            },
+            {
+              "code": "Period",
+              "display": "Period",
+              "equivalence": "equivalent",
+              "comment": "Element `Period.start` is mapped to FHIR R4 element `Period.start` as `Equivalent`.\nIf the low element is missing, the meaning is that the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "Period.end",
+          "display": "end",
+          "target": [
+            {
+              "code": "Period.end",
+              "display": "Period.end",
+              "equivalence": "equivalent",
+              "comment": "Element `Period.end` is mapped to FHIR R4 element `Period.end` as `Equivalent`.\nThe end value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03."
+            },
+            {
+              "code": "Period",
+              "display": "Period",
+              "equivalence": "equivalent",
+              "comment": "Element `Period.end` is mapped to FHIR R4 element `Period.end` as `Equivalent`.\nThe end value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

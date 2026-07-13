@@ -1,0 +1,383 @@
+{
+  "resourceType": "ValueSet",
+  "id": "R5-v2-0063-for-R4",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/xver/ValueSet/R5-v2-0063-for-R4",
+  "version": "0.1.1",
+  "name": "R5V20063ForR4",
+  "title": "Cross-version ValueSet R5.Hl7VSRelationship for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version ValueSet represents content from `http://terminology.hl7.org/ValueSet/v2-0063|2.0.0` for use in FHIR R4.",
+  "purpose": "This value set is part of the cross-version definitions generated to enable use of the\r\nvalue set `http://terminology.hl7.org/ValueSet/v2-0063|2.0.0` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source value set is bound to the following FHIR R5 elements:\r\n* \r\n\r\nNote that all concepts are included in this cross-version definition because no concepts have compatible representations\r\n\r\nFollowing are the generation technical comments:\r\n\nFHIR ValueSet `http://terminology.hl7.org/ValueSet/v2-0063|2.0.0`, defined in FHIR R5 does not have any mapping to FHIR R4",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "code": "ASC",
+            "display": "Associate"
+          },
+          {
+            "code": "BRO",
+            "display": "Brother"
+          },
+          {
+            "code": "CGV",
+            "display": "Care giver"
+          },
+          {
+            "code": "CHD",
+            "display": "Child"
+          },
+          {
+            "code": "DEP",
+            "display": "Handicapped dependent"
+          },
+          {
+            "code": "DOM",
+            "display": "Life partner"
+          },
+          {
+            "code": "EMC",
+            "display": "Emergency contact"
+          },
+          {
+            "code": "EME",
+            "display": "Employee"
+          },
+          {
+            "code": "EMR",
+            "display": "Employer"
+          },
+          {
+            "code": "EXF",
+            "display": "Extended family"
+          },
+          {
+            "code": "FCH",
+            "display": "Foster child"
+          },
+          {
+            "code": "FND",
+            "display": "Friend"
+          },
+          {
+            "code": "FTH",
+            "display": "Father"
+          },
+          {
+            "code": "GCH",
+            "display": "Grandchild"
+          },
+          {
+            "code": "GRD",
+            "display": "Guardian"
+          },
+          {
+            "code": "GRP",
+            "display": "Grandparent"
+          },
+          {
+            "code": "MGR",
+            "display": "Manager"
+          },
+          {
+            "code": "MTH",
+            "display": "Mother"
+          },
+          {
+            "code": "NCH",
+            "display": "Natural child"
+          },
+          {
+            "code": "NON",
+            "display": "None"
+          },
+          {
+            "code": "OAD",
+            "display": "Other adult"
+          },
+          {
+            "code": "OTH",
+            "display": "Other"
+          },
+          {
+            "code": "OWN",
+            "display": "Owner"
+          },
+          {
+            "code": "PAR",
+            "display": "Parent"
+          },
+          {
+            "code": "SCH",
+            "display": "Stepchild"
+          },
+          {
+            "code": "SEL",
+            "display": "Self"
+          },
+          {
+            "code": "SIB",
+            "display": "Sibling"
+          },
+          {
+            "code": "SIS",
+            "display": "Sister"
+          },
+          {
+            "code": "SPO",
+            "display": "Spouse"
+          },
+          {
+            "code": "TRA",
+            "display": "Trainer"
+          },
+          {
+            "code": "UNK",
+            "display": "Unknown"
+          },
+          {
+            "code": "WRD",
+            "display": "Ward of court"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-06-12T21:41:14.2230772+00:00",
+    "contains": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "ASC",
+        "display": "Associate"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "BRO",
+        "display": "Brother"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "CGV",
+        "display": "Care giver"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "CHD",
+        "display": "Child"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "DEP",
+        "display": "Handicapped dependent"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "DOM",
+        "display": "Life partner"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "EMC",
+        "display": "Emergency contact"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "EME",
+        "display": "Employee"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "EMR",
+        "display": "Employer"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "EXF",
+        "display": "Extended family"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "FCH",
+        "display": "Foster child"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "FND",
+        "display": "Friend"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "FTH",
+        "display": "Father"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "GCH",
+        "display": "Grandchild"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "GRD",
+        "display": "Guardian"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "GRP",
+        "display": "Grandparent"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "MGR",
+        "display": "Manager"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "MTH",
+        "display": "Mother"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "NCH",
+        "display": "Natural child"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "NON",
+        "display": "None"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "OAD",
+        "display": "Other adult"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "OTH",
+        "display": "Other"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "OWN",
+        "display": "Owner"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "PAR",
+        "display": "Parent"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "SCH",
+        "display": "Stepchild"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "SEL",
+        "display": "Self"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "SIB",
+        "display": "Sibling"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "SIS",
+        "display": "Sister"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "SPO",
+        "display": "Spouse"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "TRA",
+        "display": "Trainer"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "UNK",
+        "display": "Unknown"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0063",
+        "version": "2.1.0",
+        "code": "WRD",
+        "display": "Ward of court"
+      }
+    ]
+  }
+}

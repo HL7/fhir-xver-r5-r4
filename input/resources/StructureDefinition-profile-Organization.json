@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Organization",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Organization",
+  "version": "0.1.1",
+  "name": "Profile_R5_Organization_R4",
+  "title": "Cross-version Profile for R5.Organization resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9542584-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Organization resource content to be represented via FHIR R4 Organization resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization",
+        "path": "Organization",
+        "short": "Cross-version Profile for R5.Organization resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Organization resource content to be represented via FHIR R4 Organization resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Organization.extension:description",
+        "path": "Organization.extension",
+        "sliceName": "description",
+        "short": "R5: Additional details about the Organization that could be displayed as further information to identify the Organization beyond its name (new)",
+        "definition": "R5: `Organization.description` (new:markdown)",
+        "comment": "Element `Organization.description` has a context of Organization based on following the parent source element upwards and mapping to `Organization`.\nElement `Organization.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Organization.description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.extension:qualification",
+        "path": "Organization.extension",
+        "sliceName": "qualification",
+        "short": "R5: Qualifications, certifications, accreditations, licenses, training, etc. pertaining to the provision of care (new)",
+        "definition": "R5: `Organization.qualification` (new:BackboneElement)",
+        "comment": "Element `Organization.qualification` has a context of Organization based on following the parent source element upwards and mapping to `Organization`.\nElement `Organization.qualification` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Organization.qualification"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

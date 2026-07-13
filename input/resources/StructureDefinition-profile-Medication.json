@@ -1,0 +1,217 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Medication",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Medication",
+  "version": "0.1.1",
+  "name": "Profile_R5_Medication_R4",
+  "title": "Cross-version Profile for R5.Medication resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.868316-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Medication resource content to be represented via FHIR R4 Medication resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication",
+        "path": "Medication",
+        "short": "Cross-version Profile for R5.Medication resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Medication resource content to be represented via FHIR R4 Medication resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Medication.extension:definition",
+        "path": "Medication.extension",
+        "sliceName": "definition",
+        "short": "R5: Knowledge about this medication (new)",
+        "definition": "R5: `Medication.definition` (new:Reference(MedicationKnowledge))",
+        "comment": "Element `Medication.definition` has a context of Medication based on following the parent source element upwards and mapping to `Medication`.\nElement `Medication.definition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.definition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.status.modifierExtension",
+        "path": "Medication.status.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Medication.status.modifierExtension:status",
+        "path": "Medication.status.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: status",
+        "definition": "R5: `Medication.status`",
+        "comment": "Element `Medication.status` is mapped to FHIR R4 element `Medication.status` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `Medication.status`: `http://hl7.org/fhir/StructureDefinition/artifact-status`.\nThis status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product \"ABC Hospital Special Cream\" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to \"entered in error\".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.amount.extension",
+        "path": "Medication.amount.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Medication.amount.extension:totalVolume",
+        "path": "Medication.amount.extension",
+        "sliceName": "totalVolume",
+        "short": "R5: When the specified product code does not infer a package size, this is the specific amount of drug in the product additional types",
+        "definition": "R5: `Medication.totalVolume` additional types (Quantity) additional types from child elements (code, comparator, system, unit, value)",
+        "comment": "Element `Medication.totalVolume` is mapped to FHIR R4 element `Medication.amount` as `SourceIsBroaderThanTarget`.\nThe mappings for `Medication.totalVolume` do not cover the following types: Quantity.\nThe mappings for `Medication.totalVolume` do not cover the following types based on type expansion: code, comparator, system, unit, value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.totalVolume"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.strength.extension",
+        "path": "Medication.ingredient.strength.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Medication.ingredient.strength.extension:strength",
+        "path": "Medication.ingredient.strength.extension",
+        "sliceName": "strength",
+        "short": "R5: strength additional types",
+        "definition": "R5: `Medication.ingredient.strength[x]` additional types (CodeableConcept, Quantity)",
+        "comment": "Element `Medication.ingredient.strength[x]` is mapped to FHIR R4 element `Medication.ingredient.strength` as `SourceIsBroaderThanTarget`.\nThe mappings for `Medication.ingredient.strength[x]` do not cover the following types: CodeableConcept, Quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

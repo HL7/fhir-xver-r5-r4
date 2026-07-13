@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Dosage.asNeededFor",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor",
+  "version": "0.1.1",
+  "name": "ExtensionDosage_AsNeededFor",
+  "title": "R5: asNeededFor",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Dosage.asNeededFor`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Dosage.asNeededFor` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Dosage.asNeededFor` 0..* `CodeableConcept`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Dosage.asNeededFor` 0..* `CodeableConcept`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Dosage.asNeededFor` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.asNeededFor` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Dosage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: asNeededFor",
+        "definition": "R5: `Dosage.asNeededFor`",
+        "comment": "Element `Dosage.asNeededFor` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.asNeededFor` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Take \"as needed\" (for x)",
+        "definition": "Indicates whether the Medication is only taken based on a precondition for taking the Medication (CodeableConcept).",
+        "comment": "Can express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}

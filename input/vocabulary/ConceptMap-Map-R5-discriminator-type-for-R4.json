@@ -1,0 +1,93 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-discriminator-type-for-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-discriminator-type-for-R4",
+  "version": "0.1.1",
+  "name": "MapR5DiscriminatorTypeForR4",
+  "title": "Cross-version ConceptMap for ValueSet R5-discriminator-type-for-R4 from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.3180334-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/discriminator-type",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/discriminator-type",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "exists",
+          "display": "Exists",
+          "target": [
+            {
+              "code": "exists",
+              "display": "Exists",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DiscriminatorType-R4B-DiscriminatorType` (`ConceptMap-R5-DiscriminatorType-R4B-DiscriminatorType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DiscriminatorType-R4-DiscriminatorType` (`ConceptMap-R4B-DiscriminatorType-R4-DiscriminatorType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0#exists` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1#exists` as Equivalent in `ConceptMap-R5-DiscriminatorType-R4-DiscriminatorType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "pattern",
+          "display": "Pattern",
+          "target": [
+            {
+              "code": "pattern",
+              "display": "Pattern",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DiscriminatorType-R4B-DiscriminatorType` (`ConceptMap-R5-DiscriminatorType-R4B-DiscriminatorType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DiscriminatorType-R4-DiscriminatorType` (`ConceptMap-R4B-DiscriminatorType-R4-DiscriminatorType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0#pattern` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1#pattern` as Equivalent in `ConceptMap-R5-DiscriminatorType-R4-DiscriminatorType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "profile",
+          "display": "Profile",
+          "target": [
+            {
+              "code": "profile",
+              "display": "Profile",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DiscriminatorType-R4B-DiscriminatorType` (`ConceptMap-R5-DiscriminatorType-R4B-DiscriminatorType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DiscriminatorType-R4-DiscriminatorType` (`ConceptMap-R4B-DiscriminatorType-R4-DiscriminatorType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0#profile` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1#profile` as Equivalent in `ConceptMap-R5-DiscriminatorType-R4-DiscriminatorType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "type",
+          "display": "Type",
+          "target": [
+            {
+              "code": "type",
+              "display": "Type",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DiscriminatorType-R4B-DiscriminatorType` (`ConceptMap-R5-DiscriminatorType-R4B-DiscriminatorType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DiscriminatorType-R4-DiscriminatorType` (`ConceptMap-R4B-DiscriminatorType-R4-DiscriminatorType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0#type` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1#type` as Equivalent in `ConceptMap-R5-DiscriminatorType-R4-DiscriminatorType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "value",
+          "display": "Value",
+          "target": [
+            {
+              "code": "value",
+              "display": "Value",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DiscriminatorType-R4B-DiscriminatorType` (`ConceptMap-R5-DiscriminatorType-R4B-DiscriminatorType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|4.3.0` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DiscriminatorType-R4-DiscriminatorType` (`ConceptMap-R4B-DiscriminatorType-R4-DiscriminatorType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0#value` to `http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1#value` as Equivalent in `ConceptMap-R5-DiscriminatorType-R4-DiscriminatorType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "position",
+          "display": "Position",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

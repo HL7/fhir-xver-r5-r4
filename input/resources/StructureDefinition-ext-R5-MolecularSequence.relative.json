@@ -1,0 +1,917 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MolecularSequence.relative",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative",
+  "version": "0.1.1",
+  "name": "ExtensionMolecularSequence_Relative",
+  "title": "R5: A sequence defined relative to another sequence",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MolecularSequence.relative`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MolecularSequence.relative` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MolecularSequence.relative` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MolecularSequence.relative` 0..* `BackboneElement`\n*  R4B: `MolecularSequence.referenceSeq` 0..1 `BackboneElement`\n*  R4: `MolecularSequence.referenceSeq` 0..1 `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MolecularSequence.relative` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.referenceSeq` as `SourceIsBroaderThanTarget`.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.variant` as `Equivalent`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MolecularSequence"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: A sequence defined relative to another sequence",
+        "definition": "R5: `MolecularSequence.relative`",
+        "comment": "Element `MolecularSequence.relative` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.referenceSeq` as `SourceIsBroaderThanTarget`.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.variant` as `Equivalent`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:coordinateSystem",
+        "path": "Extension.extension",
+        "sliceName": "coordinateSystem",
+        "short": "R5: Ways of identifying nucleotides or amino acids within a sequence (new)",
+        "definition": "R5: `MolecularSequence.relative.coordinateSystem` (new:CodeableConcept)",
+        "comment": "Element `MolecularSequence.relative.coordinateSystem` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.coordinateSystem` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.coordinateSystem` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MolecularSequence.relative.coordinateSystem` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.coordinateSystem` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.coordinateSystem` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:coordinateSystem.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "coordinateSystem"
+      },
+      {
+        "id": "Extension.extension:coordinateSystem.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Ways of identifying nucleotides or amino acids within a sequence",
+        "definition": "These are different ways of identifying nucleotides or amino acids within a sequence. Different databases and file types may use different systems. For detail definitions, see https://loinc.org/92822-6/ for more detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ordinalPosition",
+        "path": "Extension.extension",
+        "sliceName": "ordinalPosition",
+        "short": "R5: Indicates the order in which the sequence should be considered when putting multiple 'relative' elements together (new)",
+        "definition": "R5: `MolecularSequence.relative.ordinalPosition` (new:integer)",
+        "comment": "Element `MolecularSequence.relative.ordinalPosition` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.ordinalPosition` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.ordinalPosition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MolecularSequence.relative.ordinalPosition` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.ordinalPosition` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.ordinalPosition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:ordinalPosition.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "ordinalPosition"
+      },
+      {
+        "id": "Extension.extension:ordinalPosition.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Indicates the order in which the sequence should be considered when putting multiple 'relative' elements together",
+        "definition": "Indicates the order in which the sequence should be considered when putting multiple 'relative' elements together.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:sequenceRange",
+        "path": "Extension.extension",
+        "sliceName": "sequenceRange",
+        "short": "R5: Indicates the nucleotide range in the composed sequence when multiple 'relative' elements are used together (new)",
+        "definition": "R5: `MolecularSequence.relative.sequenceRange` (new:Range)",
+        "comment": "Element `MolecularSequence.relative.sequenceRange` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.sequenceRange` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.sequenceRange` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MolecularSequence.relative.sequenceRange` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.sequenceRange` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.sequenceRange` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:sequenceRange.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "sequenceRange"
+      },
+      {
+        "id": "Extension.extension:sequenceRange.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Indicates the nucleotide range in the composed sequence when multiple 'relative' elements are used together",
+        "definition": "Indicates the nucleotide range in the composed sequence when multiple 'relative' elements are used together.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence",
+        "path": "Extension.extension",
+        "sliceName": "startingSequence",
+        "short": "R5: A sequence used as starting sequence",
+        "definition": "R5: `MolecularSequence.relative.startingSequence`",
+        "comment": "Element `MolecularSequence.relative.startingSequence` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.startingSequence` is mapped to FHIR R4 element `MolecularSequence.referenceSeq` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.startingSequence` is mapped to FHIR R4 element `MolecularSequence.referenceSeq` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:genomeAssembly",
+        "path": "Extension.extension.extension",
+        "sliceName": "genomeAssembly",
+        "short": "R5: The genome assembly used for starting sequence, e.g. GRCh38 (new)",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.genomeAssembly` (new:CodeableConcept)",
+        "comment": "Element `MolecularSequence.relative.startingSequence.genomeAssembly` has a context of MolecularSequence.referenceSeq based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.startingSequence.genomeAssembly` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.genomeAssembly` has a context of MolecularSequence.referenceSeq based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.startingSequence.genomeAssembly` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:genomeAssembly.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "genomeAssembly"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:genomeAssembly.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "The genome assembly used for starting sequence, e.g. GRCh38",
+        "definition": "The genome assembly used for starting sequence, e.g. GRCh38.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:chromosome",
+        "path": "Extension.extension.extension",
+        "sliceName": "chromosome",
+        "short": "R5: Chromosome Identifier",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.chromosome`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.chromosome` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.chromosome` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.chromosome` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.chromosome` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:chromosome.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "chromosome"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:chromosome.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Chromosome Identifier",
+        "definition": "Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:sequence",
+        "path": "Extension.extension.extension",
+        "sliceName": "sequence",
+        "short": "R5: The reference sequence that represents the starting sequence additional types",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.sequence[x]` additional types (CodeableConcept, Reference(http://hl7.org/fhir/StructureDefinition/MolecularSequence))",
+        "comment": "Element `MolecularSequence.relative.startingSequence.sequence[x]` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.referenceSeqString` as `SourceIsBroaderThanTarget`.\nThe mappings for `MolecularSequence.relative.startingSequence.sequence[x]` do not cover the following types: CodeableConcept, Reference.\nA starting sequence may be represented in one of three ways:\n  1.  CodeableConcept, using NCBI, LRG or other appropriate code systems\n  1.  a simple string of IUPAC codes\n  1.  a reference to another MolecularSequence resource.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.sequence[x]` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.referenceSeqString` as `SourceIsBroaderThanTarget`.\nThe mappings for `MolecularSequence.relative.startingSequence.sequence[x]` do not cover the following types: CodeableConcept, Reference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:sequence.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "sequence"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:sequence.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "The reference sequence that represents the starting sequence",
+        "definition": "The reference sequence that represents the starting sequence.",
+        "comment": "A starting sequence may be represented in one of three ways:\n  1.  CodeableConcept, using NCBI, LRG or other appropriate code systems\n  1.  a simple string of IUPAC codes\n  1.  a reference to another MolecularSequence resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowStart",
+        "path": "Extension.extension.extension",
+        "sliceName": "windowStart",
+        "short": "R5: Start position of the window on the starting sequence",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.windowStart`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.windowStart` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.windowStart` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.windowStart` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.windowStart` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowStart.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "windowStart"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowStart.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Start position of the window on the starting sequence",
+        "definition": "Start position of the window on the starting sequence. This value should honor the rules of the coordinateSystem.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowEnd",
+        "path": "Extension.extension.extension",
+        "sliceName": "windowEnd",
+        "short": "R5: End position of the window on the starting sequence",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.windowEnd`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.windowEnd` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.windowEnd` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.windowEnd` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.windowEnd` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowEnd.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "windowEnd"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:windowEnd.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "End position of the window on the starting sequence",
+        "definition": "End position of the window on the starting sequence. This value should honor the rules of the  coordinateSystem.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:orientation",
+        "path": "Extension.extension.extension",
+        "sliceName": "orientation",
+        "short": "R5: orientation",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.orientation`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.orientation` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.orientation` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.orientation` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.orientation` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:orientation.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "orientation"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:orientation.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "sense | antisense",
+        "definition": "A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the \"sense\" strand, and the opposite complementary strand is the \"antisense\" strand.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Type for orientation",
+          "valueSet": "http://hl7.org/fhir/ValueSet/orientation-type|4.0.1"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:strand",
+        "path": "Extension.extension.extension",
+        "sliceName": "strand",
+        "short": "R5: strand",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.strand`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.strand` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.strand` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.startingSequence.strand` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.strand` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:strand.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "strand"
+      },
+      {
+        "id": "Extension.extension:startingSequence.extension:strand.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "watson | crick",
+        "definition": "An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Type for strand",
+          "valueSet": "http://hl7.org/fhir/ValueSet/strand-type|4.0.1"
+        }
+      },
+      {
+        "id": "Extension.extension:startingSequence.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "startingSequence"
+      },
+      {
+        "id": "Extension.extension:startingSequence.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Extension.extension:edit",
+        "path": "Extension.extension",
+        "sliceName": "edit",
+        "short": "R5: Changes in sequence from the starting sequence",
+        "definition": "R5: `MolecularSequence.relative.edit`",
+        "comment": "Element `MolecularSequence.relative.edit` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.edit` is mapped to FHIR R4 element `MolecularSequence.variant` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.edit` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.edit` is mapped to FHIR R4 element `MolecularSequence.variant` as `Equivalent`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension:start",
+        "path": "Extension.extension.extension",
+        "sliceName": "start",
+        "short": "R5: Start position of the edit on the starting sequence (new)",
+        "definition": "R5: `MolecularSequence.relative.edit.start` (new:integer)",
+        "comment": "Element `MolecularSequence.relative.edit.start` has a context of MolecularSequence.variant based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.edit.start` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `MolecularSequence.relative.edit.start` has a context of MolecularSequence.variant based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.edit.start` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension:start.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "start"
+      },
+      {
+        "id": "Extension.extension:edit.extension:start.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Start position of the edit on the starting sequence",
+        "definition": "Start position of the edit on the starting sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:edit.extension:end",
+        "path": "Extension.extension.extension",
+        "sliceName": "end",
+        "short": "R5: End position of the edit on the starting sequence",
+        "definition": "R5: `MolecularSequence.relative.edit.end`",
+        "comment": "Element `MolecularSequence.relative.edit.end` is mapped to FHIR R4 element `MolecularSequence.variant.end` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.edit.end` is mapped to FHIR R4 element `MolecularSequence.variant.end` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension:end.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "end"
+      },
+      {
+        "id": "Extension.extension:edit.extension:end.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "End position of the edit on the starting sequence",
+        "definition": "End position of the edit on the starting sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacementSequence",
+        "path": "Extension.extension.extension",
+        "sliceName": "replacementSequence",
+        "short": "R5: replacementSequence",
+        "definition": "R5: `MolecularSequence.relative.edit.replacementSequence`",
+        "comment": "Element `MolecularSequence.relative.edit.replacementSequence` is mapped to FHIR R4 element `MolecularSequence.variant.observedAllele` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.edit.replacementSequence` is mapped to FHIR R4 element `MolecularSequence.variant.observedAllele` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacementSequence.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "replacementSequence"
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacementSequence.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Allele that was observed",
+        "definition": "Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed sequence. When the sequence type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacedSequence",
+        "path": "Extension.extension.extension",
+        "sliceName": "replacedSequence",
+        "short": "R5: Allele in the starting sequence",
+        "definition": "R5: `MolecularSequence.relative.edit.replacedSequence`",
+        "comment": "Element `MolecularSequence.relative.edit.replacedSequence` is mapped to FHIR R4 element `MolecularSequence.variant.referenceAllele` as `Equivalent`.",
+        "requirements": "Element `MolecularSequence.relative.edit.replacedSequence` is mapped to FHIR R4 element `MolecularSequence.variant.referenceAllele` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacedSequence.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "replacedSequence"
+      },
+      {
+        "id": "Extension.extension:edit.extension:replacedSequence.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Allele in the starting sequence",
+        "definition": "Allele in the starting sequence. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the starting sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:edit.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "edit"
+      },
+      {
+        "id": "Extension.extension:edit.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-RegulatedAuthorization",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-RegulatedAuthorization",
+  "version": "0.1.1",
+  "name": "Profile_R5_RegulatedAuthorization_R4",
+  "title": "Cross-version Profile for R5.RegulatedAuthorization resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0035701-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 RegulatedAuthorization resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.RegulatedAuthorization resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 RegulatedAuthorization resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:type",
+        "path": "Basic.extension",
+        "sliceName": "type",
+        "short": "R5: Overall type of this authorization, for example drug marketing approval, orphan drug designation (new)",
+        "definition": "R5: `RegulatedAuthorization.type` (new:CodeableConcept)",
+        "comment": "Element `RegulatedAuthorization.type` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:description",
+        "path": "Basic.extension",
+        "sliceName": "description",
+        "short": "R5: General textual supporting information (new)",
+        "definition": "R5: `RegulatedAuthorization.description` (new:markdown)",
+        "comment": "Element `RegulatedAuthorization.description` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:region",
+        "path": "Basic.extension",
+        "sliceName": "region",
+        "short": "R5: The territory in which the authorization has been granted (new)",
+        "definition": "R5: `RegulatedAuthorization.region` (new:CodeableConcept)",
+        "comment": "Element `RegulatedAuthorization.region` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.region` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.region"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:status",
+        "path": "Basic.extension",
+        "sliceName": "status",
+        "short": "R5: The status that is authorised e.g. approved. Intermediate states can be tracked with cases and applications (new)",
+        "definition": "R5: `RegulatedAuthorization.status` (new:CodeableConcept)",
+        "comment": "Element `RegulatedAuthorization.status` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:statusDate",
+        "path": "Basic.extension",
+        "sliceName": "statusDate",
+        "short": "R5: The date at which the current status was assigned (new)",
+        "definition": "R5: `RegulatedAuthorization.statusDate` (new:dateTime)",
+        "comment": "Element `RegulatedAuthorization.statusDate` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.statusDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.statusDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:validityPeriod",
+        "path": "Basic.extension",
+        "sliceName": "validityPeriod",
+        "short": "R5: The time period in which the regulatory approval etc. is in effect, e.g. a Marketing Authorization includes the date of authorization and/or expiration date (new)",
+        "definition": "R5: `RegulatedAuthorization.validityPeriod` (new:Period)",
+        "comment": "Element `RegulatedAuthorization.validityPeriod` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.validityPeriod` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.validityPeriod"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:indication",
+        "path": "Basic.extension",
+        "sliceName": "indication",
+        "short": "R5: Condition for which the use of the regulated product applies (new)",
+        "definition": "R5: `RegulatedAuthorization.indication` (new:CodeableReference(ClinicalUseDefinition))",
+        "comment": "Element `RegulatedAuthorization.indication` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.indication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.indication"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:intendedUse",
+        "path": "Basic.extension",
+        "sliceName": "intendedUse",
+        "short": "R5: The intended use of the product, e.g. prevention, treatment (new)",
+        "definition": "R5: `RegulatedAuthorization.intendedUse` (new:CodeableConcept)",
+        "comment": "Element `RegulatedAuthorization.intendedUse` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.intendedUse` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.intendedUse"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:basis",
+        "path": "Basic.extension",
+        "sliceName": "basis",
+        "short": "R5: The legal/regulatory framework or reasons under which this authorization is granted (new)",
+        "definition": "R5: `RegulatedAuthorization.basis` (new:CodeableConcept)",
+        "comment": "Element `RegulatedAuthorization.basis` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.basis` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.basis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:holder",
+        "path": "Basic.extension",
+        "sliceName": "holder",
+        "short": "R5: The organization that has been granted this authorization, by the regulator (new)",
+        "definition": "R5: `RegulatedAuthorization.holder` (new:Reference(Organization))",
+        "comment": "Element `RegulatedAuthorization.holder` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.holder` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.holder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:regulator",
+        "path": "Basic.extension",
+        "sliceName": "regulator",
+        "short": "R5: The regulatory authority or authorizing body granting the authorization (new)",
+        "definition": "R5: `RegulatedAuthorization.regulator` (new:Reference(Organization))",
+        "comment": "Element `RegulatedAuthorization.regulator` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.regulator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.regulator"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:attachedDocument",
+        "path": "Basic.extension",
+        "sliceName": "attachedDocument",
+        "short": "R5: Additional information or supporting documentation about the authorization (new)",
+        "definition": "R5: `RegulatedAuthorization.attachedDocument` (new:Reference(DocumentReference))",
+        "comment": "Element `RegulatedAuthorization.attachedDocument` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.attachedDocument` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.attachedDocument"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:case",
+        "path": "Basic.extension",
+        "sliceName": "case",
+        "short": "R5: The case or regulatory procedure for granting or amending a regulated authorization. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page) (new)",
+        "definition": "R5: `RegulatedAuthorization.case` (new:BackboneElement)",
+        "comment": "Element `RegulatedAuthorization.case` is not mapped to FHIR R4, since FHIR R5 `RegulatedAuthorization` is not mapped.\nElement `RegulatedAuthorization.case` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-RegulatedAuthorization.case"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "RegulatedAuthorization"
+      }
+    ]
+  }
+}

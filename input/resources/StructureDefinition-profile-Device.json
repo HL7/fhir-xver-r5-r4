@@ -1,0 +1,552 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Device",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Device",
+  "version": "0.1.1",
+  "name": "Profile_R5_Device_R4",
+  "title": "Cross-version Profile for R5.Device resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.6235466-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Device resource content to be represented via FHIR R4 Device resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device",
+        "path": "Device",
+        "short": "Cross-version Profile for R5.Device resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Device resource content to be represented via FHIR R4 Device resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-Device-type",
+            "requirements": "Cardinality constraints for type from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Device.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.type').exists() implies Device.type.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Device.extension",
+        "path": "Device.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.extension:availabilityStatus",
+        "path": "Device.extension",
+        "sliceName": "availabilityStatus",
+        "short": "R5: lost | damaged | destroyed | available (new)",
+        "definition": "R5: `Device.availabilityStatus` (new:CodeableConcept)",
+        "comment": "Element `Device.availabilityStatus` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.availabilityStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.availabilityStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:biologicalSourceEvent",
+        "path": "Device.extension",
+        "sliceName": "biologicalSourceEvent",
+        "short": "R5: An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled (new)",
+        "definition": "R5: `Device.biologicalSourceEvent` (new:Identifier)",
+        "comment": "Element `Device.biologicalSourceEvent` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.biologicalSourceEvent` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nNecessary to support mandatory requirements for traceability from donor/source to recipient and vice versa, while also satisfying donor anonymity requirements. The element is defined consistently across BiologicallyDerivedProduct, NutritionProduct, and Device.  The identifier references an event that links to a single biological entity such as a blood donor, or to multiple biological entities (e.g. when the product is an embryo or a pooled platelet product).  A single biologicalSourceEvent identifier may appear on multiple products of many types derived from a single donation event or source extraction.  As an example, a single donation event may provide 2 kidneys and a liver for organ transplantation, 2 corneas for eye surgery, heart valves and arterial tissue for cardiovascular surgery, multiple skin grafts, tendons, multiple shaped bone grafts and a large number of bone putty/paste products; and each of them may be assigned to the same biological source event identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.biologicalSourceEvent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:category",
+        "path": "Device.extension",
+        "sliceName": "category",
+        "short": "R5: Indicates a high-level grouping of the device (new)",
+        "definition": "R5: `Device.category` (new:CodeableConcept)",
+        "comment": "Element `Device.category` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:type",
+        "path": "Device.extension",
+        "sliceName": "type",
+        "short": "R5: type",
+        "definition": "R5: `Device.type`",
+        "comment": "Element `Device.type` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Device.type` is mapped to FHIR R4 element `Device.type` as `SourceIsBroaderThanTarget`.\nMultiple device types are use when a device is categorized in more than one context – for example, hybrid devices in which the device is both of type gateway and sensor.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.type"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Device-type"
+        ]
+      },
+      {
+        "id": "Device.extension:mode",
+        "path": "Device.extension",
+        "sliceName": "mode",
+        "short": "R5: The designated condition for performing a task (new)",
+        "definition": "R5: `Device.mode` (new:CodeableConcept)",
+        "comment": "Element `Device.mode` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.mode` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.mode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:cycle",
+        "path": "Device.extension",
+        "sliceName": "cycle",
+        "short": "R5: The series of occurrences that repeats during the operation of the device (new)",
+        "definition": "R5: `Device.cycle` (new:Count)",
+        "comment": "Element `Device.cycle` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.cycle` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.cycle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:duration",
+        "path": "Device.extension",
+        "sliceName": "duration",
+        "short": "R5: A measurement of time during the device's operation (e.g., days, hours, mins, etc.) (new)",
+        "definition": "R5: `Device.duration` (new:Duration)",
+        "comment": "Element `Device.duration` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.duration` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.duration"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:endpoint",
+        "path": "Device.extension",
+        "sliceName": "endpoint",
+        "short": "R5: Technical endpoints providing access to electronic services provided by the device (new)",
+        "definition": "R5: `Device.endpoint` (new:Reference(Endpoint))",
+        "comment": "Element `Device.endpoint` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.endpoint` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.endpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.extension:gateway",
+        "path": "Device.extension",
+        "sliceName": "gateway",
+        "short": "R5: Linked device acting as a communication/data collector, translator or controller (new)",
+        "definition": "R5: `Device.gateway` (new:CodeableReference(Device))",
+        "comment": "Element `Device.gateway` has a context of Device based on following the parent source element upwards and mapping to `Device`.\nElement `Device.gateway` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe Device.gateway may be used when the Device being referenced has a gateway and/or to capture one or more gateways associated with the device. If the Gateway is included in the Observation resource, the Observation.gatewayDevice should be used instead.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.gateway"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.definition.extension",
+        "path": "Device.definition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.definition.extension:definition",
+        "path": "Device.definition.extension",
+        "sliceName": "definition",
+        "short": "R5: definition additional types",
+        "definition": "R5: `Device.definition` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/DeviceDefinition)) additional types from child elements (concept)",
+        "comment": "Element `Device.definition` is mapped to FHIR R4 element `Device.definition` as `SourceIsBroaderThanTarget`.\nThe mappings for `Device.definition` do not cover the following types: CodeableReference.\nThe mappings for `Device.definition` do not cover the following types based on type expansion: concept.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.definition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.udiCarrier.entryType.extension",
+        "path": "Device.udiCarrier.entryType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.udiCarrier.entryType.extension:entryType",
+        "path": "Device.udiCarrier.entryType.extension",
+        "sliceName": "entryType",
+        "short": "R5: barcode | rfid | manual | card | self-reported | electronic-transmission | unknown additional codes",
+        "definition": "R5: `Device.udiCarrier.entryType` additional codes",
+        "comment": "Element `Device.udiCarrier.entryType` is mapped to FHIR R4 element `Device.udiCarrier.entryType` as `RelatedTo`.\nThe mappings for `Device.udiCarrier.entryType` do not allow expression of the necessary codes, per the bindings on the source and target.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.udiCarrier.entryType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.deviceName.extension",
+        "path": "Device.deviceName.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.deviceName.extension:displayName",
+        "path": "Device.deviceName.extension",
+        "sliceName": "displayName",
+        "short": "R5: The name used to display by default when the device is referenced additional types",
+        "definition": "R5: `Device.displayName` additional types (string) additional types from child elements (value)",
+        "comment": "Element `Device.displayName` is mapped to FHIR R4 element `Device.deviceName` as `RelatedTo`.\nThe mappings for `Device.displayName` do not cover the following types: string.\nThe mappings for `Device.displayName` do not cover the following types based on type expansion: value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.displayName"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.specialization.extension",
+        "path": "Device.specialization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.specialization.extension:conformsTo",
+        "path": "Device.specialization.extension",
+        "sliceName": "conformsTo",
+        "short": "R5: Identifies the standards, specifications, or formal guidances for the capabilities supported by the device",
+        "definition": "R5: `Device.conformsTo`",
+        "comment": "Element `Device.conformsTo` is mapped to FHIR R4 element `Device.specialization` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `Device.conformsTo`: `http://hl7.org/fhir/StructureDefinition/device-conformsTo`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/device-conformsTo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.specialization.extension:version",
+        "path": "Device.specialization.extension",
+        "sliceName": "version",
+        "short": "R5: Specific form or variant of the standard (new)",
+        "definition": "R5: `Device.conformsTo.version` (new:string)",
+        "comment": "Element `Device.conformsTo.version` has a context of Device.specialization based on following the parent source element upwards and mapping to `Device`.\nElement `Device.conformsTo.version` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.conformsTo.version"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.version.extension",
+        "path": "Device.version.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Device.version.extension:installDate",
+        "path": "Device.version.extension",
+        "sliceName": "installDate",
+        "short": "R5: The date the version was installed on the device (new)",
+        "definition": "R5: `Device.version.installDate` (new:dateTime)",
+        "comment": "Element `Device.version.installDate` has a context of Device.version based on following the parent source element upwards and mapping to `Device`.\nElement `Device.version.installDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.version.installDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.property.extension",
+        "path": "Device.property.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Device.property.extension:value",
+        "path": "Device.property.extension",
+        "sliceName": "value",
+        "short": "R5: Value of the property additional types",
+        "definition": "R5: `Device.property.value[x]` additional types (string, boolean, integer, Range, Attachment)",
+        "comment": "Element `Device.property.value[x]` is mapped to FHIR R4 element `Device.property.valueQuantity` as `RelatedTo`.\nElement `Device.property.value[x]` is mapped to FHIR R4 element `Device.property.valueCode` as `RelatedTo`.\nThe mappings for `Device.property.value[x]` do not cover the following types: Attachment, boolean, integer, Range, string.\nThe text element in CodeableConcept.text is used for properties which would usually be coded (such as the size of an implant, or a security classification) but for which there is not currently an appropriate concept in the vocabulary (e.g. a custom implant size, or a security classification which depends on configuration). Otherwise the string choice type is used for descriptive properties, or instructions.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.property.value"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

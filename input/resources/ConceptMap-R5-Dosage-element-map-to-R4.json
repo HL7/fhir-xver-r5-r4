@@ -1,0 +1,368 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Dosage-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Dosage-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5DosageElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Dosage to FHIR R4 Dosage",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7293808-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Dosage to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Dosage",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Dosage",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Dosage.sequence",
+          "display": "sequence",
+          "target": [
+            {
+              "code": "Dosage.sequence",
+              "display": "Dosage.sequence",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.sequence` is mapped to FHIR R4 element `Dosage.sequence` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.sequence` is mapped to FHIR R4 element `Dosage.sequence` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "Dosage.text",
+              "display": "Dosage.text",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.text` is mapped to FHIR R4 element `Dosage.text` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.text` is mapped to FHIR R4 element `Dosage.text` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.additionalInstruction",
+          "display": "additionalInstruction",
+          "target": [
+            {
+              "code": "Dosage.additionalInstruction",
+              "display": "Dosage.additionalInstruction",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.additionalInstruction` is mapped to FHIR R4 element `Dosage.additionalInstruction` as `Equivalent`.\nInformation about administration or preparation of the medication (e.g. \"infuse as rapidly as possibly via intraperitoneal port\" or take \"immediately following drug x\") should be populated in dosage.text."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.additionalInstruction` is mapped to FHIR R4 element `Dosage.additionalInstruction` as `Equivalent`.\nInformation about administration or preparation of the medication (e.g. \"infuse as rapidly as possibly via intraperitoneal port\" or take \"immediately following drug x\") should be populated in dosage.text."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.patientInstruction",
+          "display": "patientInstruction",
+          "target": [
+            {
+              "code": "Dosage.patientInstruction",
+              "display": "Dosage.patientInstruction",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.patientInstruction` is mapped to FHIR R4 element `Dosage.patientInstruction` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.patientInstruction` is mapped to FHIR R4 element `Dosage.patientInstruction` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.timing",
+          "display": "timing",
+          "target": [
+            {
+              "code": "Dosage.timing",
+              "display": "Dosage.timing",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.timing` is mapped to FHIR R4 element `Dosage.timing` as `Equivalent`.\nThis attribute might not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.timing` is mapped to FHIR R4 element `Dosage.timing` as `Equivalent`.\nThis attribute might not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.asNeeded",
+          "display": "asNeeded",
+          "target": [
+            {
+              "code": "Dosage.asNeeded[x]",
+              "display": "Dosage.asNeeded[x]",
+              "equivalence": "relatedto",
+              "comment": "Element `Dosage.asNeeded` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "relatedto",
+              "comment": "Element `Dosage.asNeeded` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.asNeededFor",
+          "display": "asNeededFor",
+          "target": [
+            {
+              "code": "Dosage.asNeeded[x]",
+              "display": "Dosage.asNeeded[x]",
+              "equivalence": "relatedto",
+              "comment": "Element `Dosage.asNeededFor` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.asNeededFor` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\"."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "relatedto",
+              "comment": "Element `Dosage.asNeededFor` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.asNeededFor` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\"."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.site",
+          "display": "site",
+          "target": [
+            {
+              "code": "Dosage.site",
+              "display": "Dosage.site",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.site` is mapped to FHIR R4 element `Dosage.site` as `Equivalent`.\nIf the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [http://hl7.org/fhir/StructureDefinition/bodySite](http://hl7.org/fhir/extensions/StructureDefinition-bodySite.html).  May be a summary code, or a reference to a very precise definition of the location, or both."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.site` is mapped to FHIR R4 element `Dosage.site` as `Equivalent`.\nIf the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [http://hl7.org/fhir/StructureDefinition/bodySite](http://hl7.org/fhir/extensions/StructureDefinition-bodySite.html).  May be a summary code, or a reference to a very precise definition of the location, or both."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.route",
+          "display": "route",
+          "target": [
+            {
+              "code": "Dosage.route",
+              "display": "Dosage.route",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.route` is mapped to FHIR R4 element `Dosage.route` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.route` is mapped to FHIR R4 element `Dosage.route` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.method",
+          "display": "method",
+          "target": [
+            {
+              "code": "Dosage.method",
+              "display": "Dosage.method",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.method` is mapped to FHIR R4 element `Dosage.method` as `Equivalent`.\nTerminologies used often pre-coordinate this term with the route and or form of administration."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.method` is mapped to FHIR R4 element `Dosage.method` as `Equivalent`.\nTerminologies used often pre-coordinate this term with the route and or form of administration."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.doseAndRate",
+          "display": "doseAndRate",
+          "target": [
+            {
+              "code": "Dosage.doseAndRate",
+              "display": "Dosage.doseAndRate",
+              "equivalence": "wider",
+              "comment": "Element `Dosage.doseAndRate` is mapped to FHIR R4 element `Dosage.doseAndRate` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "wider",
+              "comment": "Element `Dosage.doseAndRate` is mapped to FHIR R4 element `Dosage.doseAndRate` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.doseAndRate.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Dosage.doseAndRate.type",
+              "display": "Dosage.doseAndRate.type",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.type` is mapped to FHIR R4 element `Dosage.doseAndRate.type` as `Equivalent`."
+            },
+            {
+              "code": "Dosage.doseAndRate",
+              "display": "Dosage.doseAndRate",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.type` is mapped to FHIR R4 element `Dosage.doseAndRate.type` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.doseAndRate.dose[x]",
+          "display": "dose[x]",
+          "target": [
+            {
+              "code": "Dosage.doseAndRate.dose[x]",
+              "display": "Dosage.doseAndRate.dose[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.dose[x]` is mapped to FHIR R4 element `Dosage.doseAndRate.dose[x]` as `Equivalent`.\nThe target context `Dosage.doseAndRate.dose[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage.doseAndRate`.\nNote that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."
+            },
+            {
+              "code": "Dosage.doseAndRate",
+              "display": "Dosage.doseAndRate",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.dose[x]` is mapped to FHIR R4 element `Dosage.doseAndRate.dose[x]` as `Equivalent`.\nThe target context `Dosage.doseAndRate.dose[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage.doseAndRate`.\nNote that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.doseAndRate.rate[x]",
+          "display": "rate[x]",
+          "target": [
+            {
+              "code": "Dosage.doseAndRate.rate[x]",
+              "display": "Dosage.doseAndRate.rate[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.rate[x]` is mapped to FHIR R4 element `Dosage.doseAndRate.rate[x]` as `Equivalent`.\nThe target context `Dosage.doseAndRate.rate[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage.doseAndRate`.\nIt is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate.\r\rIt is possible to specify a rate over time (for example, 100 ml/hour) using either the rateRatio and rateQuantity.  The rateQuantity approach requires systems to have the capability to parse UCUM grammar where ml/hour is included rather than a specific ratio where the time is specified as the denominator.  Where a rate such as 500ml over 2 hours is specified, the use of rateRatio may be more semantically correct than specifying using a rateQuantity of 250 mg/hour."
+            },
+            {
+              "code": "Dosage.doseAndRate",
+              "display": "Dosage.doseAndRate",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.doseAndRate.rate[x]` is mapped to FHIR R4 element `Dosage.doseAndRate.rate[x]` as `Equivalent`.\nThe target context `Dosage.doseAndRate.rate[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage.doseAndRate`.\nIt is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate.\r\rIt is possible to specify a rate over time (for example, 100 ml/hour) using either the rateRatio and rateQuantity.  The rateQuantity approach requires systems to have the capability to parse UCUM grammar where ml/hour is included rather than a specific ratio where the time is specified as the denominator.  Where a rate such as 500ml over 2 hours is specified, the use of rateRatio may be more semantically correct than specifying using a rateQuantity of 250 mg/hour."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.maxDosePerPeriod",
+          "display": "maxDosePerPeriod",
+          "target": [
+            {
+              "code": "Dosage.maxDosePerPeriod",
+              "display": "Dosage.maxDosePerPeriod",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerPeriod` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.maxDosePerPeriod` is mapped to FHIR R4 element `Dosage.maxDosePerPeriod` as `SourceIsBroaderThanTarget`.\nThis is intended for use as an adjunct to the dosage when there is an upper cap.  For example \"2 tablets every 4 hours to a maximum of 8/day\"."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerPeriod` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.maxDosePerPeriod` is mapped to FHIR R4 element `Dosage.maxDosePerPeriod` as `SourceIsBroaderThanTarget`.\nThis is intended for use as an adjunct to the dosage when there is an upper cap.  For example \"2 tablets every 4 hours to a maximum of 8/day\"."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.maxDosePerAdministration",
+          "display": "maxDosePerAdministration",
+          "target": [
+            {
+              "code": "Dosage.maxDosePerAdministration",
+              "display": "Dosage.maxDosePerAdministration",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerAdministration` is mapped to FHIR R4 element `Dosage.maxDosePerAdministration` as `Equivalent`.\nThis is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerAdministration` is mapped to FHIR R4 element `Dosage.maxDosePerAdministration` as `Equivalent`.\nThis is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg."
+            }
+          ]
+        },
+        {
+          "code": "Dosage.maxDosePerLifetime",
+          "display": "maxDosePerLifetime",
+          "target": [
+            {
+              "code": "Dosage.maxDosePerLifetime",
+              "display": "Dosage.maxDosePerLifetime",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerLifetime` is mapped to FHIR R4 element `Dosage.maxDosePerLifetime` as `Equivalent`."
+            },
+            {
+              "code": "Dosage",
+              "display": "Dosage",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerLifetime` is mapped to FHIR R4 element `Dosage.maxDosePerLifetime` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Dosage",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Dosage.asNeededFor",
+          "display": "asNeededFor",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `Dosage.asNeededFor` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.asNeededFor` is mapped to FHIR R4 element `Dosage.asNeeded[x]` as `SourceIsBroaderThanTarget`.\nThe target context `Dosage.asNeeded[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Dosage`.\nCan express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Dosage",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.maxDosePerPeriod",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Dosage.maxDosePerPeriod",
+          "display": "maxDosePerPeriod",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Dosage.maxDosePerPeriod` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Dosage.maxDosePerPeriod` is mapped to FHIR R4 element `Dosage.maxDosePerPeriod` as `SourceIsBroaderThanTarget`.\nThis is intended for use as an adjunct to the dosage when there is an upper cap.  For example \"2 tablets every 4 hours to a maximum of 8/day\"."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

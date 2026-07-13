@@ -1,0 +1,336 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Composition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Composition",
+  "version": "0.1.1",
+  "name": "Profile_R5_Composition_R4",
+  "title": "Cross-version Profile for R5.Composition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.5738892-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Composition resource content to be represented via FHIR R4 Composition resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Cross-version Profile for R5.Composition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Composition resource content to be represented via FHIR R4 Composition resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-Composition-identifier",
+            "requirements": "Cardinality constraints for identifier from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Composition.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier').exists() implies Composition.identifier.exists()"
+          },
+          {
+            "key": "xvpc-R5-R4-Composition-subject",
+            "requirements": "Cardinality constraints for subject from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Composition.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.subject').exists() implies Composition.subject.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.extension:url",
+        "path": "Composition.extension",
+        "sliceName": "url",
+        "short": "R5: Canonical identifier for this Composition, represented as a URI (globally unique) (new)",
+        "definition": "R5: `Composition.url` (new:uri)",
+        "comment": "Element `Composition.url` has a context of Composition based on following the parent source element upwards and mapping to `Composition`.\nElement `Composition.url` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nCan be a urn:uuid: or a urn:oid: but real http: addresses are preferred. Multiple instances may share the same URL if they have a distinct version.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.url"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension:identifier",
+        "path": "Composition.extension",
+        "sliceName": "identifier",
+        "short": "R5: identifier",
+        "definition": "R5: `Composition.identifier`",
+        "comment": "Element `Composition.identifier` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Composition.identifier` is mapped to FHIR R4 element `Composition.identifier` as `SourceIsBroaderThanTarget`.\nSimilar to ClinicalDocument/setId in CDA. See discussion in resource definition for how these relate.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Composition-identifier"
+        ]
+      },
+      {
+        "id": "Composition.extension:version",
+        "path": "Composition.extension",
+        "sliceName": "version",
+        "short": "R5: An explicitly assigned identifer of a variation of the content in the Composition (new)",
+        "definition": "R5: `Composition.version` (new:string)",
+        "comment": "Element `Composition.version` has a context of Composition based on following the parent source element upwards and mapping to `Composition`.\nElement `Composition.version` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhile each resource, including the composition itself, has its own version identifier, this is a formal identifier for the logical version of the Composition as a whole. It would remain constant if the resources were moved to a new server, and all got new individual resource versions, for example.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension:subject",
+        "path": "Composition.extension",
+        "sliceName": "subject",
+        "short": "R5: subject",
+        "definition": "R5: `Composition.subject`",
+        "comment": "Element `Composition.subject` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Composition.subject` is mapped to FHIR R4 element `Composition.subject` as `SourceIsBroaderThanTarget`.\nFor clinical documents, this is usually the patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.subject"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Composition-subject"
+        ]
+      },
+      {
+        "id": "Composition.extension:useContext",
+        "path": "Composition.extension",
+        "sliceName": "useContext",
+        "short": "R5: The context that the content is intended to support (new)",
+        "definition": "R5: `Composition.useContext` (new:UsageContext)",
+        "comment": "Element `Composition.useContext` has a context of Composition based on following the parent source element upwards and mapping to `Composition`.\nElement `Composition.useContext` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhen multiple useContexts are specified, there is no expectation that all or any of the contexts apply.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.useContext"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension:name",
+        "path": "Composition.extension",
+        "sliceName": "name",
+        "short": "R5: Name for this Composition (computer friendly) (new)",
+        "definition": "R5: `Composition.name` (new:string)",
+        "comment": "Element `Composition.name` has a context of Composition based on following the parent source element upwards and mapping to `Composition`.\nElement `Composition.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension:note",
+        "path": "Composition.extension",
+        "sliceName": "note",
+        "short": "R5: For any additional notes (new)",
+        "definition": "R5: `Composition.note` (new:Annotation)",
+        "comment": "Element `Composition.note` has a context of Composition based on following the parent source element upwards and mapping to `Composition`.\nElement `Composition.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nA comment, general note or annotation not coded elsewhere.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.status.extension",
+        "path": "Composition.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.status.extension:status",
+        "path": "Composition.status.extension",
+        "sliceName": "status",
+        "short": "R5: registered | partial | preliminary | final | amended | corrected | appended | cancelled | entered-in-error | deprecated | unknown",
+        "definition": "R5: `Composition.status`",
+        "comment": "Element `Composition.status` is mapped to FHIR R4 element `Composition.status` as `SourceIsBroaderThanTarget`.\nThe target context `Composition.status` is a modifier element, so this extension does not need to be defined as a modifier.\nIf a composition is marked as withdrawn, the compositions/documents in the series, or data from the composition or document series, should never be displayed to a user without being clearly marked as untrustworthy. The flag \"entered-in-error\" is why this element is labeled as a modifier of other elements.   \n\nSome reporting work flows require that the original narrative of a final document never be altered; instead, only new narrative can be added. The composition resource has no explicit status for explicitly noting whether this business rule is in effect. This would be handled by an extension if required.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.attester.mode.extension",
+        "path": "Composition.attester.mode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.attester.mode.extension:mode",
+        "path": "Composition.attester.mode.extension",
+        "sliceName": "mode",
+        "short": "R5: mode additional types",
+        "definition": "R5: `Composition.attester.mode` additional types (CodeableConcept) additional types from child elements (coding)",
+        "comment": "Element `Composition.attester.mode` is mapped to FHIR R4 element `Composition.attester.mode` as `SourceIsBroaderThanTarget`.\nThe mappings for `Composition.attester.mode` do not cover the following types: CodeableConcept.\nThe mappings for `Composition.attester.mode` do not cover the following types based on type expansion: coding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.attester.mode"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

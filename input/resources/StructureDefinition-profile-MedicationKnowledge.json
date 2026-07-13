@@ -1,0 +1,797 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-MedicationKnowledge",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-MedicationKnowledge",
+  "version": "0.1.1",
+  "name": "Profile_R5_MedicationKnowledge_R4",
+  "title": "Cross-version Profile for R5.MedicationKnowledge resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8868498-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 MedicationKnowledge resource content to be represented via FHIR R4 MedicationKnowledge resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationKnowledge",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationKnowledge",
+        "path": "MedicationKnowledge",
+        "short": "Cross-version Profile for R5.MedicationKnowledge resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 MedicationKnowledge resource content to be represented via FHIR R4 MedicationKnowledge resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-MedicationKnowledge-packaging",
+            "requirements": "Cardinality constraints for packaging from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationKnowledge.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.packaging').exists() implies MedicationKnowledge.packaging.exists()"
+          },
+          {
+            "key": "xvpc-R5-R4-MedicationKnowledge-indication",
+            "requirements": "Cardinality constraints for indication from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationKnowledge.administrationGuidelines.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.indicationGuideline.indication').exists() implies MedicationKnowledge.administrationGuidelines.indication[x].exists()"
+          },
+          {
+            "key": "xvpc-R5-R4-MedicationKnowledge-schedule",
+            "requirements": "Cardinality constraints for schedule from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationKnowledge.regulatory.schedule.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.regulatory.schedule').exists() implies MedicationKnowledge.regulatory.schedule.schedule.exists()"
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.extension",
+        "path": "MedicationKnowledge.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.extension:identifier",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "identifier",
+        "short": "R5: Business identifier for this medication (new)",
+        "definition": "R5: `MedicationKnowledge.identifier` (new:Identifier)",
+        "comment": "Element `MedicationKnowledge.identifier` has a context of MedicationKnowledge based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `MedicationKnowledge.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.\nThis is a business identifier, not a resource identifier (see discussion).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.extension:author",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "author",
+        "short": "R5: Creator or owner of the knowledge or information about the medication (new)",
+        "definition": "R5: `MedicationKnowledge.author` (new:Reference(Organization))",
+        "comment": "Element `MedicationKnowledge.author` has a context of MedicationKnowledge based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.author` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `MedicationKnowledge.author`: `http://hl7.org/fhir/StructureDefinition/artifact-author`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-author"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.extension:intendedJurisdiction",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "intendedJurisdiction",
+        "short": "R5: Codes that identify the different jurisdictions for which the information of this resource was created (new)",
+        "definition": "R5: `MedicationKnowledge.intendedJurisdiction` (new:CodeableConcept)",
+        "comment": "Element `MedicationKnowledge.intendedJurisdiction` has a context of MedicationKnowledge based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.intendedJurisdiction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe codes could have varying granularity from a country or group of countries down to a specific district.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.intendedJurisdiction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.extension:packaging",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "packaging",
+        "short": "R5: packaging",
+        "definition": "R5: `MedicationKnowledge.packaging`",
+        "comment": "Element `MedicationKnowledge.packaging` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationKnowledge.packaging` is mapped to FHIR R4 element `MedicationKnowledge.packaging` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.packaging"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationKnowledge-packaging"
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.extension:storageGuideline",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "storageGuideline",
+        "short": "R5: How the medication should be stored (new)",
+        "definition": "R5: `MedicationKnowledge.storageGuideline` (new:BackboneElement)",
+        "comment": "Element `MedicationKnowledge.storageGuideline` has a context of MedicationKnowledge based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.storageGuideline` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.storageGuideline"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.status.modifierExtension",
+        "path": "MedicationKnowledge.status.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.status.modifierExtension:status",
+        "path": "MedicationKnowledge.status.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: active | entered-in-error | inactive",
+        "definition": "R5: `MedicationKnowledge.status`",
+        "comment": "Element `MedicationKnowledge.status` is mapped to FHIR R4 element `MedicationKnowledge.status` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `MedicationKnowledge.status`: `http://hl7.org/fhir/StructureDefinition/artifact-status`.\nThis status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product \"ABC Hospital Special Cream\" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to \"entered in error\".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.synonym.extension",
+        "path": "MedicationKnowledge.synonym.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.synonym.extension:name",
+        "path": "MedicationKnowledge.synonym.extension",
+        "sliceName": "name",
+        "short": "R5: A name associated with the medication being described",
+        "definition": "R5: `MedicationKnowledge.name`",
+        "comment": "Element `MedicationKnowledge.name` is mapped to FHIR R4 element `MedicationKnowledge.synonym` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `MedicationKnowledge.name`: `http://hl7.org/fhir/StructureDefinition/artifact-name`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.monograph.source.extension",
+        "path": "MedicationKnowledge.monograph.source.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.monograph.source.extension:source",
+        "path": "MedicationKnowledge.monograph.source.extension",
+        "sliceName": "source",
+        "short": "R5: source additional types",
+        "definition": "R5: `MedicationKnowledge.monograph.source` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `MedicationKnowledge.monograph.source` is mapped to FHIR R4 element `MedicationKnowledge.monograph.source` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationKnowledge.monograph.source` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationKnowledge.monograph.source` with unmapped reference targets: DocumentReference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.ingredient.extension",
+        "path": "MedicationKnowledge.ingredient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.ingredient.extension:type",
+        "path": "MedicationKnowledge.ingredient.extension",
+        "sliceName": "type",
+        "short": "R5: A code that defines the type of ingredient, active, base, etc (new)",
+        "definition": "R5: `MedicationKnowledge.definitional.ingredient.type` (new:CodeableConcept)",
+        "comment": "Element `MedicationKnowledge.definitional.ingredient.type` has a context of MedicationKnowledge.ingredient based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.definitional.ingredient.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.definitional.ingredient.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.ingredient.strength.extension",
+        "path": "MedicationKnowledge.ingredient.strength.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.ingredient.strength.extension:strength",
+        "path": "MedicationKnowledge.ingredient.strength.extension",
+        "sliceName": "strength",
+        "short": "R5: strength additional types",
+        "definition": "R5: `MedicationKnowledge.definitional.ingredient.strength[x]` additional types (CodeableConcept, Quantity)",
+        "comment": "Element `MedicationKnowledge.definitional.ingredient.strength[x]` is mapped to FHIR R4 element `MedicationKnowledge.ingredient.strength` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationKnowledge.definitional.ingredient.strength[x]` do not cover the following types: CodeableConcept, Quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.definitional.ingredient.strength"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.cost.extension",
+        "path": "MedicationKnowledge.cost.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.cost.extension:cost",
+        "path": "MedicationKnowledge.cost.extension",
+        "sliceName": "cost",
+        "short": "R5: cost",
+        "definition": "R5: `MedicationKnowledge.cost`",
+        "comment": "Element `MedicationKnowledge.cost` is mapped to FHIR R4 element `MedicationKnowledge.cost` as `Equivalent`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.cost"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.cost.extension:effectiveDate",
+        "path": "MedicationKnowledge.cost.extension",
+        "sliceName": "effectiveDate",
+        "short": "R5: The date range for which the cost is effective (new)",
+        "definition": "R5: `MedicationKnowledge.cost.effectiveDate` (new:Period)",
+        "comment": "Element `MedicationKnowledge.cost.effectiveDate` has a context of MedicationKnowledge.cost based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.cost.effectiveDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.cost.effectiveDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.cost.cost.extension",
+        "path": "MedicationKnowledge.cost.cost.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.cost.cost.extension:cost",
+        "path": "MedicationKnowledge.cost.cost.extension",
+        "sliceName": "cost",
+        "short": "R5: The price or category of the cost of the medication additional types",
+        "definition": "R5: `MedicationKnowledge.cost.cost[x]` additional types (CodeableConcept) additional types from child elements (coding, text)",
+        "comment": "Element `MedicationKnowledge.cost.cost[x]` is mapped to FHIR R4 element `MedicationKnowledge.cost.cost` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationKnowledge.cost.cost[x]` do not cover the following types: CodeableConcept.\nThe mappings for `MedicationKnowledge.cost.cost[x]` do not cover the following types based on type expansion: coding, text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.cost.cost"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.administrationGuidelines.extension",
+        "path": "MedicationKnowledge.administrationGuidelines.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.administrationGuidelines.extension:indication",
+        "path": "MedicationKnowledge.administrationGuidelines.extension",
+        "sliceName": "indication",
+        "short": "R5: Indication for use that applies to the specific administration guideline",
+        "definition": "R5: `MedicationKnowledge.indicationGuideline.indication`",
+        "comment": "Element `MedicationKnowledge.indicationGuideline.indication` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationKnowledge.indicationGuideline.indication` is mapped to FHIR R4 element `MedicationKnowledge.administrationGuidelines.indication[x]` as `SourceIsBroaderThanTarget`.\nThe target context `MedicationKnowledge.administrationGuidelines.indication[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `MedicationKnowledge.administrationGuidelines`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.indicationGuideline.indication"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationKnowledge-indication"
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.administrationGuidelines.extension:dosingGuideline",
+        "path": "MedicationKnowledge.administrationGuidelines.extension",
+        "sliceName": "dosingGuideline",
+        "short": "R5: Guidelines for dosage of the medication (new)",
+        "definition": "R5: `MedicationKnowledge.indicationGuideline.dosingGuideline` (new:BackboneElement)",
+        "comment": "Element `MedicationKnowledge.indicationGuideline.dosingGuideline` has a context of MedicationKnowledge.administrationGuidelines based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.indicationGuideline.dosingGuideline` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.indicationGuideline.dosingGuideline"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.medicineClassification.extension",
+        "path": "MedicationKnowledge.medicineClassification.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.medicineClassification.extension:source",
+        "path": "MedicationKnowledge.medicineClassification.extension",
+        "sliceName": "source",
+        "short": "R5: The source of the classification (new)",
+        "definition": "R5: `MedicationKnowledge.medicineClassification.source[x]` (new:string, uri)",
+        "comment": "Element `MedicationKnowledge.medicineClassification.source[x]` has a context of MedicationKnowledge.medicineClassification based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.medicineClassification.source[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.medicineClassification.source"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.packaging.extension",
+        "path": "MedicationKnowledge.packaging.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.packaging.extension:packagedProduct",
+        "path": "MedicationKnowledge.packaging.extension",
+        "sliceName": "packagedProduct",
+        "short": "R5: The packaged medication that is being priced (new)",
+        "definition": "R5: `MedicationKnowledge.packaging.packagedProduct` (new:Reference(PackagedProductDefinition))",
+        "comment": "Element `MedicationKnowledge.packaging.packagedProduct` is part of an existing definition because parent element `MedicationKnowledge.packaging` requires an extension for additional cardinality.\nElement `MedicationKnowledge.packaging.packagedProduct` has a context of MedicationKnowledge.packaging based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.packaging.packagedProduct` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.packaging.packagedProduct"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.drugCharacteristic.extension",
+        "path": "MedicationKnowledge.drugCharacteristic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.drugCharacteristic.extension:definition",
+        "path": "MedicationKnowledge.drugCharacteristic.extension",
+        "sliceName": "definition",
+        "short": "R5: Definitional resources that provide more information about this medication (new)",
+        "definition": "R5: `MedicationKnowledge.definitional.definition` (new:Reference(MedicinalProductDefinition))",
+        "comment": "Element `MedicationKnowledge.definitional.definition` has a context of MedicationKnowledge.drugCharacteristic based on following the parent source element upwards and mapping to `MedicationKnowledge`.\nElement `MedicationKnowledge.definitional.definition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.definitional.definition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.drugCharacteristic.extension:value",
+        "path": "MedicationKnowledge.drugCharacteristic.extension",
+        "sliceName": "value",
+        "short": "R5: value additional types",
+        "definition": "R5: `MedicationKnowledge.definitional.drugCharacteristic.value[x]` additional types (Attachment)",
+        "comment": "Element `MedicationKnowledge.definitional.drugCharacteristic.value[x]` is mapped to FHIR R4 element `MedicationKnowledge.drugCharacteristic.value[x]` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationKnowledge.definitional.drugCharacteristic.value[x]` do not cover the following types: Attachment.\nThe target context `MedicationKnowledge.drugCharacteristic.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `MedicationKnowledge.drugCharacteristic`.\nThe description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.definitional.drugCharacteristic.value"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.contraindication.extension",
+        "path": "MedicationKnowledge.contraindication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.contraindication.extension:clinicalUseIssue",
+        "path": "MedicationKnowledge.contraindication.extension",
+        "sliceName": "clinicalUseIssue",
+        "short": "R5: clinicalUseIssue additional types",
+        "definition": "R5: `MedicationKnowledge.clinicalUseIssue` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `MedicationKnowledge.clinicalUseIssue` is mapped to FHIR R4 element `MedicationKnowledge.contraindication` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationKnowledge.clinicalUseIssue` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationKnowledge.clinicalUseIssue` with unmapped reference targets: ClinicalUseDefinition.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationKnowledge.regulatory.schedule.extension",
+        "path": "MedicationKnowledge.regulatory.schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationKnowledge.regulatory.schedule.extension:schedule",
+        "path": "MedicationKnowledge.regulatory.schedule.extension",
+        "sliceName": "schedule",
+        "short": "R5: Specifies the schedule of a medication in jurisdiction",
+        "definition": "R5: `MedicationKnowledge.regulatory.schedule`",
+        "comment": "Element `MedicationKnowledge.regulatory.schedule` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationKnowledge.regulatory.schedule` is mapped to FHIR R4 element `MedicationKnowledge.regulatory.schedule.schedule` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationKnowledge.regulatory.schedule"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationKnowledge-schedule"
+        ]
+      }
+    ]
+  }
+}

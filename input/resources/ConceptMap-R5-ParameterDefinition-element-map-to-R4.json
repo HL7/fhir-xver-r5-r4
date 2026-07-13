@@ -1,0 +1,150 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ParameterDefinition-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ParameterDefinition-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ParameterDefinitionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ParameterDefinition to FHIR R4 ParameterDefinition",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2559293-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ParameterDefinition to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ParameterDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/ParameterDefinition",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ParameterDefinition.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "ParameterDefinition.name",
+              "display": "ParameterDefinition.name",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.name` is mapped to FHIR R4 element `ParameterDefinition.name` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.name` is mapped to FHIR R4 element `ParameterDefinition.name` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.use",
+          "display": "use",
+          "target": [
+            {
+              "code": "ParameterDefinition.use",
+              "display": "ParameterDefinition.use",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.use` is mapped to FHIR R4 element `ParameterDefinition.use` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.use` is mapped to FHIR R4 element `ParameterDefinition.use` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.min",
+          "display": "min",
+          "target": [
+            {
+              "code": "ParameterDefinition.min",
+              "display": "ParameterDefinition.min",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.min` is mapped to FHIR R4 element `ParameterDefinition.min` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.min` is mapped to FHIR R4 element `ParameterDefinition.min` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.max",
+          "display": "max",
+          "target": [
+            {
+              "code": "ParameterDefinition.max",
+              "display": "ParameterDefinition.max",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.max` is mapped to FHIR R4 element `ParameterDefinition.max` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.max` is mapped to FHIR R4 element `ParameterDefinition.max` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.documentation",
+          "display": "documentation",
+          "target": [
+            {
+              "code": "ParameterDefinition.documentation",
+              "display": "ParameterDefinition.documentation",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.documentation` is mapped to FHIR R4 element `ParameterDefinition.documentation` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.documentation` is mapped to FHIR R4 element `ParameterDefinition.documentation` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "ParameterDefinition.type",
+              "display": "ParameterDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.type` is mapped to FHIR R4 element `ParameterDefinition.type` as `RelatedTo`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.type` is mapped to FHIR R4 element `ParameterDefinition.type` as `RelatedTo`."
+            }
+          ]
+        },
+        {
+          "code": "ParameterDefinition.profile",
+          "display": "profile",
+          "target": [
+            {
+              "code": "ParameterDefinition.profile",
+              "display": "ParameterDefinition.profile",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.profile` is mapped to FHIR R4 element `ParameterDefinition.profile` as `Equivalent`."
+            },
+            {
+              "code": "ParameterDefinition",
+              "display": "ParameterDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `ParameterDefinition.profile` is mapped to FHIR R4 element `ParameterDefinition.profile` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

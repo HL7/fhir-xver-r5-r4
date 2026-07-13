@@ -1,0 +1,329 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-RatioRange",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RatioRange",
+  "version": "0.1.1",
+  "name": "ExtensionRatioRange",
+  "title": "R5: Range of ratio values (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `RatioRange` (new:RatioRange)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `RatioRange` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`RatioRange` 0..* `RatioRange`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `RatioRange` 0..* `RatioRange`\r\n\r\nFollowing are the generation technical comments:\r\nFHIR R5 ComplexType `RatioRange` is representable via extensions in FHIR R4.\nElement `RatioRange` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Extension"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Range of ratio values (new)",
+        "definition": "R5: `RatioRange` (new:RatioRange)",
+        "comment": "FHIR R5 ComplexType `RatioRange` is representable via extensions in FHIR R4.\nElement `RatioRange` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype",
+        "path": "Extension.extension",
+        "sliceName": "_datatype",
+        "short": "DataType slice for a FHIR R5 `RatioRange` value",
+        "definition": "Slice to indicate the presence of a R5 `RatioRange` in FHIR R4",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/_datatype"
+      },
+      {
+        "id": "Extension.extension:_datatype.value[x]",
+        "path": "Extension.extension.value[x]",
+        "comment": "Must be: RatioRange",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "RatioRange"
+      },
+      {
+        "id": "Extension.extension:lowNumerator",
+        "path": "Extension.extension",
+        "sliceName": "lowNumerator",
+        "short": "R5: Low Numerator limit (new)",
+        "definition": "R5: `RatioRange.lowNumerator` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the low element is missing, the low boundary is not known.",
+        "requirements": "Element `RatioRange.lowNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.lowNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.lowNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:lowNumerator.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "lowNumerator"
+      },
+      {
+        "id": "Extension.extension:lowNumerator.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Low Numerator limit",
+        "definition": "The value of the low limit numerator.",
+        "comment": "If the low element is missing, the low boundary is not known.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:highNumerator",
+        "path": "Extension.extension",
+        "sliceName": "highNumerator",
+        "short": "R5: High Numerator limit (new)",
+        "definition": "R5: `RatioRange.highNumerator` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the high element is missing, the high boundary is not known.",
+        "requirements": "Element `RatioRange.highNumerator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.highNumerator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.highNumerator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:highNumerator.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "highNumerator"
+      },
+      {
+        "id": "Extension.extension:highNumerator.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "High Numerator limit",
+        "definition": "The value of the high limit numerator.",
+        "comment": "If the high element is missing, the high boundary is not known.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:denominator",
+        "path": "Extension.extension",
+        "sliceName": "denominator",
+        "short": "R5: Denominator value (new)",
+        "definition": "R5: `RatioRange.denominator` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `RatioRange.denominator` is part of an existing definition because parent element `RatioRange` requires a cross-version extension.\nElement `RatioRange.denominator` is not mapped to FHIR R4, since FHIR R5 `RatioRange` is not mapped.\nElement `RatioRange.denominator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:denominator.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "denominator"
+      },
+      {
+        "id": "Extension.extension:denominator.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Denominator value",
+        "definition": "The value of the denominator.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RatioRange"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

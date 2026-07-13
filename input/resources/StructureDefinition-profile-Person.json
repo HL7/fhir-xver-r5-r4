@@ -1,0 +1,180 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Person",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Person",
+  "version": "0.1.1",
+  "name": "Profile_R5_Person_R4",
+  "title": "Cross-version Profile for R5.Person resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9771957-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Person resource content to be represented via FHIR R4 Person resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Person",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Person",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Person",
+        "path": "Person",
+        "short": "Cross-version Profile for R5.Person resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Person resource content to be represented via FHIR R4 Person resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-Person-photo",
+            "requirements": "Cardinality constraints for photo from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Person.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Person.photo').exists() implies Person.photo.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Person.extension",
+        "path": "Person.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Person.extension:deceased",
+        "path": "Person.extension",
+        "sliceName": "deceased",
+        "short": "R5: Indicates if the individual is deceased or not (new)",
+        "definition": "R5: `Person.deceased[x]` (new:boolean, dateTime)",
+        "comment": "Element `Person.deceased[x]` has a context of Person based on following the parent source element upwards and mapping to `Person`.\nElement `Person.deceased[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Person.deceased"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Person.extension:maritalStatus",
+        "path": "Person.extension",
+        "sliceName": "maritalStatus",
+        "short": "R5: Marital (civil) status of a person (new)",
+        "definition": "R5: `Person.maritalStatus` (new:CodeableConcept)",
+        "comment": "Element `Person.maritalStatus` has a context of Person based on following the parent source element upwards and mapping to `Person`.\nElement `Person.maritalStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMany countries maintain a register of births, deaths and marriages, and this would simplify that interaction",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Person.maritalStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Person.extension:photo",
+        "path": "Person.extension",
+        "sliceName": "photo",
+        "short": "R5: photo",
+        "definition": "R5: `Person.photo`",
+        "comment": "Element `Person.photo` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Person.photo` is mapped to FHIR R4 element `Person.photo` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Person.photo"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Person-photo"
+        ]
+      },
+      {
+        "id": "Person.extension:communication",
+        "path": "Person.extension",
+        "sliceName": "communication",
+        "short": "R5: A language which may be used to communicate with the person about his or her health (new)",
+        "definition": "R5: `Person.communication` (new:BackboneElement)",
+        "comment": "Element `Person.communication` has a context of Person based on following the parent source element upwards and mapping to `Person`.\nElement `Person.communication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Person.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.\n\nNote that this property should not be used to update any linked/logically linked practitioner resources as it serves as a language that can be used to communicate with patients - however it may be used to inform the value on practitioner, along with their role at the organization (with the practitioner's permission)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Person.communication"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

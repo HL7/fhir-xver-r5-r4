@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Parameters",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Parameters",
+  "version": "0.1.1",
+  "name": "Profile_R5_Parameters_R4",
+  "title": "Cross-version Profile for R5.Parameters resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9621509-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Parameters resource content to be represented via FHIR R4 Parameters resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters",
+        "path": "Parameters",
+        "short": "Cross-version Profile for R5.Parameters resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Parameters resource content to be represented via FHIR R4 Parameters resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Parameters.parameter.extension",
+        "path": "Parameters.parameter.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Parameters.parameter.extension:value",
+        "path": "Parameters.parameter.extension",
+        "sliceName": "value",
+        "short": "R5: value additional types",
+        "definition": "R5: `Parameters.parameter.value[x]` additional types (CodeableReference, RatioRange, Availability, ExtendedContactDetail)",
+        "comment": "Element `Parameters.parameter.value[x]` is mapped to FHIR R4 element `Parameters.parameter.value[x]` as `RelatedTo`.\nThe mappings for `Parameters.parameter.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Parameters.parameter.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Parameters.parameter`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Parameters.parameter.value"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

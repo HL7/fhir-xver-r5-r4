@@ -1,0 +1,227 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-RelatedArtifact-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-RelatedArtifact-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5RelatedArtifactElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 RelatedArtifact to FHIR R4 RelatedArtifact",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.5637883-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 RelatedArtifact to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "RelatedArtifact.type",
+              "display": "RelatedArtifact.type",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.type` is mapped to FHIR R4 element `RelatedArtifact.type` as `SourceIsBroaderThanTarget`.\nThe presence of both sides of a relationship type (e.g. successor and predecessor) is required to support use cases where one side of a relationship is not represented in FHIR. However, this feature SHALL NOT be used to create bi-directional resource links in FHIR instances. Specifically, following the methodology of \"new points to old\" and \"many points to one\", when using related artifact elements to describe and reference FHIR resources, the type element SHALL be drawn from the fhir-related-artifact-type ValueSet."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.type` is mapped to FHIR R4 element `RelatedArtifact.type` as `SourceIsBroaderThanTarget`.\nThe presence of both sides of a relationship type (e.g. successor and predecessor) is required to support use cases where one side of a relationship is not represented in FHIR. However, this feature SHALL NOT be used to create bi-directional resource links in FHIR instances. Specifically, following the methodology of \"new points to old\" and \"many points to one\", when using related artifact elements to describe and reference FHIR resources, the type element SHALL be drawn from the fhir-related-artifact-type ValueSet."
+            }
+          ]
+        },
+        {
+          "code": "RelatedArtifact.label",
+          "display": "label",
+          "target": [
+            {
+              "code": "RelatedArtifact.label",
+              "display": "RelatedArtifact.label",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.label` is mapped to FHIR R4 element `RelatedArtifact.label` as `Equivalent`."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.label` is mapped to FHIR R4 element `RelatedArtifact.label` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "RelatedArtifact.display",
+          "display": "display",
+          "target": [
+            {
+              "code": "RelatedArtifact.display",
+              "display": "RelatedArtifact.display",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.display` is mapped to FHIR R4 element `RelatedArtifact.display` as `Equivalent`."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.display` is mapped to FHIR R4 element `RelatedArtifact.display` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "RelatedArtifact.citation",
+          "display": "citation",
+          "target": [
+            {
+              "code": "RelatedArtifact.citation",
+              "display": "RelatedArtifact.citation",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.citation` is mapped to FHIR R4 element `RelatedArtifact.citation` as `Equivalent`.\nAdditional structured information about citations should be captured as extensions."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.citation` is mapped to FHIR R4 element `RelatedArtifact.citation` as `Equivalent`.\nAdditional structured information about citations should be captured as extensions."
+            }
+          ]
+        },
+        {
+          "code": "RelatedArtifact.document",
+          "display": "document",
+          "target": [
+            {
+              "code": "RelatedArtifact.document",
+              "display": "RelatedArtifact.document",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.document` is mapped to FHIR R4 element `RelatedArtifact.document` as `Equivalent`."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.document` is mapped to FHIR R4 element `RelatedArtifact.document` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "RelatedArtifact.resource",
+          "display": "resource",
+          "target": [
+            {
+              "code": "RelatedArtifact.resource",
+              "display": "RelatedArtifact.resource",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.resource` is mapped to FHIR R4 element `RelatedArtifact.resource` as `Equivalent`.\nIf the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource."
+            },
+            {
+              "code": "RelatedArtifact",
+              "display": "RelatedArtifact",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.resource` is mapped to FHIR R4 element `RelatedArtifact.resource` as `Equivalent`.\nIf the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RelatedArtifact.type",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `RelatedArtifact.type` is mapped to FHIR R4 element `RelatedArtifact.type` as `SourceIsBroaderThanTarget`.\nThe presence of both sides of a relationship type (e.g. successor and predecessor) is required to support use cases where one side of a relationship is not represented in FHIR. However, this feature SHALL NOT be used to create bi-directional resource links in FHIR instances. Specifically, following the methodology of \"new points to old\" and \"many points to one\", when using related artifact elements to describe and reference FHIR resources, the type element SHALL be drawn from the fhir-related-artifact-type ValueSet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RelatedArtifact.classifier",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.classifier",
+          "display": "classifier",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.classifier` has a context of RelatedArtifact based on following the parent source element upwards and mapping to `RelatedArtifact`.\nElement `RelatedArtifact.classifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RelatedArtifact.resourceReference",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.resourceReference",
+          "display": "resourceReference",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.resourceReference` has a context of RelatedArtifact based on following the parent source element upwards and mapping to `RelatedArtifact`.\nElement `RelatedArtifact.resourceReference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf both resource and resourceReference are present, they SHOULD be consistent and reference the same resource. Although relatedArtifact is intended to support references to definitional resources, there are cases where non-definitional resources can be definitional (such as Location where the kind is mode). Related artifacts SHOULD be used to reference definitional resources, and profiles SHOULD be used to make that explicit for particular use cases."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RelatedArtifact.publicationStatus",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.publicationStatus",
+          "display": "publicationStatus",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.publicationStatus` has a context of RelatedArtifact based on following the parent source element upwards and mapping to `RelatedArtifact`.\nElement `RelatedArtifact.publicationStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-RelatedArtifact.publicationDate",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "RelatedArtifact.publicationDate",
+          "display": "publicationDate",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `RelatedArtifact.publicationDate` has a context of RelatedArtifact based on following the parent source element upwards and mapping to `RelatedArtifact`.\nElement `RelatedArtifact.publicationDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

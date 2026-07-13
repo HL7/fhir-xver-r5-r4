@@ -1,0 +1,293 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-BiologicallyDerivedProduct",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-BiologicallyDerivedProduct",
+  "version": "0.1.1",
+  "name": "Profile_R5_BiologicallyDerivedProduct_R4",
+  "title": "Cross-version Profile for R5.BiologicallyDerivedProduct resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.4597546-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 BiologicallyDerivedProduct resource content to be represented via FHIR R4 BiologicallyDerivedProduct resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "BiologicallyDerivedProduct",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "BiologicallyDerivedProduct",
+        "path": "BiologicallyDerivedProduct",
+        "short": "Cross-version Profile for R5.BiologicallyDerivedProduct resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 BiologicallyDerivedProduct resource content to be represented via FHIR R4 BiologicallyDerivedProduct resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension",
+        "path": "BiologicallyDerivedProduct.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:biologicalSourceEvent",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "biologicalSourceEvent",
+        "short": "R5: An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.biologicalSourceEvent` (new:Identifier)",
+        "comment": "Element `BiologicallyDerivedProduct.biologicalSourceEvent` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.biologicalSourceEvent` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nNecessary to support mandatory requirements for traceability from donor/source to recipient and vice versa, while also satisfying donor anonymity requirements. The element is defined consistently across BiologicallyDerivedProduct, NutritionProduct, and Device.  The identifier references an event that links to a single biological entity such as a blood donor, or to multiple biological entities (e.g. when the product is an embryo or a pooled platelet product).  A single biologicalSourceEvent identifier may appear on multiple products of many types derived from a single donation event or source extraction.  As an example, a single donation event may provide 2 kidneys and a liver for organ transplantation, 2 corneas for eye surgery, heart valves and arterial tissue for cardiovascular surgery, multiple skin grafts, tendons, multiple shaped bone grafts and a large number of bone putty/paste products; and each of them may be assigned to the same biological source event identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.biologicalSourceEvent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:processingFacility",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "processingFacility",
+        "short": "R5: Processing facilities responsible for the labeling and distribution of this biologically derived product (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.processingFacility` (new:Reference(Organization))",
+        "comment": "Element `BiologicallyDerivedProduct.processingFacility` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.processingFacility` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.processingFacility"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:division",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "division",
+        "short": "R5: A unique identifier for an aliquot of a product (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.division` (new:string)",
+        "comment": "Element `BiologicallyDerivedProduct.division` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.division` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.division"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:expirationDate",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "expirationDate",
+        "short": "R5: Date, and where relevant time, of expiration (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.expirationDate` (new:dateTime)",
+        "comment": "Element `BiologicallyDerivedProduct.expirationDate` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.expirationDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.expirationDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:storageTempRequirements",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "storageTempRequirements",
+        "short": "R5: Product storage temperature requirements (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.storageTempRequirements` (new:Range)",
+        "comment": "Element `BiologicallyDerivedProduct.storageTempRequirements` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.storageTempRequirements` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMay be extracted from information held in the Product Description Code.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.storageTempRequirements"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.extension:property",
+        "path": "BiologicallyDerivedProduct.extension",
+        "sliceName": "property",
+        "short": "R5: A property that is specific to this BiologicallyDerviedProduct instance (new)",
+        "definition": "R5: `BiologicallyDerivedProduct.property` (new:BackboneElement)",
+        "comment": "Element `BiologicallyDerivedProduct.property` has a context of BiologicallyDerivedProduct based on following the parent source element upwards and mapping to `BiologicallyDerivedProduct`.\nElement `BiologicallyDerivedProduct.property` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nProperty can be used to provide information on a wide range of additional information specific to a particular biologicallyDerivedProduct.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.property"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.productCategory.extension",
+        "path": "BiologicallyDerivedProduct.productCategory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BiologicallyDerivedProduct.productCategory.extension:productCategory",
+        "path": "BiologicallyDerivedProduct.productCategory.extension",
+        "sliceName": "productCategory",
+        "short": "R5: productCategory additional types",
+        "definition": "R5: `BiologicallyDerivedProduct.productCategory` additional types (Coding) additional types from child elements (userSelected)",
+        "comment": "Element `BiologicallyDerivedProduct.productCategory` is mapped to FHIR R4 element `BiologicallyDerivedProduct.productCategory` as `SourceIsBroaderThanTarget`.\nThe mappings for `BiologicallyDerivedProduct.productCategory` do not cover the following types: Coding.\nThe mappings for `BiologicallyDerivedProduct.productCategory` do not cover the following types based on type expansion: userSelected.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.productCategory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BiologicallyDerivedProduct.status.extension",
+        "path": "BiologicallyDerivedProduct.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BiologicallyDerivedProduct.status.extension:productStatus",
+        "path": "BiologicallyDerivedProduct.status.extension",
+        "sliceName": "productStatus",
+        "short": "R5: productStatus additional types",
+        "definition": "R5: `BiologicallyDerivedProduct.productStatus` additional types (Coding) additional types from child elements (userSelected)",
+        "comment": "Element `BiologicallyDerivedProduct.productStatus` is mapped to FHIR R4 element `BiologicallyDerivedProduct.status` as `SourceIsBroaderThanTarget`.\nThe mappings for `BiologicallyDerivedProduct.productStatus` do not cover the following types: Coding.\nThe mappings for `BiologicallyDerivedProduct.productStatus` do not cover the following types based on type expansion: userSelected.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProduct.productStatus"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

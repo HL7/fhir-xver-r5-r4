@@ -1,0 +1,366 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-MedicationRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-MedicationRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_MedicationRequest_R4",
+  "title": "Cross-version Profile for R5.MedicationRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8928561-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 MedicationRequest resource content to be represented via FHIR R4 MedicationRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest",
+        "path": "MedicationRequest",
+        "short": "Cross-version Profile for R5.MedicationRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 MedicationRequest resource content to be represented via FHIR R4 MedicationRequest resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-MedicationRequest-performer",
+            "requirements": "Cardinality constraints for performer from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationRequest.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.performer').exists() implies MedicationRequest.performer.exists()"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension",
+        "path": "MedicationRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationRequest.extension:statusChanged",
+        "path": "MedicationRequest.extension",
+        "sliceName": "statusChanged",
+        "short": "R5: When the status was changed (new)",
+        "definition": "R5: `MedicationRequest.statusChanged` (new:dateTime)",
+        "comment": "Element `MedicationRequest.statusChanged` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.statusChanged` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.statusChanged"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:informationSource",
+        "path": "MedicationRequest.extension",
+        "sliceName": "informationSource",
+        "short": "R5: The person or organization who provided the information about this request, if the source is someone other than the requestor (new)",
+        "definition": "R5: `MedicationRequest.informationSource` (new:Reference(Patient,Practitioner,PractitionerRole,RelatedPerson,Organization))",
+        "comment": "Element `MedicationRequest.informationSource` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.informationSource` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.informationSource"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:performer",
+        "path": "MedicationRequest.extension",
+        "sliceName": "performer",
+        "short": "R5: performer",
+        "definition": "R5: `MedicationRequest.performer`",
+        "comment": "Element `MedicationRequest.performer` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationRequest.performer` is mapped to FHIR R4 element `MedicationRequest.performer` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationRequest.performer` with unmapped reference targets: DeviceDefinition, HealthcareService.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.performer"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationRequest-performer"
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:device",
+        "path": "MedicationRequest.extension",
+        "sliceName": "device",
+        "short": "R5: Intended type of device for the administration (new)",
+        "definition": "R5: `MedicationRequest.device` (new:CodeableReference(DeviceDefinition))",
+        "comment": "Element `MedicationRequest.device` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.device` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:renderedDosageInstruction",
+        "path": "MedicationRequest.extension",
+        "sliceName": "renderedDosageInstruction",
+        "short": "R5: Full representation of the dosage instructions (new)",
+        "definition": "R5: `MedicationRequest.renderedDosageInstruction` (new:markdown)",
+        "comment": "Element `MedicationRequest.renderedDosageInstruction` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.renderedDosageInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:effectiveDosePeriod",
+        "path": "MedicationRequest.extension",
+        "sliceName": "effectiveDosePeriod",
+        "short": "R5: Period over which the medication is to be taken (new)",
+        "definition": "R5: `MedicationRequest.effectiveDosePeriod` (new:Period)",
+        "comment": "Element `MedicationRequest.effectiveDosePeriod` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.effectiveDosePeriod` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.effectiveDosePeriod"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.status.extension",
+        "path": "MedicationRequest.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationRequest.status.extension:status",
+        "path": "MedicationRequest.status.extension",
+        "sliceName": "status",
+        "short": "R5: active | on-hold | ended | stopped | completed | cancelled | entered-in-error | draft | unknown additional codes",
+        "definition": "R5: `MedicationRequest.status` additional codes",
+        "comment": "Element `MedicationRequest.status` is mapped to FHIR R4 element `MedicationRequest.status` as `RelatedTo`.\nThe mappings for `MedicationRequest.status` do not allow expression of the necessary codes, per the bindings on the source and target.\nThe target context `MedicationRequest.status` is a modifier element, so this extension does not need to be defined as a modifier.\nThis element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.\n\nClinical decision support systems should take the status into account when determining which medications to include in their algorithms.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.performer.extension",
+        "path": "MedicationRequest.performer.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationRequest.performer.extension:performer",
+        "path": "MedicationRequest.performer.extension",
+        "sliceName": "performer",
+        "short": "R5: performer",
+        "definition": "R5: `MedicationRequest.performer`",
+        "comment": "Element `MedicationRequest.performer` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationRequest.performer` is mapped to FHIR R4 element `MedicationRequest.performer` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationRequest.performer` with unmapped reference targets: DeviceDefinition, HealthcareService.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.extension",
+        "path": "MedicationRequest.dispenseRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.extension:dispenserInstruction",
+        "path": "MedicationRequest.dispenseRequest.extension",
+        "sliceName": "dispenserInstruction",
+        "short": "R5: Additional information for the dispenser (new)",
+        "definition": "R5: `MedicationRequest.dispenseRequest.dispenserInstruction` (new:Annotation)",
+        "comment": "Element `MedicationRequest.dispenseRequest.dispenserInstruction` has a context of MedicationRequest.dispenseRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.dispenseRequest.dispenserInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.dispenseRequest.dispenserInstruction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.extension:doseAdministrationAid",
+        "path": "MedicationRequest.dispenseRequest.extension",
+        "sliceName": "doseAdministrationAid",
+        "short": "R5: Type of adherence packaging to use for the dispense (new)",
+        "definition": "R5: `MedicationRequest.dispenseRequest.doseAdministrationAid` (new:CodeableConcept)",
+        "comment": "Element `MedicationRequest.dispenseRequest.doseAdministrationAid` has a context of MedicationRequest.dispenseRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.dispenseRequest.doseAdministrationAid` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.dispenseRequest.doseAdministrationAid"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

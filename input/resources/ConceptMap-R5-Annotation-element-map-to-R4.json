@@ -1,0 +1,78 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Annotation-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Annotation-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5AnnotationElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Annotation to FHIR R4 Annotation",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.1224912-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Annotation to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Annotation",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Annotation",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Annotation.author[x]",
+          "display": "author[x]",
+          "target": [
+            {
+              "code": "Annotation.author[x]",
+              "display": "Annotation.author[x]",
+              "equivalence": "wider",
+              "comment": "Element `Annotation.author[x]` is mapped to FHIR R4 element `Annotation.author[x]` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Annotation.author[x]` with unmapped reference targets: PractitionerRole.\nSource element `Annotation.author[x]` has unmapped reference types. While the target element `Annotation.author[x]` is a choice type and does not allow extensions, the `alternate-reference` extension can be applied to Reference values within it.\nOrganization is used when there's no need for specific attribution as to who made the comment."
+            },
+            {
+              "code": "Annotation",
+              "display": "Annotation",
+              "equivalence": "wider",
+              "comment": "Element `Annotation.author[x]` is mapped to FHIR R4 element `Annotation.author[x]` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Annotation.author[x]` with unmapped reference targets: PractitionerRole.\nSource element `Annotation.author[x]` has unmapped reference types. While the target element `Annotation.author[x]` is a choice type and does not allow extensions, the `alternate-reference` extension can be applied to Reference values within it.\nOrganization is used when there's no need for specific attribution as to who made the comment."
+            }
+          ]
+        },
+        {
+          "code": "Annotation.time",
+          "display": "time",
+          "target": [
+            {
+              "code": "Annotation.time",
+              "display": "Annotation.time",
+              "equivalence": "equivalent",
+              "comment": "Element `Annotation.time` is mapped to FHIR R4 element `Annotation.time` as `Equivalent`."
+            },
+            {
+              "code": "Annotation",
+              "display": "Annotation",
+              "equivalence": "equivalent",
+              "comment": "Element `Annotation.time` is mapped to FHIR R4 element `Annotation.time` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Annotation.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "Annotation.text",
+              "display": "Annotation.text",
+              "equivalence": "equivalent",
+              "comment": "Element `Annotation.text` is mapped to FHIR R4 element `Annotation.text` as `Equivalent`."
+            },
+            {
+              "code": "Annotation",
+              "display": "Annotation",
+              "equivalence": "equivalent",
+              "comment": "Element `Annotation.text` is mapped to FHIR R4 element `Annotation.text` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

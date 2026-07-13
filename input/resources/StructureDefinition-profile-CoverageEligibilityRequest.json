@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-CoverageEligibilityRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-CoverageEligibilityRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_CoverageEligibilityRequest_R4",
+  "title": "Cross-version Profile for R5.CoverageEligibilityRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.6147584-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 CoverageEligibilityRequest resource content to be represented via FHIR R4 CoverageEligibilityRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CoverageEligibilityRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CoverageEligibilityRequest",
+        "path": "CoverageEligibilityRequest",
+        "short": "Cross-version Profile for R5.CoverageEligibilityRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 CoverageEligibilityRequest resource content to be represented via FHIR R4 CoverageEligibilityRequest resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CoverageEligibilityRequest.extension",
+        "path": "CoverageEligibilityRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CoverageEligibilityRequest.extension:event",
+        "path": "CoverageEligibilityRequest.extension",
+        "sliceName": "event",
+        "short": "R5: Event information (new)",
+        "definition": "R5: `CoverageEligibilityRequest.event` (new:BackboneElement)",
+        "comment": "Element `CoverageEligibilityRequest.event` has a context of CoverageEligibilityRequest based on following the parent source element upwards and mapping to `CoverageEligibilityRequest`.\nElement `CoverageEligibilityRequest.event` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CoverageEligibilityRequest.event"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

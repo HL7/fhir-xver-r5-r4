@@ -1,0 +1,152 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-TriggerDefinition-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-TriggerDefinition-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5TriggerDefinitionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 TriggerDefinition to FHIR R4 TriggerDefinition",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.5750507-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 TriggerDefinition to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/TriggerDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/TriggerDefinition",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "TriggerDefinition.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "TriggerDefinition.type",
+              "display": "TriggerDefinition.type",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.type` is mapped to FHIR R4 element `TriggerDefinition.type` as `Equivalent`."
+            },
+            {
+              "code": "TriggerDefinition",
+              "display": "TriggerDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.type` is mapped to FHIR R4 element `TriggerDefinition.type` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "TriggerDefinition.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "TriggerDefinition.name",
+              "display": "TriggerDefinition.name",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.name` is mapped to FHIR R4 element `TriggerDefinition.name` as `Equivalent`.\nAn event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event."
+            },
+            {
+              "code": "TriggerDefinition",
+              "display": "TriggerDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.name` is mapped to FHIR R4 element `TriggerDefinition.name` as `Equivalent`.\nAn event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event."
+            }
+          ]
+        },
+        {
+          "code": "TriggerDefinition.timing[x]",
+          "display": "timing[x]",
+          "target": [
+            {
+              "code": "TriggerDefinition.timing[x]",
+              "display": "TriggerDefinition.timing[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.timing[x]` is mapped to FHIR R4 element `TriggerDefinition.timing[x]` as `RelatedTo`.\nThe target context `TriggerDefinition.timing[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `TriggerDefinition`."
+            },
+            {
+              "code": "TriggerDefinition",
+              "display": "TriggerDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.timing[x]` is mapped to FHIR R4 element `TriggerDefinition.timing[x]` as `RelatedTo`.\nThe target context `TriggerDefinition.timing[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `TriggerDefinition`."
+            }
+          ]
+        },
+        {
+          "code": "TriggerDefinition.data",
+          "display": "data",
+          "target": [
+            {
+              "code": "TriggerDefinition.data",
+              "display": "TriggerDefinition.data",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.data` is mapped to FHIR R4 element `TriggerDefinition.data` as `Equivalent`.\nThis element shall be present for any data type trigger."
+            },
+            {
+              "code": "TriggerDefinition",
+              "display": "TriggerDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.data` is mapped to FHIR R4 element `TriggerDefinition.data` as `Equivalent`.\nThis element shall be present for any data type trigger."
+            }
+          ]
+        },
+        {
+          "code": "TriggerDefinition.condition",
+          "display": "condition",
+          "target": [
+            {
+              "code": "TriggerDefinition.condition",
+              "display": "TriggerDefinition.condition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.condition` is mapped to FHIR R4 element `TriggerDefinition.condition` as `Equivalent`.\nThis element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type."
+            },
+            {
+              "code": "TriggerDefinition",
+              "display": "TriggerDefinition",
+              "equivalence": "equivalent",
+              "comment": "Element `TriggerDefinition.condition` is mapped to FHIR R4 element `TriggerDefinition.condition` as `Equivalent`.\nThis element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/TriggerDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-TriggerDefinition.code",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "TriggerDefinition.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `TriggerDefinition.code` has a context of TriggerDefinition based on following the parent source element upwards and mapping to `TriggerDefinition`.\nElement `TriggerDefinition.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/TriggerDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-TriggerDefinition.subscriptionTopic",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "TriggerDefinition.subscriptionTopic",
+          "display": "subscriptionTopic",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `TriggerDefinition.subscriptionTopic` has a context of TriggerDefinition based on following the parent source element upwards and mapping to `TriggerDefinition`.\nElement `TriggerDefinition.subscriptionTopic` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

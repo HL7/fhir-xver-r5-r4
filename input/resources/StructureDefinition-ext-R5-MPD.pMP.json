@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MPD.pMP",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicinalProductDefinition.packagedMedicinalProduct",
+  "version": "0.1.1",
+  "name": "ExtensionMedicinalProductDefinition_PackagedMedicinalProduct",
+  "title": "R5: Package type for the product additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MedicinalProductDefinition.packagedMedicinalProduct` additional types (CodeableConcept) additional types from child elements (coding, text)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MedicinalProductDefinition.packagedMedicinalProduct` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MedicinalProductDefinition.packagedMedicinalProduct` 0..* `CodeableConcept`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MedicinalProductDefinition.packagedMedicinalProduct` 0..* `CodeableConcept`\n*  R4B: `MedicinalProductDefinition.packagedMedicinalProduct` 0..* `CodeableConcept`\n*  R4: `MedicinalProduct.packagedMedicinalProduct` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MedicinalProductDefinition.packagedMedicinalProduct` is mapped to FHIR R4 element `MedicinalProduct.packagedMedicinalProduct` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicinalProductDefinition.packagedMedicinalProduct` do not cover the following types: CodeableConcept.\nThe mappings for `MedicinalProductDefinition.packagedMedicinalProduct` do not cover the following types based on type expansion: coding, text.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicinalProduct.packagedMedicinalProduct"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Package type for the product additional types",
+        "definition": "R5: `MedicinalProductDefinition.packagedMedicinalProduct` additional types (CodeableConcept) additional types from child elements (coding, text)",
+        "comment": "Element `MedicinalProductDefinition.packagedMedicinalProduct` is mapped to FHIR R4 element `MedicinalProduct.packagedMedicinalProduct` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicinalProductDefinition.packagedMedicinalProduct` do not cover the following types: CodeableConcept.\nThe mappings for `MedicinalProductDefinition.packagedMedicinalProduct` do not cover the following types based on type expansion: coding, text.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicinalProductDefinition.packagedMedicinalProduct"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Package type for the product",
+        "definition": "Package type for the product. See also the PackagedProductDefinition resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Types of medicinal product packs",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-medicinal-product-package-type-for-R4"
+        }
+      }
+    ]
+  }
+}

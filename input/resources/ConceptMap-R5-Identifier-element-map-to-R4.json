@@ -1,0 +1,132 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Identifier-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Identifier-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5IdentifierElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Identifier to FHIR R4 Identifier",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.0279855-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Identifier to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Identifier",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Identifier",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Identifier.use",
+          "display": "use",
+          "target": [
+            {
+              "code": "Identifier.use",
+              "display": "Identifier.use",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.use` is mapped to FHIR R4 element `Identifier.use` as `Equivalent`.\nApplications can assume that an identifier is permanent unless it explicitly says that it is temporary."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.use` is mapped to FHIR R4 element `Identifier.use` as `Equivalent`.\nApplications can assume that an identifier is permanent unless it explicitly says that it is temporary."
+            }
+          ]
+        },
+        {
+          "code": "Identifier.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Identifier.type",
+              "display": "Identifier.type",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.type` is mapped to FHIR R4 element `Identifier.type` as `Equivalent`.\nThis element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.type` is mapped to FHIR R4 element `Identifier.type` as `Equivalent`.\nThis element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."
+            }
+          ]
+        },
+        {
+          "code": "Identifier.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "Identifier.system",
+              "display": "Identifier.system",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.system` is mapped to FHIR R4 element `Identifier.system` as `Equivalent`.\nIdentifier.system is always case sensitive."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.system` is mapped to FHIR R4 element `Identifier.system` as `Equivalent`.\nIdentifier.system is always case sensitive."
+            }
+          ]
+        },
+        {
+          "code": "Identifier.value",
+          "display": "value",
+          "target": [
+            {
+              "code": "Identifier.value",
+              "display": "Identifier.value",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.value` is mapped to FHIR R4 element `Identifier.value` as `Equivalent`.\nIf the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [http://hl7.org/fhir/StructureDefinition/rendered-value](http://hl7.org/fhir/extensions/StructureDefinition-rendered-value.html)). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.value` is mapped to FHIR R4 element `Identifier.value` as `Equivalent`.\nIf the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [http://hl7.org/fhir/StructureDefinition/rendered-value](http://hl7.org/fhir/extensions/StructureDefinition-rendered-value.html)). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe."
+            }
+          ]
+        },
+        {
+          "code": "Identifier.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Identifier.period",
+              "display": "Identifier.period",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.period` is mapped to FHIR R4 element `Identifier.period` as `Equivalent`."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.period` is mapped to FHIR R4 element `Identifier.period` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Identifier.assigner",
+          "display": "assigner",
+          "target": [
+            {
+              "code": "Identifier.assigner",
+              "display": "Identifier.assigner",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.assigner` is mapped to FHIR R4 element `Identifier.assigner` as `Equivalent`.\nThe Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."
+            },
+            {
+              "code": "Identifier",
+              "display": "Identifier",
+              "equivalence": "equivalent",
+              "comment": "Element `Identifier.assigner` is mapped to FHIR R4 element `Identifier.assigner` as `Equivalent`.\nThe Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

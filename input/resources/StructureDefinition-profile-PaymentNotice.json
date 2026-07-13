@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-PaymentNotice",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-PaymentNotice",
+  "version": "0.1.1",
+  "name": "Profile_R5_PaymentNotice_R4",
+  "title": "Cross-version Profile for R5.PaymentNotice resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9657062-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 PaymentNotice resource content to be represented via FHIR R4 PaymentNotice resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PaymentNotice",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PaymentNotice",
+        "path": "PaymentNotice",
+        "short": "Cross-version Profile for R5.PaymentNotice resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 PaymentNotice resource content to be represented via FHIR R4 PaymentNotice resources.",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  }
+}

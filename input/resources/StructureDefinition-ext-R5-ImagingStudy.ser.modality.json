@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ImagingStudy.ser.modality",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingStudy.series.modality",
+  "version": "0.1.1",
+  "name": "ExtensionImagingStudy_Series_Modality",
+  "title": "R5: The modality used for this series additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ImagingStudy.series.modality` additional types (CodeableConcept) additional types from child elements (text)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ImagingStudy.series.modality` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ImagingStudy.series.modality` 1..1 `CodeableConcept`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ImagingStudy.series.modality` 1..1 `CodeableConcept`\n*  R4B: `ImagingStudy.series.modality` 1..1 `Coding`\n*  R4: `ImagingStudy.series.modality` 1..1 `Coding`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ImagingStudy.series.modality` is mapped to FHIR R4 element `ImagingStudy.series.modality` as `SourceIsBroaderThanTarget`.\nThe mappings for `ImagingStudy.series.modality` do not cover the following types: CodeableConcept.\nThe mappings for `ImagingStudy.series.modality` do not cover the following types based on type expansion: text.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ImagingStudy.series.modality"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: The modality used for this series additional types",
+        "definition": "R5: `ImagingStudy.series.modality` additional types (CodeableConcept) additional types from child elements (text)",
+        "comment": "Element `ImagingStudy.series.modality` is mapped to FHIR R4 element `ImagingStudy.series.modality` as `SourceIsBroaderThanTarget`.\nThe mappings for `ImagingStudy.series.modality` do not cover the following types: CodeableConcept.\nThe mappings for `ImagingStudy.series.modality` do not cover the following types based on type expansion: text.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingStudy.series.modality"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "The modality used for this series",
+        "definition": "The distinct modality for this series. This may include both acquisition and non-acquisition modalities.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Type of acquired data in the instance.",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-dicom-cid-33-Modality-for-R4"
+        }
+      }
+    ]
+  }
+}

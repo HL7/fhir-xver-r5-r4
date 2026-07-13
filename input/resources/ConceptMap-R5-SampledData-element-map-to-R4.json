@@ -1,0 +1,207 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-SampledData-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-SampledData-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5SampledDataElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 SampledData to FHIR R4 SampledData",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.5660107-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 SampledData to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/SampledData",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/SampledData",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "SampledData.origin",
+          "display": "origin",
+          "target": [
+            {
+              "code": "SampledData.origin",
+              "display": "SampledData.origin",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.origin` is mapped to FHIR R4 element `SampledData.origin` as `Equivalent`."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.origin` is mapped to FHIR R4 element `SampledData.origin` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.interval",
+          "display": "interval",
+          "target": [
+            {
+              "code": "SampledData.period",
+              "display": "SampledData.period",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.interval` is mapped to FHIR R4 element `SampledData.period` as `Equivalent`.\nThis is usually a whole number."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.interval` is mapped to FHIR R4 element `SampledData.period` as `Equivalent`.\nThis is usually a whole number."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.factor",
+          "display": "factor",
+          "target": [
+            {
+              "code": "SampledData.factor",
+              "display": "SampledData.factor",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.factor` is mapped to FHIR R4 element `SampledData.factor` as `Equivalent`."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.factor` is mapped to FHIR R4 element `SampledData.factor` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.lowerLimit",
+          "display": "lowerLimit",
+          "target": [
+            {
+              "code": "SampledData.lowerLimit",
+              "display": "SampledData.lowerLimit",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.lowerLimit` is mapped to FHIR R4 element `SampledData.lowerLimit` as `Equivalent`."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.lowerLimit` is mapped to FHIR R4 element `SampledData.lowerLimit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.upperLimit",
+          "display": "upperLimit",
+          "target": [
+            {
+              "code": "SampledData.upperLimit",
+              "display": "SampledData.upperLimit",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.upperLimit` is mapped to FHIR R4 element `SampledData.upperLimit` as `Equivalent`."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.upperLimit` is mapped to FHIR R4 element `SampledData.upperLimit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.dimensions",
+          "display": "dimensions",
+          "target": [
+            {
+              "code": "SampledData.dimensions",
+              "display": "SampledData.dimensions",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.dimensions` is mapped to FHIR R4 element `SampledData.dimensions` as `Equivalent`.\nIf there is more than one dimension, the code for the type of data will define the meaning of the dimensions (typically ECG data)."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.dimensions` is mapped to FHIR R4 element `SampledData.dimensions` as `Equivalent`.\nIf there is more than one dimension, the code for the type of data will define the meaning of the dimensions (typically ECG data)."
+            }
+          ]
+        },
+        {
+          "code": "SampledData.data",
+          "display": "data",
+          "target": [
+            {
+              "code": "SampledData.data",
+              "display": "SampledData.data",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.data` is mapped to FHIR R4 element `SampledData.data` as `Equivalent`.\nThe data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData."
+            },
+            {
+              "code": "SampledData",
+              "display": "SampledData",
+              "equivalence": "equivalent",
+              "comment": "Element `SampledData.data` is mapped to FHIR R4 element `SampledData.data` as `Equivalent`.\nThe data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/SampledData",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-SampledData.intervalUnit",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "SampledData.intervalUnit",
+          "display": "intervalUnit",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `SampledData.intervalUnit` has a context of SampledData based on following the parent source element upwards and mapping to `SampledData`.\nElement `SampledData.intervalUnit` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/SampledData",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-SampledData.codeMap",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "SampledData.codeMap",
+          "display": "codeMap",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `SampledData.codeMap` has a context of SampledData based on following the parent source element upwards and mapping to `SampledData`.\nElement `SampledData.codeMap` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe ConceptMap cannot define meanings for the codes 'E', 'U', or 'L' (nor 'e', 'u', or 'l')."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/SampledData",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-SampledData.offsets",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "SampledData.offsets",
+          "display": "offsets",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `SampledData.offsets` has a context of SampledData based on following the parent source element upwards and mapping to `SampledData`.\nElement `SampledData.offsets` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf offsets is present, the number of data points must be equal to the number of offsets mlutipled by the dimensions."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

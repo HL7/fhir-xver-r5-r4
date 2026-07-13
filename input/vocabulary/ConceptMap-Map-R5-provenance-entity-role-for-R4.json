@@ -1,0 +1,81 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-provenance-entity-role-for-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-provenance-entity-role-for-R4",
+  "version": "0.1.1",
+  "name": "MapR5ProvenanceEntityRoleForR4",
+  "title": "Cross-version ConceptMap for ValueSet R5-provenance-entity-role-for-R4 from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.4007056-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/provenance-entity-role",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/provenance-entity-role",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "quotation",
+          "display": "Quotation",
+          "target": [
+            {
+              "code": "quotation",
+              "display": "Quotation",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole` (`ConceptMap-R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole` (`ConceptMap-R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0#quotation` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1#quotation` as Equivalent in `ConceptMap-R5-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "removal",
+          "display": "Removal",
+          "target": [
+            {
+              "code": "removal",
+              "display": "Removal",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole` (`ConceptMap-R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole` (`ConceptMap-R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0#removal` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1#removal` as Equivalent in `ConceptMap-R5-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "revision",
+          "display": "Revision",
+          "target": [
+            {
+              "code": "revision",
+              "display": "Revision",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole` (`ConceptMap-R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole` (`ConceptMap-R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0#revision` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1#revision` as Equivalent in `ConceptMap-R5-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "source",
+          "display": "Source",
+          "target": [
+            {
+              "code": "source",
+              "display": "Source",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole` (`ConceptMap-R5-ProvenanceEntityRole-R4B-ProvenanceEntityRole.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.3.0` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole` (`ConceptMap-R4B-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/provenance-entity-role|5.0.0#source` to `http://hl7.org/fhir/ValueSet/provenance-entity-role|4.0.1#source` as Equivalent in `ConceptMap-R5-ProvenanceEntityRole-R4-ProvenanceEntityRole.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "instantiates",
+          "display": "Instantiates",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

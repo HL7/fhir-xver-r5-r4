@@ -1,0 +1,114 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ContactPoint-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ContactPoint-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ContactPointElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ContactPoint to FHIR R4 ContactPoint",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.6993834-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ContactPoint to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ContactPoint.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "ContactPoint.system",
+              "display": "ContactPoint.system",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.system` is mapped to FHIR R4 element `ContactPoint.system` as `Equivalent`."
+            },
+            {
+              "code": "ContactPoint",
+              "display": "ContactPoint",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.system` is mapped to FHIR R4 element `ContactPoint.system` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ContactPoint.value",
+          "display": "value",
+          "target": [
+            {
+              "code": "ContactPoint.value",
+              "display": "ContactPoint.value",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.value` is mapped to FHIR R4 element `ContactPoint.value` as `Equivalent`.\nAdditional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value."
+            },
+            {
+              "code": "ContactPoint",
+              "display": "ContactPoint",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.value` is mapped to FHIR R4 element `ContactPoint.value` as `Equivalent`.\nAdditional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value."
+            }
+          ]
+        },
+        {
+          "code": "ContactPoint.use",
+          "display": "use",
+          "target": [
+            {
+              "code": "ContactPoint.use",
+              "display": "ContactPoint.use",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.use` is mapped to FHIR R4 element `ContactPoint.use` as `Equivalent`.\nApplications can assume that a contact is current unless it explicitly says that it is temporary or old."
+            },
+            {
+              "code": "ContactPoint",
+              "display": "ContactPoint",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.use` is mapped to FHIR R4 element `ContactPoint.use` as `Equivalent`.\nApplications can assume that a contact is current unless it explicitly says that it is temporary or old."
+            }
+          ]
+        },
+        {
+          "code": "ContactPoint.rank",
+          "display": "rank",
+          "target": [
+            {
+              "code": "ContactPoint.rank",
+              "display": "ContactPoint.rank",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.rank` is mapped to FHIR R4 element `ContactPoint.rank` as `Equivalent`.\nNote that rank does not necessarily follow the order in which the contacts are represented in the instance.\n\nRanks need not be unique.  E.g. it's possible to have multiple contacts with rank=1.  If the ranks have different systems or uses, this would be interpreted to mean \"X is my most preferred phone number, Y is my most preferred email address\" or \"X is my preferred home email and Y is my preferred work email\".  If the system and use for equally-ranked contacts are the same, then the level of preference is equivalent for both repetitions. \n\nRanks need not be sequential and not all repetitions must have a rank.  For example, it's possible to have 4 contacts with ranks of 2, 5 and two with no rank specified.  That would be interpreted to mean the first is preferred over the second and no preference stated for the remaining contacts."
+            },
+            {
+              "code": "ContactPoint",
+              "display": "ContactPoint",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.rank` is mapped to FHIR R4 element `ContactPoint.rank` as `Equivalent`.\nNote that rank does not necessarily follow the order in which the contacts are represented in the instance.\n\nRanks need not be unique.  E.g. it's possible to have multiple contacts with rank=1.  If the ranks have different systems or uses, this would be interpreted to mean \"X is my most preferred phone number, Y is my most preferred email address\" or \"X is my preferred home email and Y is my preferred work email\".  If the system and use for equally-ranked contacts are the same, then the level of preference is equivalent for both repetitions. \n\nRanks need not be sequential and not all repetitions must have a rank.  For example, it's possible to have 4 contacts with ranks of 2, 5 and two with no rank specified.  That would be interpreted to mean the first is preferred over the second and no preference stated for the remaining contacts."
+            }
+          ]
+        },
+        {
+          "code": "ContactPoint.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "ContactPoint.period",
+              "display": "ContactPoint.period",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.period` is mapped to FHIR R4 element `ContactPoint.period` as `Equivalent`."
+            },
+            {
+              "code": "ContactPoint",
+              "display": "ContactPoint",
+              "equivalence": "equivalent",
+              "comment": "Element `ContactPoint.period` is mapped to FHIR R4 element `ContactPoint.period` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

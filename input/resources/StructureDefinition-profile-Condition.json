@@ -1,0 +1,139 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Condition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Condition",
+  "version": "0.1.1",
+  "name": "Profile_R5_Condition_R4",
+  "title": "Cross-version Profile for R5.Condition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.5884085-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Condition resource content to be represented via FHIR R4 Condition resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "short": "Cross-version Profile for R5.Condition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Condition resource content to be represented via FHIR R4 Condition resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Condition.extension:participant",
+        "path": "Condition.extension",
+        "sliceName": "participant",
+        "short": "R5: Who or what participated in the activities related to the condition and how they were involved (new)",
+        "definition": "R5: `Condition.participant` (new:BackboneElement)",
+        "comment": "Element `Condition.participant` has a context of Condition based on following the parent source element upwards and mapping to `Condition`.\nElement `Condition.participant` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.participant"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.clinicalStatus.extension",
+        "path": "Condition.clinicalStatus.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Condition.clinicalStatus.extension:clinicalStatus",
+        "path": "Condition.clinicalStatus.extension",
+        "sliceName": "clinicalStatus",
+        "short": "R5: active | recurrence | relapse | inactive | remission | resolved | unknown",
+        "definition": "R5: `Condition.clinicalStatus`",
+        "comment": "Element `Condition.clinicalStatus` is mapped to FHIR R4 element `Condition.clinicalStatus` as `SourceIsBroaderThanTarget`.\nThe target context `Condition.clinicalStatus` is a modifier element, so this extension does not need to be defined as a modifier.\nThe data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.  clinicalStatus is required since it is a modifier element.  For conditions that are problems list items, the clinicalStatus should not be unknown.  For conditions that are not problem list items, the clinicalStatus may be unknown.  For example, conditions derived from a claim are point in time, so those conditions may have a clinicalStatus of unknown",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.clinicalStatus"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

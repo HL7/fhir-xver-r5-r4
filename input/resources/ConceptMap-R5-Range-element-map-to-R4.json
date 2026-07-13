@@ -1,0 +1,60 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Range-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Range-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5RangeElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Range to FHIR R4 Range",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2618264-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Range to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Range",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Range",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Range.low",
+          "display": "low",
+          "target": [
+            {
+              "code": "Range.low",
+              "display": "Range.low",
+              "equivalence": "equivalent",
+              "comment": "Element `Range.low` is mapped to FHIR R4 element `Range.low` as `Equivalent`.\nIf the low element is missing, the low boundary is not known."
+            },
+            {
+              "code": "Range",
+              "display": "Range",
+              "equivalence": "equivalent",
+              "comment": "Element `Range.low` is mapped to FHIR R4 element `Range.low` as `Equivalent`.\nIf the low element is missing, the low boundary is not known."
+            }
+          ]
+        },
+        {
+          "code": "Range.high",
+          "display": "high",
+          "target": [
+            {
+              "code": "Range.high",
+              "display": "Range.high",
+              "equivalence": "equivalent",
+              "comment": "Element `Range.high` is mapped to FHIR R4 element `Range.high` as `Equivalent`.\nIf the high element is missing, the high boundary is not known."
+            },
+            {
+              "code": "Range",
+              "display": "Range",
+              "equivalence": "equivalent",
+              "comment": "Element `Range.high` is mapped to FHIR R4 element `Range.high` as `Equivalent`.\nIf the high element is missing, the high boundary is not known."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

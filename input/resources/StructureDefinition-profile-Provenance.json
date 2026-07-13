@@ -1,0 +1,302 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Provenance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Provenance",
+  "version": "0.1.1",
+  "name": "Profile_R5_Provenance_R4",
+  "title": "Cross-version Profile for R5.Provenance resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9947006-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Provenance resource content to be represented via FHIR R4 Provenance resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Provenance",
+        "path": "Provenance",
+        "short": "Cross-version Profile for R5.Provenance resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Provenance resource content to be represented via FHIR R4 Provenance resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.extension",
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.extension:basedOn",
+        "path": "Provenance.extension",
+        "sliceName": "basedOn",
+        "short": "R5: Workflow authorization within which this event occurred (new)",
+        "definition": "R5: `Provenance.basedOn` (new:Reference(CarePlan,DeviceRequest,ImmunizationRecommendation,MedicationRequest,NutritionOrder,ServiceRequest,Task))",
+        "comment": "Element `Provenance.basedOn` has a context of Provenance based on following the parent source element upwards and mapping to `Provenance`.\nElement `Provenance.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Provenance.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.extension:patient",
+        "path": "Provenance.extension",
+        "sliceName": "patient",
+        "short": "R5: The patient is the subject of the data created/updated (.target) by the activity (new)",
+        "definition": "R5: `Provenance.patient` (new:Reference(Patient))",
+        "comment": "Element `Provenance.patient` has a context of Provenance based on following the parent source element upwards and mapping to `Provenance`.\nElement `Provenance.patient` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Provenance.patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.extension:encounter",
+        "path": "Provenance.extension",
+        "sliceName": "encounter",
+        "short": "R5: Encounter within which this event occurred or which the event is tightly associated (new)",
+        "definition": "R5: `Provenance.encounter` (new:Reference(Encounter))",
+        "comment": "Element `Provenance.encounter` has a context of Provenance based on following the parent source element upwards and mapping to `Provenance`.\nElement `Provenance.encounter` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Provenance.encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.reason.extension",
+        "path": "Provenance.reason.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.reason.extension:authorization",
+        "path": "Provenance.reason.extension",
+        "sliceName": "authorization",
+        "short": "R5: Authorization (purposeOfUse) related to the event additional types",
+        "definition": "R5: `Provenance.authorization` additional types (CodeableReference) additional types from child elements (reference)",
+        "comment": "Element `Provenance.authorization` is mapped to FHIR R4 element `Provenance.reason` as `SourceIsBroaderThanTarget`.\nThe mappings for `Provenance.authorization` do not cover the following types: CodeableReference.\nThe mappings for `Provenance.authorization` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Provenance.authorization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.agent.who.extension",
+        "path": "Provenance.agent.who.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.agent.who.extension:who",
+        "path": "Provenance.agent.who.extension",
+        "sliceName": "who",
+        "short": "R5: The agent that participated in the event",
+        "definition": "R5: `Provenance.agent.who`",
+        "comment": "Element `Provenance.agent.who` is mapped to FHIR R4 element `Provenance.agent.who` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Provenance.agent.who` with unmapped reference targets: CareTeam.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.agent.onBehalfOf.extension",
+        "path": "Provenance.agent.onBehalfOf.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.agent.onBehalfOf.extension:onBehalfOf",
+        "path": "Provenance.agent.onBehalfOf.extension",
+        "sliceName": "onBehalfOf",
+        "short": "R5: The agent that delegated",
+        "definition": "R5: `Provenance.agent.onBehalfOf`",
+        "comment": "Element `Provenance.agent.onBehalfOf` is mapped to FHIR R4 element `Provenance.agent.onBehalfOf` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Provenance.agent.onBehalfOf` with unmapped reference targets: CareTeam.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.entity.role.extension",
+        "path": "Provenance.entity.role.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Provenance.entity.role.extension:role",
+        "path": "Provenance.entity.role.extension",
+        "sliceName": "role",
+        "short": "R5: revision | quotation | source | instantiates | removal",
+        "definition": "R5: `Provenance.entity.role`",
+        "comment": "Element `Provenance.entity.role` is mapped to FHIR R4 element `Provenance.entity.role` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Provenance.entity.role"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

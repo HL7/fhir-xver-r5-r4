@@ -1,0 +1,133 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Expression-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Expression-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ExpressionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Expression to FHIR R4 Expression",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7556865-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Expression to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Expression",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Expression",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Expression.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Expression.description",
+              "display": "Expression.description",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.description` is mapped to FHIR R4 element `Expression.description` as `Equivalent`."
+            },
+            {
+              "code": "Expression",
+              "display": "Expression",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.description` is mapped to FHIR R4 element `Expression.description` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Expression.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Expression.name",
+              "display": "Expression.name",
+              "equivalence": "wider",
+              "comment": "Element `Expression.name` is mapped to FHIR R4 element `Expression.name` as `SourceIsBroaderThanTarget`.\nThe mappings for `Expression.name` do not cover the following types: code.\nThe mappings for `Expression.name` do not cover the following types based on type expansion: value."
+            },
+            {
+              "code": "Expression",
+              "display": "Expression",
+              "equivalence": "wider",
+              "comment": "Element `Expression.name` is mapped to FHIR R4 element `Expression.name` as `SourceIsBroaderThanTarget`.\nThe mappings for `Expression.name` do not cover the following types: code.\nThe mappings for `Expression.name` do not cover the following types based on type expansion: value."
+            }
+          ]
+        },
+        {
+          "code": "Expression.language",
+          "display": "language",
+          "target": [
+            {
+              "code": "Expression.language",
+              "display": "Expression.language",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.language` is mapped to FHIR R4 element `Expression.language` as `Equivalent`."
+            },
+            {
+              "code": "Expression",
+              "display": "Expression",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.language` is mapped to FHIR R4 element `Expression.language` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Expression.expression",
+          "display": "expression",
+          "target": [
+            {
+              "code": "Expression.expression",
+              "display": "Expression.expression",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.expression` is mapped to FHIR R4 element `Expression.expression` as `Equivalent`.\nIf Expression.expression and Expression.reference are both present, the Expression.expression might just be a name pointing something within the referenced content."
+            },
+            {
+              "code": "Expression",
+              "display": "Expression",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.expression` is mapped to FHIR R4 element `Expression.expression` as `Equivalent`.\nIf Expression.expression and Expression.reference are both present, the Expression.expression might just be a name pointing something within the referenced content."
+            }
+          ]
+        },
+        {
+          "code": "Expression.reference",
+          "display": "reference",
+          "target": [
+            {
+              "code": "Expression.reference",
+              "display": "Expression.reference",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.reference` is mapped to FHIR R4 element `Expression.reference` as `Equivalent`.\nIf both a reference and an expression is found, the reference SHALL point to the same expression."
+            },
+            {
+              "code": "Expression",
+              "display": "Expression",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.reference` is mapped to FHIR R4 element `Expression.reference` as `Equivalent`.\nIf both a reference and an expression is found, the reference SHALL point to the same expression."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Expression",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Expression.name",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Expression.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Expression.name` is mapped to FHIR R4 element `Expression.name` as `SourceIsBroaderThanTarget`.\nThe mappings for `Expression.name` do not cover the following types: code.\nThe mappings for `Expression.name` do not cover the following types based on type expansion: value."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

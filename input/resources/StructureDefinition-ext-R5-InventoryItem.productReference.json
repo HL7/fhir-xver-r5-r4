@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-InventoryItem.productReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.productReference",
+  "version": "0.1.1",
+  "name": "ExtensionInventoryItem_ProductReference",
+  "title": "R5: Link to a product resource used in clinical workflows (new)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `InventoryItem.productReference` (new:Reference(Medication,Device,NutritionProduct,BiologicallyDerivedProduct))",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `InventoryItem.productReference` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`InventoryItem.productReference` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/NutritionProduct,http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n* R5 `InventoryItem.productReference` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/NutritionProduct,http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `InventoryItem.productReference` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.productReference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Basic"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Link to a product resource used in clinical workflows (new)",
+        "definition": "R5: `InventoryItem.productReference` (new:Reference(Medication,Device,NutritionProduct,BiologicallyDerivedProduct))",
+        "comment": "Element `InventoryItem.productReference` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.productReference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.productReference"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Link to a product resource used in clinical workflows",
+        "definition": "Link to a product resource used in clinical workflows.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Basic",
+              "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

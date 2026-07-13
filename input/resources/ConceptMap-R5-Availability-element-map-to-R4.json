@@ -1,0 +1,1168 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Availability-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Availability-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5AvailabilityElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Availability to FHIR R4 no direct target type",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.1266214-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Availability to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Availability",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.defaultValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.fixed",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.pattern",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.example.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Extension.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Parameters.parameter.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-PractitionerRole.availability",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.input.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.output.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.input",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Availability",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.output",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Availability.availableTime",
+          "display": "availableTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.availableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.daysOfWeek",
+          "display": "daysOfWeek",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:daysOfWeek",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.daysOfWeek` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.daysOfWeek` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.daysOfWeek` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.allDay",
+          "display": "allDay",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:allDay",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.allDay` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.allDay` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.allDay` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableStartTime",
+          "display": "availableStartTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:availableStartTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableStartTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableStartTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableStartTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.availableTime.availableEndTime",
+          "display": "availableEndTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:availableTime.extension:availableEndTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.availableTime.availableEndTime` is part of an existing definition because parent element `Availability.availableTime` requires a cross-version extension.\nElement `Availability.availableTime.availableEndTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.availableTime.availableEndTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe timezone is expected to be specified or implied by the context this datatype is used."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime",
+          "display": "notAvailableTime",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime` is part of an existing definition because parent element `Availability` requires a cross-version extension.\nElement `Availability.notAvailableTime` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.description",
+          "display": "description",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime.extension:description",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.description` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.description` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).\n\ne.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the \"summer\" period was well known, but would recommend its inclusion anyway."
+            }
+          ]
+        },
+        {
+          "code": "Availability.notAvailableTime.during",
+          "display": "during",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueAvailability.extension:notAvailableTime.extension:during",
+              "equivalence": "wider",
+              "comment": "Element `Availability.notAvailableTime.during` is part of an existing definition because parent element `Availability.notAvailableTime` requires a cross-version extension.\nElement `Availability.notAvailableTime.during` is not mapped to FHIR R4, since FHIR R5 `Availability` is not mapped.\nElement `Availability.notAvailableTime.during` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-MolecularSequence",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-MolecularSequence",
+  "version": "0.1.1",
+  "name": "Profile_R5_MolecularSequence_R4",
+  "title": "Cross-version Profile for R5.MolecularSequence resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9129468-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 MolecularSequence resource content to be represented via FHIR R4 MolecularSequence resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MolecularSequence",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MolecularSequence",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MolecularSequence",
+        "path": "MolecularSequence",
+        "short": "Cross-version Profile for R5.MolecularSequence resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 MolecularSequence resource content to be represented via FHIR R4 MolecularSequence resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-MolecularSequence-relative",
+            "requirements": "Cardinality constraints for relative from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MolecularSequence.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative').exists() implies MolecularSequence.referenceSeq.exists()"
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension",
+        "path": "MolecularSequence.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "MolecularSequence.extension:focus",
+        "path": "MolecularSequence.extension",
+        "sliceName": "focus",
+        "short": "R5: What the molecular sequence is about, when it is not about the subject of record (new)",
+        "definition": "R5: `MolecularSequence.focus` (new:Reference(Resource))",
+        "comment": "Element `MolecularSequence.focus` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.focus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.focus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension:formatted",
+        "path": "MolecularSequence.extension",
+        "sliceName": "formatted",
+        "short": "R5: Embedded file or a link (URL) which contains content to represent the sequence (new)",
+        "definition": "R5: `MolecularSequence.formatted` (new:Attachment)",
+        "comment": "Element `MolecularSequence.formatted` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.formatted` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.formatted"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension:relative",
+        "path": "MolecularSequence.extension",
+        "sliceName": "relative",
+        "short": "R5: A sequence defined relative to another sequence",
+        "definition": "R5: `MolecularSequence.relative`",
+        "comment": "Element `MolecularSequence.relative` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.referenceSeq` as `SourceIsBroaderThanTarget`.\nElement `MolecularSequence.relative` is mapped to FHIR R4 element `MolecularSequence.variant` as `Equivalent`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MolecularSequence-relative"
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension:coordinateSystem",
+        "path": "MolecularSequence.extension",
+        "sliceName": "coordinateSystem",
+        "short": "R5: Ways of identifying nucleotides or amino acids within a sequence (new)",
+        "definition": "R5: `MolecularSequence.relative.coordinateSystem` (new:CodeableConcept)",
+        "comment": "Element `MolecularSequence.relative.coordinateSystem` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.coordinateSystem` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.coordinateSystem` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.coordinateSystem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension:ordinalPosition",
+        "path": "MolecularSequence.extension",
+        "sliceName": "ordinalPosition",
+        "short": "R5: Indicates the order in which the sequence should be considered when putting multiple 'relative' elements together (new)",
+        "definition": "R5: `MolecularSequence.relative.ordinalPosition` (new:integer)",
+        "comment": "Element `MolecularSequence.relative.ordinalPosition` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.ordinalPosition` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.ordinalPosition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.ordinalPosition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.extension:sequenceRange",
+        "path": "MolecularSequence.extension",
+        "sliceName": "sequenceRange",
+        "short": "R5: Indicates the nucleotide range in the composed sequence when multiple 'relative' elements are used together (new)",
+        "definition": "R5: `MolecularSequence.relative.sequenceRange` (new:Range)",
+        "comment": "Element `MolecularSequence.relative.sequenceRange` is part of an existing definition because parent element `MolecularSequence.relative` requires an extension for additional cardinality.\nElement `MolecularSequence.relative.sequenceRange` has a context of MolecularSequence based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.sequenceRange` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.sequenceRange"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.patient.extension",
+        "path": "MolecularSequence.patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MolecularSequence.patient.extension:subject",
+        "path": "MolecularSequence.patient.extension",
+        "sliceName": "subject",
+        "short": "R5: Subject this sequence is associated too",
+        "definition": "R5: `MolecularSequence.subject`",
+        "comment": "Element `MolecularSequence.subject` is mapped to FHIR R4 element `MolecularSequence.patient` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MolecularSequence.subject` with unmapped reference targets: BiologicallyDerivedProduct, Group, NutritionProduct, Substance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.referenceSeq.extension",
+        "path": "MolecularSequence.referenceSeq.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MolecularSequence.referenceSeq.extension:genomeAssembly",
+        "path": "MolecularSequence.referenceSeq.extension",
+        "sliceName": "genomeAssembly",
+        "short": "R5: The genome assembly used for starting sequence, e.g. GRCh38 (new)",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.genomeAssembly` (new:CodeableConcept)",
+        "comment": "Element `MolecularSequence.relative.startingSequence.genomeAssembly` has a context of MolecularSequence.referenceSeq based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.startingSequence.genomeAssembly` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.startingSequence.genomeAssembly"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.referenceSeq.extension:sequence",
+        "path": "MolecularSequence.referenceSeq.extension",
+        "sliceName": "sequence",
+        "short": "R5: The reference sequence that represents the starting sequence additional types",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.sequence[x]` additional types (CodeableConcept, Reference(http://hl7.org/fhir/StructureDefinition/MolecularSequence))",
+        "comment": "Element `MolecularSequence.relative.startingSequence.sequence[x]` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.referenceSeqString` as `SourceIsBroaderThanTarget`.\nThe mappings for `MolecularSequence.relative.startingSequence.sequence[x]` do not cover the following types: CodeableConcept, Reference.\nA starting sequence may be represented in one of three ways:\n  1.  CodeableConcept, using NCBI, LRG or other appropriate code systems\n  1.  a simple string of IUPAC codes\n  1.  a reference to another MolecularSequence resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.startingSequence.sequence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.referenceSeq.chromosome.extension",
+        "path": "MolecularSequence.referenceSeq.chromosome.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MolecularSequence.referenceSeq.chromosome.extension:chromosome",
+        "path": "MolecularSequence.referenceSeq.chromosome.extension",
+        "sliceName": "chromosome",
+        "short": "R5: Chromosome Identifier",
+        "definition": "R5: `MolecularSequence.relative.startingSequence.chromosome`",
+        "comment": "Element `MolecularSequence.relative.startingSequence.chromosome` is mapped to FHIR R4 element `MolecularSequence.referenceSeq.chromosome` as `Equivalent`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.startingSequence.chromosome"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MolecularSequence.variant.extension",
+        "path": "MolecularSequence.variant.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MolecularSequence.variant.extension:start",
+        "path": "MolecularSequence.variant.extension",
+        "sliceName": "start",
+        "short": "R5: Start position of the edit on the starting sequence (new)",
+        "definition": "R5: `MolecularSequence.relative.edit.start` (new:integer)",
+        "comment": "Element `MolecularSequence.relative.edit.start` has a context of MolecularSequence.variant based on following the parent source element upwards and mapping to `MolecularSequence`.\nElement `MolecularSequence.relative.edit.start` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MolecularSequence.relative.edit.start"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Consent.sourceReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Consent.sourceReference",
+  "version": "0.1.1",
+  "name": "ExtensionConsent_SourceReference",
+  "title": "R5: sourceReference",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Consent.sourceReference`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Consent.sourceReference` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Consent.sourceReference` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/Consent,http://hl7.org/fhir/StructureDefinition/DocumentReference,http://hl7.org/fhir/StructureDefinition/Contract,http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Consent.sourceReference` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/Consent,http://hl7.org/fhir/StructureDefinition/DocumentReference,http://hl7.org/fhir/StructureDefinition/Contract,http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)`\n*  R4B: `Consent.source[x]` 0..1 `Attachment, Reference(http://hl7.org/fhir/StructureDefinition/Consent,http://hl7.org/fhir/StructureDefinition/DocumentReference,http://hl7.org/fhir/StructureDefinition/Contract,http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)`\n*  R4: `Consent.source[x]` 0..1 `Attachment, Reference(http://hl7.org/fhir/StructureDefinition/Consent,http://hl7.org/fhir/StructureDefinition/DocumentReference,http://hl7.org/fhir/StructureDefinition/Contract,http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Consent.sourceReference` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Consent.sourceReference` is mapped to FHIR R4 element `Consent.source[x]` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Consent.sourceReference` with unmapped reference targets: DocumentReference.\nSource element `Consent.sourceReference` has unmapped reference types. While the target element `Consent.source[x]` is a choice type and does not allow extensions, the `alternate-reference` extension can be applied to Reference values within it.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Consent"
+    },
+    {
+      "type": "element",
+      "expression": "Consent.source[x]"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: sourceReference",
+        "definition": "R5: `Consent.sourceReference`",
+        "comment": "Element `Consent.sourceReference` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Consent.sourceReference` is mapped to FHIR R4 element `Consent.source[x]` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `Consent.sourceReference` with unmapped reference targets: DocumentReference.\nSource element `Consent.sourceReference` has unmapped reference types. While the target element `Consent.source[x]` is a choice type and does not allow extensions, the `alternate-reference` extension can be applied to Reference values within it.\nThe source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Consent.sourceReference"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Source from which this consent is taken",
+        "definition": "A reference to a consent that links back to such a source, a reference to a document repository (e.g. XDS) that stores the original consent document.",
+        "comment": "The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Consent",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/Contract",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

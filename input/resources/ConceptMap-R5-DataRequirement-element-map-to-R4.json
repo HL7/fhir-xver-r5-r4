@@ -1,0 +1,393 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-DataRequirement-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-DataRequirement-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5DataRequirementElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 DataRequirement to FHIR R4 DataRequirement",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7086956-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 DataRequirement to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/DataRequirement",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/DataRequirement",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "DataRequirement.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "DataRequirement.type",
+              "display": "DataRequirement.type",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.type` is mapped to FHIR R4 element `DataRequirement.type` as `RelatedTo`."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.type` is mapped to FHIR R4 element `DataRequirement.type` as `RelatedTo`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.profile",
+          "display": "profile",
+          "target": [
+            {
+              "code": "DataRequirement.profile",
+              "display": "DataRequirement.profile",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.profile` is mapped to FHIR R4 element `DataRequirement.profile` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.profile` is mapped to FHIR R4 element `DataRequirement.profile` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.subject[x]",
+          "display": "subject[x]",
+          "target": [
+            {
+              "code": "DataRequirement.subject[x]",
+              "display": "DataRequirement.subject[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.subject[x]` is mapped to FHIR R4 element `DataRequirement.subject[x]` as `Equivalent`.\nThe target context `DataRequirement.subject[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `DataRequirement`.\nThe subject of a data requirement is critical, as the data being specified is determined with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what data is available based on its relationship to the subject. In CQL, this corresponds to the context declaration."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.subject[x]` is mapped to FHIR R4 element `DataRequirement.subject[x]` as `Equivalent`.\nThe target context `DataRequirement.subject[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `DataRequirement`.\nThe subject of a data requirement is critical, as the data being specified is determined with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what data is available based on its relationship to the subject. In CQL, this corresponds to the context declaration."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.mustSupport",
+          "display": "mustSupport",
+          "target": [
+            {
+              "code": "DataRequirement.mustSupport",
+              "display": "DataRequirement.mustSupport",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.mustSupport` is mapped to FHIR R4 element `DataRequirement.mustSupport` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.mustSupport` is mapped to FHIR R4 element `DataRequirement.mustSupport` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.codeFilter",
+          "display": "codeFilter",
+          "target": [
+            {
+              "code": "DataRequirement.codeFilter",
+              "display": "DataRequirement.codeFilter",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.codeFilter` is mapped to FHIR R4 element `DataRequirement.codeFilter` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.codeFilter` is mapped to FHIR R4 element `DataRequirement.codeFilter` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.codeFilter.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "DataRequirement.codeFilter.path",
+              "display": "DataRequirement.codeFilter.path",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.path` is mapped to FHIR R4 element `DataRequirement.codeFilter.path` as `Equivalent`.\nThe path attribute contains a [Simple FHIRPath Subset](https://hl7.org/fhir/fhirpat.html#simple) that allows path traversal, but not calculation."
+            },
+            {
+              "code": "DataRequirement.codeFilter",
+              "display": "DataRequirement.codeFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.path` is mapped to FHIR R4 element `DataRequirement.codeFilter.path` as `Equivalent`.\nThe path attribute contains a [Simple FHIRPath Subset](https://hl7.org/fhir/fhirpat.html#simple) that allows path traversal, but not calculation."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.codeFilter.searchParam",
+          "display": "searchParam",
+          "target": [
+            {
+              "code": "DataRequirement.codeFilter.searchParam",
+              "display": "DataRequirement.codeFilter.searchParam",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.searchParam` is mapped to FHIR R4 element `DataRequirement.codeFilter.searchParam` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.codeFilter",
+              "display": "DataRequirement.codeFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.searchParam` is mapped to FHIR R4 element `DataRequirement.codeFilter.searchParam` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.codeFilter.valueSet",
+          "display": "valueSet",
+          "target": [
+            {
+              "code": "DataRequirement.codeFilter.valueSet",
+              "display": "DataRequirement.codeFilter.valueSet",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.valueSet` is mapped to FHIR R4 element `DataRequirement.codeFilter.valueSet` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.codeFilter",
+              "display": "DataRequirement.codeFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.valueSet` is mapped to FHIR R4 element `DataRequirement.codeFilter.valueSet` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.codeFilter.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "DataRequirement.codeFilter.code",
+              "display": "DataRequirement.codeFilter.code",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.code` is mapped to FHIR R4 element `DataRequirement.codeFilter.code` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.codeFilter",
+              "display": "DataRequirement.codeFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.codeFilter.code` is mapped to FHIR R4 element `DataRequirement.codeFilter.code` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.dateFilter",
+          "display": "dateFilter",
+          "target": [
+            {
+              "code": "DataRequirement.dateFilter",
+              "display": "DataRequirement.dateFilter",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.dateFilter` is mapped to FHIR R4 element `DataRequirement.dateFilter` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.dateFilter` is mapped to FHIR R4 element `DataRequirement.dateFilter` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.dateFilter.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "DataRequirement.dateFilter.path",
+              "display": "DataRequirement.dateFilter.path",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.path` is mapped to FHIR R4 element `DataRequirement.dateFilter.path` as `Equivalent`.\nThe path attribute contains a [Simple FHIR Subset](https://hl7.org/fhir/fhirpat.html#simple) that allows path traversal, but not calculation."
+            },
+            {
+              "code": "DataRequirement.dateFilter",
+              "display": "DataRequirement.dateFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.path` is mapped to FHIR R4 element `DataRequirement.dateFilter.path` as `Equivalent`.\nThe path attribute contains a [Simple FHIR Subset](https://hl7.org/fhir/fhirpat.html#simple) that allows path traversal, but not calculation."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.dateFilter.searchParam",
+          "display": "searchParam",
+          "target": [
+            {
+              "code": "DataRequirement.dateFilter.searchParam",
+              "display": "DataRequirement.dateFilter.searchParam",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.searchParam` is mapped to FHIR R4 element `DataRequirement.dateFilter.searchParam` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.dateFilter",
+              "display": "DataRequirement.dateFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.searchParam` is mapped to FHIR R4 element `DataRequirement.dateFilter.searchParam` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.dateFilter.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "DataRequirement.dateFilter.value[x]",
+              "display": "DataRequirement.dateFilter.value[x]",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.value[x]` is mapped to FHIR R4 element `DataRequirement.dateFilter.value[x]` as `Equivalent`.\nThe target context `DataRequirement.dateFilter.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `DataRequirement.dateFilter`."
+            },
+            {
+              "code": "DataRequirement.dateFilter",
+              "display": "DataRequirement.dateFilter",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.dateFilter.value[x]` is mapped to FHIR R4 element `DataRequirement.dateFilter.value[x]` as `Equivalent`.\nThe target context `DataRequirement.dateFilter.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `DataRequirement.dateFilter`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.limit",
+          "display": "limit",
+          "target": [
+            {
+              "code": "DataRequirement.limit",
+              "display": "DataRequirement.limit",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.limit` is mapped to FHIR R4 element `DataRequirement.limit` as `Equivalent`.\nThis element can be used in combination with the sort element to specify quota requirements such as \"the most recent 5\" or \"the highest 5\"."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.limit` is mapped to FHIR R4 element `DataRequirement.limit` as `Equivalent`.\nThis element can be used in combination with the sort element to specify quota requirements such as \"the most recent 5\" or \"the highest 5\"."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.sort",
+          "display": "sort",
+          "target": [
+            {
+              "code": "DataRequirement.sort",
+              "display": "DataRequirement.sort",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.sort` is mapped to FHIR R4 element `DataRequirement.sort` as `Equivalent`.\nThis element can be used in combination with the sort element to specify quota requirements such as \"the most recent 5\" or \"the highest 5\". When multiple sorts are specified, they are applied in the order they appear in the resource."
+            },
+            {
+              "code": "DataRequirement",
+              "display": "DataRequirement",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.sort` is mapped to FHIR R4 element `DataRequirement.sort` as `Equivalent`.\nThis element can be used in combination with the sort element to specify quota requirements such as \"the most recent 5\" or \"the highest 5\". When multiple sorts are specified, they are applied in the order they appear in the resource."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.sort.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "DataRequirement.sort.path",
+              "display": "DataRequirement.sort.path",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.sort.path` is mapped to FHIR R4 element `DataRequirement.sort.path` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.sort",
+              "display": "DataRequirement.sort",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.sort.path` is mapped to FHIR R4 element `DataRequirement.sort.path` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.sort.direction",
+          "display": "direction",
+          "target": [
+            {
+              "code": "DataRequirement.sort.direction",
+              "display": "DataRequirement.sort.direction",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.sort.direction` is mapped to FHIR R4 element `DataRequirement.sort.direction` as `Equivalent`."
+            },
+            {
+              "code": "DataRequirement.sort",
+              "display": "DataRequirement.sort",
+              "equivalence": "equivalent",
+              "comment": "Element `DataRequirement.sort.direction` is mapped to FHIR R4 element `DataRequirement.sort.direction` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/DataRequirement",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DataRequirement.valueFilter",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "DataRequirement.valueFilter",
+          "display": "valueFilter",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.valueFilter` has a context of DataRequirement based on following the parent source element upwards and mapping to `DataRequirement`.\nElement `DataRequirement.valueFilter` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.valueFilter.path",
+          "display": "path",
+          "target": [
+            {
+              "code": "Extension.extension:path",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.valueFilter.path` is part of an existing definition because parent element `DataRequirement.valueFilter` requires a cross-version extension.\nElement `DataRequirement.valueFilter.path` has a context of DataRequirement based on following the parent source element upwards and mapping to `DataRequirement`.\nElement `DataRequirement.valueFilter.path` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe path attribute contains a [Simple FHIR Subset](https://hl7.org/fhir/fhirpat.html#simple) that allows path traversal, but not calculation."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.valueFilter.searchParam",
+          "display": "searchParam",
+          "target": [
+            {
+              "code": "Extension.extension:searchParam",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.valueFilter.searchParam` is part of an existing definition because parent element `DataRequirement.valueFilter` requires a cross-version extension.\nElement `DataRequirement.valueFilter.searchParam` has a context of DataRequirement based on following the parent source element upwards and mapping to `DataRequirement`.\nElement `DataRequirement.valueFilter.searchParam` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.valueFilter.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Extension.extension:comparator",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.valueFilter.comparator` is part of an existing definition because parent element `DataRequirement.valueFilter` requires a cross-version extension.\nElement `DataRequirement.valueFilter.comparator` has a context of DataRequirement based on following the parent source element upwards and mapping to `DataRequirement`.\nElement `DataRequirement.valueFilter.comparator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "DataRequirement.valueFilter.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "Extension.extension:value",
+              "equivalence": "wider",
+              "comment": "Element `DataRequirement.valueFilter.value[x]` is part of an existing definition because parent element `DataRequirement.valueFilter` requires a cross-version extension.\nElement `DataRequirement.valueFilter.value[x]` has a context of DataRequirement based on following the parent source element upwards and mapping to `DataRequirement`.\nElement `DataRequirement.valueFilter.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

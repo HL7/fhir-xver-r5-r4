@@ -1,0 +1,225 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-SubstanceProtein",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-SubstanceProtein",
+  "version": "0.1.1",
+  "name": "Profile_R5_SubstanceProtein_R4",
+  "title": "Cross-version Profile for R5.SubstanceProtein resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0949972-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 SubstanceProtein resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.SubstanceProtein resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 SubstanceProtein resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:sequenceType",
+        "path": "Basic.extension",
+        "sliceName": "sequenceType",
+        "short": "R5: The SubstanceProtein descriptive elements will only be used when a complete or partial amino acid sequence is available or derivable from a nucleic acid sequence (new)",
+        "definition": "R5: `SubstanceProtein.sequenceType` (new:CodeableConcept)",
+        "comment": "Element `SubstanceProtein.sequenceType` is not mapped to FHIR R4, since FHIR R5 `SubstanceProtein` is not mapped.\nElement `SubstanceProtein.sequenceType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceProtein.sequenceType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:numberOfSubunits",
+        "path": "Basic.extension",
+        "sliceName": "numberOfSubunits",
+        "short": "R5: Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable (new)",
+        "definition": "R5: `SubstanceProtein.numberOfSubunits` (new:integer)",
+        "comment": "Element `SubstanceProtein.numberOfSubunits` is not mapped to FHIR R4, since FHIR R5 `SubstanceProtein` is not mapped.\nElement `SubstanceProtein.numberOfSubunits` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceProtein.numberOfSubunits"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:disulfideLinkage",
+        "path": "Basic.extension",
+        "sliceName": "disulfideLinkage",
+        "short": "R5: The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions (new)",
+        "definition": "R5: `SubstanceProtein.disulfideLinkage` (new:string)",
+        "comment": "Element `SubstanceProtein.disulfideLinkage` is not mapped to FHIR R4, since FHIR R5 `SubstanceProtein` is not mapped.\nElement `SubstanceProtein.disulfideLinkage` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceProtein.disulfideLinkage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:subunit",
+        "path": "Basic.extension",
+        "sliceName": "subunit",
+        "short": "R5: This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times (new)",
+        "definition": "R5: `SubstanceProtein.subunit` (new:BackboneElement)",
+        "comment": "Element `SubstanceProtein.subunit` is not mapped to FHIR R4, since FHIR R5 `SubstanceProtein` is not mapped.\nElement `SubstanceProtein.subunit` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubstanceProtein.subunit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "SubstanceProtein"
+      }
+    ]
+  }
+}

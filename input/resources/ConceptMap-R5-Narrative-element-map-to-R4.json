@@ -1,0 +1,90 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Narrative-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Narrative-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5NarrativeElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Narrative to FHIR R4 Narrative",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2542851-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Narrative to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Narrative",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Narrative",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Narrative.status",
+          "display": "status",
+          "target": [
+            {
+              "code": "Narrative.status",
+              "display": "Narrative.status",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.status` is mapped to FHIR R4 element `Narrative.status` as `Equivalent`."
+            },
+            {
+              "code": "Narrative",
+              "display": "Narrative",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.status` is mapped to FHIR R4 element `Narrative.status` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Narrative.div",
+          "display": "div",
+          "target": [
+            {
+              "code": "Narrative.div",
+              "display": "Narrative.div",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.div` is mapped to FHIR R4 element `Narrative.div` as `Equivalent`.\nThe contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
+            },
+            {
+              "code": "Narrative",
+              "display": "Narrative",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.div` is mapped to FHIR R4 element `Narrative.div` as `Equivalent`.\nThe contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Narrative",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.section",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Narrative.status",
+          "display": "status",
+          "target": [
+            {
+              "code": "Extension.extension:text.extension:status",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.status` is mapped to FHIR R4 element `Narrative.status` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Narrative.div",
+          "display": "div",
+          "target": [
+            {
+              "code": "Extension.extension:text.extension:div",
+              "equivalence": "equivalent",
+              "comment": "Element `Narrative.div` is mapped to FHIR R4 element `Narrative.div` as `Equivalent`.\nThe contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

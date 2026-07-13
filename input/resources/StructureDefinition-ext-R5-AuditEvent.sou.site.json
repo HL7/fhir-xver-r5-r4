@@ -1,0 +1,125 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-AuditEvent.sou.site",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AuditEvent.source.site",
+  "version": "0.1.1",
+  "name": "ExtensionAuditEvent_Source_Site",
+  "title": "R5: site additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `AuditEvent.source.site` additional types (Reference(http://hl7.org/fhir/StructureDefinition/Location)) additional types from child elements (identifier)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `AuditEvent.source.site` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`AuditEvent.source.site` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Location)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `AuditEvent.source.site` 0..1 `Reference(http://hl7.org/fhir/StructureDefinition/Location)`\n*  R4B: `AuditEvent.source.site` 0..1 `string`\n*  R4: `AuditEvent.source.site` 0..1 `string`\r\n\r\nFollowing are the generation technical comments:\r\nElement `AuditEvent.source.site` is mapped to FHIR R4 element `AuditEvent.source.site` as `SourceIsBroaderThanTarget`.\nThe mappings for `AuditEvent.source.site` do not cover the following types: Reference.\nThe mappings for `AuditEvent.source.site` do not cover the following types based on type expansion: identifier.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "AuditEvent.source.site"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: site additional types",
+        "definition": "R5: `AuditEvent.source.site` additional types (Reference(http://hl7.org/fhir/StructureDefinition/Location)) additional types from child elements (identifier)",
+        "comment": "Element `AuditEvent.source.site` is mapped to FHIR R4 element `AuditEvent.source.site` as `SourceIsBroaderThanTarget`.\nThe mappings for `AuditEvent.source.site` do not cover the following types: Reference.\nThe mappings for `AuditEvent.source.site` do not cover the following types based on type expansion: identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AuditEvent.source.site"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Logical source location within the enterprise",
+        "definition": "Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

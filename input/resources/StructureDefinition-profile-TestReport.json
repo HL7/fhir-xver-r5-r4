@@ -1,0 +1,139 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-TestReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-TestReport",
+  "version": "0.1.1",
+  "name": "Profile_R5_TestReport_R4",
+  "title": "Cross-version Profile for R5.TestReport resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.1366912-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 TestReport resource content to be represented via FHIR R4 TestReport resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "TestReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/TestReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "TestReport",
+        "path": "TestReport",
+        "short": "Cross-version Profile for R5.TestReport resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 TestReport resource content to be represented via FHIR R4 TestReport resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "TestReport.testScript.extension",
+        "path": "TestReport.testScript.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "TestReport.testScript.extension:testScript",
+        "path": "TestReport.testScript.extension",
+        "sliceName": "testScript",
+        "short": "R5: Canonical URL to the  version-specific TestScript that was executed to produce this TestReport additional types",
+        "definition": "R5: `TestReport.testScript` additional types (canonical(http://hl7.org/fhir/StructureDefinition/TestScript)) additional types from child elements (value)",
+        "comment": "Element `TestReport.testScript` is mapped to FHIR R4 element `TestReport.testScript` as `SourceIsBroaderThanTarget`.\nThe mappings for `TestReport.testScript` do not cover the following types: canonical.\nThe mappings for `TestReport.testScript` do not cover the following types based on type expansion: value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-TestReport.testScript"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TestReport.setup.action.assert.extension",
+        "path": "TestReport.setup.action.assert.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "TestReport.setup.action.assert.extension:requirement",
+        "path": "TestReport.setup.action.assert.extension",
+        "sliceName": "requirement",
+        "short": "R5: Links or references to the testing requirements (new)",
+        "definition": "R5: `TestReport.setup.action.assert.requirement` (new:BackboneElement)",
+        "comment": "Element `TestReport.setup.action.assert.requirement` has a context of TestReport.setup.action.assert based on following the parent source element upwards and mapping to `TestReport`.\nElement `TestReport.setup.action.assert.requirement` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nTestScript and TestReport instances are typically (and expected to be) based on known, defined test requirements and documentation. These links provide traceability from the executable/executed TestScript and TestReport tests to these requirements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-TestReport.setup.action.assert.requirement"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

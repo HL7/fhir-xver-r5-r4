@@ -1,0 +1,478 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-BiologicallyDerivedProductDispense",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-BiologicallyDerivedProductDispense",
+  "version": "0.1.1",
+  "name": "Profile_R5_BiologicallyDerivedProductDispense_R4",
+  "title": "Cross-version Profile for R5.BiologicallyDerivedProductDispense resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.465576-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 BiologicallyDerivedProductDispense resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.BiologicallyDerivedProductDispense resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 BiologicallyDerivedProductDispense resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 3,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:basedOn",
+        "path": "Basic.extension",
+        "sliceName": "basedOn",
+        "short": "R5: The order or request that this dispense is fulfilling (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.basedOn` (new:Reference(ServiceRequest))",
+        "comment": "Element `BiologicallyDerivedProductDispense.basedOn` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:partOf",
+        "path": "Basic.extension",
+        "sliceName": "partOf",
+        "short": "R5: Short description (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.partOf` (new:Reference(BiologicallyDerivedProductDispense))",
+        "comment": "Element `BiologicallyDerivedProductDispense.partOf` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.partOf` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.partOf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:status",
+        "path": "Basic.extension",
+        "sliceName": "status",
+        "short": "R5: preparation | in-progress | allocated | issued | unfulfilled | returned | entered-in-error | unknown (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.status` (new:code)",
+        "comment": "Element `BiologicallyDerivedProductDispense.status` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:originRelationshipType",
+        "path": "Basic.extension",
+        "sliceName": "originRelationshipType",
+        "short": "R5: Relationship between the donor and intended recipient (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.originRelationshipType` (new:CodeableConcept)",
+        "comment": "Element `BiologicallyDerivedProductDispense.originRelationshipType` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.originRelationshipType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.originRelationshipType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:product",
+        "path": "Basic.extension",
+        "sliceName": "product",
+        "short": "R5: The BiologicallyDerivedProduct that is dispensed (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.product` (new:Reference(BiologicallyDerivedProduct))",
+        "comment": "Element `BiologicallyDerivedProductDispense.product` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.product` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.product"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:patient",
+        "path": "Basic.extension",
+        "sliceName": "patient",
+        "short": "R5: The intended recipient of the dispensed product (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.patient` (new:Reference(Patient))",
+        "comment": "Element `BiologicallyDerivedProductDispense.patient` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.patient` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:matchStatus",
+        "path": "Basic.extension",
+        "sliceName": "matchStatus",
+        "short": "R5: Indicates the type of matching associated with the dispense (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.matchStatus` (new:CodeableConcept)",
+        "comment": "Element `BiologicallyDerivedProductDispense.matchStatus` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.matchStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.matchStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:performer",
+        "path": "Basic.extension",
+        "sliceName": "performer",
+        "short": "R5: Indicates who or what performed an action (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.performer` (new:BackboneElement)",
+        "comment": "Element `BiologicallyDerivedProductDispense.performer` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.performer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.performer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:location",
+        "path": "Basic.extension",
+        "sliceName": "location",
+        "short": "R5: Where the dispense occurred (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.location` (new:Reference(Location))",
+        "comment": "Element `BiologicallyDerivedProductDispense.location` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.location` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:quantity",
+        "path": "Basic.extension",
+        "sliceName": "quantity",
+        "short": "R5: Amount dispensed (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.quantity` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `BiologicallyDerivedProductDispense.quantity` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.quantity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.quantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:preparedDate",
+        "path": "Basic.extension",
+        "sliceName": "preparedDate",
+        "short": "R5: When product was selected/matched (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.preparedDate` (new:dateTime)",
+        "comment": "Element `BiologicallyDerivedProductDispense.preparedDate` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.preparedDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.preparedDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:whenHandedOver",
+        "path": "Basic.extension",
+        "sliceName": "whenHandedOver",
+        "short": "R5: When the product was dispatched (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.whenHandedOver` (new:dateTime)",
+        "comment": "Element `BiologicallyDerivedProductDispense.whenHandedOver` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.whenHandedOver` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.whenHandedOver"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:destination",
+        "path": "Basic.extension",
+        "sliceName": "destination",
+        "short": "R5: Where the product was dispatched to (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.destination` (new:Reference(Location))",
+        "comment": "Element `BiologicallyDerivedProductDispense.destination` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.destination` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.destination"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:note",
+        "path": "Basic.extension",
+        "sliceName": "note",
+        "short": "R5: Additional notes (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.note` (new:Annotation)",
+        "comment": "Element `BiologicallyDerivedProductDispense.note` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:usageInstruction",
+        "path": "Basic.extension",
+        "sliceName": "usageInstruction",
+        "short": "R5: Specific instructions for use (new)",
+        "definition": "R5: `BiologicallyDerivedProductDispense.usageInstruction` (new:string)",
+        "comment": "Element `BiologicallyDerivedProductDispense.usageInstruction` is not mapped to FHIR R4, since FHIR R5 `BiologicallyDerivedProductDispense` is not mapped.\nElement `BiologicallyDerivedProductDispense.usageInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BiologicallyDerivedProductDispense.usageInstruction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "BiologicallyDerivedProductDispense"
+      }
+    ]
+  }
+}

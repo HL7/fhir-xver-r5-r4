@@ -1,0 +1,3973 @@
+{
+  "resourceType": "ValueSet",
+  "id": "R5-v3-RouteOfAdministration-for-R4",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/xver/ValueSet/R5-v3-RouteOfAdministration-for-R4",
+  "version": "0.1.1",
+  "name": "R5V3RouteOfAdministrationForR4",
+  "title": "Cross-version ValueSet R5.RouteOfAdministration for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version ValueSet represents content from `http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration|2.0.0` for use in FHIR R4.",
+  "purpose": "This value set is part of the cross-version definitions generated to enable use of the\r\nvalue set `http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration|2.0.0` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source value set is bound to the following FHIR R5 elements:\r\n* \r\n\r\nNote that all concepts are included in this cross-version definition because no concepts have compatible representations\r\n\r\nFollowing are the generation technical comments:\r\n\nFHIR ValueSet `http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration|2.0.0`, defined in FHIR R5 does not have any mapping to FHIR R4",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "code": "AMNINJ",
+            "display": "Injection, amniotic fluid"
+          },
+          {
+            "code": "BILINJ",
+            "display": "Injection, biliary tract"
+          },
+          {
+            "code": "BLADINJ",
+            "display": "Injection, urinary bladder"
+          },
+          {
+            "code": "BLADINSTL",
+            "display": "Instillation, urinary catheter"
+          },
+          {
+            "code": "BLADIRR",
+            "display": "Irrigation, urinary bladder"
+          },
+          {
+            "code": "BLADIRRC",
+            "display": "Irrigation, urinary bladder, continuous"
+          },
+          {
+            "code": "BLADIRRT",
+            "display": "Irrigation, urinary bladder, tidal"
+          },
+          {
+            "code": "BUC",
+            "display": "Topical application, buccal"
+          },
+          {
+            "code": "CAPDINSTL",
+            "display": "Instillation, continuous ambulatory peritoneal dialysis port"
+          },
+          {
+            "code": "CECINSTL",
+            "display": "Instillation, cecostomy"
+          },
+          {
+            "code": "CERV",
+            "display": "Topical application, cervical"
+          },
+          {
+            "code": "CERVINJ",
+            "display": "Injection, cervical"
+          },
+          {
+            "code": "CERVINS",
+            "display": "Insertion, cervical (uterine)"
+          },
+          {
+            "code": "CHEW",
+            "display": "Chew, oral"
+          },
+          {
+            "code": "CHOLINJ",
+            "display": "Injection, for cholangiography"
+          },
+          {
+            "code": "CTINSTL",
+            "display": "Instillation, chest tube"
+          },
+          {
+            "code": "DEN",
+            "display": "Topical application, dental"
+          },
+          {
+            "code": "DENRINSE",
+            "display": "Rinse, dental"
+          },
+          {
+            "code": "DISSOLVE",
+            "display": "Dissolve, oral"
+          },
+          {
+            "code": "DOUCHE",
+            "display": "Douche, vaginal"
+          },
+          {
+            "code": "DRESS",
+            "display": "Topical application, soaked dressing"
+          },
+          {
+            "code": "EFT",
+            "display": "Instillation, enteral feeding tube"
+          },
+          {
+            "code": "ELECTOSMOS",
+            "display": "Electro-osmosis"
+          },
+          {
+            "code": "ENDOSININJ",
+            "display": "Injection, endosinusial"
+          },
+          {
+            "code": "ENEMA",
+            "display": "Enema, rectal"
+          },
+          {
+            "code": "ENTINSTL",
+            "display": "Instillation, enteral"
+          },
+          {
+            "code": "EPI",
+            "display": "Infusion, epidural"
+          },
+          {
+            "code": "EPIDURINJ",
+            "display": "Injection, epidural"
+          },
+          {
+            "code": "EPIINJ",
+            "display": "Injection, epidural, push"
+          },
+          {
+            "code": "EPINJSP",
+            "display": "Injection, epidural, slow push"
+          },
+          {
+            "code": "ETINSTL",
+            "display": "Instillation, endotracheal tube"
+          },
+          {
+            "code": "ETNEB",
+            "display": "Nebulization, endotracheal tube"
+          },
+          {
+            "code": "EXTCORPDIF",
+            "display": "Diffusion, extracorporeal"
+          },
+          {
+            "code": "EXTCORPINJ",
+            "display": "Injection, extracorporeal"
+          },
+          {
+            "code": "EXTRAMNINJ",
+            "display": "Injection, extra-amniotic"
+          },
+          {
+            "code": "GARGLE",
+            "display": "Gargle"
+          },
+          {
+            "code": "GBINJ",
+            "display": "Injection, gastric button"
+          },
+          {
+            "code": "GIN",
+            "display": "Topical application, gingival"
+          },
+          {
+            "code": "GINGINJ",
+            "display": "Injection, gingival"
+          },
+          {
+            "code": "GJT",
+            "display": "Instillation, gastro-jejunostomy tube"
+          },
+          {
+            "code": "GT",
+            "display": "Instillation, gastrostomy tube"
+          },
+          {
+            "code": "GUIRR",
+            "display": "Irrigation, genitourinary"
+          },
+          {
+            "code": "HAIR",
+            "display": "Topical application, hair"
+          },
+          {
+            "code": "HEMODIFF",
+            "display": "Diffusion, hemodialysis"
+          },
+          {
+            "code": "HEMOPORT",
+            "display": "Injection, hemodialysis port"
+          },
+          {
+            "code": "IA",
+            "display": "Infusion, intraarterial catheter"
+          },
+          {
+            "code": "IABDINJ",
+            "display": "Injection, intra-abdominal"
+          },
+          {
+            "code": "IAINJ",
+            "display": "Injection, intraarterial"
+          },
+          {
+            "code": "IAINJP",
+            "display": "Injection, intraarterial, push"
+          },
+          {
+            "code": "IAINJSP",
+            "display": "Injection, intraarterial, slow push"
+          },
+          {
+            "code": "IARTINJ",
+            "display": "Injection, intraarticular"
+          },
+          {
+            "code": "IBRONCHINSTIL",
+            "display": "Instillation, intrabronchial"
+          },
+          {
+            "code": "IBURSINJ",
+            "display": "Injection, intrabursal"
+          },
+          {
+            "code": "IC",
+            "display": "Infusion, intracardiac"
+          },
+          {
+            "code": "ICARDINJ",
+            "display": "Injection, intracardiac"
+          },
+          {
+            "code": "ICARDINJRP",
+            "display": "Injection, intracardiac, rapid push"
+          },
+          {
+            "code": "ICARDINJSP",
+            "display": "Injection, intracardiac, slow push"
+          },
+          {
+            "code": "ICARINJP",
+            "display": "Injection, intracardiac, push"
+          },
+          {
+            "code": "ICARTINJ",
+            "display": "Injection, intracartilaginous"
+          },
+          {
+            "code": "ICAUDINJ",
+            "display": "Injection, intracaudal"
+          },
+          {
+            "code": "ICAVINJ",
+            "display": "Injection, intracavernous"
+          },
+          {
+            "code": "ICAVITINJ",
+            "display": "Injection, intracavitary"
+          },
+          {
+            "code": "ICEREBINJ",
+            "display": "Injection, intracerebral"
+          },
+          {
+            "code": "ICISTERNINJ",
+            "display": "Injection, intracisternal"
+          },
+          {
+            "code": "ICOR",
+            "display": "Infusion, intracoronary"
+          },
+          {
+            "code": "ICORNTA",
+            "display": "Topical application, intracorneal"
+          },
+          {
+            "code": "ICORONINJ",
+            "display": "Injection, intracoronary"
+          },
+          {
+            "code": "ICORONINJP",
+            "display": "Injection, intracoronary, push"
+          },
+          {
+            "code": "ICORONTA",
+            "display": "Topical application, intracoronal (dental)"
+          },
+          {
+            "code": "ICORPCAVINJ",
+            "display": "Injection, intracorpus cavernosum"
+          },
+          {
+            "code": "IDIMPLNT",
+            "display": "Implantation, intradermal"
+          },
+          {
+            "code": "IDINJ",
+            "display": "Injection, intradermal"
+          },
+          {
+            "code": "IDISCINJ",
+            "display": "Injection, intradiscal"
+          },
+          {
+            "code": "IDOUDMAB",
+            "display": "Mucosal absorption, intraduodenal"
+          },
+          {
+            "code": "IDUCTINJ",
+            "display": "Injection, intraductal"
+          },
+          {
+            "code": "IDUODINSTIL",
+            "display": "Instillation, intraduodenal"
+          },
+          {
+            "code": "IDURINJ",
+            "display": "Injection, intradural"
+          },
+          {
+            "code": "IEPIDINJ",
+            "display": "Injection, intraepidermal"
+          },
+          {
+            "code": "IEPITHINJ",
+            "display": "Injection, intraepithelial"
+          },
+          {
+            "code": "IESOPHINSTIL",
+            "display": "Instillation, intraesophageal"
+          },
+          {
+            "code": "IESOPHTA",
+            "display": "Topical application, intraesophageal"
+          },
+          {
+            "code": "IGASTINSTIL",
+            "display": "Instillation, intragastric"
+          },
+          {
+            "code": "IGASTIRR",
+            "display": "Irrigation, intragastric"
+          },
+          {
+            "code": "IGASTLAV",
+            "display": "Lavage, intragastric"
+          },
+          {
+            "code": "IILEALINJ",
+            "display": "Instillation, intraileal"
+          },
+          {
+            "code": "IILEALTA",
+            "display": "Topical application, intraileal"
+          },
+          {
+            "code": "ILESINJ",
+            "display": "Injection, intralesional"
+          },
+          {
+            "code": "ILESIRR",
+            "display": "Irrigation, intralesional"
+          },
+          {
+            "code": "ILTOP",
+            "display": "Topical application, intralesional"
+          },
+          {
+            "code": "ILUMINJ",
+            "display": "Injection, intraluminal"
+          },
+          {
+            "code": "ILUMTA",
+            "display": "Topical application, intraluminal"
+          },
+          {
+            "code": "ILYMPJINJ",
+            "display": "Injection, intralymphatic"
+          },
+          {
+            "code": "IM",
+            "display": "Injection, intramuscular"
+          },
+          {
+            "code": "IMD",
+            "display": "Injection, intramuscular, deep"
+          },
+          {
+            "code": "IMEDULINJ",
+            "display": "Injection, intramedullary"
+          },
+          {
+            "code": "IMZ",
+            "display": "Injection, intramuscular, z track"
+          },
+          {
+            "code": "INSUF",
+            "display": "Insufflation"
+          },
+          {
+            "code": "INTERMENINJ",
+            "display": "Injection, interameningeal"
+          },
+          {
+            "code": "INTERSTITINJ",
+            "display": "Injection, interstitial"
+          },
+          {
+            "code": "IOINJ",
+            "display": "Injection, intraocular"
+          },
+          {
+            "code": "IOINSTL",
+            "display": "Instillation, intraocular"
+          },
+          {
+            "code": "IOIRR",
+            "display": "Irrigation, intraocular"
+          },
+          {
+            "code": "IONTO",
+            "display": "Topical application, iontophoresis"
+          },
+          {
+            "code": "IOSSC",
+            "display": "Infusion, intraosseous, continuous"
+          },
+          {
+            "code": "IOSSINJ",
+            "display": "Injection, intraosseous"
+          },
+          {
+            "code": "IOSURGINS",
+            "display": "Insertion, intraocular, surgical"
+          },
+          {
+            "code": "IOTOP",
+            "display": "Topical application, intraocular"
+          },
+          {
+            "code": "IOVARINJ",
+            "display": "Injection, intraovarian"
+          },
+          {
+            "code": "IPCARDINJ",
+            "display": "Injection, intrapericardial"
+          },
+          {
+            "code": "IPERINJ",
+            "display": "Injection, intraperitoneal"
+          },
+          {
+            "code": "IPINHL",
+            "display": "Inhalation, respiratory"
+          },
+          {
+            "code": "IPINJ",
+            "display": "Injection, intrapulmonary"
+          },
+          {
+            "code": "IPLRINJ",
+            "display": "Injection, intrapleural"
+          },
+          {
+            "code": "IPPB",
+            "display": "Inhalation, intermittent positive pressure breathing (ippb)"
+          },
+          {
+            "code": "IPROSTINJ",
+            "display": "Injection, intraprostatic"
+          },
+          {
+            "code": "IPUMPINJ",
+            "display": "Injection, insulin pump"
+          },
+          {
+            "code": "ISININSTIL",
+            "display": "Instillation, intrasinal"
+          },
+          {
+            "code": "ISINJ",
+            "display": "Injection, intraspinal"
+          },
+          {
+            "code": "ISTERINJ",
+            "display": "Injection, intrasternal"
+          },
+          {
+            "code": "ISYNINJ",
+            "display": "Injection, intrasynovial"
+          },
+          {
+            "code": "IT",
+            "display": "Infusion, intrathecal"
+          },
+          {
+            "code": "ITENDINJ",
+            "display": "Injection, intratendinous"
+          },
+          {
+            "code": "ITESTINJ",
+            "display": "Injection, intratesticular"
+          },
+          {
+            "code": "ITHORINJ",
+            "display": "Injection, intrathoracic"
+          },
+          {
+            "code": "ITINJ",
+            "display": "Injection, intrathecal"
+          },
+          {
+            "code": "ITRACHINSTIL",
+            "display": "Instillation, intratracheal"
+          },
+          {
+            "code": "ITRACHMAB",
+            "display": "Mucosal absorption, intratracheal"
+          },
+          {
+            "code": "ITUBINJ",
+            "display": "Injection, intratubular"
+          },
+          {
+            "code": "ITUMINJ",
+            "display": "Injection, intratumor"
+          },
+          {
+            "code": "ITYMPINJ",
+            "display": "Injection, intratympanic"
+          },
+          {
+            "code": "IU",
+            "display": "Insertion, intrauterine"
+          },
+          {
+            "code": "IUINJ",
+            "display": "Injection, intrauterine"
+          },
+          {
+            "code": "IUINJC",
+            "display": "Injection, intracervical (uterus)"
+          },
+          {
+            "code": "IUINSTL",
+            "display": "Instillation, intrauterine"
+          },
+          {
+            "code": "IURETINJ",
+            "display": "Injection, intraureteral, retrograde"
+          },
+          {
+            "code": "IV",
+            "display": "Infusion, intravenous"
+          },
+          {
+            "code": "IVASCINFUS",
+            "display": "Infusion, intravascular"
+          },
+          {
+            "code": "IVASCINJ",
+            "display": "Injection, intravascular"
+          },
+          {
+            "code": "IVC",
+            "display": "Infusion, intravenous catheter"
+          },
+          {
+            "code": "IVCC",
+            "display": "Infusion, intravenous catheter, continuous"
+          },
+          {
+            "code": "IVCI",
+            "display": "Infusion, intravenous catheter, intermittent"
+          },
+          {
+            "code": "IVENTINJ",
+            "display": "Injection, intraventricular (heart)"
+          },
+          {
+            "code": "IVESINJ",
+            "display": "Injection, intravesicle"
+          },
+          {
+            "code": "IVFLUSH",
+            "display": "Flush, intravenous catheter"
+          },
+          {
+            "code": "IVINJ",
+            "display": "Injection, intravenous"
+          },
+          {
+            "code": "IVINJBOL",
+            "display": "Injection, intravenous, bolus"
+          },
+          {
+            "code": "IVITIMPLNT",
+            "display": "Implantation, intravitreal"
+          },
+          {
+            "code": "IVITINJ",
+            "display": "Injection, intravitreal"
+          },
+          {
+            "code": "IVPUSH",
+            "display": "Injection, intravenous, push"
+          },
+          {
+            "code": "IVRPUSH",
+            "display": "Injection, intravenous, rapid push"
+          },
+          {
+            "code": "IVSPUSH",
+            "display": "Injection, intravenous, slow push"
+          },
+          {
+            "code": "JJTINSTL",
+            "display": "Instillation, jejunostomy tube"
+          },
+          {
+            "code": "LARYNGINSTIL",
+            "display": "Instillation, laryngeal"
+          },
+          {
+            "code": "LARYNGTA",
+            "display": "Topical application, laryngeal"
+          },
+          {
+            "code": "LPINS",
+            "display": "Insertion, lacrimal puncta"
+          },
+          {
+            "code": "MUC",
+            "display": "Topical application, mucous membrane"
+          },
+          {
+            "code": "NAIL",
+            "display": "Topical application, nail"
+          },
+          {
+            "code": "NASAL",
+            "display": "Topical application, nasal"
+          },
+          {
+            "code": "NASALINSTIL",
+            "display": "Instillation, nasal"
+          },
+          {
+            "code": "NASINHL",
+            "display": "Inhalation, nasal"
+          },
+          {
+            "code": "NASINHLC",
+            "display": "Inhalation, nasal cannula"
+          },
+          {
+            "code": "NASNEB",
+            "display": "Inhalation, nebulization, nasal"
+          },
+          {
+            "code": "NASOGASINSTIL",
+            "display": "Instillation, nasogastric"
+          },
+          {
+            "code": "NEB",
+            "display": "Inhalation, nebulization"
+          },
+          {
+            "code": "NGT",
+            "display": "Instillation, nasogastric tube"
+          },
+          {
+            "code": "NP",
+            "display": "Inhalation, nasal cannula"
+          },
+          {
+            "code": "NTT",
+            "display": "Instillation, nasotracheal tube"
+          },
+          {
+            "code": "OCDRESTA",
+            "display": "Occlusive dressing technique"
+          },
+          {
+            "code": "OGT",
+            "display": "Instillation, orogastric tube"
+          },
+          {
+            "code": "OJJ",
+            "display": "Instillation, orojejunum tube"
+          },
+          {
+            "code": "OPTHALTA",
+            "display": "Topical application, ophthalmic"
+          },
+          {
+            "code": "ORALTA",
+            "display": "Topical application, oral"
+          },
+          {
+            "code": "ORIFINHL",
+            "display": "Inhalation, oral intermittent flow"
+          },
+          {
+            "code": "ORINHL",
+            "display": "Inhalation, respiratory"
+          },
+          {
+            "code": "ORMUC",
+            "display": "Topical application, oromucosal"
+          },
+          {
+            "code": "ORNEB",
+            "display": "Inhalation, nebulization, oral"
+          },
+          {
+            "code": "OROPHARTA",
+            "display": "Topical application, oropharyngeal"
+          },
+          {
+            "code": "ORRINSE",
+            "display": "Rinse, oral"
+          },
+          {
+            "code": "OT",
+            "display": "Instillation, otic"
+          },
+          {
+            "code": "PAINJ",
+            "display": "Injection, periarticular"
+          },
+          {
+            "code": "PARENTINJ",
+            "display": "Injection, parenteral"
+          },
+          {
+            "code": "PCA",
+            "display": "Infusion, intravenous catheter, pca pump"
+          },
+          {
+            "code": "PDONTINJ",
+            "display": "Injection, periodontal"
+          },
+          {
+            "code": "PDONTTA",
+            "display": "Topical application, periodontal"
+          },
+          {
+            "code": "PDPINJ",
+            "display": "Injection, peritoneal dialysis port"
+          },
+          {
+            "code": "PDPINSTL",
+            "display": "Instillation, peritoneal dialysis port"
+          },
+          {
+            "code": "PDURINJ",
+            "display": "Injection, peridural"
+          },
+          {
+            "code": "PERIANAL",
+            "display": "Topical application, perianal"
+          },
+          {
+            "code": "PERINEAL",
+            "display": "Topical application, perineal"
+          },
+          {
+            "code": "PNINJ",
+            "display": "Injection, perineural"
+          },
+          {
+            "code": "PNSINJ",
+            "display": "Injection, paranasal sinuses"
+          },
+          {
+            "code": "PNSINSTL",
+            "display": "Instillation, paranasal sinuses"
+          },
+          {
+            "code": "PO",
+            "display": "Swallow, oral"
+          },
+          {
+            "code": "PR",
+            "display": "Insertion, rectal"
+          },
+          {
+            "code": "RBINJ",
+            "display": "Injection, retrobulbar"
+          },
+          {
+            "code": "REBREATH",
+            "display": "Inhalation, oral rebreather mask"
+          },
+          {
+            "code": "RECINSTL",
+            "display": "Instillation, rectal"
+          },
+          {
+            "code": "RECIRR",
+            "display": "Irrigation, rectal"
+          },
+          {
+            "code": "RECTAL",
+            "display": "Topical application, rectal"
+          },
+          {
+            "code": "RECTINSTL",
+            "display": "Instillation, rectal tube"
+          },
+          {
+            "code": "RESPINHL",
+            "display": "Inhalation, respiratory"
+          },
+          {
+            "code": "RETENEMA",
+            "display": "Enema, rectal retention"
+          },
+          {
+            "code": "SCALP",
+            "display": "Topical application, scalp"
+          },
+          {
+            "code": "SCINJ",
+            "display": "Injection, subconjunctival"
+          },
+          {
+            "code": "SHAMPOO",
+            "display": "Shampoo"
+          },
+          {
+            "code": "SININSTIL",
+            "display": "Instillation, sinus, unspecified"
+          },
+          {
+            "code": "SKIN",
+            "display": "Topical application, skin"
+          },
+          {
+            "code": "SL",
+            "display": "Dissolve, sublingual"
+          },
+          {
+            "code": "SLESINJ",
+            "display": "Injection, sublesional"
+          },
+          {
+            "code": "SMUCMAB",
+            "display": "Mucosal absorption, submucosal"
+          },
+          {
+            "code": "SOAK",
+            "display": "Immersion (soak)"
+          },
+          {
+            "code": "SOFTISINJ",
+            "display": "Injection, soft tissue"
+          },
+          {
+            "code": "SOFTISINSTIL",
+            "display": "Instillation, soft tissue"
+          },
+          {
+            "code": "SQ",
+            "display": "Injection, subcutaneous"
+          },
+          {
+            "code": "SQIMPLNT",
+            "display": "Implantation, subcutaneous"
+          },
+          {
+            "code": "SQINFUS",
+            "display": "Infusion, subcutaneous"
+          },
+          {
+            "code": "SQSURGINS",
+            "display": "Insertion, subcutaneous, surgical"
+          },
+          {
+            "code": "SUBARACHINJ",
+            "display": "Injection, subarachnoid"
+          },
+          {
+            "code": "SUBCONJTA",
+            "display": "Subconjunctival"
+          },
+          {
+            "code": "SUBMUCINJ",
+            "display": "Injection, submucosal"
+          },
+          {
+            "code": "SUCK",
+            "display": "Suck, oromucosal"
+          },
+          {
+            "code": "SWAB",
+            "display": "Topical application, swab"
+          },
+          {
+            "code": "SWISHSPIT",
+            "display": "Swish and spit out, oromucosal"
+          },
+          {
+            "code": "SWISHSWAL",
+            "display": "Swish and swallow, oromucosal"
+          },
+          {
+            "code": "TMUCTA",
+            "display": "Topical application, transmucosal"
+          },
+          {
+            "code": "TOPICAL",
+            "display": "Topical"
+          },
+          {
+            "code": "TRACH",
+            "display": "Inhalation, tracheostomy"
+          },
+          {
+            "code": "TRACHINSTL",
+            "display": "Instillation, tracheostomy"
+          },
+          {
+            "code": "TRNSDERM",
+            "display": "Transdermal"
+          },
+          {
+            "code": "TRNSDERMD",
+            "display": "Diffusion, transdermal"
+          },
+          {
+            "code": "TRNSLING",
+            "display": "Translingual"
+          },
+          {
+            "code": "TRPLACINJ",
+            "display": "Injection, transplacental"
+          },
+          {
+            "code": "TRTRACHINJ",
+            "display": "Injection, transtracheal"
+          },
+          {
+            "code": "TRTYMPINSTIL",
+            "display": "Instillation, transtympanic"
+          },
+          {
+            "code": "TTYMPTABSORP",
+            "display": "Topical absorption, transtympanic"
+          },
+          {
+            "code": "URETHINJ",
+            "display": "Injection, urethral"
+          },
+          {
+            "code": "URETHINS",
+            "display": "Insertion, urethral"
+          },
+          {
+            "code": "URETHINSTL",
+            "display": "instillation, urethral"
+          },
+          {
+            "code": "URETHSUP",
+            "display": "Suppository, urethral"
+          },
+          {
+            "code": "URETINJ",
+            "display": "Injection, ureteral"
+          },
+          {
+            "code": "VAGINS",
+            "display": "Topical application, vaginal"
+          },
+          {
+            "code": "VAGINSI",
+            "display": "Insertion, vaginal"
+          },
+          {
+            "code": "VENT",
+            "display": "Inhalation, ventilator"
+          },
+          {
+            "code": "VENTMASK",
+            "display": "Inhalation, ventimask"
+          },
+          {
+            "code": "_AmnioticFluidSacRoute",
+            "display": "AmnioticFluidSacRoute"
+          },
+          {
+            "code": "_BiliaryRoute",
+            "display": "BiliaryRoute"
+          },
+          {
+            "code": "_BodySurfaceRoute",
+            "display": "BodySurfaceRoute"
+          },
+          {
+            "code": "_BuccalMucosaRoute",
+            "display": "BuccalMucosaRoute"
+          },
+          {
+            "code": "_CecostomyRoute",
+            "display": "CecostomyRoute"
+          },
+          {
+            "code": "_CervicalRoute",
+            "display": "CervicalRoute"
+          },
+          {
+            "code": "_Chew",
+            "display": "Chew"
+          },
+          {
+            "code": "_DentalRoute",
+            "display": "DentalRoute"
+          },
+          {
+            "code": "_Diffusion",
+            "display": "Diffusion"
+          },
+          {
+            "code": "_Dissolve",
+            "display": "Dissolve"
+          },
+          {
+            "code": "_Douche",
+            "display": "Douche"
+          },
+          {
+            "code": "_ElectroOsmosisRoute",
+            "display": "ElectroOsmosisRoute"
+          },
+          {
+            "code": "_EndocervicalRoute",
+            "display": "EndocervicalRoute"
+          },
+          {
+            "code": "_Enema",
+            "display": "Enema"
+          },
+          {
+            "code": "_EnteralRoute",
+            "display": "EnteralRoute"
+          },
+          {
+            "code": "_EpiduralRoute",
+            "display": "EpiduralRoute"
+          },
+          {
+            "code": "_ExtraAmnioticRoute",
+            "display": "ExtraAmnioticRoute"
+          },
+          {
+            "code": "_ExtracorporealCirculationRoute",
+            "display": "ExtracorporealCirculationRoute"
+          },
+          {
+            "code": "_Flush",
+            "display": "Flush"
+          },
+          {
+            "code": "_GastricRoute",
+            "display": "GastricRoute"
+          },
+          {
+            "code": "_GenitourinaryRoute",
+            "display": "GenitourinaryRoute"
+          },
+          {
+            "code": "_GingivalRoute",
+            "display": "GingivalRoute"
+          },
+          {
+            "code": "_HairRoute",
+            "display": "HairRoute"
+          },
+          {
+            "code": "_Implantation",
+            "display": "Implantation"
+          },
+          {
+            "code": "_InfiltrationRoute",
+            "display": "InfiltrationRoute"
+          },
+          {
+            "code": "_Infusion",
+            "display": "Infusion"
+          },
+          {
+            "code": "_Inhalation",
+            "display": "Inhalation"
+          },
+          {
+            "code": "_Injection",
+            "display": "Injection"
+          },
+          {
+            "code": "_Insertion",
+            "display": "Insertion"
+          },
+          {
+            "code": "_Instillation",
+            "display": "Instillation"
+          },
+          {
+            "code": "_InterameningealRoute",
+            "display": "InterameningealRoute"
+          },
+          {
+            "code": "_InterstitialRoute",
+            "display": "InterstitialRoute"
+          },
+          {
+            "code": "_IntraabdominalRoute",
+            "display": "IntraabdominalRoute"
+          },
+          {
+            "code": "_IntraarterialRoute",
+            "display": "IntraarterialRoute"
+          },
+          {
+            "code": "_IntraarticularRoute",
+            "display": "IntraarticularRoute"
+          },
+          {
+            "code": "_IntrabronchialRoute",
+            "display": "IntrabronchialRoute"
+          },
+          {
+            "code": "_IntrabursalRoute",
+            "display": "IntrabursalRoute"
+          },
+          {
+            "code": "_IntracardiacRoute",
+            "display": "IntracardiacRoute"
+          },
+          {
+            "code": "_IntracartilaginousRoute",
+            "display": "IntracartilaginousRoute"
+          },
+          {
+            "code": "_IntracaudalRoute",
+            "display": "IntracaudalRoute"
+          },
+          {
+            "code": "_IntracavernosalRoute",
+            "display": "IntracavernosalRoute"
+          },
+          {
+            "code": "_IntracavitaryRoute",
+            "display": "IntracavitaryRoute"
+          },
+          {
+            "code": "_IntracerebralRoute",
+            "display": "IntracerebralRoute"
+          },
+          {
+            "code": "_IntracervicalRoute",
+            "display": "IntracervicalRoute"
+          },
+          {
+            "code": "_IntracisternalRoute",
+            "display": "IntracisternalRoute"
+          },
+          {
+            "code": "_IntracornealRoute",
+            "display": "IntracornealRoute"
+          },
+          {
+            "code": "_IntracoronalRoute",
+            "display": "IntracoronalRoute"
+          },
+          {
+            "code": "_IntracoronaryRoute",
+            "display": "IntracoronaryRoute"
+          },
+          {
+            "code": "_IntracorpusCavernosumRoute",
+            "display": "IntracorpusCavernosumRoute"
+          },
+          {
+            "code": "_IntradermalRoute",
+            "display": "IntradermalRoute"
+          },
+          {
+            "code": "_IntradiscalRoute",
+            "display": "IntradiscalRoute"
+          },
+          {
+            "code": "_IntraductalRoute",
+            "display": "IntraductalRoute"
+          },
+          {
+            "code": "_IntraduodenalRoute",
+            "display": "IntraduodenalRoute"
+          },
+          {
+            "code": "_IntraduralRoute",
+            "display": "IntraduralRoute"
+          },
+          {
+            "code": "_IntraepidermalRoute",
+            "display": "IntraepidermalRoute"
+          },
+          {
+            "code": "_IntraepithelialRoute",
+            "display": "IntraepithelialRoute"
+          },
+          {
+            "code": "_IntraesophagealRoute",
+            "display": "IntraesophagealRoute"
+          },
+          {
+            "code": "_IntragastricRoute",
+            "display": "IntragastricRoute"
+          },
+          {
+            "code": "_IntrailealRoute",
+            "display": "IntrailealRoute"
+          },
+          {
+            "code": "_IntralesionalRoute",
+            "display": "IntralesionalRoute"
+          },
+          {
+            "code": "_IntraluminalRoute",
+            "display": "IntraluminalRoute"
+          },
+          {
+            "code": "_IntralymphaticRoute",
+            "display": "IntralymphaticRoute"
+          },
+          {
+            "code": "_IntramedullaryRoute",
+            "display": "IntramedullaryRoute"
+          },
+          {
+            "code": "_IntramuscularRoute",
+            "display": "IntramuscularRoute"
+          },
+          {
+            "code": "_IntraocularRoute",
+            "display": "IntraocularRoute"
+          },
+          {
+            "code": "_IntraosseousRoute",
+            "display": "IntraosseousRoute"
+          },
+          {
+            "code": "_IntraovarianRoute",
+            "display": "IntraovarianRoute"
+          },
+          {
+            "code": "_IntrapericardialRoute",
+            "display": "IntrapericardialRoute"
+          },
+          {
+            "code": "_IntraperitonealRoute",
+            "display": "IntraperitonealRoute"
+          },
+          {
+            "code": "_IntrapleuralRoute",
+            "display": "IntrapleuralRoute"
+          },
+          {
+            "code": "_IntraprostaticRoute",
+            "display": "IntraprostaticRoute"
+          },
+          {
+            "code": "_IntrapulmonaryRoute",
+            "display": "IntrapulmonaryRoute"
+          },
+          {
+            "code": "_IntrasinalRoute",
+            "display": "IntrasinalRoute"
+          },
+          {
+            "code": "_IntraspinalRoute",
+            "display": "IntraspinalRoute"
+          },
+          {
+            "code": "_IntrasternalRoute",
+            "display": "IntrasternalRoute"
+          },
+          {
+            "code": "_IntrasynovialRoute",
+            "display": "IntrasynovialRoute"
+          },
+          {
+            "code": "_IntratendinousRoute",
+            "display": "IntratendinousRoute"
+          },
+          {
+            "code": "_IntratesticularRoute",
+            "display": "IntratesticularRoute"
+          },
+          {
+            "code": "_IntrathecalRoute",
+            "display": "IntrathecalRoute"
+          },
+          {
+            "code": "_IntrathoracicRoute",
+            "display": "IntrathoracicRoute"
+          },
+          {
+            "code": "_IntratrachealRoute",
+            "display": "IntratrachealRoute"
+          },
+          {
+            "code": "_IntratubularRoute",
+            "display": "IntratubularRoute"
+          },
+          {
+            "code": "_IntratumorRoute",
+            "display": "IntratumorRoute"
+          },
+          {
+            "code": "_IntratympanicRoute",
+            "display": "IntratympanicRoute"
+          },
+          {
+            "code": "_IntrauterineRoute",
+            "display": "IntrauterineRoute"
+          },
+          {
+            "code": "_IntravascularRoute",
+            "display": "IntravascularRoute"
+          },
+          {
+            "code": "_IntravenousRoute",
+            "display": "IntravenousRoute"
+          },
+          {
+            "code": "_IntraventricularRoute",
+            "display": "IntraventricularRoute"
+          },
+          {
+            "code": "_IntravesicleRoute",
+            "display": "IntravesicleRoute"
+          },
+          {
+            "code": "_IntravitrealRoute",
+            "display": "IntravitrealRoute"
+          },
+          {
+            "code": "_IontophoresisRoute",
+            "display": "IontophoresisRoute"
+          },
+          {
+            "code": "_Irrigation",
+            "display": "Irrigation"
+          },
+          {
+            "code": "_JejunumRoute",
+            "display": "JejunumRoute"
+          },
+          {
+            "code": "_LacrimalPunctaRoute",
+            "display": "LacrimalPunctaRoute"
+          },
+          {
+            "code": "_LaryngealRoute",
+            "display": "LaryngealRoute"
+          },
+          {
+            "code": "_LavageRoute",
+            "display": "LavageRoute"
+          },
+          {
+            "code": "_LingualRoute",
+            "display": "LingualRoute"
+          },
+          {
+            "code": "_MucosalAbsorptionRoute",
+            "display": "MucosalAbsorptionRoute"
+          },
+          {
+            "code": "_MucousMembraneRoute",
+            "display": "MucousMembraneRoute"
+          },
+          {
+            "code": "_NailRoute",
+            "display": "NailRoute"
+          },
+          {
+            "code": "_NasalRoute",
+            "display": "NasalRoute"
+          },
+          {
+            "code": "_Nebulization",
+            "display": "Nebulization"
+          },
+          {
+            "code": "_OphthalmicRoute",
+            "display": "OphthalmicRoute"
+          },
+          {
+            "code": "_OralRoute",
+            "display": "OralRoute"
+          },
+          {
+            "code": "_OromucosalRoute",
+            "display": "OromucosalRoute"
+          },
+          {
+            "code": "_OropharyngealRoute",
+            "display": "OropharyngealRoute"
+          },
+          {
+            "code": "_OticRoute",
+            "display": "OticRoute"
+          },
+          {
+            "code": "_ParanasalSinusesRoute",
+            "display": "ParanasalSinusesRoute"
+          },
+          {
+            "code": "_ParenteralRoute",
+            "display": "ParenteralRoute"
+          },
+          {
+            "code": "_PerianalRoute",
+            "display": "PerianalRoute"
+          },
+          {
+            "code": "_PeriarticularRoute",
+            "display": "PeriarticularRoute"
+          },
+          {
+            "code": "_PeriduralRoute",
+            "display": "PeriduralRoute"
+          },
+          {
+            "code": "_PerinealRoute",
+            "display": "PerinealRoute"
+          },
+          {
+            "code": "_PerineuralRoute",
+            "display": "PerineuralRoute"
+          },
+          {
+            "code": "_PeriodontalRoute",
+            "display": "PeriodontalRoute"
+          },
+          {
+            "code": "_PulmonaryRoute",
+            "display": "PulmonaryRoute"
+          },
+          {
+            "code": "_RectalRoute",
+            "display": "RectalRoute"
+          },
+          {
+            "code": "_RespiratoryTractRoute",
+            "display": "RespiratoryTractRoute"
+          },
+          {
+            "code": "_RetrobulbarRoute",
+            "display": "RetrobulbarRoute"
+          },
+          {
+            "code": "_Rinse",
+            "display": "Rinse"
+          },
+          {
+            "code": "_RouteByMethod",
+            "display": "RouteByMethod"
+          },
+          {
+            "code": "_RouteBySite",
+            "display": "RouteBySite"
+          },
+          {
+            "code": "_ScalpRoute",
+            "display": "ScalpRoute"
+          },
+          {
+            "code": "_SinusUnspecifiedRoute",
+            "display": "SinusUnspecifiedRoute"
+          },
+          {
+            "code": "_SkinRoute",
+            "display": "SkinRoute"
+          },
+          {
+            "code": "_SoftTissueRoute",
+            "display": "SoftTissueRoute"
+          },
+          {
+            "code": "_SubarachnoidRoute",
+            "display": "SubarachnoidRoute"
+          },
+          {
+            "code": "_SubconjunctivalRoute",
+            "display": "SubconjunctivalRoute"
+          },
+          {
+            "code": "_SubcutaneousRoute",
+            "display": "SubcutaneousRoute"
+          },
+          {
+            "code": "_SublesionalRoute",
+            "display": "SublesionalRoute"
+          },
+          {
+            "code": "_SublingualRoute",
+            "display": "SublingualRoute"
+          },
+          {
+            "code": "_SubmucosalRoute",
+            "display": "SubmucosalRoute"
+          },
+          {
+            "code": "_SuppositoryRoute",
+            "display": "SuppositoryRoute"
+          },
+          {
+            "code": "_Swish",
+            "display": "Swish"
+          },
+          {
+            "code": "_TopicalAbsorptionRoute",
+            "display": "TopicalAbsorptionRoute"
+          },
+          {
+            "code": "_TopicalApplication",
+            "display": "TopicalApplication"
+          },
+          {
+            "code": "_TracheostomyRoute",
+            "display": "TracheostomyRoute"
+          },
+          {
+            "code": "_TransmucosalRoute",
+            "display": "TransmucosalRoute"
+          },
+          {
+            "code": "_TransplacentalRoute",
+            "display": "TransplacentalRoute"
+          },
+          {
+            "code": "_TranstrachealRoute",
+            "display": "TranstrachealRoute"
+          },
+          {
+            "code": "_TranstympanicRoute",
+            "display": "TranstympanicRoute"
+          },
+          {
+            "code": "_UreteralRoute",
+            "display": "UreteralRoute"
+          },
+          {
+            "code": "_UrethralRoute",
+            "display": "UrethralRoute"
+          },
+          {
+            "code": "_UrinaryBladderRoute",
+            "display": "UrinaryBladderRoute"
+          },
+          {
+            "code": "_UrinaryTractRoute",
+            "display": "UrinaryTractRoute"
+          },
+          {
+            "code": "_VaginalRoute",
+            "display": "VaginalRoute"
+          },
+          {
+            "code": "_VitreousHumourRoute",
+            "display": "VitreousHumourRoute"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-06-12T21:41:14.2230772+00:00",
+    "contains": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "AMNINJ",
+        "display": "Injection, amniotic fluid"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BILINJ",
+        "display": "Injection, biliary tract"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BLADINJ",
+        "display": "Injection, urinary bladder"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BLADINSTL",
+        "display": "Instillation, urinary catheter"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BLADIRR",
+        "display": "Irrigation, urinary bladder"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BLADIRRC",
+        "display": "Irrigation, urinary bladder, continuous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BLADIRRT",
+        "display": "Irrigation, urinary bladder, tidal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "BUC",
+        "display": "Topical application, buccal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CAPDINSTL",
+        "display": "Instillation, continuous ambulatory peritoneal dialysis port"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CECINSTL",
+        "display": "Instillation, cecostomy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CERV",
+        "display": "Topical application, cervical"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CERVINJ",
+        "display": "Injection, cervical"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CERVINS",
+        "display": "Insertion, cervical (uterine)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CHEW",
+        "display": "Chew, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CHOLINJ",
+        "display": "Injection, for cholangiography"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "CTINSTL",
+        "display": "Instillation, chest tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "DEN",
+        "display": "Topical application, dental"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "DENRINSE",
+        "display": "Rinse, dental"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "DISSOLVE",
+        "display": "Dissolve, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "DOUCHE",
+        "display": "Douche, vaginal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "DRESS",
+        "display": "Topical application, soaked dressing"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EFT",
+        "display": "Instillation, enteral feeding tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ELECTOSMOS",
+        "display": "Electro-osmosis"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ENDOSININJ",
+        "display": "Injection, endosinusial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ENEMA",
+        "display": "Enema, rectal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ENTINSTL",
+        "display": "Instillation, enteral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EPI",
+        "display": "Infusion, epidural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EPIDURINJ",
+        "display": "Injection, epidural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EPIINJ",
+        "display": "Injection, epidural, push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EPINJSP",
+        "display": "Injection, epidural, slow push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ETINSTL",
+        "display": "Instillation, endotracheal tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ETNEB",
+        "display": "Nebulization, endotracheal tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EXTCORPDIF",
+        "display": "Diffusion, extracorporeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EXTCORPINJ",
+        "display": "Injection, extracorporeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "EXTRAMNINJ",
+        "display": "Injection, extra-amniotic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GARGLE",
+        "display": "Gargle"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GBINJ",
+        "display": "Injection, gastric button"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GIN",
+        "display": "Topical application, gingival"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GINGINJ",
+        "display": "Injection, gingival"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GJT",
+        "display": "Instillation, gastro-jejunostomy tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GT",
+        "display": "Instillation, gastrostomy tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "GUIRR",
+        "display": "Irrigation, genitourinary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "HAIR",
+        "display": "Topical application, hair"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "HEMODIFF",
+        "display": "Diffusion, hemodialysis"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "HEMOPORT",
+        "display": "Injection, hemodialysis port"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IA",
+        "display": "Infusion, intraarterial catheter"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IABDINJ",
+        "display": "Injection, intra-abdominal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IAINJ",
+        "display": "Injection, intraarterial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IAINJP",
+        "display": "Injection, intraarterial, push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IAINJSP",
+        "display": "Injection, intraarterial, slow push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IARTINJ",
+        "display": "Injection, intraarticular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IBRONCHINSTIL",
+        "display": "Instillation, intrabronchial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IBURSINJ",
+        "display": "Injection, intrabursal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IC",
+        "display": "Infusion, intracardiac"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICARDINJ",
+        "display": "Injection, intracardiac"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICARDINJRP",
+        "display": "Injection, intracardiac, rapid push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICARDINJSP",
+        "display": "Injection, intracardiac, slow push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICARINJP",
+        "display": "Injection, intracardiac, push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICARTINJ",
+        "display": "Injection, intracartilaginous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICAUDINJ",
+        "display": "Injection, intracaudal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICAVINJ",
+        "display": "Injection, intracavernous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICAVITINJ",
+        "display": "Injection, intracavitary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICEREBINJ",
+        "display": "Injection, intracerebral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICISTERNINJ",
+        "display": "Injection, intracisternal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICOR",
+        "display": "Infusion, intracoronary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICORNTA",
+        "display": "Topical application, intracorneal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICORONINJ",
+        "display": "Injection, intracoronary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICORONINJP",
+        "display": "Injection, intracoronary, push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICORONTA",
+        "display": "Topical application, intracoronal (dental)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ICORPCAVINJ",
+        "display": "Injection, intracorpus cavernosum"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDIMPLNT",
+        "display": "Implantation, intradermal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDINJ",
+        "display": "Injection, intradermal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDISCINJ",
+        "display": "Injection, intradiscal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDOUDMAB",
+        "display": "Mucosal absorption, intraduodenal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDUCTINJ",
+        "display": "Injection, intraductal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDUODINSTIL",
+        "display": "Instillation, intraduodenal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IDURINJ",
+        "display": "Injection, intradural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IEPIDINJ",
+        "display": "Injection, intraepidermal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IEPITHINJ",
+        "display": "Injection, intraepithelial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IESOPHINSTIL",
+        "display": "Instillation, intraesophageal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IESOPHTA",
+        "display": "Topical application, intraesophageal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IGASTINSTIL",
+        "display": "Instillation, intragastric"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IGASTIRR",
+        "display": "Irrigation, intragastric"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IGASTLAV",
+        "display": "Lavage, intragastric"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IILEALINJ",
+        "display": "Instillation, intraileal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IILEALTA",
+        "display": "Topical application, intraileal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILESINJ",
+        "display": "Injection, intralesional"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILESIRR",
+        "display": "Irrigation, intralesional"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILTOP",
+        "display": "Topical application, intralesional"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILUMINJ",
+        "display": "Injection, intraluminal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILUMTA",
+        "display": "Topical application, intraluminal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ILYMPJINJ",
+        "display": "Injection, intralymphatic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IM",
+        "display": "Injection, intramuscular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IMD",
+        "display": "Injection, intramuscular, deep"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IMEDULINJ",
+        "display": "Injection, intramedullary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IMZ",
+        "display": "Injection, intramuscular, z track"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "INSUF",
+        "display": "Insufflation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "INTERMENINJ",
+        "display": "Injection, interameningeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "INTERSTITINJ",
+        "display": "Injection, interstitial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOINJ",
+        "display": "Injection, intraocular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOINSTL",
+        "display": "Instillation, intraocular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOIRR",
+        "display": "Irrigation, intraocular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IONTO",
+        "display": "Topical application, iontophoresis"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOSSC",
+        "display": "Infusion, intraosseous, continuous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOSSINJ",
+        "display": "Injection, intraosseous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOSURGINS",
+        "display": "Insertion, intraocular, surgical"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOTOP",
+        "display": "Topical application, intraocular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IOVARINJ",
+        "display": "Injection, intraovarian"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPCARDINJ",
+        "display": "Injection, intrapericardial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPERINJ",
+        "display": "Injection, intraperitoneal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPINHL",
+        "display": "Inhalation, respiratory"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPINJ",
+        "display": "Injection, intrapulmonary"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPLRINJ",
+        "display": "Injection, intrapleural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPPB",
+        "display": "Inhalation, intermittent positive pressure breathing (ippb)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPROSTINJ",
+        "display": "Injection, intraprostatic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IPUMPINJ",
+        "display": "Injection, insulin pump"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ISININSTIL",
+        "display": "Instillation, intrasinal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ISINJ",
+        "display": "Injection, intraspinal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ISTERINJ",
+        "display": "Injection, intrasternal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ISYNINJ",
+        "display": "Injection, intrasynovial"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IT",
+        "display": "Infusion, intrathecal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITENDINJ",
+        "display": "Injection, intratendinous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITESTINJ",
+        "display": "Injection, intratesticular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITHORINJ",
+        "display": "Injection, intrathoracic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITINJ",
+        "display": "Injection, intrathecal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITRACHINSTIL",
+        "display": "Instillation, intratracheal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITRACHMAB",
+        "display": "Mucosal absorption, intratracheal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITUBINJ",
+        "display": "Injection, intratubular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITUMINJ",
+        "display": "Injection, intratumor"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ITYMPINJ",
+        "display": "Injection, intratympanic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IU",
+        "display": "Insertion, intrauterine"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IUINJ",
+        "display": "Injection, intrauterine"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IUINJC",
+        "display": "Injection, intracervical (uterus)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IUINSTL",
+        "display": "Instillation, intrauterine"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IURETINJ",
+        "display": "Injection, intraureteral, retrograde"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IV",
+        "display": "Infusion, intravenous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVASCINFUS",
+        "display": "Infusion, intravascular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVASCINJ",
+        "display": "Injection, intravascular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVC",
+        "display": "Infusion, intravenous catheter"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVCC",
+        "display": "Infusion, intravenous catheter, continuous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVCI",
+        "display": "Infusion, intravenous catheter, intermittent"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVENTINJ",
+        "display": "Injection, intraventricular (heart)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVESINJ",
+        "display": "Injection, intravesicle"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVFLUSH",
+        "display": "Flush, intravenous catheter"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVINJ",
+        "display": "Injection, intravenous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVINJBOL",
+        "display": "Injection, intravenous, bolus"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVITIMPLNT",
+        "display": "Implantation, intravitreal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVITINJ",
+        "display": "Injection, intravitreal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVPUSH",
+        "display": "Injection, intravenous, push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVRPUSH",
+        "display": "Injection, intravenous, rapid push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "IVSPUSH",
+        "display": "Injection, intravenous, slow push"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "JJTINSTL",
+        "display": "Instillation, jejunostomy tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "LARYNGINSTIL",
+        "display": "Instillation, laryngeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "LARYNGTA",
+        "display": "Topical application, laryngeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "LPINS",
+        "display": "Insertion, lacrimal puncta"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "MUC",
+        "display": "Topical application, mucous membrane"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NAIL",
+        "display": "Topical application, nail"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASAL",
+        "display": "Topical application, nasal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASALINSTIL",
+        "display": "Instillation, nasal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASINHL",
+        "display": "Inhalation, nasal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASINHLC",
+        "display": "Inhalation, nasal cannula"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASNEB",
+        "display": "Inhalation, nebulization, nasal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NASOGASINSTIL",
+        "display": "Instillation, nasogastric"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NEB",
+        "display": "Inhalation, nebulization"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NGT",
+        "display": "Instillation, nasogastric tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NP",
+        "display": "Inhalation, nasal cannula"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "NTT",
+        "display": "Instillation, nasotracheal tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OCDRESTA",
+        "display": "Occlusive dressing technique"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OGT",
+        "display": "Instillation, orogastric tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OJJ",
+        "display": "Instillation, orojejunum tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OPTHALTA",
+        "display": "Topical application, ophthalmic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORALTA",
+        "display": "Topical application, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORIFINHL",
+        "display": "Inhalation, oral intermittent flow"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORINHL",
+        "display": "Inhalation, respiratory"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORMUC",
+        "display": "Topical application, oromucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORNEB",
+        "display": "Inhalation, nebulization, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OROPHARTA",
+        "display": "Topical application, oropharyngeal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "ORRINSE",
+        "display": "Rinse, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "OT",
+        "display": "Instillation, otic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PAINJ",
+        "display": "Injection, periarticular"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PARENTINJ",
+        "display": "Injection, parenteral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PCA",
+        "display": "Infusion, intravenous catheter, pca pump"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PDONTINJ",
+        "display": "Injection, periodontal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PDONTTA",
+        "display": "Topical application, periodontal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PDPINJ",
+        "display": "Injection, peritoneal dialysis port"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PDPINSTL",
+        "display": "Instillation, peritoneal dialysis port"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PDURINJ",
+        "display": "Injection, peridural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PERIANAL",
+        "display": "Topical application, perianal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PERINEAL",
+        "display": "Topical application, perineal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PNINJ",
+        "display": "Injection, perineural"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PNSINJ",
+        "display": "Injection, paranasal sinuses"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PNSINSTL",
+        "display": "Instillation, paranasal sinuses"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PO",
+        "display": "Swallow, oral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "PR",
+        "display": "Insertion, rectal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RBINJ",
+        "display": "Injection, retrobulbar"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "REBREATH",
+        "display": "Inhalation, oral rebreather mask"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RECINSTL",
+        "display": "Instillation, rectal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RECIRR",
+        "display": "Irrigation, rectal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RECTAL",
+        "display": "Topical application, rectal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RECTINSTL",
+        "display": "Instillation, rectal tube"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RESPINHL",
+        "display": "Inhalation, respiratory"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "RETENEMA",
+        "display": "Enema, rectal retention"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SCALP",
+        "display": "Topical application, scalp"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SCINJ",
+        "display": "Injection, subconjunctival"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SHAMPOO",
+        "display": "Shampoo"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SININSTIL",
+        "display": "Instillation, sinus, unspecified"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SKIN",
+        "display": "Topical application, skin"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SL",
+        "display": "Dissolve, sublingual"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SLESINJ",
+        "display": "Injection, sublesional"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SMUCMAB",
+        "display": "Mucosal absorption, submucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SOAK",
+        "display": "Immersion (soak)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SOFTISINJ",
+        "display": "Injection, soft tissue"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SOFTISINSTIL",
+        "display": "Instillation, soft tissue"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SQ",
+        "display": "Injection, subcutaneous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SQIMPLNT",
+        "display": "Implantation, subcutaneous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SQINFUS",
+        "display": "Infusion, subcutaneous"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SQSURGINS",
+        "display": "Insertion, subcutaneous, surgical"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SUBARACHINJ",
+        "display": "Injection, subarachnoid"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SUBCONJTA",
+        "display": "Subconjunctival"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SUBMUCINJ",
+        "display": "Injection, submucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SUCK",
+        "display": "Suck, oromucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SWAB",
+        "display": "Topical application, swab"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SWISHSPIT",
+        "display": "Swish and spit out, oromucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "SWISHSWAL",
+        "display": "Swish and swallow, oromucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TMUCTA",
+        "display": "Topical application, transmucosal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TOPICAL",
+        "display": "Topical"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRACH",
+        "display": "Inhalation, tracheostomy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRACHINSTL",
+        "display": "Instillation, tracheostomy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRNSDERM",
+        "display": "Transdermal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRNSDERMD",
+        "display": "Diffusion, transdermal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRNSLING",
+        "display": "Translingual"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRPLACINJ",
+        "display": "Injection, transplacental"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRTRACHINJ",
+        "display": "Injection, transtracheal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TRTYMPINSTIL",
+        "display": "Instillation, transtympanic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "TTYMPTABSORP",
+        "display": "Topical absorption, transtympanic"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "URETHINJ",
+        "display": "Injection, urethral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "URETHINS",
+        "display": "Insertion, urethral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "URETHINSTL",
+        "display": "instillation, urethral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "URETHSUP",
+        "display": "Suppository, urethral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "URETINJ",
+        "display": "Injection, ureteral"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "VAGINS",
+        "display": "Topical application, vaginal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "VAGINSI",
+        "display": "Insertion, vaginal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "VENT",
+        "display": "Inhalation, ventilator"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "VENTMASK",
+        "display": "Inhalation, ventimask"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_AmnioticFluidSacRoute",
+        "display": "AmnioticFluidSacRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_BiliaryRoute",
+        "display": "BiliaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_BodySurfaceRoute",
+        "display": "BodySurfaceRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_BuccalMucosaRoute",
+        "display": "BuccalMucosaRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_CecostomyRoute",
+        "display": "CecostomyRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_CervicalRoute",
+        "display": "CervicalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Chew",
+        "display": "Chew"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_DentalRoute",
+        "display": "DentalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Diffusion",
+        "display": "Diffusion"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Dissolve",
+        "display": "Dissolve"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Douche",
+        "display": "Douche"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ElectroOsmosisRoute",
+        "display": "ElectroOsmosisRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_EndocervicalRoute",
+        "display": "EndocervicalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Enema",
+        "display": "Enema"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_EnteralRoute",
+        "display": "EnteralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_EpiduralRoute",
+        "display": "EpiduralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ExtraAmnioticRoute",
+        "display": "ExtraAmnioticRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ExtracorporealCirculationRoute",
+        "display": "ExtracorporealCirculationRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Flush",
+        "display": "Flush"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_GastricRoute",
+        "display": "GastricRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_GenitourinaryRoute",
+        "display": "GenitourinaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_GingivalRoute",
+        "display": "GingivalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_HairRoute",
+        "display": "HairRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Implantation",
+        "display": "Implantation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_InfiltrationRoute",
+        "display": "InfiltrationRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Infusion",
+        "display": "Infusion"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Inhalation",
+        "display": "Inhalation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Injection",
+        "display": "Injection"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Insertion",
+        "display": "Insertion"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Instillation",
+        "display": "Instillation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_InterameningealRoute",
+        "display": "InterameningealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_InterstitialRoute",
+        "display": "InterstitialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraabdominalRoute",
+        "display": "IntraabdominalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraarterialRoute",
+        "display": "IntraarterialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraarticularRoute",
+        "display": "IntraarticularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrabronchialRoute",
+        "display": "IntrabronchialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrabursalRoute",
+        "display": "IntrabursalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracardiacRoute",
+        "display": "IntracardiacRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracartilaginousRoute",
+        "display": "IntracartilaginousRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracaudalRoute",
+        "display": "IntracaudalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracavernosalRoute",
+        "display": "IntracavernosalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracavitaryRoute",
+        "display": "IntracavitaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracerebralRoute",
+        "display": "IntracerebralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracervicalRoute",
+        "display": "IntracervicalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracisternalRoute",
+        "display": "IntracisternalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracornealRoute",
+        "display": "IntracornealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracoronalRoute",
+        "display": "IntracoronalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracoronaryRoute",
+        "display": "IntracoronaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntracorpusCavernosumRoute",
+        "display": "IntracorpusCavernosumRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntradermalRoute",
+        "display": "IntradermalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntradiscalRoute",
+        "display": "IntradiscalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraductalRoute",
+        "display": "IntraductalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraduodenalRoute",
+        "display": "IntraduodenalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraduralRoute",
+        "display": "IntraduralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraepidermalRoute",
+        "display": "IntraepidermalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraepithelialRoute",
+        "display": "IntraepithelialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraesophagealRoute",
+        "display": "IntraesophagealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntragastricRoute",
+        "display": "IntragastricRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrailealRoute",
+        "display": "IntrailealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntralesionalRoute",
+        "display": "IntralesionalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraluminalRoute",
+        "display": "IntraluminalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntralymphaticRoute",
+        "display": "IntralymphaticRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntramedullaryRoute",
+        "display": "IntramedullaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntramuscularRoute",
+        "display": "IntramuscularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraocularRoute",
+        "display": "IntraocularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraosseousRoute",
+        "display": "IntraosseousRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraovarianRoute",
+        "display": "IntraovarianRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrapericardialRoute",
+        "display": "IntrapericardialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraperitonealRoute",
+        "display": "IntraperitonealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrapleuralRoute",
+        "display": "IntrapleuralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraprostaticRoute",
+        "display": "IntraprostaticRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrapulmonaryRoute",
+        "display": "IntrapulmonaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrasinalRoute",
+        "display": "IntrasinalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraspinalRoute",
+        "display": "IntraspinalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrasternalRoute",
+        "display": "IntrasternalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrasynovialRoute",
+        "display": "IntrasynovialRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratendinousRoute",
+        "display": "IntratendinousRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratesticularRoute",
+        "display": "IntratesticularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrathecalRoute",
+        "display": "IntrathecalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrathoracicRoute",
+        "display": "IntrathoracicRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratrachealRoute",
+        "display": "IntratrachealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratubularRoute",
+        "display": "IntratubularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratumorRoute",
+        "display": "IntratumorRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntratympanicRoute",
+        "display": "IntratympanicRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntrauterineRoute",
+        "display": "IntrauterineRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntravascularRoute",
+        "display": "IntravascularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntravenousRoute",
+        "display": "IntravenousRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntraventricularRoute",
+        "display": "IntraventricularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntravesicleRoute",
+        "display": "IntravesicleRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IntravitrealRoute",
+        "display": "IntravitrealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_IontophoresisRoute",
+        "display": "IontophoresisRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Irrigation",
+        "display": "Irrigation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_JejunumRoute",
+        "display": "JejunumRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_LacrimalPunctaRoute",
+        "display": "LacrimalPunctaRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_LaryngealRoute",
+        "display": "LaryngealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_LavageRoute",
+        "display": "LavageRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_LingualRoute",
+        "display": "LingualRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_MucosalAbsorptionRoute",
+        "display": "MucosalAbsorptionRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_MucousMembraneRoute",
+        "display": "MucousMembraneRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_NailRoute",
+        "display": "NailRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_NasalRoute",
+        "display": "NasalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Nebulization",
+        "display": "Nebulization"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_OphthalmicRoute",
+        "display": "OphthalmicRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_OralRoute",
+        "display": "OralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_OromucosalRoute",
+        "display": "OromucosalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_OropharyngealRoute",
+        "display": "OropharyngealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_OticRoute",
+        "display": "OticRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ParanasalSinusesRoute",
+        "display": "ParanasalSinusesRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ParenteralRoute",
+        "display": "ParenteralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PerianalRoute",
+        "display": "PerianalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PeriarticularRoute",
+        "display": "PeriarticularRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PeriduralRoute",
+        "display": "PeriduralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PerinealRoute",
+        "display": "PerinealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PerineuralRoute",
+        "display": "PerineuralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PeriodontalRoute",
+        "display": "PeriodontalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_PulmonaryRoute",
+        "display": "PulmonaryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_RectalRoute",
+        "display": "RectalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_RespiratoryTractRoute",
+        "display": "RespiratoryTractRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_RetrobulbarRoute",
+        "display": "RetrobulbarRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Rinse",
+        "display": "Rinse"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_RouteByMethod",
+        "display": "RouteByMethod"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_RouteBySite",
+        "display": "RouteBySite"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_ScalpRoute",
+        "display": "ScalpRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SinusUnspecifiedRoute",
+        "display": "SinusUnspecifiedRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SkinRoute",
+        "display": "SkinRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SoftTissueRoute",
+        "display": "SoftTissueRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SubarachnoidRoute",
+        "display": "SubarachnoidRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SubconjunctivalRoute",
+        "display": "SubconjunctivalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SubcutaneousRoute",
+        "display": "SubcutaneousRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SublesionalRoute",
+        "display": "SublesionalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SublingualRoute",
+        "display": "SublingualRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SubmucosalRoute",
+        "display": "SubmucosalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_SuppositoryRoute",
+        "display": "SuppositoryRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_Swish",
+        "display": "Swish"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TopicalAbsorptionRoute",
+        "display": "TopicalAbsorptionRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TopicalApplication",
+        "display": "TopicalApplication"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TracheostomyRoute",
+        "display": "TracheostomyRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TransmucosalRoute",
+        "display": "TransmucosalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TransplacentalRoute",
+        "display": "TransplacentalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TranstrachealRoute",
+        "display": "TranstrachealRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_TranstympanicRoute",
+        "display": "TranstympanicRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_UreteralRoute",
+        "display": "UreteralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_UrethralRoute",
+        "display": "UrethralRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_UrinaryBladderRoute",
+        "display": "UrinaryBladderRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_UrinaryTractRoute",
+        "display": "UrinaryTractRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_VaginalRoute",
+        "display": "VaginalRoute"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "version": "2.1.0",
+        "code": "_VitreousHumourRoute",
+        "display": "VitreousHumourRoute"
+      }
+    ]
+  }
+}

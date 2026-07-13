@@ -1,0 +1,247 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-SupplyRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-SupplyRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_SupplyRequest_R4",
+  "title": "Cross-version Profile for R5.SupplyRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.1158525-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 SupplyRequest resource content to be represented via FHIR R4 SupplyRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "SupplyRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/SupplyRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "SupplyRequest",
+        "path": "SupplyRequest",
+        "short": "Cross-version Profile for R5.SupplyRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 SupplyRequest resource content to be represented via FHIR R4 SupplyRequest resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyRequest.extension",
+        "path": "SupplyRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyRequest.extension:basedOn",
+        "path": "SupplyRequest.extension",
+        "sliceName": "basedOn",
+        "short": "R5: What other request is fulfilled by this supply request (new)",
+        "definition": "R5: `SupplyRequest.basedOn` (new:Reference(Resource))",
+        "comment": "Element `SupplyRequest.basedOn` has a context of SupplyRequest based on following the parent source element upwards and mapping to `SupplyRequest`.\nElement `SupplyRequest.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyRequest.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyRequest.extension:deliverFor",
+        "path": "SupplyRequest.extension",
+        "sliceName": "deliverFor",
+        "short": "R5: The patient for who the supply request is for (new)",
+        "definition": "R5: `SupplyRequest.deliverFor` (new:Reference(Patient))",
+        "comment": "Element `SupplyRequest.deliverFor` has a context of SupplyRequest based on following the parent source element upwards and mapping to `SupplyRequest`.\nElement `SupplyRequest.deliverFor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyRequest.deliverFor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyRequest.extension:item",
+        "path": "SupplyRequest.extension",
+        "sliceName": "item",
+        "short": "R5: item additional types",
+        "definition": "R5: `SupplyRequest.item` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Medication), CodeableReference(http://hl7.org/fhir/StructureDefinition/Substance), CodeableReference(http://hl7.org/fhir/StructureDefinition/Device), CodeableReference(http://hl7.org/fhir/StructureDefinition/DeviceDefinition), CodeableReference(http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct), CodeableReference(http://hl7.org/fhir/StructureDefinition/NutritionProduct), CodeableReference(http://hl7.org/fhir/StructureDefinition/InventoryItem))",
+        "comment": "Element `SupplyRequest.item` is mapped to FHIR R4 element `SupplyRequest.item[x]` as `SourceIsBroaderThanTarget`.\nThe mappings for `SupplyRequest.item` do not cover the following types: CodeableReference.\nThe target context `SupplyRequest.item[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `SupplyRequest`.\nNote that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyRequest.item"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyRequest.extension:reason",
+        "path": "SupplyRequest.extension",
+        "sliceName": "reason",
+        "short": "R5: The reason why the supply item was requested additional types",
+        "definition": "R5: `SupplyRequest.reason` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport), CodeableReference(http://hl7.org/fhir/StructureDefinition/DocumentReference))",
+        "comment": "Element `SupplyRequest.reason` is mapped to FHIR R4 element `SupplyRequest.reasonCode` as `SourceIsBroaderThanTarget`.\nElement `SupplyRequest.reason` is mapped to FHIR R4 element `SupplyRequest.reasonReference` as `SourceIsBroaderThanTarget`.\nThe mappings for `SupplyRequest.reason` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyRequest.reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyRequest.requester.extension",
+        "path": "SupplyRequest.requester.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyRequest.requester.extension:requester",
+        "path": "SupplyRequest.requester.extension",
+        "sliceName": "requester",
+        "short": "R5: requester",
+        "definition": "R5: `SupplyRequest.requester`",
+        "comment": "Element `SupplyRequest.requester` is mapped to FHIR R4 element `SupplyRequest.requester` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SupplyRequest.requester` with unmapped reference targets: CareTeam.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyRequest.deliverTo.extension",
+        "path": "SupplyRequest.deliverTo.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyRequest.deliverTo.extension:deliverTo",
+        "path": "SupplyRequest.deliverTo.extension",
+        "sliceName": "deliverTo",
+        "short": "R5: deliverTo",
+        "definition": "R5: `SupplyRequest.deliverTo`",
+        "comment": "Element `SupplyRequest.deliverTo` is mapped to FHIR R4 element `SupplyRequest.deliverTo` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SupplyRequest.deliverTo` with unmapped reference targets: RelatedPerson.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

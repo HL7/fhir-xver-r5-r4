@@ -1,0 +1,162 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Practitioner",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Practitioner",
+  "version": "0.1.1",
+  "name": "Profile_R5_Practitioner_R4",
+  "title": "Cross-version Profile for R5.Practitioner resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9863829-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Practitioner resource content to be represented via FHIR R4 Practitioner resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner",
+        "path": "Practitioner",
+        "short": "Cross-version Profile for R5.Practitioner resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Practitioner resource content to be represented via FHIR R4 Practitioner resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Practitioner.extension",
+        "path": "Practitioner.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Practitioner.extension:deceased",
+        "path": "Practitioner.extension",
+        "sliceName": "deceased",
+        "short": "R5: Indicates if the practitioner is deceased or not (new)",
+        "definition": "R5: `Practitioner.deceased[x]` (new:boolean, dateTime)",
+        "comment": "Element `Practitioner.deceased[x]` has a context of Practitioner based on following the parent source element upwards and mapping to `Practitioner`.\nElement `Practitioner.deceased[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there's no value in the instance, it means there is no statement on whether or not the practitioner is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Practitioner.deceased"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Practitioner.communication.extension",
+        "path": "Practitioner.communication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Practitioner.communication.extension:language",
+        "path": "Practitioner.communication.extension",
+        "sliceName": "language",
+        "short": "R5: The language code used to communicate with the practitioner (new)",
+        "definition": "R5: `Practitioner.communication.language` (new:CodeableConcept)",
+        "comment": "Element `Practitioner.communication.language` has a context of Practitioner.communication based on following the parent source element upwards and mapping to `Practitioner`.\nElement `Practitioner.communication.language` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Practitioner.communication.language"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Practitioner.communication.extension:preferred",
+        "path": "Practitioner.communication.extension",
+        "sliceName": "preferred",
+        "short": "R5: Language preference indicator (new)",
+        "definition": "R5: `Practitioner.communication.preferred` (new:boolean)",
+        "comment": "Element `Practitioner.communication.preferred` has a context of Practitioner.communication based on following the parent source element upwards and mapping to `Practitioner`.\nElement `Practitioner.communication.preferred` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis language is specifically identified for communicating directly with the practitioner (typically un-related to patient communications).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Practitioner.communication.preferred"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ImmunizationRecommendation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ImmunizationRecommendation",
+  "version": "0.1.1",
+  "name": "Profile_R5_ImmunizationRecommendation_R4",
+  "title": "Cross-version Profile for R5.ImmunizationRecommendation resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8006154-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ImmunizationRecommendation resource content to be represented via FHIR R4 ImmunizationRecommendation resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImmunizationRecommendation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImmunizationRecommendation",
+        "path": "ImmunizationRecommendation",
+        "short": "Cross-version Profile for R5.ImmunizationRecommendation resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ImmunizationRecommendation resource content to be represented via FHIR R4 ImmunizationRecommendation resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-ImmunizationRecommendation-targetDisease",
+            "requirements": "Cardinality constraints for targetDisease from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "ImmunizationRecommendation.recommendation.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-ImmunizationRecommendation.recommendation.targetDisease').exists() implies ImmunizationRecommendation.recommendation.targetDisease.exists()"
+          }
+        ]
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.extension",
+        "path": "ImmunizationRecommendation.recommendation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.extension:targetDisease",
+        "path": "ImmunizationRecommendation.recommendation.extension",
+        "sliceName": "targetDisease",
+        "short": "R5: targetDisease",
+        "definition": "R5: `ImmunizationRecommendation.recommendation.targetDisease`",
+        "comment": "Element `ImmunizationRecommendation.recommendation.targetDisease` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ImmunizationRecommendation.recommendation.targetDisease` is mapped to FHIR R4 element `ImmunizationRecommendation.recommendation.targetDisease` as `SourceIsBroaderThanTarget`.\nA given instance of the .recommendation backbone element should correspond to a single recommended administration but sometimes that administration (e.g. MMR) will encompass multiple diseases, thus the targetDisease element is allowed to repeat.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImmunizationRecommendation.recommendation.targetDisease"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-ImmunizationRecommendation-targetDisease"
+        ]
+      }
+    ]
+  }
+}

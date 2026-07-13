@@ -1,0 +1,286 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-CapabilityStatement",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-CapabilityStatement",
+  "version": "0.1.1",
+  "name": "Profile_R5_CapabilityStatement_R4",
+  "title": "Cross-version Profile for R5.CapabilityStatement resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.4793483-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 CapabilityStatement resource content to be represented via FHIR R4 CapabilityStatement resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CapabilityStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CapabilityStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CapabilityStatement",
+        "path": "CapabilityStatement",
+        "short": "Cross-version Profile for R5.CapabilityStatement resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 CapabilityStatement resource content to be represented via FHIR R4 CapabilityStatement resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.extension",
+        "path": "CapabilityStatement.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.extension:identifier",
+        "path": "CapabilityStatement.extension",
+        "sliceName": "identifier",
+        "short": "R5: Additional identifier for the CapabilityStatement (business identifier) (new)",
+        "definition": "R5: `CapabilityStatement.identifier` (new:Identifier)",
+        "comment": "Element `CapabilityStatement.identifier` has a context of CapabilityStatement based on following the parent source element upwards and mapping to `CapabilityStatement`.\nElement `CapabilityStatement.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.extension:versionAlgorithm",
+        "path": "CapabilityStatement.extension",
+        "sliceName": "versionAlgorithm",
+        "short": "R5: How to compare versions (new)",
+        "definition": "R5: `CapabilityStatement.versionAlgorithm[x]` (new:Coding, string)",
+        "comment": "Element `CapabilityStatement.versionAlgorithm[x]` has a context of CapabilityStatement based on following the parent source element upwards and mapping to `CapabilityStatement`.\nElement `CapabilityStatement.versionAlgorithm[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `CapabilityStatement.versionAlgorithm[x]`: `http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm`.\nIf set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can't be successfully be determined.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.extension:copyrightLabel",
+        "path": "CapabilityStatement.extension",
+        "sliceName": "copyrightLabel",
+        "short": "R5: Copyright holder and year(s) (new)",
+        "definition": "R5: `CapabilityStatement.copyrightLabel` (new:string)",
+        "comment": "Element `CapabilityStatement.copyrightLabel` has a context of CapabilityStatement based on following the parent source element upwards and mapping to `CapabilityStatement`.\nElement `CapabilityStatement.copyrightLabel` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `CapabilityStatement.copyrightLabel`: `http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel`.\nThe (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general 'copyright' element.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.extension:acceptLanguage",
+        "path": "CapabilityStatement.extension",
+        "sliceName": "acceptLanguage",
+        "short": "R5: Languages supported (new)",
+        "definition": "R5: `CapabilityStatement.acceptLanguage` (new:code)",
+        "comment": "Element `CapabilityStatement.acceptLanguage` has a context of CapabilityStatement based on following the parent source element upwards and mapping to `CapabilityStatement`.\nElement `CapabilityStatement.acceptLanguage` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIn general, if a server gets a request with an Accept-Language that it doesn't support, it should still reutrn the resource, just in its default language for the resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.acceptLanguage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.fhirVersion.extension",
+        "path": "CapabilityStatement.fhirVersion.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.fhirVersion.extension:fhirVersion",
+        "path": "CapabilityStatement.fhirVersion.extension",
+        "sliceName": "fhirVersion",
+        "short": "R5: fhirVersion",
+        "definition": "R5: `CapabilityStatement.fhirVersion`",
+        "comment": "Element `CapabilityStatement.fhirVersion` is mapped to FHIR R4 element `CapabilityStatement.fhirVersion` as `SourceIsBroaderThanTarget`.\nServers may implement multiple versions (see [Managing Multiple Versions](https://hl7.org/fhir/versioning.html), and the [$versions](https://hl7.org/fhir/capabilitystatement-operation-versions.html) operation). If they do, and the CapabilityStatement is requested from the server, then this fhirVersion will be either the version requested, or the server's default version.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.fhirVersion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.rest.resource.extension",
+        "path": "CapabilityStatement.rest.resource.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource.extension:conditionalPatch",
+        "path": "CapabilityStatement.rest.resource.extension",
+        "sliceName": "conditionalPatch",
+        "short": "R5: If allows/uses conditional patch (new)",
+        "definition": "R5: `CapabilityStatement.rest.resource.conditionalPatch` (new:boolean)",
+        "comment": "Element `CapabilityStatement.rest.resource.conditionalPatch` has a context of CapabilityStatement.rest.resource based on following the parent source element upwards and mapping to `CapabilityStatement`.\nElement `CapabilityStatement.rest.resource.conditionalPatch` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nConditional Patch is mainly appropriate for interface engine scripts converting from other formats, such as v2.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.rest.resource.conditionalPatch"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CapabilityStatement.rest.resource.type.extension",
+        "path": "CapabilityStatement.rest.resource.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource.type.extension:type",
+        "path": "CapabilityStatement.rest.resource.type.extension",
+        "sliceName": "type",
+        "short": "R5: type additional codes",
+        "definition": "R5: `CapabilityStatement.rest.resource.type` additional codes",
+        "comment": "Element `CapabilityStatement.rest.resource.type` is mapped to FHIR R4 element `CapabilityStatement.rest.resource.type` as `RelatedTo`.\nThe mappings for `CapabilityStatement.rest.resource.type` do not allow expression of the necessary codes, per the bindings on the source and target.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.rest.resource.type"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

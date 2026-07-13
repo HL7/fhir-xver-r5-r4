@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-AdverseEvent.sus.instance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AdverseEvent.suspectEntity.instance",
+  "version": "0.1.1",
+  "name": "ExtensionAdverseEvent_SuspectEntity_Instance",
+  "title": "R5: instance additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `AdverseEvent.suspectEntity.instance[x]` additional types (CodeableConcept)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `AdverseEvent.suspectEntity.instance[x]` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`AdverseEvent.suspectEntity.instance[x]` 1..1 `CodeableConcept, Reference(http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/Substance,http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationStatement,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct,http://hl7.org/fhir/StructureDefinition/ResearchStudy)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `AdverseEvent.suspectEntity.instance[x]` 1..1 `CodeableConcept, Reference(http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/Substance,http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationStatement,http://hl7.org/fhir/StructureDefinition/Device,http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct,http://hl7.org/fhir/StructureDefinition/ResearchStudy)`\n*  R4B: `AdverseEvent.suspectEntity.instance` 1..1 `Reference(http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/Substance,http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationStatement,http://hl7.org/fhir/StructureDefinition/Device)`\n*  R4: `AdverseEvent.suspectEntity.instance` 1..1 `Reference(http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/Substance,http://hl7.org/fhir/StructureDefinition/Medication,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationStatement,http://hl7.org/fhir/StructureDefinition/Device)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `AdverseEvent.suspectEntity.instance[x]` is mapped to FHIR R4 element `AdverseEvent.suspectEntity.instance` as `SourceIsBroaderThanTarget`.\nThe mappings for `AdverseEvent.suspectEntity.instance[x]` do not cover the following types: CodeableConcept.\nThe standard extension `alternate-reference` has been mapped as PART of the representation of FHIR R5 element `AdverseEvent.suspectEntity.instance[x]` with unmapped reference targets: BiologicallyDerivedProduct, ResearchStudy.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "AdverseEvent.suspectEntity.instance"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: instance additional types",
+        "definition": "R5: `AdverseEvent.suspectEntity.instance[x]` additional types (CodeableConcept)",
+        "comment": "Element `AdverseEvent.suspectEntity.instance[x]` is mapped to FHIR R4 element `AdverseEvent.suspectEntity.instance` as `SourceIsBroaderThanTarget`.\nThe mappings for `AdverseEvent.suspectEntity.instance[x]` do not cover the following types: CodeableConcept.\nThe standard extension `alternate-reference` has been mapped as PART of the representation of FHIR R5 element `AdverseEvent.suspectEntity.instance[x]` with unmapped reference targets: BiologicallyDerivedProduct, ResearchStudy.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-AdverseEvent.suspectEntity.instance"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Refers to the specific entity that caused the adverse event",
+        "definition": "Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}

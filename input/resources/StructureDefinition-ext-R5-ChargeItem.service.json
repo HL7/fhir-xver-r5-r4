@@ -1,0 +1,284 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ChargeItem.service",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ChargeItem.service",
+  "version": "0.1.1",
+  "name": "ExtensionChargeItem_Service",
+  "title": "R5: service additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ChargeItem.service` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport), CodeableReference(http://hl7.org/fhir/StructureDefinition/ImagingStudy), CodeableReference(http://hl7.org/fhir/StructureDefinition/Immunization), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationAdministration), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationDispense), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationRequest), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/Procedure), CodeableReference(http://hl7.org/fhir/StructureDefinition/ServiceRequest), CodeableReference(http://hl7.org/fhir/StructureDefinition/SupplyDelivery))",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ChargeItem.service` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ChargeItem.service` 0..* `CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport,http://hl7.org/fhir/StructureDefinition/ImagingStudy,http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationDispense,http://hl7.org/fhir/StructureDefinition/MedicationRequest,http://hl7.org/fhir/StructureDefinition/Observation,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/ServiceRequest,http://hl7.org/fhir/StructureDefinition/SupplyDelivery)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ChargeItem.service` 0..* `CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport,http://hl7.org/fhir/StructureDefinition/ImagingStudy,http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationDispense,http://hl7.org/fhir/StructureDefinition/MedicationRequest,http://hl7.org/fhir/StructureDefinition/Observation,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/ServiceRequest,http://hl7.org/fhir/StructureDefinition/SupplyDelivery)`\n*  R4B: `ChargeItem.service` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport,http://hl7.org/fhir/StructureDefinition/ImagingStudy,http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationDispense,http://hl7.org/fhir/StructureDefinition/Observation,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/SupplyDelivery)`\n*  R4: `ChargeItem.service` 0..* `Reference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport,http://hl7.org/fhir/StructureDefinition/ImagingStudy,http://hl7.org/fhir/StructureDefinition/Immunization,http://hl7.org/fhir/StructureDefinition/MedicationAdministration,http://hl7.org/fhir/StructureDefinition/MedicationDispense,http://hl7.org/fhir/StructureDefinition/Observation,http://hl7.org/fhir/StructureDefinition/Procedure,http://hl7.org/fhir/StructureDefinition/SupplyDelivery)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ChargeItem.service` is mapped to FHIR R4 element `ChargeItem.service` as `SourceIsBroaderThanTarget`.\nThe mappings for `ChargeItem.service` do not cover the following types: CodeableReference.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ChargeItem.service"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: service additional types",
+        "definition": "R5: `ChargeItem.service` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport), CodeableReference(http://hl7.org/fhir/StructureDefinition/ImagingStudy), CodeableReference(http://hl7.org/fhir/StructureDefinition/Immunization), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationAdministration), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationDispense), CodeableReference(http://hl7.org/fhir/StructureDefinition/MedicationRequest), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/Procedure), CodeableReference(http://hl7.org/fhir/StructureDefinition/ServiceRequest), CodeableReference(http://hl7.org/fhir/StructureDefinition/SupplyDelivery))",
+        "comment": "Element `ChargeItem.service` is mapped to FHIR R4 element `ChargeItem.service` as `SourceIsBroaderThanTarget`.\nThe mappings for `ChargeItem.service` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype",
+        "path": "Extension.extension",
+        "sliceName": "_datatype",
+        "short": "DataType slice for a FHIR R5 `CodeableReference` value",
+        "definition": "Slice to indicate the presence of a R5 `CodeableReference` in FHIR R4",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/_datatype"
+      },
+      {
+        "id": "Extension.extension:_datatype.value[x]",
+        "path": "Extension.extension.value[x]",
+        "comment": "Must be: CodeableReference",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "CodeableReference"
+      },
+      {
+        "id": "Extension.extension:concept",
+        "path": "Extension.extension",
+        "sliceName": "concept",
+        "short": "R5: Reference to a concept (by class) (new)",
+        "definition": "R5: `CodeableReference.concept` (new:CodeableConcept)",
+        "comment": "Element `CodeableReference.concept` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.concept` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.concept` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `CodeableReference.concept` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.concept` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.concept` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:concept.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "concept"
+      },
+      {
+        "id": "Extension.extension:concept.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Reference to a concept (by class)",
+        "definition": "A reference to a concept - e.g. the information is identified by its general class to the degree of precision found in the terminology.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:reference",
+        "path": "Extension.extension",
+        "sliceName": "reference",
+        "short": "R5: Reference to a resource (by instance) (new)",
+        "definition": "R5: `CodeableReference.reference` (new:Reference)",
+        "comment": "Element `CodeableReference.reference` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.reference` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `CodeableReference.reference` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.reference` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:reference.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "reference"
+      },
+      {
+        "id": "Extension.extension:reference.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Reference to a resource (by instance)",
+        "definition": "A reference to a resource the provides exact details about the information being referenced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+              "http://hl7.org/fhir/StructureDefinition/Immunization",
+              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/Procedure",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org/fhir/StructureDefinition/SupplyDelivery"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ChargeItem.service"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

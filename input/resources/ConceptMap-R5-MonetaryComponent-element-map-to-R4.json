@@ -1,0 +1,172 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-MonetaryComponent-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-MonetaryComponent-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5MonetaryComponentElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 MonetaryComponent to FHIR R4 no direct target type",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.0371414-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 MonetaryComponent to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MonetaryComponent",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MonetaryComponent",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "MonetaryComponent.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:type",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.type` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.type` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.code` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.code` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.factor",
+          "display": "factor",
+          "target": [
+            {
+              "code": "Extension.extension:factor",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.factor` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.factor` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.factor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.amount",
+          "display": "amount",
+          "target": [
+            {
+              "code": "Extension.extension:amount",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.amount` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.amount` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.amount` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MonetaryComponent",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ChargeItem.unitPriceComponent",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "MonetaryComponent.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:type",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.type` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.type` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.code` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.code` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.factor",
+          "display": "factor",
+          "target": [
+            {
+              "code": "Extension.extension:factor",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.factor` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.factor` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.factor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.amount",
+          "display": "amount",
+          "target": [
+            {
+              "code": "Extension.extension:amount",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.amount` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.amount` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.amount` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MonetaryComponent",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ChargeItem.totalPriceComponent",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "MonetaryComponent.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:type",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.type` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.type` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.code` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.code` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.factor",
+          "display": "factor",
+          "target": [
+            {
+              "code": "Extension.extension:factor",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.factor` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.factor` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.factor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "MonetaryComponent.amount",
+          "display": "amount",
+          "target": [
+            {
+              "code": "Extension.extension:amount",
+              "equivalence": "wider",
+              "comment": "Element `MonetaryComponent.amount` is part of an existing definition because parent element `MonetaryComponent` requires a cross-version extension.\nElement `MonetaryComponent.amount` is not mapped to FHIR R4, since FHIR R5 `MonetaryComponent` is not mapped.\nElement `MonetaryComponent.amount` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

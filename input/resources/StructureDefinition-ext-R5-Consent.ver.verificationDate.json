@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Consent.ver.verificationDate",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Consent.verification.verificationDate",
+  "version": "0.1.1",
+  "name": "ExtensionConsent_Verification_VerificationDate",
+  "title": "R5: verificationDate",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Consent.verification.verificationDate`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Consent.verification.verificationDate` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Consent.verification.verificationDate` 0..* `dateTime`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Consent.verification.verificationDate` 0..* `dateTime`\n*  R4B: `Consent.verification.verificationDate` 0..1 `dateTime`\n*  R4: `Consent.verification.verificationDate` 0..1 `dateTime`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Consent.verification.verificationDate` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Consent.verification.verificationDate` is mapped to FHIR R4 element `Consent.verification.verificationDate` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Consent.verification"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: verificationDate",
+        "definition": "R5: `Consent.verification.verificationDate`",
+        "comment": "Element `Consent.verification.verificationDate` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Consent.verification.verificationDate` is mapped to FHIR R4 element `Consent.verification.verificationDate` as `SourceIsBroaderThanTarget`.\nAllows for history of verification/validation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Consent.verification.verificationDate"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "When consent verified",
+        "definition": "Date(s) verification was collected.",
+        "comment": "Allows for history of verification/validation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

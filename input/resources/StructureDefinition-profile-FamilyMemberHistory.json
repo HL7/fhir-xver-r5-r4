@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-FamilyMemberHistory",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-FamilyMemberHistory",
+  "version": "0.1.1",
+  "name": "Profile_R5_FamilyMemberHistory_R4",
+  "title": "Cross-version Profile for R5.FamilyMemberHistory resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.758948-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 FamilyMemberHistory resource content to be represented via FHIR R4 FamilyMemberHistory resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "FamilyMemberHistory",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyMemberHistory",
+        "path": "FamilyMemberHistory",
+        "short": "Cross-version Profile for R5.FamilyMemberHistory resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 FamilyMemberHistory resource content to be represented via FHIR R4 FamilyMemberHistory resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "FamilyMemberHistory.extension",
+        "path": "FamilyMemberHistory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "FamilyMemberHistory.extension:participant",
+        "path": "FamilyMemberHistory.extension",
+        "sliceName": "participant",
+        "short": "R5: Who or what participated in the activities related to the family member history and how they were involved (new)",
+        "definition": "R5: `FamilyMemberHistory.participant` (new:BackboneElement)",
+        "comment": "Element `FamilyMemberHistory.participant` has a context of FamilyMemberHistory based on following the parent source element upwards and mapping to `FamilyMemberHistory`.\nElement `FamilyMemberHistory.participant` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-FamilyMemberHistory.participant"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.extension:reason",
+        "path": "FamilyMemberHistory.extension",
+        "sliceName": "reason",
+        "short": "R5: Why was family member history performed? additional types",
+        "definition": "R5: `FamilyMemberHistory.reason` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/AllergyIntolerance), CodeableReference(http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse), CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport), CodeableReference(http://hl7.org/fhir/StructureDefinition/DocumentReference))",
+        "comment": "Element `FamilyMemberHistory.reason` is mapped to FHIR R4 element `FamilyMemberHistory.reasonCode` as `SourceIsBroaderThanTarget`.\nElement `FamilyMemberHistory.reason` is mapped to FHIR R4 element `FamilyMemberHistory.reasonReference` as `SourceIsBroaderThanTarget`.\nThe mappings for `FamilyMemberHistory.reason` do not cover the following types: CodeableReference.\nTextual reasons can be captured using reasonCode.text.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-FamilyMemberHistory.reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.extension:procedure",
+        "path": "FamilyMemberHistory.extension",
+        "sliceName": "procedure",
+        "short": "R5: Procedures that the related person had (new)",
+        "definition": "R5: `FamilyMemberHistory.procedure` (new:BackboneElement)",
+        "comment": "Element `FamilyMemberHistory.procedure` has a context of FamilyMemberHistory based on following the parent source element upwards and mapping to `FamilyMemberHistory`.\nElement `FamilyMemberHistory.procedure` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-FamilyMemberHistory.procedure"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

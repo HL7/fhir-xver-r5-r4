@@ -1,0 +1,178 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ClinicalImpression",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ClinicalImpression",
+  "version": "0.1.1",
+  "name": "Profile_R5_ClinicalImpression_R4",
+  "title": "Cross-version Profile for R5.ClinicalImpression resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.5339564-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ClinicalImpression resource content to be represented via FHIR R4 ClinicalImpression resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ClinicalImpression",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ClinicalImpression",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ClinicalImpression",
+        "path": "ClinicalImpression",
+        "short": "Cross-version Profile for R5.ClinicalImpression resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ClinicalImpression resource content to be represented via FHIR R4 ClinicalImpression resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ClinicalImpression.extension",
+        "path": "ClinicalImpression.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ClinicalImpression.extension:changePattern",
+        "path": "ClinicalImpression.extension",
+        "sliceName": "changePattern",
+        "short": "R5: Change in the status/pattern of a subject's condition since previously assessed, such as worsening, improving, or no change (new)",
+        "definition": "R5: `ClinicalImpression.changePattern` (new:CodeableConcept)",
+        "comment": "Element `ClinicalImpression.changePattern` has a context of ClinicalImpression based on following the parent source element upwards and mapping to `ClinicalImpression`.\nElement `ClinicalImpression.changePattern` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalImpression.changePattern"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ClinicalImpression.status.extension",
+        "path": "ClinicalImpression.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ClinicalImpression.status.extension:status",
+        "path": "ClinicalImpression.status.extension",
+        "sliceName": "status",
+        "short": "R5: preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+        "definition": "R5: `ClinicalImpression.status`",
+        "comment": "Element `ClinicalImpression.status` is mapped to FHIR R4 element `ClinicalImpression.status` as `SourceIsBroaderThanTarget`.\nThe target context `ClinicalImpression.status` is a modifier element, so this extension does not need to be defined as a modifier.\nThis element is labeled as a modifier because the status contains the code entered-in-error that marks the clinical impression as not currently valid.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalImpression.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ClinicalImpression.finding.extension",
+        "path": "ClinicalImpression.finding.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ClinicalImpression.finding.extension:item",
+        "path": "ClinicalImpression.finding.extension",
+        "sliceName": "item",
+        "short": "R5: What was found additional types",
+        "definition": "R5: `ClinicalImpression.finding.item` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/DocumentReference))",
+        "comment": "Element `ClinicalImpression.finding.item` is mapped to FHIR R4 element `ClinicalImpression.finding.itemCodeableConcept` as `SourceIsBroaderThanTarget`.\nElement `ClinicalImpression.finding.item` is mapped to FHIR R4 element `ClinicalImpression.finding.itemReference` as `SourceIsBroaderThanTarget`.\nThe mappings for `ClinicalImpression.finding.item` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalImpression.finding.item"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

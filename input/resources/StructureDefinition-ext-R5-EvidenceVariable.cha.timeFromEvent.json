@@ -1,0 +1,379 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-EvidenceVariable.cha.timeFromEvent",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.timeFromEvent",
+  "version": "0.1.1",
+  "name": "ExtensionEvidenceVariable_Characteristic_TimeFromEvent",
+  "title": "R5: Timing in which the characteristic is determined",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `EvidenceVariable.characteristic.timeFromEvent`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `EvidenceVariable.characteristic.timeFromEvent` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`EvidenceVariable.characteristic.timeFromEvent` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `EvidenceVariable.characteristic.timeFromEvent` 0..* `BackboneElement`\n*  R4B: `EvidenceVariable.characteristic.timeFromStart` 0..1 `BackboneElement`\n*  R4: `EvidenceVariable.characteristic.timeFromStart` 0..1 `Duration`\r\n\r\nFollowing are the generation technical comments:\r\nElement `EvidenceVariable.characteristic.timeFromEvent` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `EvidenceVariable.characteristic.timeFromEvent` is mapped to FHIR R4 element `EvidenceVariable.characteristic.timeFromStart` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "EvidenceVariable.characteristic"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Timing in which the characteristic is determined",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent`",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `EvidenceVariable.characteristic.timeFromEvent` is mapped to FHIR R4 element `EvidenceVariable.characteristic.timeFromStart` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:description",
+        "path": "Extension.extension",
+        "sliceName": "description",
+        "short": "R5: Human readable description (new)",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent.description` (new:markdown)",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent.description` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.description` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `EvidenceVariable.characteristic.timeFromEvent.description` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.description` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:description.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "description"
+      },
+      {
+        "id": "Extension.extension:description.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Human readable description",
+        "definition": "Human readable description.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:note",
+        "path": "Extension.extension",
+        "sliceName": "note",
+        "short": "R5: Used for footnotes or explanatory notes (new)",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent.note` (new:Annotation)",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent.note` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.note` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `EvidenceVariable.characteristic.timeFromEvent.note` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.note` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:note.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "note"
+      },
+      {
+        "id": "Extension.extension:note.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Used for footnotes or explanatory notes",
+        "definition": "A human-readable string to clarify or explain concepts about the timeFromEvent.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:event",
+        "path": "Extension.extension",
+        "sliceName": "event",
+        "short": "R5: The event used as a base point (reference point) in time (new)",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent.event[x]` (new:CodeableConcept, dateTime, id, Reference)",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent.event[x]` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.event[x]` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.event[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `EvidenceVariable.characteristic.timeFromEvent.event[x]` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.event[x]` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.event[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:event.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "event"
+      },
+      {
+        "id": "Extension.extension:event.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "The event used as a base point (reference point) in time",
+        "definition": "The event used as a base point (reference point) in time.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "id"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-evidence-variable-event-for-R4"
+        }
+      },
+      {
+        "id": "Extension.extension:quantity",
+        "path": "Extension.extension",
+        "sliceName": "quantity",
+        "short": "R5: Used to express the observation at a defined amount of time before or after the event (new)",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent.quantity` (new:Quantity)",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent.quantity` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.quantity` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.quantity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `EvidenceVariable.characteristic.timeFromEvent.quantity` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.quantity` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.quantity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:quantity.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "quantity"
+      },
+      {
+        "id": "Extension.extension:quantity.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Used to express the observation at a defined amount of time before or after the event",
+        "definition": "Used to express the observation at a defined amount of time before or after the event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:range",
+        "path": "Extension.extension",
+        "sliceName": "range",
+        "short": "R5: Used to express the observation within a period before and/or after the event (new)",
+        "definition": "R5: `EvidenceVariable.characteristic.timeFromEvent.range` (new:Range)",
+        "comment": "Element `EvidenceVariable.characteristic.timeFromEvent.range` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.range` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.range` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `EvidenceVariable.characteristic.timeFromEvent.range` is part of an existing definition because parent element `EvidenceVariable.characteristic.timeFromEvent` requires an extension for additional cardinality.\nElement `EvidenceVariable.characteristic.timeFromEvent.range` has a context of EvidenceVariable.characteristic.timeFromStart based on following the parent source element upwards and mapping to `EvidenceVariable`.\nElement `EvidenceVariable.characteristic.timeFromEvent.range` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:range.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "range"
+      },
+      {
+        "id": "Extension.extension:range.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Used to express the observation within a period before and/or after the event",
+        "definition": "Used to express the observation within a period before and/or after the event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.timeFromEvent"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

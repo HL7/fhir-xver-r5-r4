@@ -1,0 +1,162 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Invoice",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Invoice",
+  "version": "0.1.1",
+  "name": "Profile_R5_Invoice_R4",
+  "title": "Cross-version Profile for R5.Invoice resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8328794-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Invoice resource content to be represented via FHIR R4 Invoice resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Invoice",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Invoice",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Invoice",
+        "path": "Invoice",
+        "short": "Cross-version Profile for R5.Invoice resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Invoice resource content to be represented via FHIR R4 Invoice resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Invoice.extension",
+        "path": "Invoice.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Invoice.extension:creation",
+        "path": "Invoice.extension",
+        "sliceName": "creation",
+        "short": "R5: When posted (new)",
+        "definition": "R5: `Invoice.creation` (new:dateTime)",
+        "comment": "Element `Invoice.creation` has a context of Invoice based on following the parent source element upwards and mapping to `Invoice`.\nElement `Invoice.creation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe list of types may be constrained as appropriate for the type of charge item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.creation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Invoice.extension:period",
+        "path": "Invoice.extension",
+        "sliceName": "period",
+        "short": "R5: Billing date or period (new)",
+        "definition": "R5: `Invoice.period[x]` (new:date, Period)",
+        "comment": "Element `Invoice.period[x]` has a context of Invoice based on following the parent source element upwards and mapping to `Invoice`.\nElement `Invoice.period[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Invoice.lineItem.extension",
+        "path": "Invoice.lineItem.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Invoice.lineItem.extension:serviced",
+        "path": "Invoice.lineItem.extension",
+        "sliceName": "serviced",
+        "short": "R5: Service data or period (new)",
+        "definition": "R5: `Invoice.lineItem.serviced[x]` (new:date, Period)",
+        "comment": "Element `Invoice.lineItem.serviced[x]` has a context of Invoice.lineItem based on following the parent source element upwards and mapping to `Invoice`.\nElement `Invoice.lineItem.serviced[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.lineItem.serviced"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

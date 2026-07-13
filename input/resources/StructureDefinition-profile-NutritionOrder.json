@@ -1,0 +1,722 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-NutritionOrder",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-NutritionOrder",
+  "version": "0.1.1",
+  "name": "Profile_R5_NutritionOrder_R4",
+  "title": "Cross-version Profile for R5.NutritionOrder resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9275197-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 NutritionOrder resource content to be represented via FHIR R4 NutritionOrder resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "NutritionOrder",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "NutritionOrder",
+        "path": "NutritionOrder",
+        "short": "Cross-version Profile for R5.NutritionOrder resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 NutritionOrder resource content to be represented via FHIR R4 NutritionOrder resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-NutritionOrder-additive",
+            "requirements": "Cardinality constraints for additive from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "NutritionOrder.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.additive').exists() implies NutritionOrder.enteralFormula.exists()"
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension",
+        "path": "NutritionOrder.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.extension:basedOn",
+        "path": "NutritionOrder.extension",
+        "sliceName": "basedOn",
+        "short": "R5: What this order fulfills (new)",
+        "definition": "R5: `NutritionOrder.basedOn` (new:Reference(CarePlan,NutritionOrder,ServiceRequest))",
+        "comment": "Element `NutritionOrder.basedOn` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:groupIdentifier",
+        "path": "NutritionOrder.extension",
+        "sliceName": "groupIdentifier",
+        "short": "R5: Composite Request ID (new)",
+        "definition": "R5: `NutritionOrder.groupIdentifier` (new:Identifier)",
+        "comment": "Element `NutritionOrder.groupIdentifier` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.groupIdentifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.groupIdentifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:priority",
+        "path": "NutritionOrder.extension",
+        "sliceName": "priority",
+        "short": "R5: routine | urgent | asap | stat (new)",
+        "definition": "R5: `NutritionOrder.priority` (new:code)",
+        "comment": "Element `NutritionOrder.priority` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.priority` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.priority"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:supportingInformation",
+        "path": "NutritionOrder.extension",
+        "sliceName": "supportingInformation",
+        "short": "R5: Information to support fulfilling of the nutrition order (new)",
+        "definition": "R5: `NutritionOrder.supportingInformation` (new:Reference(Resource))",
+        "comment": "Element `NutritionOrder.supportingInformation` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.supportingInformation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.supportingInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:performer",
+        "path": "NutritionOrder.extension",
+        "sliceName": "performer",
+        "short": "R5: Who is desired to perform the administration of what is being ordered (new)",
+        "definition": "R5: `NutritionOrder.performer` (new:CodeableReference(CareTeam,Practitioner,PractitionerRole,RelatedPerson,Patient,Organization))",
+        "comment": "Element `NutritionOrder.performer` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.performer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.performer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:outsideFoodAllowed",
+        "path": "NutritionOrder.extension",
+        "sliceName": "outsideFoodAllowed",
+        "short": "R5: Capture when a food item is brought in by the patient and/or family (new)",
+        "definition": "R5: `NutritionOrder.outsideFoodAllowed` (new:boolean)",
+        "comment": "Element `NutritionOrder.outsideFoodAllowed` has a context of NutritionOrder based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.outsideFoodAllowed` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.outsideFoodAllowed"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.extension:additive",
+        "path": "NutritionOrder.extension",
+        "sliceName": "additive",
+        "short": "R5: Components to add to the feeding",
+        "definition": "R5: `NutritionOrder.enteralFormula.additive`",
+        "comment": "Element `NutritionOrder.enteralFormula.additive` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `NutritionOrder.enteralFormula.additive` is mapped to FHIR R4 element `NutritionOrder.enteralFormula` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.additive"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-NutritionOrder-additive"
+        ]
+      },
+      {
+        "id": "NutritionOrder.patient.extension",
+        "path": "NutritionOrder.patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.patient.extension:subject",
+        "path": "NutritionOrder.patient.extension",
+        "sliceName": "subject",
+        "short": "R5: Who requires the diet, formula or nutritional supplement additional types",
+        "definition": "R5: `NutritionOrder.subject` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `NutritionOrder.subject` is mapped to FHIR R4 element `NutritionOrder.patient` as `SourceIsBroaderThanTarget`.\nThe mappings for `NutritionOrder.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `NutritionOrder.subject` with unmapped reference targets: Group.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.oralDiet.schedule.extension",
+        "path": "NutritionOrder.oralDiet.schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.oralDiet.schedule.extension:timing",
+        "path": "NutritionOrder.oralDiet.schedule.extension",
+        "sliceName": "timing",
+        "short": "R5: Scheduled frequency of diet (new)",
+        "definition": "R5: `NutritionOrder.oralDiet.schedule.timing` (new:Timing)",
+        "comment": "Element `NutritionOrder.oralDiet.schedule.timing` has a context of NutritionOrder.oralDiet.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.oralDiet.schedule.timing` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.oralDiet.schedule.timing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.oralDiet.schedule.extension:asNeeded",
+        "path": "NutritionOrder.oralDiet.schedule.extension",
+        "sliceName": "asNeeded",
+        "short": "R5: Take 'as needed' (new)",
+        "definition": "R5: `NutritionOrder.oralDiet.schedule.asNeeded` (new:boolean)",
+        "comment": "Element `NutritionOrder.oralDiet.schedule.asNeeded` has a context of NutritionOrder.oralDiet.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.oralDiet.schedule.asNeeded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.oralDiet.schedule.asNeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.oralDiet.schedule.extension:asNeededFor",
+        "path": "NutritionOrder.oralDiet.schedule.extension",
+        "sliceName": "asNeededFor",
+        "short": "R5: Take 'as needed' for x (new)",
+        "definition": "R5: `NutritionOrder.oralDiet.schedule.asNeededFor` (new:CodeableConcept)",
+        "comment": "Element `NutritionOrder.oralDiet.schedule.asNeededFor` has a context of NutritionOrder.oralDiet.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.oralDiet.schedule.asNeededFor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.oralDiet.schedule.asNeededFor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.supplement.type.extension",
+        "path": "NutritionOrder.supplement.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.supplement.type.extension:type",
+        "path": "NutritionOrder.supplement.type.extension",
+        "sliceName": "type",
+        "short": "R5: type additional types",
+        "definition": "R5: `NutritionOrder.supplement.type` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/NutritionProduct)) additional types from child elements (reference)",
+        "comment": "Element `NutritionOrder.supplement.type` is mapped to FHIR R4 element `NutritionOrder.supplement.type` as `SourceIsBroaderThanTarget`.\nThe mappings for `NutritionOrder.supplement.type` do not cover the following types: CodeableReference.\nThe mappings for `NutritionOrder.supplement.type` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.supplement.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.supplement.schedule.extension",
+        "path": "NutritionOrder.supplement.schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.supplement.schedule.extension:timing",
+        "path": "NutritionOrder.supplement.schedule.extension",
+        "sliceName": "timing",
+        "short": "R5: Scheduled frequency of diet (new)",
+        "definition": "R5: `NutritionOrder.supplement.schedule.timing` (new:Timing)",
+        "comment": "Element `NutritionOrder.supplement.schedule.timing` has a context of NutritionOrder.supplement.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.supplement.schedule.timing` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.supplement.schedule.timing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.supplement.schedule.extension:asNeeded",
+        "path": "NutritionOrder.supplement.schedule.extension",
+        "sliceName": "asNeeded",
+        "short": "R5: Take 'as needed' (new)",
+        "definition": "R5: `NutritionOrder.supplement.schedule.asNeeded` (new:boolean)",
+        "comment": "Element `NutritionOrder.supplement.schedule.asNeeded` has a context of NutritionOrder.supplement.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.supplement.schedule.asNeeded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.supplement.schedule.asNeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.supplement.schedule.extension:asNeededFor",
+        "path": "NutritionOrder.supplement.schedule.extension",
+        "sliceName": "asNeededFor",
+        "short": "R5: Take 'as needed' for x (new)",
+        "definition": "R5: `NutritionOrder.supplement.schedule.asNeededFor` (new:CodeableConcept)",
+        "comment": "Element `NutritionOrder.supplement.schedule.asNeededFor` has a context of NutritionOrder.supplement.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.supplement.schedule.asNeededFor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.supplement.schedule.asNeededFor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.extension",
+        "path": "NutritionOrder.enteralFormula.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.extension:deliveryDevice",
+        "path": "NutritionOrder.enteralFormula.extension",
+        "sliceName": "deliveryDevice",
+        "short": "R5: Intended type of device for the administration (new)",
+        "definition": "R5: `NutritionOrder.enteralFormula.deliveryDevice` (new:CodeableReference(DeviceDefinition))",
+        "comment": "Element `NutritionOrder.enteralFormula.deliveryDevice` has a context of NutritionOrder.enteralFormula based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.enteralFormula.deliveryDevice` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.deliveryDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.extension:quantity",
+        "path": "NutritionOrder.enteralFormula.extension",
+        "sliceName": "quantity",
+        "short": "R5: Amount of additive to be given or mixed in (new)",
+        "definition": "R5: `NutritionOrder.enteralFormula.additive.quantity` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `NutritionOrder.enteralFormula.additive.quantity` is part of an existing definition because parent element `NutritionOrder.enteralFormula.additive` requires an extension for additional cardinality.\nElement `NutritionOrder.enteralFormula.additive.quantity` has a context of NutritionOrder.enteralFormula based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.enteralFormula.additive.quantity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.additive.quantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.baseFormulaType.extension",
+        "path": "NutritionOrder.enteralFormula.baseFormulaType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.baseFormulaType.extension:baseFormulaType",
+        "path": "NutritionOrder.enteralFormula.baseFormulaType.extension",
+        "sliceName": "baseFormulaType",
+        "short": "R5: baseFormulaType additional types",
+        "definition": "R5: `NutritionOrder.enteralFormula.baseFormulaType` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/NutritionProduct)) additional types from child elements (reference)",
+        "comment": "Element `NutritionOrder.enteralFormula.baseFormulaType` is mapped to FHIR R4 element `NutritionOrder.enteralFormula.baseFormulaType` as `SourceIsBroaderThanTarget`.\nThe mappings for `NutritionOrder.enteralFormula.baseFormulaType` do not cover the following types: CodeableReference.\nThe mappings for `NutritionOrder.enteralFormula.baseFormulaType` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.baseFormulaType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.additiveType.extension",
+        "path": "NutritionOrder.enteralFormula.additiveType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.additiveType.extension:type",
+        "path": "NutritionOrder.enteralFormula.additiveType.extension",
+        "sliceName": "type",
+        "short": "R5: type additional types",
+        "definition": "R5: `NutritionOrder.enteralFormula.additive.type` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/NutritionProduct)) additional types from child elements (reference)",
+        "comment": "Element `NutritionOrder.enteralFormula.additive.type` is part of an existing definition because parent element `NutritionOrder.enteralFormula.additive` requires an extension for additional cardinality.\nElement `NutritionOrder.enteralFormula.additive.type` is mapped to FHIR R4 element `NutritionOrder.enteralFormula.additiveType` as `SourceIsBroaderThanTarget`.\nThe mappings for `NutritionOrder.enteralFormula.additive.type` do not cover the following types: CodeableReference.\nThe mappings for `NutritionOrder.enteralFormula.additive.type` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.additive.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.administration.schedule.extension",
+        "path": "NutritionOrder.enteralFormula.administration.schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.administration.schedule.extension:timing",
+        "path": "NutritionOrder.enteralFormula.administration.schedule.extension",
+        "sliceName": "timing",
+        "short": "R5: Scheduled frequency of enteral formula (new)",
+        "definition": "R5: `NutritionOrder.enteralFormula.administration.schedule.timing` (new:Timing)",
+        "comment": "Element `NutritionOrder.enteralFormula.administration.schedule.timing` has a context of NutritionOrder.enteralFormula.administration.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.enteralFormula.administration.schedule.timing` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.administration.schedule.timing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.administration.schedule.extension:asNeeded",
+        "path": "NutritionOrder.enteralFormula.administration.schedule.extension",
+        "sliceName": "asNeeded",
+        "short": "R5: Take 'as needed' (new)",
+        "definition": "R5: `NutritionOrder.enteralFormula.administration.schedule.asNeeded` (new:boolean)",
+        "comment": "Element `NutritionOrder.enteralFormula.administration.schedule.asNeeded` has a context of NutritionOrder.enteralFormula.administration.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.enteralFormula.administration.schedule.asNeeded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.administration.schedule.asNeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.enteralFormula.administration.schedule.extension:asNeededFor",
+        "path": "NutritionOrder.enteralFormula.administration.schedule.extension",
+        "sliceName": "asNeededFor",
+        "short": "R5: Take 'as needed' for x (new)",
+        "definition": "R5: `NutritionOrder.enteralFormula.administration.schedule.asNeededFor` (new:CodeableConcept)",
+        "comment": "Element `NutritionOrder.enteralFormula.administration.schedule.asNeededFor` has a context of NutritionOrder.enteralFormula.administration.schedule based on following the parent source element upwards and mapping to `NutritionOrder`.\nElement `NutritionOrder.enteralFormula.administration.schedule.asNeededFor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-NutritionOrder.enteralFormula.administration.schedule.asNeededFor"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

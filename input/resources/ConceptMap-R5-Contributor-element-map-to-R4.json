@@ -1,0 +1,78 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Contributor-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Contributor-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ContributorElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Contributor to FHIR R4 Contributor",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7042758-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Contributor to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Contributor",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Contributor",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Contributor.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Contributor.type",
+              "display": "Contributor.type",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.type` is mapped to FHIR R4 element `Contributor.type` as `Equivalent`."
+            },
+            {
+              "code": "Contributor",
+              "display": "Contributor",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.type` is mapped to FHIR R4 element `Contributor.type` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Contributor.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Contributor.name",
+              "display": "Contributor.name",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.name` is mapped to FHIR R4 element `Contributor.name` as `Equivalent`."
+            },
+            {
+              "code": "Contributor",
+              "display": "Contributor",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.name` is mapped to FHIR R4 element `Contributor.name` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Contributor.contact",
+          "display": "contact",
+          "target": [
+            {
+              "code": "Contributor.contact",
+              "display": "Contributor.contact",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.contact` is mapped to FHIR R4 element `Contributor.contact` as `Equivalent`."
+            },
+            {
+              "code": "Contributor",
+              "display": "Contributor",
+              "equivalence": "equivalent",
+              "comment": "Element `Contributor.contact` is mapped to FHIR R4 element `Contributor.contact` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

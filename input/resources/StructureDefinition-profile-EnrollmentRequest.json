@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-EnrollmentRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-EnrollmentRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_EnrollmentRequest_R4",
+  "title": "Cross-version Profile for R5.EnrollmentRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.703584-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 EnrollmentRequest resource content to be represented via FHIR R4 EnrollmentRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "EnrollmentRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "EnrollmentRequest",
+        "path": "EnrollmentRequest",
+        "short": "Cross-version Profile for R5.EnrollmentRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 EnrollmentRequest resource content to be represented via FHIR R4 EnrollmentRequest resources.",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  }
+}

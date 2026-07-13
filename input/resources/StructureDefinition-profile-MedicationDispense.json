@@ -1,0 +1,398 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-MedicationDispense",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-MedicationDispense",
+  "version": "0.1.1",
+  "name": "Profile_R5_MedicationDispense_R4",
+  "title": "Cross-version Profile for R5.MedicationDispense resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8771234-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 MedicationDispense resource content to be represented via FHIR R4 MedicationDispense resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense",
+        "path": "MedicationDispense",
+        "short": "Cross-version Profile for R5.MedicationDispense resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 MedicationDispense resource content to be represented via FHIR R4 MedicationDispense resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-MedicationDispense-category",
+            "requirements": "Cardinality constraints for category from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "MedicationDispense.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.category').exists() implies MedicationDispense.category.exists()"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension",
+        "path": "MedicationDispense.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.extension:basedOn",
+        "path": "MedicationDispense.extension",
+        "sliceName": "basedOn",
+        "short": "R5: Plan that is fulfilled by this dispense (new)",
+        "definition": "R5: `MedicationDispense.basedOn` (new:Reference(CarePlan))",
+        "comment": "Element `MedicationDispense.basedOn` has a context of MedicationDispense based on following the parent source element upwards and mapping to `MedicationDispense`.\nElement `MedicationDispense.basedOn` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.basedOn"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:statusChanged",
+        "path": "MedicationDispense.extension",
+        "sliceName": "statusChanged",
+        "short": "R5: When the status changed (new)",
+        "definition": "R5: `MedicationDispense.statusChanged` (new:dateTime)",
+        "comment": "Element `MedicationDispense.statusChanged` has a context of MedicationDispense based on following the parent source element upwards and mapping to `MedicationDispense`.\nElement `MedicationDispense.statusChanged` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.statusChanged"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:category",
+        "path": "MedicationDispense.extension",
+        "sliceName": "category",
+        "short": "R5: category",
+        "definition": "R5: `MedicationDispense.category`",
+        "comment": "Element `MedicationDispense.category` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationDispense.category` is mapped to FHIR R4 element `MedicationDispense.category` as `SourceIsBroaderThanTarget`.\nThe category can be used to include where the medication is expected to be consumed or other types of dispenses.  Invariants can be used to bind to different value sets when profiling to bind.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.category"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-MedicationDispense-category"
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:recorded",
+        "path": "MedicationDispense.extension",
+        "sliceName": "recorded",
+        "short": "R5: When the recording of the dispense started (new)",
+        "definition": "R5: `MedicationDispense.recorded` (new:dateTime)",
+        "comment": "Element `MedicationDispense.recorded` has a context of MedicationDispense based on following the parent source element upwards and mapping to `MedicationDispense`.\nElement `MedicationDispense.recorded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction",
+        "path": "MedicationDispense.extension",
+        "sliceName": "renderedDosageInstruction",
+        "short": "R5: Full representation of the dosage instructions (new)",
+        "definition": "R5: `MedicationDispense.renderedDosageInstruction` (new:markdown)",
+        "comment": "Element `MedicationDispense.renderedDosageInstruction` has a context of MedicationDispense based on following the parent source element upwards and mapping to `MedicationDispense`.\nElement `MedicationDispense.renderedDosageInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe content of the renderedDosageInstructions must not be different than the dose represented in the dosageInstruction content.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.partOf.extension",
+        "path": "MedicationDispense.partOf.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.partOf.extension:partOf",
+        "path": "MedicationDispense.partOf.extension",
+        "sliceName": "partOf",
+        "short": "R5: partOf additional types",
+        "definition": "R5: `MedicationDispense.partOf` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `MedicationDispense.partOf` is mapped to FHIR R4 element `MedicationDispense.partOf` as `SourceIsBroaderThanTarget`.\nThe mappings for `MedicationDispense.partOf` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationDispense.partOf` with unmapped reference targets: MedicationAdministration.\nWhile both a procedure and a medication administration may have triggered the dispense, but it is not expected that multiple procedures and/or multiple medication administrations would be triggers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.performer.actor.extension",
+        "path": "MedicationDispense.performer.actor.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.performer.actor.extension:actor",
+        "path": "MedicationDispense.performer.actor.extension",
+        "sliceName": "actor",
+        "short": "R5: actor",
+        "definition": "R5: `MedicationDispense.performer.actor`",
+        "comment": "Element `MedicationDispense.performer.actor` is mapped to FHIR R4 element `MedicationDispense.performer.actor` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationDispense.performer.actor` with unmapped reference targets: CareTeam.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.location.extension",
+        "path": "MedicationDispense.location.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.location.extension:location",
+        "path": "MedicationDispense.location.extension",
+        "sliceName": "location",
+        "short": "R5: location",
+        "definition": "R5: `MedicationDispense.location`",
+        "comment": "Element `MedicationDispense.location` is mapped to FHIR R4 element `MedicationDispense.location` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `MedicationDispense.location`: `http://hl7.org/fhir/StructureDefinition/event-location`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/event-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.receiver.extension",
+        "path": "MedicationDispense.receiver.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.receiver.extension:receiver",
+        "path": "MedicationDispense.receiver.extension",
+        "sliceName": "receiver",
+        "short": "R5: Who collected the medication or where the medication was delivered",
+        "definition": "R5: `MedicationDispense.receiver`",
+        "comment": "Element `MedicationDispense.receiver` is mapped to FHIR R4 element `MedicationDispense.receiver` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationDispense.receiver` with unmapped reference targets: Location, PractitionerRole, RelatedPerson.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.substitution.responsibleParty.extension",
+        "path": "MedicationDispense.substitution.responsibleParty.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.substitution.responsibleParty.extension:responsibleParty",
+        "path": "MedicationDispense.substitution.responsibleParty.extension",
+        "sliceName": "responsibleParty",
+        "short": "R5: responsibleParty",
+        "definition": "R5: `MedicationDispense.substitution.responsibleParty`",
+        "comment": "Element `MedicationDispense.substitution.responsibleParty` is mapped to FHIR R4 element `MedicationDispense.substitution.responsibleParty` as `RelatedTo`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `MedicationDispense.substitution.responsibleParty` with unmapped reference targets: Organization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

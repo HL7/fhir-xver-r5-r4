@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ImplementationGuide.man.res.profile",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.manifest.resource.profile",
+  "version": "0.1.1",
+  "name": "ExtensionImplementationGuide_Manifest_Resource_Profile",
+  "title": "R5: Profile(s) this is an example of",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ImplementationGuide.manifest.resource.profile`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ImplementationGuide.manifest.resource.profile` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ImplementationGuide.manifest.resource.profile` 0..* `canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ImplementationGuide.manifest.resource.profile` 0..* `canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition)`\n*  R4B: `ImplementationGuide.manifest.resource.example[x]` 0..1 `boolean, canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition)`\n*  R4: `ImplementationGuide.manifest.resource.example[x]` 0..1 `boolean, canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition)`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ImplementationGuide.manifest.resource.profile` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ImplementationGuide.manifest.resource.profile` is mapped to FHIR R4 element `ImplementationGuide.manifest.resource.example[x]` as `SourceIsBroaderThanTarget`.\nThe target context `ImplementationGuide.manifest.resource.example[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ImplementationGuide.manifest.resource`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ImplementationGuide.manifest.resource"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Profile(s) this is an example of",
+        "definition": "R5: `ImplementationGuide.manifest.resource.profile`",
+        "comment": "Element `ImplementationGuide.manifest.resource.profile` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ImplementationGuide.manifest.resource.profile` is mapped to FHIR R4 element `ImplementationGuide.manifest.resource.example[x]` as `SourceIsBroaderThanTarget`.\nThe target context `ImplementationGuide.manifest.resource.example[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `ImplementationGuide.manifest.resource`.\nExamples: \n\n* StructureDefinition -> Any \n* ValueSet -> expansion \n* OperationDefinition -> Parameters \n* Questionnaire -> QuestionnaireResponse.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.manifest.resource.profile"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Profile(s) this is an example of",
+        "definition": "If present, indicates profile(s) the instance is valid against.",
+        "comment": "Examples: \n\n* StructureDefinition -> Any \n* ValueSet -> expansion \n* OperationDefinition -> Parameters \n* Questionnaire -> QuestionnaireResponse.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-OperationDefinition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-OperationDefinition",
+  "version": "0.1.1",
+  "name": "Profile_R5_OperationDefinition_R4",
+  "title": "Cross-version Profile for R5.OperationDefinition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.9476286-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 OperationDefinition resource content to be represented via FHIR R4 OperationDefinition resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationDefinition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationDefinition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationDefinition",
+        "path": "OperationDefinition",
+        "short": "Cross-version Profile for R5.OperationDefinition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 OperationDefinition resource content to be represented via FHIR R4 OperationDefinition resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationDefinition.extension",
+        "path": "OperationDefinition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationDefinition.extension:identifier",
+        "path": "OperationDefinition.extension",
+        "sliceName": "identifier",
+        "short": "R5: Additional identifier for the implementation guide (business identifier) (new)",
+        "definition": "R5: `OperationDefinition.identifier` (new:Identifier)",
+        "comment": "Element `OperationDefinition.identifier` has a context of OperationDefinition based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `OperationDefinition.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.extension:versionAlgorithm",
+        "path": "OperationDefinition.extension",
+        "sliceName": "versionAlgorithm",
+        "short": "R5: How to compare versions (new)",
+        "definition": "R5: `OperationDefinition.versionAlgorithm[x]` (new:Coding, string)",
+        "comment": "Element `OperationDefinition.versionAlgorithm[x]` has a context of OperationDefinition based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.versionAlgorithm[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `OperationDefinition.versionAlgorithm[x]`: `http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm`.\nIf set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can't be successfully be determined.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.extension:copyright",
+        "path": "OperationDefinition.extension",
+        "sliceName": "copyright",
+        "short": "R5: Use and/or publishing restrictions (new)",
+        "definition": "R5: `OperationDefinition.copyright` (new:markdown)",
+        "comment": "Element `OperationDefinition.copyright` has a context of OperationDefinition based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.copyright` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `OperationDefinition.copyright`: `http://hl7.org/fhir/StructureDefinition/artifact-copyright`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-copyright"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.extension:copyrightLabel",
+        "path": "OperationDefinition.extension",
+        "sliceName": "copyrightLabel",
+        "short": "R5: Copyright holder and year(s) (new)",
+        "definition": "R5: `OperationDefinition.copyrightLabel` (new:string)",
+        "comment": "Element `OperationDefinition.copyrightLabel` has a context of OperationDefinition based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.copyrightLabel` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `OperationDefinition.copyrightLabel`: `http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel`.\nThe (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general 'copyright' element.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.parameter.extension",
+        "path": "OperationDefinition.parameter.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OperationDefinition.parameter.extension:scope",
+        "path": "OperationDefinition.parameter.extension",
+        "sliceName": "scope",
+        "short": "R5: instance | type | system (new)",
+        "definition": "R5: `OperationDefinition.parameter.scope` (new:code)",
+        "comment": "Element `OperationDefinition.parameter.scope` has a context of OperationDefinition.parameter based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.parameter.scope` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-OperationDefinition.parameter.scope"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.parameter.extension:allowedType",
+        "path": "OperationDefinition.parameter.extension",
+        "sliceName": "allowedType",
+        "short": "R5: Allowed sub-type this parameter can have (if type is abstract) (new)",
+        "definition": "R5: `OperationDefinition.parameter.allowedType` (new:code)",
+        "comment": "Element `OperationDefinition.parameter.allowedType` has a context of OperationDefinition.parameter based on following the parent source element upwards and mapping to `OperationDefinition`.\nElement `OperationDefinition.parameter.allowedType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIn previous versions of FHIR, there was an extension for this: http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-OperationDefinition.parameter.allowedType"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

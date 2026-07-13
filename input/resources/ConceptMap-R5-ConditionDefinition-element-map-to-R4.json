@@ -1,0 +1,521 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ConditionDefinition-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ConditionDefinition-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ConditionDefinitionElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ConditionDefinition to FHIR R4 Basic",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:43.415188-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ConditionDefinition to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Basic",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.meta",
+          "display": "meta",
+          "target": [
+            {
+              "code": "Basic.meta",
+              "display": "Basic.meta",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.meta` (`Resource.meta`), use that element instead.\nElement `ConditionDefinition.meta` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.meta` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.implicitRules",
+          "display": "implicitRules",
+          "target": [
+            {
+              "code": "Basic.implicitRules",
+              "display": "Basic.implicitRules",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.implicitRules` (`Resource.implicitRules`), use that element instead.\nElement `ConditionDefinition.implicitRules` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.implicitRules` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAsserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of its narrative along with other profiles, value sets, etc."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.language",
+          "display": "language",
+          "target": [
+            {
+              "code": "Basic.language",
+              "display": "Basic.language",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.language` (`Resource.language`), use that element instead.\nElement `ConditionDefinition.language` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.language` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nLanguage is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "Basic.text",
+              "display": "Basic.text",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.text` (`DomainResource.text`), use that element instead.\nElement `ConditionDefinition.text` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.text` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nContained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.contained",
+          "display": "contained",
+          "target": [
+            {
+              "code": "Basic.contained",
+              "display": "Basic.contained",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.contained` (`DomainResource.contained`), use that element instead.\nElement `ConditionDefinition.contained` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.contained` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.identifier",
+          "display": "identifier",
+          "target": [
+            {
+              "code": "Basic.identifier",
+              "display": "Basic.identifier",
+              "equivalence": "equivalent",
+              "comment": "Element matches Basic element path `Basic.identifier` (`Basic.identifier`), use that element instead.\nElement `ConditionDefinition.identifier` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.identifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ConditionDefinition.identifier`: `http://hl7.org/fhir/StructureDefinition/artifact-identifier`.\nTypically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this condition definition outside of FHIR, where it is not possible to use the logical URI."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.subtitle",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.subtitle",
+          "display": "subtitle",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.subtitle` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.subtitle` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.jurisdiction",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.jurisdiction",
+          "display": "jurisdiction",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.jurisdiction` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.jurisdiction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nElement `ConditionDefinition.jurisdiction` has been flagged as deprecated.\nIt may be possible for the condition definition to be used in jurisdictions other than those for which it was originally designed or intended.\n\nDEPRECATION NOTE: For consistency, implementations are encouraged to migrate to using the new 'jurisdiction' code in the useContext element.  (I.e. useContext.code indicating http://terminology.hl7.org/CodeSystem/usage-context-type#jurisdiction and useContext.valueCodeableConcept indicating the jurisdiction.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.code",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.code` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.severity",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.severity",
+          "display": "severity",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.severity` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.severity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nCoding of the severity with a terminology is preferred, where possible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.bodySite",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.bodySite",
+          "display": "bodySite",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.bodySite` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.bodySite` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nOnly used if not implicit in code found in ConditionDefinition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [http://hl7.org/fhir/StructureDefinition/bodySite](http://hl7.org/fhir/extensions/StructureDefinition-bodySite.html).  May be a summary code, or a reference to a very precise definition of the location, or both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.stage",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.stage",
+          "display": "stage",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.stage` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.stage` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.hasSeverity",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.hasSeverity",
+          "display": "hasSeverity",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.hasSeverity` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.hasSeverity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.hasBodySite",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.hasBodySite",
+          "display": "hasBodySite",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.hasBodySite` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.hasBodySite` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.hasStage",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.hasStage",
+          "display": "hasStage",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.hasStage` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.hasStage` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.definition",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.definition",
+          "display": "definition",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.definition` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.definition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.observation",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.observation",
+          "display": "observation",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.observation` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.observation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.observation.category",
+          "display": "category",
+          "target": [
+            {
+              "code": "Extension.extension:category",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.observation.category` is part of an existing definition because parent element `ConditionDefinition.observation` requires a cross-version extension.\nElement `ConditionDefinition.observation.category` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.observation.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.observation.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.observation.code` is part of an existing definition because parent element `ConditionDefinition.observation` requires a cross-version extension.\nElement `ConditionDefinition.observation.code` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.observation.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.medication",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.medication",
+          "display": "medication",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.medication` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.medication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.medication.category",
+          "display": "category",
+          "target": [
+            {
+              "code": "Extension.extension:category",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.medication.category` is part of an existing definition because parent element `ConditionDefinition.medication` requires a cross-version extension.\nElement `ConditionDefinition.medication.category` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.medication.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.medication.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.medication.code` is part of an existing definition because parent element `ConditionDefinition.medication` requires a cross-version extension.\nElement `ConditionDefinition.medication.code` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.medication.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.precondition",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.precondition",
+          "display": "precondition",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.precondition` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.precondition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.precondition.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:type",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.precondition.type` is part of an existing definition because parent element `ConditionDefinition.precondition` requires a cross-version extension.\nElement `ConditionDefinition.precondition.type` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.precondition.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.precondition.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Extension.extension:code",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.precondition.code` is part of an existing definition because parent element `ConditionDefinition.precondition` requires a cross-version extension.\nElement `ConditionDefinition.precondition.code` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.precondition.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.precondition.value[x]",
+          "display": "value[x]",
+          "target": [
+            {
+              "code": "Extension.extension:value",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.precondition.value[x]` is part of an existing definition because parent element `ConditionDefinition.precondition` requires a cross-version extension.\nElement `ConditionDefinition.precondition.value[x]` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.precondition.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.team",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.team",
+          "display": "team",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.team` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.team` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.questionnaire",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.questionnaire",
+          "display": "questionnaire",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.questionnaire` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.questionnaire` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.questionnaire.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.questionnaire.purpose` is part of an existing definition because parent element `ConditionDefinition.questionnaire` requires a cross-version extension.\nElement `ConditionDefinition.questionnaire.purpose` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.questionnaire.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.questionnaire.reference",
+          "display": "reference",
+          "target": [
+            {
+              "code": "Extension.extension:reference",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.questionnaire.reference` is part of an existing definition because parent element `ConditionDefinition.questionnaire` requires a cross-version extension.\nElement `ConditionDefinition.questionnaire.reference` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.questionnaire.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ConditionDefinition",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConditionDefinition.plan",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ConditionDefinition.plan",
+          "display": "plan",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.plan` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.plan` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.plan.role",
+          "display": "role",
+          "target": [
+            {
+              "code": "Extension.extension:role",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.plan.role` is part of an existing definition because parent element `ConditionDefinition.plan` requires a cross-version extension.\nElement `ConditionDefinition.plan.role` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.plan.role` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ConditionDefinition.plan.reference",
+          "display": "reference",
+          "target": [
+            {
+              "code": "Extension.extension:reference",
+              "equivalence": "wider",
+              "comment": "Element `ConditionDefinition.plan.reference` is part of an existing definition because parent element `ConditionDefinition.plan` requires a cross-version extension.\nElement `ConditionDefinition.plan.reference` is not mapped to FHIR R4, since FHIR R5 `ConditionDefinition` is not mapped.\nElement `ConditionDefinition.plan.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

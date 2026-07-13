@@ -1,0 +1,150 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Slot",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Slot",
+  "version": "0.1.1",
+  "name": "Profile_R5_Slot_R4",
+  "title": "Cross-version Profile for R5.Slot resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0404543-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Slot resource content to be represented via FHIR R4 Slot resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Slot",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Slot",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Slot",
+        "path": "Slot",
+        "short": "Cross-version Profile for R5.Slot resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Slot resource content to be represented via FHIR R4 Slot resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-Slot-appointmentType",
+            "requirements": "Cardinality constraints for appointmentType from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Slot.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.appointmentType').exists() implies Slot.appointmentType.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Slot.extension",
+        "path": "Slot.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Slot.extension:appointmentType",
+        "path": "Slot.extension",
+        "sliceName": "appointmentType",
+        "short": "R5: appointmentType",
+        "definition": "R5: `Slot.appointmentType`",
+        "comment": "Element `Slot.appointmentType` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Slot.appointmentType` is mapped to FHIR R4 element `Slot.appointmentType` as `SourceIsBroaderThanTarget`.\nA slot may be allow multiple appointment types, but when booked, would only be used for one of the given appointment types.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.appointmentType"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Slot-appointmentType"
+        ]
+      },
+      {
+        "id": "Slot.serviceType.extension",
+        "path": "Slot.serviceType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Slot.serviceType.extension:serviceType",
+        "path": "Slot.serviceType.extension",
+        "sliceName": "serviceType",
+        "short": "R5: The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the Schedule resource additional types",
+        "definition": "R5: `Slot.serviceType` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/HealthcareService)) additional types from child elements (reference)",
+        "comment": "Element `Slot.serviceType` is mapped to FHIR R4 element `Slot.serviceType` as `SourceIsBroaderThanTarget`.\nThe mappings for `Slot.serviceType` do not cover the following types: CodeableReference.\nThe mappings for `Slot.serviceType` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

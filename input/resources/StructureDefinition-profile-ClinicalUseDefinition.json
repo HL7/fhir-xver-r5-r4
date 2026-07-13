@@ -1,0 +1,386 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ClinicalUseDefinition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ClinicalUseDefinition",
+  "version": "0.1.1",
+  "name": "Profile_R5_ClinicalUseDefinition_R4",
+  "title": "Cross-version Profile for R5.ClinicalUseDefinition resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.5390038-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ClinicalUseDefinition resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.ClinicalUseDefinition resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ClinicalUseDefinition resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:type",
+        "path": "Basic.extension",
+        "sliceName": "type",
+        "short": "R5: indication | contraindication | interaction | undesirable-effect | warning (new)",
+        "definition": "R5: `ClinicalUseDefinition.type` (new:code)",
+        "comment": "Element `ClinicalUseDefinition.type` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:category",
+        "path": "Basic.extension",
+        "sliceName": "category",
+        "short": "R5: A categorisation of the issue, primarily for dividing warnings into subject heading areas such as \"Pregnancy\", \"Overdose\" (new)",
+        "definition": "R5: `ClinicalUseDefinition.category` (new:CodeableConcept)",
+        "comment": "Element `ClinicalUseDefinition.category` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.category"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:status",
+        "path": "Basic.extension",
+        "sliceName": "status",
+        "short": "R5: Whether this is a current issue or one that has been retired etc (new)",
+        "definition": "R5: `ClinicalUseDefinition.status` (new:CodeableConcept)",
+        "comment": "Element `ClinicalUseDefinition.status` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ClinicalUseDefinition.status`: `http://hl7.org/fhir/StructureDefinition/artifact-status`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:contraindication",
+        "path": "Basic.extension",
+        "sliceName": "contraindication",
+        "short": "R5: Specifics for when this is a contraindication (new)",
+        "definition": "R5: `ClinicalUseDefinition.contraindication` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.contraindication` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.contraindication"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:otherTherapy",
+        "path": "Basic.extension",
+        "sliceName": "otherTherapy",
+        "short": "R5: Information about use of the product in relation to other therapies described as part of the contraindication (new)",
+        "definition": "R5: `ClinicalUseDefinition.contraindication.otherTherapy` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.contraindication.otherTherapy` is part of an existing definition because parent element `ClinicalUseDefinition.contraindication` requires a cross-version extension.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.contraindication.otherTherapy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.contraindication.otherTherapy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:indication",
+        "path": "Basic.extension",
+        "sliceName": "indication",
+        "short": "R5: Specifics for when this is an indication (new)",
+        "definition": "R5: `ClinicalUseDefinition.indication` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.indication` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.indication` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.indication"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:interaction",
+        "path": "Basic.extension",
+        "sliceName": "interaction",
+        "short": "R5: Specifics for when this is an interaction (new)",
+        "definition": "R5: `ClinicalUseDefinition.interaction` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.interaction` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.interaction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.interaction"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:population",
+        "path": "Basic.extension",
+        "sliceName": "population",
+        "short": "R5: The population group to which this applies (new)",
+        "definition": "R5: `ClinicalUseDefinition.population` (new:Reference(Group))",
+        "comment": "Element `ClinicalUseDefinition.population` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.population` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.population"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:library",
+        "path": "Basic.extension",
+        "sliceName": "library",
+        "short": "R5: Logic used by the clinical use definition (new)",
+        "definition": "R5: `ClinicalUseDefinition.library` (new:canonical(Library))",
+        "comment": "Element `ClinicalUseDefinition.library` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.library` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.library"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:undesirableEffect",
+        "path": "Basic.extension",
+        "sliceName": "undesirableEffect",
+        "short": "R5: A possible negative outcome from the use of this treatment (new)",
+        "definition": "R5: `ClinicalUseDefinition.undesirableEffect` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.undesirableEffect` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.undesirableEffect` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.undesirableEffect"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:warning",
+        "path": "Basic.extension",
+        "sliceName": "warning",
+        "short": "R5: Critical environmental, health or physical risks or hazards. For example 'Do not operate heavy machinery', 'May cause drowsiness' (new)",
+        "definition": "R5: `ClinicalUseDefinition.warning` (new:BackboneElement)",
+        "comment": "Element `ClinicalUseDefinition.warning` is not mapped to FHIR R4, since FHIR R5 `ClinicalUseDefinition` is not mapped.\nElement `ClinicalUseDefinition.warning` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ClinicalUseDefinition.warning"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "ClinicalUseDefinition"
+      }
+    ]
+  }
+}

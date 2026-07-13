@@ -1,0 +1,139 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Substance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Substance",
+  "version": "0.1.1",
+  "name": "Profile_R5_Substance_R4",
+  "title": "Cross-version Profile for R5.Substance resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.0745894-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Substance resource content to be represented via FHIR R4 Substance resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Substance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Substance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Substance",
+        "path": "Substance",
+        "short": "Cross-version Profile for R5.Substance resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Substance resource content to be represented via FHIR R4 Substance resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Substance.status.modifierExtension",
+        "path": "Substance.status.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Substance.status.modifierExtension:status",
+        "path": "Substance.status.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: status",
+        "definition": "R5: `Substance.status`",
+        "comment": "Element `Substance.status` is mapped to FHIR R4 element `Substance.status` as `Equivalent`.\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `Substance.status`: `http://hl7.org/fhir/StructureDefinition/artifact-status`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Substance.code.extension",
+        "path": "Substance.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Substance.code.extension:code",
+        "path": "Substance.code.extension",
+        "sliceName": "code",
+        "short": "R5: code additional types",
+        "definition": "R5: `Substance.code` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/SubstanceDefinition)) additional types from child elements (reference)",
+        "comment": "Element `Substance.code` is mapped to FHIR R4 element `Substance.code` as `SourceIsBroaderThanTarget`.\nThe mappings for `Substance.code` do not cover the following types: CodeableReference.\nThe mappings for `Substance.code` do not cover the following types based on type expansion: reference.\nThis could be a reference to an externally defined code.  It could also be a locally assigned code (e.g. a formulary),  optionally with translations to the standard drug codes.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Substance.code"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+### Lookup for [FHIR R5](https://hl7.org/fhir/R5/) ValueSet ImmunizationStatusReasonCodes:[`http://hl7.org/fhir/ValueSet/immunization-status-reason`](https://hl7.org/fhir/R5/valueset-immunization-status-reason.html) for use in [FHIR R4](https://hl7.org/fhir/R4/)
+
+The FHIR R5 ValueSet ImmunizationStatusReasonCodes maps to the  FHIR R4 ValueSet ImmunizationStatusReasonCodes:[`http://hl7.org/fhir/ValueSet/immunization-status-reason`](https://hl7.org/fhir/R4/valueset-immunization-status-reason.html)
+
+| Source System | Code | Display | Has XVer | Target System | Code | Display |
+| -------------- | ---- | ------- | -------- | ------------- | ---- | ------- |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `IMMUNE` | immunity | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `MEDPREC` | medical precaution | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `OSTOCK` | product out of stock | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `PATOBJ` | patient objection | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `PHILISOP` | philosophical objection | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `RELIG` | religious objection | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `VACEFF` | vaccine efficacy concerns | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActReason` | `VACSAF` | vaccine safety concerns | Yes |  |  |  |
+{: .grid }
+

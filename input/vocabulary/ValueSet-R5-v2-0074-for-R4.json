@@ -1,0 +1,513 @@
+{
+  "resourceType": "ValueSet",
+  "id": "R5-v2-0074-for-R4",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/xver/ValueSet/R5-v2-0074-for-R4",
+  "version": "0.1.1",
+  "name": "R5V20074ForR4",
+  "title": "Cross-version ValueSet R5.Hl7VSDiagnosticServiceSectionId for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version ValueSet represents content from `http://terminology.hl7.org/ValueSet/v2-0074|2.0.0` for use in FHIR R4.",
+  "purpose": "This value set is part of the cross-version definitions generated to enable use of the\r\nvalue set `http://terminology.hl7.org/ValueSet/v2-0074|2.0.0` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source value set is bound to the following FHIR R5 elements:\r\n* \r\n\r\nNote that all concepts are included in this cross-version definition because no concepts have compatible representations\r\n\r\nFollowing are the generation technical comments:\r\n\nFHIR ValueSet `http://terminology.hl7.org/ValueSet/v2-0074|2.0.0`, defined in FHIR R5 does not have any mapping to FHIR R4",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "concept": [
+          {
+            "code": "AU",
+            "display": "Audiology"
+          },
+          {
+            "code": "BG",
+            "display": "Blood Gases"
+          },
+          {
+            "code": "BLB",
+            "display": "Blood Bank"
+          },
+          {
+            "code": "CG",
+            "display": "Cytogenetics"
+          },
+          {
+            "code": "CH",
+            "display": "Chemistry"
+          },
+          {
+            "code": "CP",
+            "display": "Cytopathology"
+          },
+          {
+            "code": "CT",
+            "display": "CAT Scan"
+          },
+          {
+            "code": "CTH",
+            "display": "Cardiac Catheterization"
+          },
+          {
+            "code": "CUS",
+            "display": "Cardiac Ultrasound"
+          },
+          {
+            "code": "EC",
+            "display": "Electrocardiac (e.g., EKG,  EEC, Holter)"
+          },
+          {
+            "code": "EN",
+            "display": "Electroneuro (EEG, EMG,EP,PSG)"
+          },
+          {
+            "code": "GE",
+            "display": "Genetics"
+          },
+          {
+            "code": "HM",
+            "display": "Hematology"
+          },
+          {
+            "code": "ICU",
+            "display": "Bedside ICU Monitoring"
+          },
+          {
+            "code": "IMG",
+            "display": "Diagnostic Imaging"
+          },
+          {
+            "code": "IMM",
+            "display": "Immunology"
+          },
+          {
+            "code": "LAB",
+            "display": "Laboratory"
+          },
+          {
+            "code": "MB",
+            "display": "Microbiology"
+          },
+          {
+            "code": "MCB",
+            "display": "Mycobacteriology"
+          },
+          {
+            "code": "MYC",
+            "display": "Mycology"
+          },
+          {
+            "code": "NMR",
+            "display": "Nuclear Magnetic Resonance"
+          },
+          {
+            "code": "NMS",
+            "display": "Nuclear Medicine Scan"
+          },
+          {
+            "code": "NRS",
+            "display": "Nursing Service Measures"
+          },
+          {
+            "code": "OSL",
+            "display": "Outside Lab"
+          },
+          {
+            "code": "OT",
+            "display": "Occupational Therapy"
+          },
+          {
+            "code": "OTH",
+            "display": "Other"
+          },
+          {
+            "code": "OUS",
+            "display": "OB Ultrasound"
+          },
+          {
+            "code": "PAR",
+            "display": "Parasitology"
+          },
+          {
+            "code": "PAT",
+            "display": "Pathology (gross & histopath, not surgical)"
+          },
+          {
+            "code": "PF",
+            "display": "Pulmonary Function"
+          },
+          {
+            "code": "PHR",
+            "display": "Pharmacy"
+          },
+          {
+            "code": "PHY",
+            "display": "Physician (Hx. Dx, admission note, etc.)"
+          },
+          {
+            "code": "PT",
+            "display": "Physical Therapy"
+          },
+          {
+            "code": "RAD",
+            "display": "Radiology"
+          },
+          {
+            "code": "RC",
+            "display": "Respiratory Care (therapy)"
+          },
+          {
+            "code": "RT",
+            "display": "Radiation Therapy"
+          },
+          {
+            "code": "RUS",
+            "display": "Radiology Ultrasound"
+          },
+          {
+            "code": "RX",
+            "display": "Radiograph"
+          },
+          {
+            "code": "SP",
+            "display": "Surgical Pathology"
+          },
+          {
+            "code": "SR",
+            "display": "Serology"
+          },
+          {
+            "code": "TX",
+            "display": "Toxicology"
+          },
+          {
+            "code": "URN",
+            "display": "Urinalysis"
+          },
+          {
+            "code": "VR",
+            "display": "Virology"
+          },
+          {
+            "code": "VUS",
+            "display": "Vascular Ultrasound"
+          },
+          {
+            "code": "XRC",
+            "display": "Cineradiograph"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-06-12T21:41:14.2230772+00:00",
+    "contains": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "AU",
+        "display": "Audiology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "BG",
+        "display": "Blood Gases"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "BLB",
+        "display": "Blood Bank"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CG",
+        "display": "Cytogenetics"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CH",
+        "display": "Chemistry"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CP",
+        "display": "Cytopathology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CT",
+        "display": "CAT Scan"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CTH",
+        "display": "Cardiac Catheterization"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "CUS",
+        "display": "Cardiac Ultrasound"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "EC",
+        "display": "Electrocardiac (e.g., EKG,  EEC, Holter)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "EN",
+        "display": "Electroneuro (EEG, EMG,EP,PSG)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "GE",
+        "display": "Genetics"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "HM",
+        "display": "Hematology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "ICU",
+        "display": "Bedside ICU Monitoring"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "IMG",
+        "display": "Diagnostic Imaging"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "IMM",
+        "display": "Immunology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "LAB",
+        "display": "Laboratory"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "MB",
+        "display": "Microbiology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "MCB",
+        "display": "Mycobacteriology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "MYC",
+        "display": "Mycology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "NMR",
+        "display": "Nuclear Magnetic Resonance"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "NMS",
+        "display": "Nuclear Medicine Scan"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "NRS",
+        "display": "Nursing Service Measures"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "OSL",
+        "display": "Outside Lab"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "OT",
+        "display": "Occupational Therapy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "OTH",
+        "display": "Other"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "OUS",
+        "display": "OB Ultrasound"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PAR",
+        "display": "Parasitology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PAT",
+        "display": "Pathology (gross & histopath, not surgical)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PF",
+        "display": "Pulmonary Function"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PHR",
+        "display": "Pharmacy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PHY",
+        "display": "Physician (Hx. Dx, admission note, etc.)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "PT",
+        "display": "Physical Therapy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "RAD",
+        "display": "Radiology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "RC",
+        "display": "Respiratory Care (therapy)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "RT",
+        "display": "Radiation Therapy"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "RUS",
+        "display": "Radiology Ultrasound"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "RX",
+        "display": "Radiograph"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "SP",
+        "display": "Surgical Pathology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "SR",
+        "display": "Serology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "TX",
+        "display": "Toxicology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "URN",
+        "display": "Urinalysis"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "VR",
+        "display": "Virology"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "VUS",
+        "display": "Vascular Ultrasound"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+        "version": "2.5.0",
+        "code": "XRC",
+        "display": "Cineradiograph"
+      }
+    ]
+  }
+}

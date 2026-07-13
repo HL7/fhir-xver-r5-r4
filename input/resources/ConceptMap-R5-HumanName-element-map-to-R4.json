@@ -1,0 +1,150 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-HumanName-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-HumanName-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5HumanNameElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 HumanName to FHIR R4 HumanName",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.0237523-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 HumanName to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/HumanName",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/HumanName",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "HumanName.use",
+          "display": "use",
+          "target": [
+            {
+              "code": "HumanName.use",
+              "display": "HumanName.use",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.use` is mapped to FHIR R4 element `HumanName.use` as `Equivalent`.\nApplications can assume that a name is current unless it explicitly says that it is temporary or old."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.use` is mapped to FHIR R4 element `HumanName.use` as `Equivalent`.\nApplications can assume that a name is current unless it explicitly says that it is temporary or old."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.text",
+          "display": "text",
+          "target": [
+            {
+              "code": "HumanName.text",
+              "display": "HumanName.text",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.text` is mapped to FHIR R4 element `HumanName.text` as `Equivalent`.\nCan provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.text` is mapped to FHIR R4 element `HumanName.text` as `Equivalent`.\nCan provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.family",
+          "display": "family",
+          "target": [
+            {
+              "code": "HumanName.family",
+              "display": "HumanName.family",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.family` is mapped to FHIR R4 element `HumanName.family` as `Equivalent`.\nFamily Name may be decomposed into specific parts using extensions (de, nl, es related cultures)."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.family` is mapped to FHIR R4 element `HumanName.family` as `Equivalent`.\nFamily Name may be decomposed into specific parts using extensions (de, nl, es related cultures)."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.given",
+          "display": "given",
+          "target": [
+            {
+              "code": "HumanName.given",
+              "display": "HumanName.given",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.given` is mapped to FHIR R4 element `HumanName.given` as `Equivalent`.\nIf only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called \"first name\" since given names do not always come first."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.given` is mapped to FHIR R4 element `HumanName.given` as `Equivalent`.\nIf only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called \"first name\" since given names do not always come first."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.prefix",
+          "display": "prefix",
+          "target": [
+            {
+              "code": "HumanName.prefix",
+              "display": "HumanName.prefix",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.prefix` is mapped to FHIR R4 element `HumanName.prefix` as `Equivalent`."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.prefix` is mapped to FHIR R4 element `HumanName.prefix` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.suffix",
+          "display": "suffix",
+          "target": [
+            {
+              "code": "HumanName.suffix",
+              "display": "HumanName.suffix",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.suffix` is mapped to FHIR R4 element `HumanName.suffix` as `Equivalent`."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.suffix` is mapped to FHIR R4 element `HumanName.suffix` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "HumanName.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "HumanName.period",
+              "display": "HumanName.period",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.period` is mapped to FHIR R4 element `HumanName.period` as `Equivalent`."
+            },
+            {
+              "code": "HumanName",
+              "display": "HumanName",
+              "equivalence": "equivalent",
+              "comment": "Element `HumanName.period` is mapped to FHIR R4 element `HumanName.period` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

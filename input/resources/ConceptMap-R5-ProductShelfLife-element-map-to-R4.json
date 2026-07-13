@@ -1,0 +1,138 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ProductShelfLife-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ProductShelfLife-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ProductShelfLifeElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ProductShelfLife to FHIR R4 ProductShelfLife",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2590175-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ProductShelfLife to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ProductShelfLife",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/ProductShelfLife",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "ProductShelfLife.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "ProductShelfLife.type",
+              "display": "ProductShelfLife.type",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.type` is mapped to FHIR R4 element `ProductShelfLife.type` as `Equivalent`."
+            },
+            {
+              "code": "ProductShelfLife",
+              "display": "ProductShelfLife",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.type` is mapped to FHIR R4 element `ProductShelfLife.type` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ProductShelfLife.period[x]",
+          "display": "period[x]",
+          "target": [
+            {
+              "code": "ProductShelfLife.period",
+              "display": "ProductShelfLife.period",
+              "equivalence": "relatedto",
+              "comment": "Element `ProductShelfLife.period[x]` is mapped to FHIR R4 element `ProductShelfLife.period` as `RelatedTo`.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types: string.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types based on type expansion: value."
+            },
+            {
+              "code": "ProductShelfLife",
+              "display": "ProductShelfLife",
+              "equivalence": "relatedto",
+              "comment": "Element `ProductShelfLife.period[x]` is mapped to FHIR R4 element `ProductShelfLife.period` as `RelatedTo`.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types: string.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types based on type expansion: value."
+            }
+          ]
+        },
+        {
+          "code": "ProductShelfLife.specialPrecautionsForStorage",
+          "display": "specialPrecautionsForStorage",
+          "target": [
+            {
+              "code": "ProductShelfLife.specialPrecautionsForStorage",
+              "display": "ProductShelfLife.specialPrecautionsForStorage",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.specialPrecautionsForStorage` is mapped to FHIR R4 element `ProductShelfLife.specialPrecautionsForStorage` as `Equivalent`."
+            },
+            {
+              "code": "ProductShelfLife",
+              "display": "ProductShelfLife",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.specialPrecautionsForStorage` is mapped to FHIR R4 element `ProductShelfLife.specialPrecautionsForStorage` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ProductShelfLife",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-PackagedProductDefinition.packaging",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ProductShelfLife.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Extension.extension:shelfLifeStorage.extension:type",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.type` is mapped to FHIR R4 element `ProductShelfLife.type` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "ProductShelfLife.period[x]",
+          "display": "period[x]",
+          "target": [
+            {
+              "code": "Extension.extension:shelfLifeStorage.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ProductShelfLife.period[x]` is mapped to FHIR R4 element `ProductShelfLife.period` as `RelatedTo`.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types: string.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types based on type expansion: value."
+            }
+          ]
+        },
+        {
+          "code": "ProductShelfLife.specialPrecautionsForStorage",
+          "display": "specialPrecautionsForStorage",
+          "target": [
+            {
+              "code": "Extension.extension:shelfLifeStorage.extension:specialPrecautionsForStorage",
+              "equivalence": "equivalent",
+              "comment": "Element `ProductShelfLife.specialPrecautionsForStorage` is mapped to FHIR R4 element `ProductShelfLife.specialPrecautionsForStorage` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ProductShelfLife",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ProductShelfLife.period",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ProductShelfLife.period[x]",
+          "display": "period[x]",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "wider",
+              "comment": "Element `ProductShelfLife.period[x]` is mapped to FHIR R4 element `ProductShelfLife.period` as `RelatedTo`.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types: string.\nThe mappings for `ProductShelfLife.period[x]` do not cover the following types based on type expansion: value."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

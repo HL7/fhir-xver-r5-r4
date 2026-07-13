@@ -1,0 +1,208 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Endpoint",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Endpoint",
+  "version": "0.1.1",
+  "name": "Profile_R5_Endpoint_R4",
+  "title": "Cross-version Profile for R5.Endpoint resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.6990482-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Endpoint resource content to be represented via FHIR R4 Endpoint resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Endpoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint",
+        "path": "Endpoint",
+        "short": "Cross-version Profile for R5.Endpoint resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Endpoint resource content to be represented via FHIR R4 Endpoint resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Endpoint.extension",
+        "path": "Endpoint.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Endpoint.extension:connectionType",
+        "path": "Endpoint.extension",
+        "sliceName": "connectionType",
+        "short": "R5: connectionType additional types",
+        "definition": "R5: `Endpoint.connectionType` additional types (CodeableConcept) additional types from child elements (text)",
+        "comment": "Element `Endpoint.connectionType` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Endpoint.connectionType` is mapped to FHIR R4 element `Endpoint.connectionType` as `SourceIsBroaderThanTarget`.\nThe mappings for `Endpoint.connectionType` do not cover the following types: CodeableConcept.\nThe mappings for `Endpoint.connectionType` do not cover the following types based on type expansion: text.\nFor additional connectivity details for the protocol, extensions will be used at this point, as in the XDS example. If there are multiple payload types or mimetypes they are all applicable for all connection types, and all have the same status.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Endpoint.extension:description",
+        "path": "Endpoint.extension",
+        "sliceName": "description",
+        "short": "R5: Additional details about the endpoint that could be displayed as further information to identify the description beyond its name (new)",
+        "definition": "R5: `Endpoint.description` (new:string)",
+        "comment": "Element `Endpoint.description` has a context of Endpoint based on following the parent source element upwards and mapping to `Endpoint`.\nElement `Endpoint.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Endpoint.extension:environmentType",
+        "path": "Endpoint.extension",
+        "sliceName": "environmentType",
+        "short": "R5: The type of environment(s) exposed at this endpoint (new)",
+        "definition": "R5: `Endpoint.environmentType` (new:CodeableConcept)",
+        "comment": "Element `Endpoint.environmentType` has a context of Endpoint based on following the parent source element upwards and mapping to `Endpoint`.\nElement `Endpoint.environmentType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Endpoint.extension:type",
+        "path": "Endpoint.extension",
+        "sliceName": "type",
+        "short": "R5: The type of content that may be used at this endpoint (e.g. XDS Discharge summaries) (new)",
+        "definition": "R5: `Endpoint.payload.type` (new:CodeableConcept)",
+        "comment": "Element `Endpoint.payload.type` has a context of Endpoint based on following the parent source element upwards and mapping to `Endpoint`.\nElement `Endpoint.payload.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe mimeType describes the serialization format of the data, where the payload.type indicates the specific document/schema that is being transferred; e.g. DischargeSummary or CarePlan.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Endpoint.connectionType.extension",
+        "path": "Endpoint.connectionType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Endpoint.connectionType.extension:connectionType",
+        "path": "Endpoint.connectionType.extension",
+        "sliceName": "connectionType",
+        "short": "R5: connectionType additional types",
+        "definition": "R5: `Endpoint.connectionType` additional types (CodeableConcept) additional types from child elements (text)",
+        "comment": "Element `Endpoint.connectionType` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Endpoint.connectionType` is mapped to FHIR R4 element `Endpoint.connectionType` as `SourceIsBroaderThanTarget`.\nThe mappings for `Endpoint.connectionType` do not cover the following types: CodeableConcept.\nThe mappings for `Endpoint.connectionType` do not cover the following types based on type expansion: text.\nFor additional connectivity details for the protocol, extensions will be used at this point, as in the XDS example. If there are multiple payload types or mimetypes they are all applicable for all connection types, and all have the same status.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

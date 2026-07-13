@@ -1,0 +1,267 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-CarePlan",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-CarePlan",
+  "version": "0.1.1",
+  "name": "Profile_R5_CarePlan_R4",
+  "title": "Cross-version Profile for R5.CarePlan resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.4928365-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 CarePlan resource content to be represented via FHIR R4 CarePlan resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CarePlan",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CarePlan",
+        "path": "CarePlan",
+        "short": "Cross-version Profile for R5.CarePlan resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 CarePlan resource content to be represented via FHIR R4 CarePlan resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-CarePlan-performedActivity",
+            "requirements": "Cardinality constraints for performedActivity from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "CarePlan.activity.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-CarePlan.activity.performedActivity').exists() implies CarePlan.activity.outcomeCodeableConcept.exists()"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.basedOn.extension",
+        "path": "CarePlan.basedOn.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.basedOn.extension:basedOn",
+        "path": "CarePlan.basedOn.extension",
+        "sliceName": "basedOn",
+        "short": "R5: Fulfills plan, proposal or order",
+        "definition": "R5: `CarePlan.basedOn`",
+        "comment": "Element `CarePlan.basedOn` is mapped to FHIR R4 element `CarePlan.basedOn` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `CarePlan.basedOn` with unmapped reference targets: NutritionOrder, RequestOrchestration, ServiceRequest.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.intent.extension",
+        "path": "CarePlan.intent.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.intent.extension:intent",
+        "path": "CarePlan.intent.extension",
+        "sliceName": "intent",
+        "short": "R5: proposal | plan | order | option | directive",
+        "definition": "R5: `CarePlan.intent`",
+        "comment": "Element `CarePlan.intent` is mapped to FHIR R4 element `CarePlan.intent` as `SourceIsBroaderThanTarget`.\nThe target context `CarePlan.intent` is a modifier element, so this extension does not need to be defined as a modifier.\nThis element is labeled as a modifier because the intent alters when and how the resource is actually applicable.\nThis element is expected to be immutable. E.g. A \"proposal\" instance should never change to be a \"plan\" instance or \"order\" instance. Instead, a new instance 'basedOn' the prior instance should be created with the new 'intent' value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CarePlan.intent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.addresses.extension",
+        "path": "CarePlan.addresses.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.addresses.extension:addresses",
+        "path": "CarePlan.addresses.extension",
+        "sliceName": "addresses",
+        "short": "R5: addresses additional types",
+        "definition": "R5: `CarePlan.addresses` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition)) additional types from child elements (concept)",
+        "comment": "Element `CarePlan.addresses` is mapped to FHIR R4 element `CarePlan.addresses` as `SourceIsBroaderThanTarget`.\nThe mappings for `CarePlan.addresses` do not cover the following types: CodeableReference.\nThe mappings for `CarePlan.addresses` do not cover the following types based on type expansion: concept.\nUse CarePlan.addresses.concept when a code sufficiently describes the concern (e.g. condition, problem, diagnosis, risk). Use CarePlan.addresses.reference when referencing a resource, which allows more information to be conveyed, such as onset date. CarePlan.addresses.concept and CarePlan.addresses.reference are not meant to be duplicative. For a single concern, either CarePlan.addresses.concept or CarePlan.addresses.reference can be used. CarePlan.addresses.concept may be a summary code, or CarePlan.addresses.reference may be used to reference a very precise definition of the concern using Condition. Both CarePlan.addresses.concept and CarePlan.addresses.reference can be used if they are describing different concerns for the care plan.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CarePlan.addresses"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.activity.extension",
+        "path": "CarePlan.activity.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.activity.extension:performedActivity",
+        "path": "CarePlan.activity.extension",
+        "sliceName": "performedActivity",
+        "short": "R5: Results of the activity (concept, or Appointment, Encounter, Procedure, etc.)",
+        "definition": "R5: `CarePlan.activity.performedActivity`",
+        "comment": "Element `CarePlan.activity.performedActivity` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `CarePlan.activity.performedActivity` is mapped to FHIR R4 element `CarePlan.activity.outcomeCodeableConcept` as `SourceIsBroaderThanTarget`.\nElement `CarePlan.activity.performedActivity` is mapped to FHIR R4 element `CarePlan.activity.outcomeReference` as `SourceIsBroaderThanTarget`.\nElement `CarePlan.activity.performedActivity` is mapped to FHIR R4 element `CarePlan.activity.reference` as `RelatedTo`.\nNote that this should not duplicate the activity status (e.g. completed or in progress). The activity performed is independent of the outcome of the related goal(s). For example, if the goal is to achieve a target body weight of 150 lbs and an activity is defined to exercise, then the activity performed could be amount and intensity of exercise performed whereas the goal outcome is an observation for the actual body weight measured.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-CarePlan.activity.performedActivity"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-CarePlan-performedActivity"
+        ]
+      },
+      {
+        "id": "CarePlan.activity.reference.extension",
+        "path": "CarePlan.activity.reference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.activity.reference.extension:plannedActivityReference",
+        "path": "CarePlan.activity.reference.extension",
+        "sliceName": "plannedActivityReference",
+        "short": "R5: Activity that is intended to be part of the care plan",
+        "definition": "R5: `CarePlan.activity.plannedActivityReference`",
+        "comment": "Element `CarePlan.activity.plannedActivityReference` is mapped to FHIR R4 element `CarePlan.activity.reference` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `CarePlan.activity.plannedActivityReference` with unmapped reference targets: ImmunizationRecommendation, SupplyRequest.\nStandard extension exists ([http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal](http://hl7.org/fhir/extensions/StructureDefinition-resource-pertainsToGoal.html)) that allows goals to be referenced from any of the referenced resources in CarePlan.activity.plannedActivityReference.  \nThe goal should be visible when the resource referenced by CarePlan.activity.plannedActivityReference is viewed independently from the CarePlan.  Requests that are pointed to by a CarePlan using this element should *not* point to this CarePlan using the \"basedOn\" element.  i.e. Requests that are part of a CarePlan are not \"based on\" the CarePlan.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ArtifactAssessment",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ArtifactAssessment",
+  "version": "0.1.1",
+  "name": "Profile_R5_ArtifactAssessment_R4",
+  "title": "Cross-version Profile for R5.ArtifactAssessment resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.4486663-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ArtifactAssessment resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.ArtifactAssessment resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ArtifactAssessment resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:title",
+        "path": "Basic.extension",
+        "sliceName": "title",
+        "short": "R5: A short title for the assessment for use in displaying and selecting (new)",
+        "definition": "R5: `ArtifactAssessment.title` (new:string)",
+        "comment": "Element `ArtifactAssessment.title` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.title` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.title"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:citeAs",
+        "path": "Basic.extension",
+        "sliceName": "citeAs",
+        "short": "R5: How to cite the comment or rating (new)",
+        "definition": "R5: `ArtifactAssessment.citeAs[x]` (new:markdown, Reference(Citation))",
+        "comment": "Element `ArtifactAssessment.citeAs[x]` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.citeAs[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.citeAs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:date",
+        "path": "Basic.extension",
+        "sliceName": "date",
+        "short": "R5: Date last changed (new)",
+        "definition": "R5: `ArtifactAssessment.date` (new:dateTime)",
+        "comment": "Element `ArtifactAssessment.date` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.date` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the artifact assessment. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.date"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:copyright",
+        "path": "Basic.extension",
+        "sliceName": "copyright",
+        "short": "R5: Use and/or publishing restrictions (new)",
+        "definition": "R5: `ArtifactAssessment.copyright` (new:markdown)",
+        "comment": "Element `ArtifactAssessment.copyright` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.copyright` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.copyright"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:approvalDate",
+        "path": "Basic.extension",
+        "sliceName": "approvalDate",
+        "short": "R5: When the artifact assessment was approved by publisher (new)",
+        "definition": "R5: `ArtifactAssessment.approvalDate` (new:date)",
+        "comment": "Element `ArtifactAssessment.approvalDate` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.approvalDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe 'date' element may be more recent than the approval date because of minor changes or editorial corrections.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.approvalDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:lastReviewDate",
+        "path": "Basic.extension",
+        "sliceName": "lastReviewDate",
+        "short": "R5: When the artifact assessment was last reviewed by the publisher (new)",
+        "definition": "R5: `ArtifactAssessment.lastReviewDate` (new:date)",
+        "comment": "Element `ArtifactAssessment.lastReviewDate` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.lastReviewDate` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf specified, this date follows the original approval date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.lastReviewDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:artifact",
+        "path": "Basic.extension",
+        "sliceName": "artifact",
+        "short": "R5: The artifact assessed, commented upon or rated (new)",
+        "definition": "R5: `ArtifactAssessment.artifact[x]` (new:canonical, Reference(Resource), uri)",
+        "comment": "Element `ArtifactAssessment.artifact[x]` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.artifact[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.artifact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:content",
+        "path": "Basic.extension",
+        "sliceName": "content",
+        "short": "R5: Comment, classifier, or rating content (new)",
+        "definition": "R5: `ArtifactAssessment.content` (new:BackboneElement)",
+        "comment": "Element `ArtifactAssessment.content` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.content` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.content"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:workflowStatus",
+        "path": "Basic.extension",
+        "sliceName": "workflowStatus",
+        "short": "R5: submitted | triaged | waiting-for-input | resolved-no-change | resolved-change-required | deferred | duplicate | applied | published | entered-in-error (new)",
+        "definition": "R5: `ArtifactAssessment.workflowStatus` (new:code)",
+        "comment": "Element `ArtifactAssessment.workflowStatus` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.workflowStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.workflowStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:disposition",
+        "path": "Basic.extension",
+        "sliceName": "disposition",
+        "short": "R5: unresolved | not-persuasive | persuasive | persuasive-with-modification | not-persuasive-with-modification (new)",
+        "definition": "R5: `ArtifactAssessment.disposition` (new:code)",
+        "comment": "Element `ArtifactAssessment.disposition` is not mapped to FHIR R4, since FHIR R5 `ArtifactAssessment` is not mapped.\nElement `ArtifactAssessment.disposition` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ArtifactAssessment.disposition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "ArtifactAssessment"
+      }
+    ]
+  }
+}

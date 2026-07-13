@@ -1,0 +1,150 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Signature-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Signature-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5SignatureElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Signature to FHIR R4 Signature",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.568333-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Signature to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Signature",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Signature",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Signature.type",
+          "display": "type",
+          "target": [
+            {
+              "code": "Signature.type",
+              "display": "Signature.type",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.type` is mapped to FHIR R4 element `Signature.type` as `Equivalent`.\nExamples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a &quot;Commitment Type Indication&quot;."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.type` is mapped to FHIR R4 element `Signature.type` as `Equivalent`.\nExamples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a &quot;Commitment Type Indication&quot;."
+            }
+          ]
+        },
+        {
+          "code": "Signature.when",
+          "display": "when",
+          "target": [
+            {
+              "code": "Signature.when",
+              "display": "Signature.when",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.when` is mapped to FHIR R4 element `Signature.when` as `Equivalent`.\nThis should agree with the information in the signature."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.when` is mapped to FHIR R4 element `Signature.when` as `Equivalent`.\nThis should agree with the information in the signature."
+            }
+          ]
+        },
+        {
+          "code": "Signature.who",
+          "display": "who",
+          "target": [
+            {
+              "code": "Signature.who",
+              "display": "Signature.who",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.who` is mapped to FHIR R4 element `Signature.who` as `Equivalent`.\nThis should agree with the information in the signature."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.who` is mapped to FHIR R4 element `Signature.who` as `Equivalent`.\nThis should agree with the information in the signature."
+            }
+          ]
+        },
+        {
+          "code": "Signature.onBehalfOf",
+          "display": "onBehalfOf",
+          "target": [
+            {
+              "code": "Signature.onBehalfOf",
+              "display": "Signature.onBehalfOf",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.onBehalfOf` is mapped to FHIR R4 element `Signature.onBehalfOf` as `Equivalent`.\nThe party that can't sign. For example a child."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.onBehalfOf` is mapped to FHIR R4 element `Signature.onBehalfOf` as `Equivalent`.\nThe party that can't sign. For example a child."
+            }
+          ]
+        },
+        {
+          "code": "Signature.targetFormat",
+          "display": "targetFormat",
+          "target": [
+            {
+              "code": "Signature.targetFormat",
+              "display": "Signature.targetFormat",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.targetFormat` is mapped to FHIR R4 element `Signature.targetFormat` as `Equivalent`.\n\"xml\", \"json\" and \"ttl\" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.targetFormat` is mapped to FHIR R4 element `Signature.targetFormat` as `Equivalent`.\n\"xml\", \"json\" and \"ttl\" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here."
+            }
+          ]
+        },
+        {
+          "code": "Signature.sigFormat",
+          "display": "sigFormat",
+          "target": [
+            {
+              "code": "Signature.sigFormat",
+              "display": "Signature.sigFormat",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.sigFormat` is mapped to FHIR R4 element `Signature.sigFormat` as `Equivalent`."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.sigFormat` is mapped to FHIR R4 element `Signature.sigFormat` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Signature.data",
+          "display": "data",
+          "target": [
+            {
+              "code": "Signature.data",
+              "display": "Signature.data",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.data` is mapped to FHIR R4 element `Signature.data` as `Equivalent`.\nWhere the signature type is an XML DigSig, the signed content is a FHIR Resource(s), the signature is of the XML form of the Resource(s) using  XML-Signature (XMLDIG) \"Detached Signature\" form."
+            },
+            {
+              "code": "Signature",
+              "display": "Signature",
+              "equivalence": "equivalent",
+              "comment": "Element `Signature.data` is mapped to FHIR R4 element `Signature.data` as `Equivalent`.\nWhere the signature type is an XML DigSig, the signed content is a FHIR Resource(s), the signature is of the XML form of the Resource(s) using  XML-Signature (XMLDIG) \"Detached Signature\" form."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

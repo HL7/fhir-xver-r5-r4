@@ -1,0 +1,240 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-MarketingStatus-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-MarketingStatus-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5MarketingStatusElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 MarketingStatus to FHIR R4 MarketingStatus",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.0305861-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 MarketingStatus to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MarketingStatus",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/MarketingStatus",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "MarketingStatus.country",
+          "display": "country",
+          "target": [
+            {
+              "code": "MarketingStatus.country",
+              "display": "MarketingStatus.country",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.country` is mapped to FHIR R4 element `MarketingStatus.country` as `Equivalent`."
+            },
+            {
+              "code": "MarketingStatus",
+              "display": "MarketingStatus",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.country` is mapped to FHIR R4 element `MarketingStatus.country` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.jurisdiction",
+          "display": "jurisdiction",
+          "target": [
+            {
+              "code": "MarketingStatus.jurisdiction",
+              "display": "MarketingStatus.jurisdiction",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.jurisdiction` is mapped to FHIR R4 element `MarketingStatus.jurisdiction` as `Equivalent`."
+            },
+            {
+              "code": "MarketingStatus",
+              "display": "MarketingStatus",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.jurisdiction` is mapped to FHIR R4 element `MarketingStatus.jurisdiction` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.status",
+          "display": "status",
+          "target": [
+            {
+              "code": "MarketingStatus.status",
+              "display": "MarketingStatus.status",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.status` is mapped to FHIR R4 element `MarketingStatus.status` as `Equivalent`."
+            },
+            {
+              "code": "MarketingStatus",
+              "display": "MarketingStatus",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.status` is mapped to FHIR R4 element `MarketingStatus.status` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.dateRange",
+          "display": "dateRange",
+          "target": [
+            {
+              "code": "MarketingStatus.dateRange",
+              "display": "MarketingStatus.dateRange",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.dateRange` is mapped to FHIR R4 element `MarketingStatus.dateRange` as `Equivalent`."
+            },
+            {
+              "code": "MarketingStatus",
+              "display": "MarketingStatus",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.dateRange` is mapped to FHIR R4 element `MarketingStatus.dateRange` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.restoreDate",
+          "display": "restoreDate",
+          "target": [
+            {
+              "code": "MarketingStatus.restoreDate",
+              "display": "MarketingStatus.restoreDate",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.restoreDate` is mapped to FHIR R4 element `MarketingStatus.restoreDate` as `Equivalent`."
+            },
+            {
+              "code": "MarketingStatus",
+              "display": "MarketingStatus",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.restoreDate` is mapped to FHIR R4 element `MarketingStatus.restoreDate` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MarketingStatus",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ManufacturedItemDefinition.marketingStatus",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "MarketingStatus.country",
+          "display": "country",
+          "target": [
+            {
+              "code": "Extension.extension:country",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.country` is mapped to FHIR R4 element `MarketingStatus.country` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.jurisdiction",
+          "display": "jurisdiction",
+          "target": [
+            {
+              "code": "Extension.extension:jurisdiction",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.jurisdiction` is mapped to FHIR R4 element `MarketingStatus.jurisdiction` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.status",
+          "display": "status",
+          "target": [
+            {
+              "code": "Extension.extension:status",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.status` is mapped to FHIR R4 element `MarketingStatus.status` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.dateRange",
+          "display": "dateRange",
+          "target": [
+            {
+              "code": "Extension.extension:dateRange",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.dateRange` is mapped to FHIR R4 element `MarketingStatus.dateRange` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.restoreDate",
+          "display": "restoreDate",
+          "target": [
+            {
+              "code": "Extension.extension:restoreDate",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.restoreDate` is mapped to FHIR R4 element `MarketingStatus.restoreDate` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/MarketingStatus",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-PackagedProductDefinition.marketingStatus",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "MarketingStatus.country",
+          "display": "country",
+          "target": [
+            {
+              "code": "Extension.extension:country",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.country` is mapped to FHIR R4 element `MarketingStatus.country` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.jurisdiction",
+          "display": "jurisdiction",
+          "target": [
+            {
+              "code": "Extension.extension:jurisdiction",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.jurisdiction` is mapped to FHIR R4 element `MarketingStatus.jurisdiction` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.status",
+          "display": "status",
+          "target": [
+            {
+              "code": "Extension.extension:status",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.status` is mapped to FHIR R4 element `MarketingStatus.status` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.dateRange",
+          "display": "dateRange",
+          "target": [
+            {
+              "code": "Extension.extension:dateRange",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.dateRange` is mapped to FHIR R4 element `MarketingStatus.dateRange` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "MarketingStatus.restoreDate",
+          "display": "restoreDate",
+          "target": [
+            {
+              "code": "Extension.extension:restoreDate",
+              "equivalence": "equivalent",
+              "comment": "Element `MarketingStatus.restoreDate` is mapped to FHIR R4 element `MarketingStatus.restoreDate` as `Equivalent`."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

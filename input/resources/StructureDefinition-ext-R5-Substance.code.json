@@ -1,0 +1,275 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Substance.code",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Substance.code",
+  "version": "0.1.1",
+  "name": "ExtensionSubstance_Code",
+  "title": "R5: code additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Substance.code` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/SubstanceDefinition)) additional types from child elements (reference)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Substance.code` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Substance.code` 1..1 `CodeableReference(http://hl7.org/fhir/StructureDefinition/SubstanceDefinition)`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Substance.code` 1..1 `CodeableReference(http://hl7.org/fhir/StructureDefinition/SubstanceDefinition)`\n*  R4B: `Substance.code` 1..1 `CodeableConcept`\n*  R4: `Substance.code` 1..1 `CodeableConcept`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Substance.code` is mapped to FHIR R4 element `Substance.code` as `SourceIsBroaderThanTarget`.\nThe mappings for `Substance.code` do not cover the following types: CodeableReference.\nThe mappings for `Substance.code` do not cover the following types based on type expansion: reference.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Substance.code"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: code additional types",
+        "definition": "R5: `Substance.code` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/SubstanceDefinition)) additional types from child elements (reference)",
+        "comment": "Element `Substance.code` is mapped to FHIR R4 element `Substance.code` as `SourceIsBroaderThanTarget`.\nThe mappings for `Substance.code` do not cover the following types: CodeableReference.\nThe mappings for `Substance.code` do not cover the following types based on type expansion: reference.\nThis could be a reference to an externally defined code.  It could also be a locally assigned code (e.g. a formulary),  optionally with translations to the standard drug codes.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 2,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype",
+        "path": "Extension.extension",
+        "sliceName": "_datatype",
+        "short": "DataType slice for a FHIR R5 `CodeableReference` value",
+        "definition": "Slice to indicate the presence of a R5 `CodeableReference` in FHIR R4",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:_datatype.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/_datatype"
+      },
+      {
+        "id": "Extension.extension:_datatype.value[x]",
+        "path": "Extension.extension.value[x]",
+        "comment": "Must be: CodeableReference",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "CodeableReference"
+      },
+      {
+        "id": "Extension.extension:concept",
+        "path": "Extension.extension",
+        "sliceName": "concept",
+        "short": "R5: Reference to a concept (by class) (new)",
+        "definition": "R5: `CodeableReference.concept` (new:CodeableConcept)",
+        "comment": "Element `CodeableReference.concept` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.concept` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.concept` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `CodeableReference.concept` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.concept` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.concept` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:concept.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "concept"
+      },
+      {
+        "id": "Extension.extension:concept.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Reference to a concept (by class)",
+        "definition": "A reference to a concept - e.g. the information is identified by its general class to the degree of precision found in the terminology.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:reference",
+        "path": "Extension.extension",
+        "sliceName": "reference",
+        "short": "R5: Reference to a resource (by instance) (new)",
+        "definition": "R5: `CodeableReference.reference` (new:Reference)",
+        "comment": "Element `CodeableReference.reference` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.reference` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `CodeableReference.reference` is part of an existing definition because parent element `CodeableReference` requires a cross-version extension.\nElement `CodeableReference.reference` is not mapped to FHIR R4, since FHIR R5 `CodeableReference` is not mapped.\nElement `CodeableReference.reference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:reference.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "reference"
+      },
+      {
+        "id": "Extension.extension:reference.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Reference to a resource (by instance)",
+        "definition": "A reference to a resource the provides exact details about the information being referenced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Substance.code"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

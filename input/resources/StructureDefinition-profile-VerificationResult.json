@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-VerificationResult",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-VerificationResult",
+  "version": "0.1.1",
+  "name": "Profile_R5_VerificationResult_R4",
+  "title": "Cross-version Profile for R5.VerificationResult resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.1634196-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 VerificationResult resource content to be represented via FHIR R4 VerificationResult resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "VerificationResult",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/VerificationResult",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "VerificationResult",
+        "path": "VerificationResult",
+        "short": "Cross-version Profile for R5.VerificationResult resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 VerificationResult resource content to be represented via FHIR R4 VerificationResult resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "VerificationResult.status.extension",
+        "path": "VerificationResult.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "VerificationResult.status.extension:status",
+        "path": "VerificationResult.status.extension",
+        "sliceName": "status",
+        "short": "R5: attested | validated | in-process | req-revalid | val-fail | reval-fail | entered-in-error",
+        "definition": "R5: `VerificationResult.status`",
+        "comment": "Element `VerificationResult.status` is mapped to FHIR R4 element `VerificationResult.status` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-VerificationResult.status"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

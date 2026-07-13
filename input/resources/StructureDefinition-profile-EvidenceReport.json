@@ -1,0 +1,540 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-EvidenceReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-EvidenceReport",
+  "version": "0.1.1",
+  "name": "Profile_R5_EvidenceReport_R4",
+  "title": "Cross-version Profile for R5.EvidenceReport resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.7169304-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 EvidenceReport resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.EvidenceReport resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 EvidenceReport resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:url",
+        "path": "Basic.extension",
+        "sliceName": "url",
+        "short": "R5: Canonical identifier for this EvidenceReport, represented as a globally unique URI (new)",
+        "definition": "R5: `EvidenceReport.url` (new:uri)",
+        "comment": "Element `EvidenceReport.url` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.url` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nCan be a urn:uuid: or a urn:oid: but real http: addresses are preferred. Multiple instances may share the same URL if they have a distinct version.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.url"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:useContext",
+        "path": "Basic.extension",
+        "sliceName": "useContext",
+        "short": "R5: The context that the content is intended to support (new)",
+        "definition": "R5: `EvidenceReport.useContext` (new:UsageContext)",
+        "comment": "Element `EvidenceReport.useContext` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.useContext` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhen multiple useContexts are specified, there is no expectation that all or any of the contexts apply.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.useContext"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:relatedIdentifier",
+        "path": "Basic.extension",
+        "sliceName": "relatedIdentifier",
+        "short": "R5: Identifiers for articles that may relate to more than one evidence report (new)",
+        "definition": "R5: `EvidenceReport.relatedIdentifier` (new:Identifier)",
+        "comment": "Element `EvidenceReport.relatedIdentifier` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.relatedIdentifier` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMay include trial registry identifiers, e.g. NCT04372602 from clinicaltrials.gov. This identifier can be valid for multiple EvidenceReport resources.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.relatedIdentifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:citeAs",
+        "path": "Basic.extension",
+        "sliceName": "citeAs",
+        "short": "R5: Citation for this report (new)",
+        "definition": "R5: `EvidenceReport.citeAs[x]` (new:markdown, Reference(Citation))",
+        "comment": "Element `EvidenceReport.citeAs[x]` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.citeAs[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nused for reports for which external citation is expected, such as use in support of scholarly publications.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.citeAs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:type",
+        "path": "Basic.extension",
+        "sliceName": "type",
+        "short": "R5: Kind of report (new)",
+        "definition": "R5: `EvidenceReport.type` (new:CodeableConcept)",
+        "comment": "Element `EvidenceReport.type` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:note",
+        "path": "Basic.extension",
+        "sliceName": "note",
+        "short": "R5: Used for footnotes and annotations (new)",
+        "definition": "R5: `EvidenceReport.note` (new:Annotation)",
+        "comment": "Element `EvidenceReport.note` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:relatedArtifact",
+        "path": "Basic.extension",
+        "sliceName": "relatedArtifact",
+        "short": "R5: Link, description or reference to artifact associated with the report (new)",
+        "definition": "R5: `EvidenceReport.relatedArtifact` (new:RelatedArtifact)",
+        "comment": "Element `EvidenceReport.relatedArtifact` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.relatedArtifact` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.relatedArtifact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:subject",
+        "path": "Basic.extension",
+        "sliceName": "subject",
+        "short": "R5: Focus of the report (new)",
+        "definition": "R5: `EvidenceReport.subject` (new:BackboneElement)",
+        "comment": "Element `EvidenceReport.subject` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.subject` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhile the source element matches Basic element path `` (``), the definitions are not compatible (source: `BackboneElement`:1..1 -> basic: `Reference(http://hl7.org/fhir/StructureDefinition/Resource)`:0..1).\nMay be used as an expression for search queries and search results",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.subject"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:publisher",
+        "path": "Basic.extension",
+        "sliceName": "publisher",
+        "short": "R5: Name of the publisher/steward (organization or individual) (new)",
+        "definition": "R5: `EvidenceReport.publisher` (new:string)",
+        "comment": "Element `EvidenceReport.publisher` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.publisher` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nUsually an organization but may be an individual. The publisher (or steward) of the evidence report is the organization or individual primarily responsible for the maintenance and upkeep of the evidence report. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence report. This item SHOULD be populated unless the information is available from context.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.publisher"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:contact",
+        "path": "Basic.extension",
+        "sliceName": "contact",
+        "short": "R5: Contact details for the publisher (new)",
+        "definition": "R5: `EvidenceReport.contact` (new:ContactDetail)",
+        "comment": "Element `EvidenceReport.contact` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.contact` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nExtensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](https://hl7.org/fhir/clinicalreasoning-module.html)).\n\nSee guidance around (not) making local changes to elements [here](https://hl7.org/fhir/canonicalreso.html#localization).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.contact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:author",
+        "path": "Basic.extension",
+        "sliceName": "author",
+        "short": "R5: Who authored the content (new)",
+        "definition": "R5: `EvidenceReport.author` (new:ContactDetail)",
+        "comment": "Element `EvidenceReport.author` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.author` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhile the source element matches Basic element path `` (``), the definitions are not compatible (source: `ContactDetail`:0..* -> basic: `Reference(http://hl7.org/fhir/StructureDefinition/Practitioner,http://hl7.org/fhir/StructureDefinition/PractitionerRole,http://hl7.org/fhir/StructureDefinition/Patient,http://hl7.org/fhir/StructureDefinition/RelatedPerson,http://hl7.org/fhir/StructureDefinition/Organization)`:0..1).\nExtensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](https://hl7.org/fhir/clinicalreasoning-module.html)).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.author"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:editor",
+        "path": "Basic.extension",
+        "sliceName": "editor",
+        "short": "R5: Who edited the content (new)",
+        "definition": "R5: `EvidenceReport.editor` (new:ContactDetail)",
+        "comment": "Element `EvidenceReport.editor` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.editor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nExtensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](https://hl7.org/fhir/clinicalreasoning-module.html)).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.editor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:reviewer",
+        "path": "Basic.extension",
+        "sliceName": "reviewer",
+        "short": "R5: Who reviewed the content (new)",
+        "definition": "R5: `EvidenceReport.reviewer` (new:ContactDetail)",
+        "comment": "Element `EvidenceReport.reviewer` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.reviewer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nExtensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](https://hl7.org/fhir/clinicalreasoning-module.html)).\n\nSee guidance around (not) making local changes to elements [here](https://hl7.org/fhir/canonicalreso.html#localization).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.reviewer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:endorser",
+        "path": "Basic.extension",
+        "sliceName": "endorser",
+        "short": "R5: Who endorsed the content (new)",
+        "definition": "R5: `EvidenceReport.endorser` (new:ContactDetail)",
+        "comment": "Element `EvidenceReport.endorser` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.endorser` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nExtensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](https://hl7.org/fhir/clinicalreasoning-module.html)).\n\nSee guidance around (not) making local changes to elements [here](https://hl7.org/fhir/canonicalreso.html#localization).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.endorser"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:relatesTo",
+        "path": "Basic.extension",
+        "sliceName": "relatesTo",
+        "short": "R5: Relationships to other compositions/documents (new)",
+        "definition": "R5: `EvidenceReport.relatesTo` (new:BackboneElement)",
+        "comment": "Element `EvidenceReport.relatesTo` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.relatesTo` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nA document is a version specific composition.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.relatesTo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:section",
+        "path": "Basic.extension",
+        "sliceName": "section",
+        "short": "R5: Composition is broken into sections (new)",
+        "definition": "R5: `EvidenceReport.section` (new:BackboneElement)",
+        "comment": "Element `EvidenceReport.section` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.section` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.section"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension",
+        "path": "Basic.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.modifierExtension:status",
+        "path": "Basic.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: draft | active | retired | unknown (new)",
+        "definition": "R5: `EvidenceReport.status` (new:code)",
+        "comment": "Element `EvidenceReport.status` is not mapped to FHIR R4, since FHIR R5 `EvidenceReport` is not mapped.\nElement `EvidenceReport.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAllows filtering of summaries that are appropriate for use versus not.\n\nSee guidance around (not) making local changes to elements [here](https://hl7.org/fhir/canonicalreso.html#localization).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceReport.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "EvidenceReport"
+      }
+    ]
+  }
+}

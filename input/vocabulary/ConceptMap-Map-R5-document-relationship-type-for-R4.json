@@ -1,0 +1,90 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "Map-R5-document-relationship-type-for-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-document-relationship-type-for-R4",
+  "version": "0.1.1",
+  "name": "MapR5DocumentRelationshipTypeForR4",
+  "title": "Cross-version ConceptMap for ValueSet R5-document-relationship-type-for-R4 from FHIR R5 to FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:26.3225469-05:00",
+  "description": "This ConceptMap represents the cross-version mapping of concepts from ValueSet `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0` for use in FHIR R4.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0",
+  "targetUri": "http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/document-relationship-type",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/document-relationship-type",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "appends",
+          "display": "Appends",
+          "target": [
+            {
+              "code": "appends",
+              "display": "Appends",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DocumentRelationshipType-R4B-DocumentRelationshipType` (`ConceptMap-R5-DocumentRelationshipType-R4B-DocumentRelationshipType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DocumentRelationshipType-R4-DocumentRelationshipType` (`ConceptMap-R4B-DocumentRelationshipType-R4-DocumentRelationshipType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0#appends` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1#appends` as Equivalent in `ConceptMap-R5-DocumentRelationshipType-R4-DocumentRelationshipType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "replaces",
+          "display": "Replaces",
+          "target": [
+            {
+              "code": "replaces",
+              "display": "Replaces",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DocumentRelationshipType-R4B-DocumentRelationshipType` (`ConceptMap-R5-DocumentRelationshipType-R4B-DocumentRelationshipType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DocumentRelationshipType-R4-DocumentRelationshipType` (`ConceptMap-R4B-DocumentRelationshipType-R4-DocumentRelationshipType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0#replaces` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1#replaces` as Equivalent in `ConceptMap-R5-DocumentRelationshipType-R4-DocumentRelationshipType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "signs",
+          "display": "Signs",
+          "target": [
+            {
+              "code": "signs",
+              "display": "Signs",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DocumentRelationshipType-R4B-DocumentRelationshipType` (`ConceptMap-R5-DocumentRelationshipType-R4B-DocumentRelationshipType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DocumentRelationshipType-R4-DocumentRelationshipType` (`ConceptMap-R4B-DocumentRelationshipType-R4-DocumentRelationshipType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0#signs` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1#signs` as Equivalent in `ConceptMap-R5-DocumentRelationshipType-R4-DocumentRelationshipType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "transforms",
+          "display": "Transforms",
+          "target": [
+            {
+              "code": "transforms",
+              "display": "Transforms",
+              "equivalence": "equivalent",
+              "comment": "Using explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` as Equivalent in `http://hl7.org/fhir/uv/xver/5.0/ConceptMap/R5-DocumentRelationshipType-R4B-DocumentRelationshipType` (`ConceptMap-R5-DocumentRelationshipType-R4B-DocumentRelationshipType.json`)\nUsing explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|4.3.0` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1` as Equivalent in `http://hl7.org/fhir/uv/xver/4.3/ConceptMap/R4B-DocumentRelationshipType-R4-DocumentRelationshipType` (`ConceptMap-R4B-DocumentRelationshipType-R4-DocumentRelationshipType.json`)\nApplying explicit mapping from `http://hl7.org/fhir/ValueSet/document-relationship-type|5.0.0#transforms` to `http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1#transforms` as Equivalent in `ConceptMap-R5-DocumentRelationshipType-R4-DocumentRelationshipType.json`, which results in Equivalent."
+            }
+          ]
+        },
+        {
+          "code": "incorporates",
+          "display": "Incorporates",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "summarizes",
+          "display": "Summarizes",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MedicationStatement.category",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.category",
+  "version": "0.1.1",
+  "name": "ExtensionMedicationStatement_Category",
+  "title": "R5: Type of medication statement",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MedicationStatement.category`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MedicationStatement.category` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MedicationStatement.category` 0..* `CodeableConcept`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MedicationStatement.category` 0..* `CodeableConcept`\n*  R4B: `MedicationStatement.category` 0..1 `CodeableConcept`\n*  R4: `MedicationStatement.category` 0..1 `CodeableConcept`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MedicationStatement.category` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationStatement.category` is mapped to FHIR R4 element `MedicationStatement.category` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationStatement"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Type of medication statement",
+        "definition": "R5: `MedicationStatement.category`",
+        "comment": "Element `MedicationStatement.category` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `MedicationStatement.category` is mapped to FHIR R4 element `MedicationStatement.category` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.category"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Type of medication statement",
+        "definition": "Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "A coded concept identifying where the medication included in the MedicationStatement is expected to be consumed or administered.",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-medicationrequest-admin-location-for-R4"
+        }
+      }
+    ]
+  }
+}

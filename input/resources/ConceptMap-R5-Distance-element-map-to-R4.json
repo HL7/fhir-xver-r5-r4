@@ -1,0 +1,133 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Distance-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Distance-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5DistanceElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Distance to FHIR R4 Distance",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7276001-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Distance to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Distance",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Distance",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Distance.value",
+          "display": "value",
+          "target": [
+            {
+              "code": "Distance.value",
+              "display": "Distance.value",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.value` is mapped to FHIR R4 element `Distance.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            },
+            {
+              "code": "Distance",
+              "display": "Distance",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.value` is mapped to FHIR R4 element `Distance.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            }
+          ]
+        },
+        {
+          "code": "Distance.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Distance.comparator",
+              "display": "Distance.comparator",
+              "equivalence": "wider",
+              "comment": "Element `Distance.comparator` is mapped to FHIR R4 element `Distance.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Distance.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            },
+            {
+              "code": "Distance",
+              "display": "Distance",
+              "equivalence": "wider",
+              "comment": "Element `Distance.comparator` is mapped to FHIR R4 element `Distance.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Distance.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        },
+        {
+          "code": "Distance.unit",
+          "display": "unit",
+          "target": [
+            {
+              "code": "Distance.unit",
+              "display": "Distance.unit",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.unit` is mapped to FHIR R4 element `Distance.unit` as `Equivalent`."
+            },
+            {
+              "code": "Distance",
+              "display": "Distance",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.unit` is mapped to FHIR R4 element `Distance.unit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Distance.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "Distance.system",
+              "display": "Distance.system",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.system` is mapped to FHIR R4 element `Distance.system` as `Equivalent`."
+            },
+            {
+              "code": "Distance",
+              "display": "Distance",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.system` is mapped to FHIR R4 element `Distance.system` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Distance.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Distance.code",
+              "display": "Distance.code",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.code` is mapped to FHIR R4 element `Distance.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            },
+            {
+              "code": "Distance",
+              "display": "Distance",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.code` is mapped to FHIR R4 element `Distance.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Distance",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Distance.comparator",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Distance.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Distance.comparator` is mapped to FHIR R4 element `Distance.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Distance.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ObservationDefinition.permittedUnit",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.permittedUnit",
+  "version": "0.1.1",
+  "name": "ExtensionObservationDefinition_PermittedUnit",
+  "title": "R5: Unit for quantitative results",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ObservationDefinition.permittedUnit`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ObservationDefinition.permittedUnit` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ObservationDefinition.permittedUnit` 0..* `Coding`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ObservationDefinition.permittedUnit` 0..* `Coding`\n*  R4B: `ObservationDefinition.quantitativeDetails.customaryUnit` 0..1 `CodeableConcept`\n*  R4: `ObservationDefinition.quantitativeDetails.customaryUnit` 0..1 `CodeableConcept`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ObservationDefinition.permittedUnit` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ObservationDefinition.permittedUnit` is mapped to FHIR R4 element `ObservationDefinition.quantitativeDetails.customaryUnit` as `RelatedTo`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ObservationDefinition.quantitativeDetails"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Unit for quantitative results",
+        "definition": "R5: `ObservationDefinition.permittedUnit`",
+        "comment": "Element `ObservationDefinition.permittedUnit` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `ObservationDefinition.permittedUnit` is mapped to FHIR R4 element `ObservationDefinition.quantitativeDetails.customaryUnit` as `RelatedTo`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.permittedUnit"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Unit for quantitative results",
+        "definition": "Units allowed for the valueQuantity element in the instance observations conforming to this ObservationDefinition.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

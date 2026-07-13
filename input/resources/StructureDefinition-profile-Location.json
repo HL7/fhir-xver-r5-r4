@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Location",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Location",
+  "version": "0.1.1",
+  "name": "Profile_R5_Location_R4",
+  "title": "Cross-version Profile for R5.Location resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8445772-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Location resource content to be represented via FHIR R4 Location resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location",
+        "path": "Location",
+        "short": "Cross-version Profile for R5.Location resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Location resource content to be represented via FHIR R4 Location resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Location.extension",
+        "path": "Location.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Location.extension:contact",
+        "path": "Location.extension",
+        "sliceName": "contact",
+        "short": "R5: Official contact details for the location (new)",
+        "definition": "R5: `Location.contact` (new:ExtendedContactDetail)",
+        "comment": "Element `Location.contact` has a context of Location based on following the parent source element upwards and mapping to `Location`.\nElement `Location.contact` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThe address/telecom use code 'home' are not to be used. Note that these contacts are not the contact details of people who provide the service (that would be through PractitionerRole), these are official contacts for the Healthcare itself for specific purposes. E.g. Mailing Addresses, Billing Addresses, Contact numbers for Booking or Billing Enquiries, general web address, web address for online bookings etc.\n\nIf this is empty (or the type of interest is empty), refer to the organization's contacts.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Location.contact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Location.extension:characteristic",
+        "path": "Location.extension",
+        "sliceName": "characteristic",
+        "short": "R5: Collection of characteristics (attributes) (new)",
+        "definition": "R5: `Location.characteristic` (new:CodeableConcept)",
+        "comment": "Element `Location.characteristic` has a context of Location based on following the parent source element upwards and mapping to `Location`.\nElement `Location.characteristic` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThese could be such things as is wheelchair accessible.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Location.characteristic"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Location.extension:virtualService",
+        "path": "Location.extension",
+        "sliceName": "virtualService",
+        "short": "R5: Connection details of a virtual service (e.g. conference call) (new)",
+        "definition": "R5: `Location.virtualService` (new:VirtualServiceDetail)",
+        "comment": "Element `Location.virtualService` has a context of Location based on following the parent source element upwards and mapping to `Location`.\nElement `Location.virtualService` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThere are two types of virtual meetings that often exist:\r\r* a persistent, virtual meeting room that can only be used for a single purpose at a time,\r * and a dynamic virtual meeting room that is generated on demand for a specific purpose.\r\r Implementers may consider using Appointment.virtualService for virtual meeting rooms that are generated on-demand.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Location.virtualService"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

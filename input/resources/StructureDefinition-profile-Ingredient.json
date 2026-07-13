@@ -1,0 +1,356 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Ingredient",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Ingredient",
+  "version": "0.1.1",
+  "name": "Profile_R5_Ingredient_R4",
+  "title": "Cross-version Profile for R5.Ingredient resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8134816-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Ingredient resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.Ingredient resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Ingredient resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 2,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:for",
+        "path": "Basic.extension",
+        "sliceName": "for",
+        "short": "R5: The product which this ingredient is a constituent part of (new)",
+        "definition": "R5: `Ingredient.for` (new:Reference(MedicinalProductDefinition,AdministrableProductDefinition,ManufacturedItemDefinition))",
+        "comment": "Element `Ingredient.for` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.for` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.for"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:role",
+        "path": "Basic.extension",
+        "sliceName": "role",
+        "short": "R5: Purpose of the ingredient within the product, e.g. active, inactive (new)",
+        "definition": "R5: `Ingredient.role` (new:CodeableConcept)",
+        "comment": "Element `Ingredient.role` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.role` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.role"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:function",
+        "path": "Basic.extension",
+        "sliceName": "function",
+        "short": "R5: Precise action within the drug product, e.g. antioxidant, alkalizing agent (new)",
+        "definition": "R5: `Ingredient.function` (new:CodeableConcept)",
+        "comment": "Element `Ingredient.function` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.function` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.function"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:group",
+        "path": "Basic.extension",
+        "sliceName": "group",
+        "short": "R5: A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink (new)",
+        "definition": "R5: `Ingredient.group` (new:CodeableConcept)",
+        "comment": "Element `Ingredient.group` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.group` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.group"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:allergenicIndicator",
+        "path": "Basic.extension",
+        "sliceName": "allergenicIndicator",
+        "short": "R5: If the ingredient is a known or suspected allergen (new)",
+        "definition": "R5: `Ingredient.allergenicIndicator` (new:boolean)",
+        "comment": "Element `Ingredient.allergenicIndicator` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.allergenicIndicator` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.allergenicIndicator"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:comment",
+        "path": "Basic.extension",
+        "sliceName": "comment",
+        "short": "R5: A place for providing any notes that are relevant to the component, e.g. removed during process, adjusted for loss on drying (new)",
+        "definition": "R5: `Ingredient.comment` (new:markdown)",
+        "comment": "Element `Ingredient.comment` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.comment` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.comment"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:manufacturer",
+        "path": "Basic.extension",
+        "sliceName": "manufacturer",
+        "short": "R5: An organization that manufactures this ingredient (new)",
+        "definition": "R5: `Ingredient.manufacturer` (new:BackboneElement)",
+        "comment": "Element `Ingredient.manufacturer` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.manufacturer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.manufacturer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:substance",
+        "path": "Basic.extension",
+        "sliceName": "substance",
+        "short": "R5: The substance that comprises this ingredient (new)",
+        "definition": "R5: `Ingredient.substance` (new:BackboneElement)",
+        "comment": "Element `Ingredient.substance` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.substance` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.substance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension",
+        "path": "Basic.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.modifierExtension:status",
+        "path": "Basic.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: draft | active | retired | unknown (new)",
+        "definition": "R5: `Ingredient.status` (new:code)",
+        "comment": "Element `Ingredient.status` is not mapped to FHIR R4, since FHIR R5 `Ingredient` is not mapped.\nElement `Ingredient.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAllows filtering of ingredient that are appropriate for use versus not.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Ingredient.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "Ingredient"
+      }
+    ]
+  }
+}

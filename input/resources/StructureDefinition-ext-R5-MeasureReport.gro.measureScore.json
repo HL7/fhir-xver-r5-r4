@@ -1,0 +1,131 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-MeasureReport.gro.measureScore",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.measureScore",
+  "version": "0.1.1",
+  "name": "ExtensionMeasureReport_Group_MeasureScore",
+  "title": "R5: measureScore additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `MeasureReport.group.measureScore[x]` additional types (dateTime, CodeableConcept, Period, Range)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `MeasureReport.group.measureScore[x]` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`MeasureReport.group.measureScore[x]` 0..1 `CodeableConcept, dateTime, Duration, Period, Quantity, Range`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `MeasureReport.group.measureScore[x]` 0..1 `CodeableConcept, dateTime, Duration, Period, Quantity, Range`\n*  R4B: `MeasureReport.group.measureScore` 0..1 `Quantity`\n*  R4: `MeasureReport.group.measureScore` 0..1 `Quantity`\r\n\r\nFollowing are the generation technical comments:\r\nElement `MeasureReport.group.measureScore[x]` is mapped to FHIR R4 element `MeasureReport.group.measureScore` as `RelatedTo`.\nThe mappings for `MeasureReport.group.measureScore[x]` do not cover the following types: CodeableConcept, dateTime, Period, Range.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MeasureReport.group.measureScore"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: measureScore additional types",
+        "definition": "R5: `MeasureReport.group.measureScore[x]` additional types (dateTime, CodeableConcept, Period, Range)",
+        "comment": "Element `MeasureReport.group.measureScore[x]` is mapped to FHIR R4 element `MeasureReport.group.measureScore` as `RelatedTo`.\nThe mappings for `MeasureReport.group.measureScore[x]` do not cover the following types: CodeableConcept, dateTime, Period, Range.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.measureScore"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "What score this group achieved",
+        "definition": "The measure score for this population group, calculated as appropriate for the measure type and scoring method, and based on the contents of the populations defined in the group.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          }
+        ]
+      }
+    ]
+  }
+}

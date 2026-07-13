@@ -1,0 +1,114 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Coding-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Coding-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5CodingElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Coding to FHIR R4 Coding",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.6935446-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Coding to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Coding",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Coding",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Coding.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "Coding.system",
+              "display": "Coding.system",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.system` is mapped to FHIR R4 element `Coding.system` as `Equivalent`.\nThe URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should be an absolute reference to some definition that establishes the system clearly and unambiguously."
+            },
+            {
+              "code": "Coding",
+              "display": "Coding",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.system` is mapped to FHIR R4 element `Coding.system` as `Equivalent`.\nThe URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should be an absolute reference to some definition that establishes the system clearly and unambiguously."
+            }
+          ]
+        },
+        {
+          "code": "Coding.version",
+          "display": "version",
+          "target": [
+            {
+              "code": "Coding.version",
+              "display": "Coding.version",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.version` is mapped to FHIR R4 element `Coding.version` as `Equivalent`.\nWhere the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."
+            },
+            {
+              "code": "Coding",
+              "display": "Coding",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.version` is mapped to FHIR R4 element `Coding.version` as `Equivalent`.\nWhere the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."
+            }
+          ]
+        },
+        {
+          "code": "Coding.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Coding.code",
+              "display": "Coding.code",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.code` is mapped to FHIR R4 element `Coding.code` as `Equivalent`."
+            },
+            {
+              "code": "Coding",
+              "display": "Coding",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.code` is mapped to FHIR R4 element `Coding.code` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Coding.display",
+          "display": "display",
+          "target": [
+            {
+              "code": "Coding.display",
+              "display": "Coding.display",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.display` is mapped to FHIR R4 element `Coding.display` as `Equivalent`."
+            },
+            {
+              "code": "Coding",
+              "display": "Coding",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.display` is mapped to FHIR R4 element `Coding.display` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Coding.userSelected",
+          "display": "userSelected",
+          "target": [
+            {
+              "code": "Coding.userSelected",
+              "display": "Coding.userSelected",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.userSelected` is mapped to FHIR R4 element `Coding.userSelected` as `Equivalent`.\nAmongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."
+            },
+            {
+              "code": "Coding",
+              "display": "Coding",
+              "equivalence": "equivalent",
+              "comment": "Element `Coding.userSelected` is mapped to FHIR R4 element `Coding.userSelected` as `Equivalent`.\nAmongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Quantity-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Quantity-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5QuantityElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Quantity to FHIR R4 Quantity",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:51.2603457-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Quantity to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Quantity",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Quantity",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Quantity.value",
+          "display": "value",
+          "target": [
+            {
+              "code": "Quantity.value",
+              "display": "Quantity.value",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.value` is mapped to FHIR R4 element `Quantity.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            },
+            {
+              "code": "Quantity",
+              "display": "Quantity",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.value` is mapped to FHIR R4 element `Quantity.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            }
+          ]
+        },
+        {
+          "code": "Quantity.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Quantity.comparator",
+              "display": "Quantity.comparator",
+              "equivalence": "wider",
+              "comment": "Element `Quantity.comparator` is mapped to FHIR R4 element `Quantity.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Quantity.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            },
+            {
+              "code": "Quantity",
+              "display": "Quantity",
+              "equivalence": "wider",
+              "comment": "Element `Quantity.comparator` is mapped to FHIR R4 element `Quantity.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Quantity.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        },
+        {
+          "code": "Quantity.unit",
+          "display": "unit",
+          "target": [
+            {
+              "code": "Quantity.unit",
+              "display": "Quantity.unit",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.unit` is mapped to FHIR R4 element `Quantity.unit` as `Equivalent`."
+            },
+            {
+              "code": "Quantity",
+              "display": "Quantity",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.unit` is mapped to FHIR R4 element `Quantity.unit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Quantity.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "Quantity.system",
+              "display": "Quantity.system",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.system` is mapped to FHIR R4 element `Quantity.system` as `Equivalent`."
+            },
+            {
+              "code": "Quantity",
+              "display": "Quantity",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.system` is mapped to FHIR R4 element `Quantity.system` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Quantity.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Quantity.code",
+              "display": "Quantity.code",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.code` is mapped to FHIR R4 element `Quantity.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            },
+            {
+              "code": "Quantity",
+              "display": "Quantity",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.code` is mapped to FHIR R4 element `Quantity.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Quantity",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Quantity.comparator",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Quantity.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Quantity.comparator` is mapped to FHIR R4 element `Quantity.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Quantity.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-DeviceRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-DeviceRequest",
+  "version": "0.1.1",
+  "name": "Profile_R5_DeviceRequest_R4",
+  "title": "Cross-version Profile for R5.DeviceRequest resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.6554592-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 DeviceRequest resource content to be represented via FHIR R4 DeviceRequest resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DeviceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DeviceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DeviceRequest",
+        "path": "DeviceRequest",
+        "short": "Cross-version Profile for R5.DeviceRequest resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 DeviceRequest resource content to be represented via FHIR R4 DeviceRequest resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DeviceRequest.extension",
+        "path": "DeviceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DeviceRequest.extension:quantity",
+        "path": "DeviceRequest.extension",
+        "sliceName": "quantity",
+        "short": "R5: Quantity of devices to supply (new)",
+        "definition": "R5: `DeviceRequest.quantity` (new:integer)",
+        "comment": "Element `DeviceRequest.quantity` has a context of DeviceRequest based on following the parent source element upwards and mapping to `DeviceRequest`.\nElement `DeviceRequest.quantity` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.quantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.extension:performer",
+        "path": "DeviceRequest.extension",
+        "sliceName": "performer",
+        "short": "R5: Requested Filler additional types",
+        "definition": "R5: `DeviceRequest.performer` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Practitioner), CodeableReference(http://hl7.org/fhir/StructureDefinition/PractitionerRole), CodeableReference(http://hl7.org/fhir/StructureDefinition/Organization), CodeableReference(http://hl7.org/fhir/StructureDefinition/CareTeam), CodeableReference(http://hl7.org/fhir/StructureDefinition/HealthcareService), CodeableReference(http://hl7.org/fhir/StructureDefinition/Patient), CodeableReference(http://hl7.org/fhir/StructureDefinition/Device), CodeableReference(http://hl7.org/fhir/StructureDefinition/RelatedPerson))",
+        "comment": "Element `DeviceRequest.performer` is mapped to FHIR R4 element `DeviceRequest.performerType` as `SourceIsBroaderThanTarget`.\nElement `DeviceRequest.performer` is mapped to FHIR R4 element `DeviceRequest.performer` as `SourceIsBroaderThanTarget`.\nThe mappings for `DeviceRequest.performer` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.performer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.extension:reason",
+        "path": "DeviceRequest.extension",
+        "sliceName": "reason",
+        "short": "R5: Coded/Linked Reason for request additional types",
+        "definition": "R5: `DeviceRequest.reason` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/Condition), CodeableReference(http://hl7.org/fhir/StructureDefinition/Observation), CodeableReference(http://hl7.org/fhir/StructureDefinition/DiagnosticReport), CodeableReference(http://hl7.org/fhir/StructureDefinition/DocumentReference))",
+        "comment": "Element `DeviceRequest.reason` is mapped to FHIR R4 element `DeviceRequest.reasonCode` as `SourceIsBroaderThanTarget`.\nElement `DeviceRequest.reason` is mapped to FHIR R4 element `DeviceRequest.reasonReference` as `SourceIsBroaderThanTarget`.\nThe mappings for `DeviceRequest.reason` do not cover the following types: CodeableReference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.extension:asNeeded",
+        "path": "DeviceRequest.extension",
+        "sliceName": "asNeeded",
+        "short": "R5: PRN status of request (new)",
+        "definition": "R5: `DeviceRequest.asNeeded` (new:boolean)",
+        "comment": "Element `DeviceRequest.asNeeded` has a context of DeviceRequest based on following the parent source element upwards and mapping to `DeviceRequest`.\nElement `DeviceRequest.asNeeded` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.asNeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.extension:asNeededFor",
+        "path": "DeviceRequest.extension",
+        "sliceName": "asNeededFor",
+        "short": "R5: Device usage reason (new)",
+        "definition": "R5: `DeviceRequest.asNeededFor` (new:CodeableConcept)",
+        "comment": "Element `DeviceRequest.asNeededFor` has a context of DeviceRequest based on following the parent source element upwards and mapping to `DeviceRequest`.\nElement `DeviceRequest.asNeededFor` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.asNeededFor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.modifierExtension",
+        "path": "DeviceRequest.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DeviceRequest.modifierExtension:doNotPerform",
+        "path": "DeviceRequest.modifierExtension",
+        "sliceName": "doNotPerform",
+        "short": "R5: True if the request is to stop or not to start using the device (new)",
+        "definition": "R5: `DeviceRequest.doNotPerform` (new:boolean)",
+        "comment": "Element `DeviceRequest.doNotPerform` has a context of DeviceRequest based on following the parent source element upwards and mapping to `DeviceRequest`.\nElement `DeviceRequest.doNotPerform` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf do not perform is not specified, the request is a positive request e.g. \"do perform\". DeviceRequest.reasonCode includes the reason for marking the DeviceRequest as 'do not perform'.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DeviceRequest.priorRequest.extension",
+        "path": "DeviceRequest.priorRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DeviceRequest.priorRequest.extension:replaces",
+        "path": "DeviceRequest.priorRequest.extension",
+        "sliceName": "replaces",
+        "short": "R5: replaces additional types",
+        "definition": "R5: `DeviceRequest.replaces` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `DeviceRequest.replaces` is mapped to FHIR R4 element `DeviceRequest.priorRequest` as `SourceIsBroaderThanTarget`.\nThe mappings for `DeviceRequest.replaces` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `DeviceRequest.replaces` with unmapped reference targets: DeviceRequest.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

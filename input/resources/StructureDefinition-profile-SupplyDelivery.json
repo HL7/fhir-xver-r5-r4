@@ -1,0 +1,226 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-SupplyDelivery",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-SupplyDelivery",
+  "version": "0.1.1",
+  "name": "Profile_R5_SupplyDelivery_R4",
+  "title": "Cross-version Profile for R5.SupplyDelivery resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.1127721-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 SupplyDelivery resource content to be represented via FHIR R4 SupplyDelivery resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "SupplyDelivery",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/SupplyDelivery",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "SupplyDelivery",
+        "path": "SupplyDelivery",
+        "short": "Cross-version Profile for R5.SupplyDelivery resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 SupplyDelivery resource content to be represented via FHIR R4 SupplyDelivery resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-SupplyDelivery-suppliedItem",
+            "requirements": "Cardinality constraints for suppliedItem from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "SupplyDelivery.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyDelivery.suppliedItem').exists() implies SupplyDelivery.suppliedItem.exists()"
+          }
+        ]
+      },
+      {
+        "id": "SupplyDelivery.extension",
+        "path": "SupplyDelivery.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyDelivery.extension:suppliedItem",
+        "path": "SupplyDelivery.extension",
+        "sliceName": "suppliedItem",
+        "short": "R5: suppliedItem",
+        "definition": "R5: `SupplyDelivery.suppliedItem`",
+        "comment": "Element `SupplyDelivery.suppliedItem` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `SupplyDelivery.suppliedItem` is mapped to FHIR R4 element `SupplyDelivery.suppliedItem` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyDelivery.suppliedItem"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-SupplyDelivery-suppliedItem"
+        ]
+      },
+      {
+        "id": "SupplyDelivery.type.extension",
+        "path": "SupplyDelivery.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyDelivery.type.extension:type",
+        "path": "SupplyDelivery.type.extension",
+        "sliceName": "type",
+        "short": "R5: Category of supply event",
+        "definition": "R5: `SupplyDelivery.type`",
+        "comment": "Element `SupplyDelivery.type` is mapped to FHIR R4 element `SupplyDelivery.type` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-SupplyDelivery.type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyDelivery.suppliedItem.item[x]:valueReference.extension",
+        "path": "SupplyDelivery.suppliedItem.itemReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyDelivery.suppliedItem.item[x]:valueReference.extension:alternateReference",
+        "path": "SupplyDelivery.suppliedItem.itemReference.extension",
+        "sliceName": "alternateReference",
+        "short": "R5: Medication, Substance, Device or Biologically Derived Product supplied",
+        "definition": "R5: `SupplyDelivery.suppliedItem.item[x]`",
+        "comment": "Element `SupplyDelivery.suppliedItem.item[x]` is part of an existing definition because parent element `SupplyDelivery.suppliedItem` requires an extension for additional cardinality.\nElement `SupplyDelivery.suppliedItem.item[x]` is mapped to FHIR R4 element `SupplyDelivery.suppliedItem.item[x]` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SupplyDelivery.suppliedItem.item[x]` with unmapped reference targets: BiologicallyDerivedProduct, InventoryItem, NutritionProduct.\nSource element `SupplyDelivery.suppliedItem.item[x]` has unmapped reference types. While the target element `SupplyDelivery.suppliedItem.item[x]` is a choice type and does not allow extensions, the `alternate-reference` extension can be applied to Reference values within it.",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SupplyDelivery.receiver.extension",
+        "path": "SupplyDelivery.receiver.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SupplyDelivery.receiver.extension:receiver",
+        "path": "SupplyDelivery.receiver.extension",
+        "sliceName": "receiver",
+        "short": "R5: Who received the delivery",
+        "definition": "R5: `SupplyDelivery.receiver`",
+        "comment": "Element `SupplyDelivery.receiver` is mapped to FHIR R4 element `SupplyDelivery.receiver` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `SupplyDelivery.receiver` with unmapped reference targets: Organization.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

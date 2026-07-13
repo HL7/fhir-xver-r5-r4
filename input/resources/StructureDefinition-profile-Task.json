@@ -1,0 +1,336 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-Task",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-Task",
+  "version": "0.1.1",
+  "name": "Profile_R5_Task_R4",
+  "title": "Cross-version Profile for R5.Task resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:41.1208483-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 Task resource content to be represented via FHIR R4 Task resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Task",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Task",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Task",
+        "path": "Task",
+        "short": "Cross-version Profile for R5.Task resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 Task resource content to be represented via FHIR R4 Task resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-Task-reason",
+            "requirements": "Cardinality constraints for reason from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Task.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.reason').exists() implies Task.reasonCode.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Task.extension",
+        "path": "Task.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Task.extension:requestedPeriod",
+        "path": "Task.extension",
+        "sliceName": "requestedPeriod",
+        "short": "R5: When the task should be performed (new)",
+        "definition": "R5: `Task.requestedPeriod` (new:Period)",
+        "comment": "Element `Task.requestedPeriod` has a context of Task based on following the parent source element upwards and mapping to `Task`.\nElement `Task.requestedPeriod` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nThis is typically used when the Task is *not* seeking fulfillment of a focus Request, as in that case the period would be specified on the Request and/or in the Task.restriction.period.  Instead, it is used for stand-alone tasks.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPeriod"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.extension:requestedPerformer",
+        "path": "Task.extension",
+        "sliceName": "requestedPerformer",
+        "short": "R5: Who should perform Task (new)",
+        "definition": "R5: `Task.requestedPerformer` (new:CodeableReference(Practitioner,PractitionerRole,Organization,CareTeam,HealthcareService,Patient,Device,RelatedPerson))",
+        "comment": "Element `Task.requestedPerformer` has a context of Task based on following the parent source element upwards and mapping to `Task`.\nElement `Task.requestedPerformer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.extension:performer",
+        "path": "Task.extension",
+        "sliceName": "performer",
+        "short": "R5: Who or what performed the task (new)",
+        "definition": "R5: `Task.performer` (new:BackboneElement)",
+        "comment": "Element `Task.performer` has a context of Task based on following the parent source element upwards and mapping to `Task`.\nElement `Task.performer` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.performer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.extension:reason",
+        "path": "Task.extension",
+        "sliceName": "reason",
+        "short": "R5: Why task is needed",
+        "definition": "R5: `Task.reason`",
+        "comment": "Element `Task.reason` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Task.reason` is mapped to FHIR R4 element `Task.reasonCode` as `SourceIsBroaderThanTarget`.\nElement `Task.reason` is mapped to FHIR R4 element `Task.reasonReference` as `SourceIsBroaderThanTarget`.\nThis will typically not be present for Tasks with a code of 'please fulfill' as, for those, the reason for action is conveyed on the Request pointed to by Task.focus.  Some types of tasks will not need a 'reason'.  E.g. a request to discharge a patient can be inferred to be 'because the patient is ready' and this would not need a reason to be stated on the Task.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.reason"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-Task-reason"
+        ]
+      },
+      {
+        "id": "Task.modifierExtension",
+        "path": "Task.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Task.modifierExtension:doNotPerform",
+        "path": "Task.modifierExtension",
+        "sliceName": "doNotPerform",
+        "short": "R5: True if Task is prohibiting action (new)",
+        "definition": "R5: `Task.doNotPerform` (new:boolean)",
+        "comment": "Element `Task.doNotPerform` has a context of Task based on following the parent source element upwards and mapping to `Task`.\nElement `Task.doNotPerform` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `Task.doNotPerform`: `http://hl7.org/fhir/StructureDefinition/request-doNotPerform`.\nThe attributes provided with the Task qualify what is not to be done. For example, if a requestedPeriod is provided, the 'do not' request only applies within the specified time. If a requestedPerformer is specified then the 'do not' request only applies to performers of that type. Qualifiers include: code, subject, occurrence, requestedPerformer and performer.\n\nIn some cases, the Request.code may pre-coordinate prohibition into the requested action. E.g. 'NPO' (nothing by mouth), 'DNR' (do not recussitate). If this happens, doNotPerform SHALL NOT be set to true. I.e. The resource shall not have double negation. (E.g. 'Do not DNR').\n\ndoNotPerform should ONLY be used with Tasks that are tightly bounded in time or process phase.  E.g. 'Do not fulfill the midnight dose of medication X tonight due to the early morning scheduled procedure, where the nurse could reasonably check off 'Med X not given at midnight as instructed'.  Similarly, a decision support proposal that a patient should not be given a standard intake questionnaire (because the patient is cognitively impaired) would be marked as 'complete' or 'rejected' when the clinician preps the CarePlan or order set after reviewing the decision support results.  If there is a need to create a standing order to not do something that can't be satisfied by a single 'non-action', but rather an ongoing refusal to perform the function, MedicationRequest, ServiceRequest or some other form of authorization should be used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/request-doNotPerform"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.statusReason.extension",
+        "path": "Task.statusReason.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Task.statusReason.extension:statusReason",
+        "path": "Task.statusReason.extension",
+        "sliceName": "statusReason",
+        "short": "R5: statusReason additional types",
+        "definition": "R5: `Task.statusReason` additional types (CodeableReference) additional types from child elements (reference)",
+        "comment": "Element `Task.statusReason` is mapped to FHIR R4 element `Task.statusReason` as `SourceIsBroaderThanTarget`.\nThe mappings for `Task.statusReason` do not cover the following types: CodeableReference.\nThe mappings for `Task.statusReason` do not cover the following types based on type expansion: reference.\nThis applies to the current status.  Look at the history of the task to see reasons for past statuses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.statusReason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.input.extension",
+        "path": "Task.input.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Task.input.extension:value",
+        "path": "Task.input.extension",
+        "sliceName": "value",
+        "short": "R5: value additional types",
+        "definition": "R5: `Task.input.value[x]` additional types (CodeableReference, RatioRange, Availability, ExtendedContactDetail)",
+        "comment": "Element `Task.input.value[x]` is mapped to FHIR R4 element `Task.input.value[x]` as `RelatedTo`.\nThe mappings for `Task.input.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Task.input.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Task.input`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.input.value"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.output.extension",
+        "path": "Task.output.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Task.output.extension:value",
+        "path": "Task.output.extension",
+        "sliceName": "value",
+        "short": "R5: value additional types",
+        "definition": "R5: `Task.output.value[x]` additional types (CodeableReference, RatioRange, Availability, ExtendedContactDetail)",
+        "comment": "Element `Task.output.value[x]` is mapped to FHIR R4 element `Task.output.value[x]` as `RelatedTo`.\nThe mappings for `Task.output.value[x]` do not cover the following types: Availability, CodeableReference, ExtendedContactDetail, RatioRange.\nThe target context `Task.output.value[x]` is a choice-type element and cannot directly hold extensions. The context is moved up to parent element `Task.output`.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.output.value"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

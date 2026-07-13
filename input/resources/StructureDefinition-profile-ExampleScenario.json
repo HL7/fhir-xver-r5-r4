@@ -1,0 +1,456 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-ExampleScenario",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-ExampleScenario",
+  "version": "0.1.1",
+  "name": "Profile_R5_ExampleScenario_R4",
+  "title": "Cross-version Profile for R5.ExampleScenario resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.7276956-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 ExampleScenario resource content to be represented via FHIR R4 ExampleScenario resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ExampleScenario",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ExampleScenario",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ExampleScenario",
+        "path": "ExampleScenario",
+        "short": "Cross-version Profile for R5.ExampleScenario resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 ExampleScenario resource content to be represented via FHIR R4 ExampleScenario resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.extension",
+        "path": "ExampleScenario.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.extension:versionAlgorithm",
+        "path": "ExampleScenario.extension",
+        "sliceName": "versionAlgorithm",
+        "short": "R5: How to compare versions (new)",
+        "definition": "R5: `ExampleScenario.versionAlgorithm[x]` (new:Coding, string)",
+        "comment": "Element `ExampleScenario.versionAlgorithm[x]` has a context of ExampleScenario based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.versionAlgorithm[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ExampleScenario.versionAlgorithm[x]`: `http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm`.\nIf set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can't be successfully be determined.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.extension:title",
+        "path": "ExampleScenario.extension",
+        "sliceName": "title",
+        "short": "R5: Name for this example scenario (human friendly) (new)",
+        "definition": "R5: `ExampleScenario.title` (new:string)",
+        "comment": "Element `ExampleScenario.title` has a context of ExampleScenario based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.title` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ExampleScenario.title`: `http://hl7.org/fhir/StructureDefinition/artifact-title`.\nThis name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-title"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.extension:description",
+        "path": "ExampleScenario.extension",
+        "sliceName": "description",
+        "short": "R5: Natural language description of the ExampleScenario (new)",
+        "definition": "R5: `ExampleScenario.description` (new:markdown)",
+        "comment": "Element `ExampleScenario.description` has a context of ExampleScenario based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ExampleScenario.description`: `http://hl7.org/fhir/StructureDefinition/artifact-description`.\nThis description can be used to capture details such as comments about misuse. It is not a rendering of the ExampleScenario as conveyed in the 'text' field of the resource itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.extension:copyrightLabel",
+        "path": "ExampleScenario.extension",
+        "sliceName": "copyrightLabel",
+        "short": "R5: Copyright holder and year(s) (new)",
+        "definition": "R5: `ExampleScenario.copyrightLabel` (new:string)",
+        "comment": "Element `ExampleScenario.copyrightLabel` has a context of ExampleScenario based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.copyrightLabel` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nAn externally-defined extension that has been mapped as the representation of FHIR R5 element `ExampleScenario.copyrightLabel`: `http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel`.\nThe (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general 'copyright' element.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.extension",
+        "path": "ExampleScenario.instance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.instance.extension:structureVersion",
+        "path": "ExampleScenario.instance.extension",
+        "sliceName": "structureVersion",
+        "short": "R5: E.g. 4.0.1 (new)",
+        "definition": "R5: `ExampleScenario.instance.structureVersion` (new:string)",
+        "comment": "Element `ExampleScenario.instance.structureVersion` has a context of ExampleScenario.instance based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.instance.structureVersion` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.structureVersion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.extension:structureProfile",
+        "path": "ExampleScenario.instance.extension",
+        "sliceName": "structureProfile",
+        "short": "R5: Rules instance adheres to (new)",
+        "definition": "R5: `ExampleScenario.instance.structureProfile[x]` (new:canonical, uri)",
+        "comment": "Element `ExampleScenario.instance.structureProfile[x]` has a context of ExampleScenario.instance based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.instance.structureProfile[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.structureProfile"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.extension:content",
+        "path": "ExampleScenario.instance.extension",
+        "sliceName": "content",
+        "short": "R5: Example instance data (new)",
+        "definition": "R5: `ExampleScenario.instance.content` (new:Reference)",
+        "comment": "Element `ExampleScenario.instance.content` has a context of ExampleScenario.instance based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.instance.content` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf not conveying FHIR data or not using the same version of FHIR as this ExampleScenario instance, the reference must be to a Binary.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.resourceType.extension",
+        "path": "ExampleScenario.instance.resourceType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.instance.resourceType.extension:structureType",
+        "path": "ExampleScenario.instance.resourceType.extension",
+        "sliceName": "structureType",
+        "short": "R5: Data structure for example additional types",
+        "definition": "R5: `ExampleScenario.instance.structureType` additional types (Coding) additional types from child elements (userSelected)",
+        "comment": "Element `ExampleScenario.instance.structureType` is mapped to FHIR R4 element `ExampleScenario.instance.resourceType` as `RelatedTo`.\nThe mappings for `ExampleScenario.instance.structureType` do not cover the following types: Coding.\nThe mappings for `ExampleScenario.instance.structureType` do not cover the following types based on type expansion: userSelected.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.structureType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.version.extension",
+        "path": "ExampleScenario.instance.version.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.instance.version.extension:title",
+        "path": "ExampleScenario.instance.version.extension",
+        "sliceName": "title",
+        "short": "R5: Label for instance version (new)",
+        "definition": "R5: `ExampleScenario.instance.version.title` (new:string)",
+        "comment": "Element `ExampleScenario.instance.version.title` has a context of ExampleScenario.instance.version based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.instance.version.title` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.version.title"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.instance.version.extension:content",
+        "path": "ExampleScenario.instance.version.extension",
+        "sliceName": "content",
+        "short": "R5: Example instance version data (new)",
+        "definition": "R5: `ExampleScenario.instance.version.content` (new:Reference)",
+        "comment": "Element `ExampleScenario.instance.version.content` has a context of ExampleScenario.instance.version based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.instance.version.content` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf not conveying FHIR data or not using the same version of FHIR as this ExampleScenario instance, the reference must be to a Binary.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.version.content"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.process.step.extension",
+        "path": "ExampleScenario.process.step.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.process.step.extension:number",
+        "path": "ExampleScenario.process.step.extension",
+        "sliceName": "number",
+        "short": "R5: Sequential number of the step (new)",
+        "definition": "R5: `ExampleScenario.process.step.number` (new:string)",
+        "comment": "Element `ExampleScenario.process.step.number` has a context of ExampleScenario.process.step based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.process.step.number` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf step numbers are simultaneous, they will be the same.  Numbers don't have to be numeric.  E.g. '2c)' is a valid step number",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.process.step.number"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.process.step.extension:workflow",
+        "path": "ExampleScenario.process.step.extension",
+        "sliceName": "workflow",
+        "short": "R5: Step is nested workflow (new)",
+        "definition": "R5: `ExampleScenario.process.step.workflow` (new:canonical(ExampleScenario))",
+        "comment": "Element `ExampleScenario.process.step.workflow` has a context of ExampleScenario.process.step based on following the parent source element upwards and mapping to `ExampleScenario`.\nElement `ExampleScenario.process.step.workflow` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.process.step.workflow"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExampleScenario.process.step.operation.type.extension",
+        "path": "ExampleScenario.process.step.operation.type.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExampleScenario.process.step.operation.type.extension:type",
+        "path": "ExampleScenario.process.step.operation.type.extension",
+        "sliceName": "type",
+        "short": "R5: Kind of action additional types",
+        "definition": "R5: `ExampleScenario.process.step.operation.type` additional types (Coding) additional types from child elements (userSelected)",
+        "comment": "Element `ExampleScenario.process.step.operation.type` is mapped to FHIR R4 element `ExampleScenario.process.step.operation.type` as `SourceIsBroaderThanTarget`.\nThe mappings for `ExampleScenario.process.step.operation.type` do not cover the following types: Coding.\nThe mappings for `ExampleScenario.process.step.operation.type` do not cover the following types based on type expansion: userSelected.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.process.step.operation.type"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

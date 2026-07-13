@@ -1,0 +1,356 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-InventoryReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-InventoryReport",
+  "version": "0.1.1",
+  "name": "Profile_R5_InventoryReport_R4",
+  "title": "Cross-version Profile for R5.InventoryReport resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8301169-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 InventoryReport resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.InventoryReport resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 InventoryReport resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:operationType",
+        "path": "Basic.extension",
+        "sliceName": "operationType",
+        "short": "R5: addition | subtraction (new)",
+        "definition": "R5: `InventoryReport.operationType` (new:CodeableConcept)",
+        "comment": "Element `InventoryReport.operationType` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.operationType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.operationType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:operationTypeReason",
+        "path": "Basic.extension",
+        "sliceName": "operationTypeReason",
+        "short": "R5: The reason for this count - regular count, ad-hoc count, new arrivals, etc (new)",
+        "definition": "R5: `InventoryReport.operationTypeReason` (new:CodeableConcept)",
+        "comment": "Element `InventoryReport.operationTypeReason` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.operationTypeReason` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.operationTypeReason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:reportedDateTime",
+        "path": "Basic.extension",
+        "sliceName": "reportedDateTime",
+        "short": "R5: When the report has been submitted (new)",
+        "definition": "R5: `InventoryReport.reportedDateTime` (new:dateTime)",
+        "comment": "Element `InventoryReport.reportedDateTime` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.reportedDateTime` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.reportedDateTime"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:reporter",
+        "path": "Basic.extension",
+        "sliceName": "reporter",
+        "short": "R5: Who submits the report (new)",
+        "definition": "R5: `InventoryReport.reporter` (new:Reference(Practitioner,Patient,RelatedPerson,Device))",
+        "comment": "Element `InventoryReport.reporter` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.reporter` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.reporter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:reportingPeriod",
+        "path": "Basic.extension",
+        "sliceName": "reportingPeriod",
+        "short": "R5: The period the report refers to (new)",
+        "definition": "R5: `InventoryReport.reportingPeriod` (new:Period)",
+        "comment": "Element `InventoryReport.reportingPeriod` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.reportingPeriod` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.reportingPeriod"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:inventoryListing",
+        "path": "Basic.extension",
+        "sliceName": "inventoryListing",
+        "short": "R5: An inventory listing section (grouped by any of the attributes) (new)",
+        "definition": "R5: `InventoryReport.inventoryListing` (new:BackboneElement)",
+        "comment": "Element `InventoryReport.inventoryListing` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.inventoryListing` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.inventoryListing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:note",
+        "path": "Basic.extension",
+        "sliceName": "note",
+        "short": "R5: A note associated with the InventoryReport (new)",
+        "definition": "R5: `InventoryReport.note` (new:Annotation)",
+        "comment": "Element `InventoryReport.note` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.note` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.note"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension",
+        "path": "Basic.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.modifierExtension:status",
+        "path": "Basic.modifierExtension",
+        "sliceName": "status",
+        "short": "R5: draft | requested | active | entered-in-error (new)",
+        "definition": "R5: `InventoryReport.status` (new:code)",
+        "comment": "Element `InventoryReport.status` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.modifierExtension:countType",
+        "path": "Basic.modifierExtension",
+        "sliceName": "countType",
+        "short": "R5: snapshot | difference (new)",
+        "definition": "R5: `InventoryReport.countType` (new:code)",
+        "comment": "Element `InventoryReport.countType` is not mapped to FHIR R4, since FHIR R5 `InventoryReport` is not mapped.\nElement `InventoryReport.countType` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryReport.countType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "InventoryReport"
+      }
+    ]
+  }
+}

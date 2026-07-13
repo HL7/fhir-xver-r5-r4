@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Coverage.subscriberId",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.subscriberId",
+  "version": "0.1.1",
+  "name": "ExtensionCoverage_SubscriberId",
+  "title": "R5: subscriberId additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Coverage.subscriberId` additional types (Identifier) additional types from child elements (assigner, period, type)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Coverage.subscriberId` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Coverage.subscriberId` 0..* `Identifier`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Coverage.subscriberId` 0..* `Identifier`\n*  R4B: `Coverage.subscriberId` 0..1 `string`\n*  R4: `Coverage.subscriberId` 0..1 `string`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Coverage.subscriberId` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Coverage.subscriberId` is mapped to FHIR R4 element `Coverage.subscriberId` as `SourceIsBroaderThanTarget`.\nThe mappings for `Coverage.subscriberId` do not cover the following types: Identifier.\nThe mappings for `Coverage.subscriberId` do not cover the following types based on type expansion: assigner, period, type.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    },
+    {
+      "type": "element",
+      "expression": "Coverage.subscriberId"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: subscriberId additional types",
+        "definition": "R5: `Coverage.subscriberId` additional types (Identifier) additional types from child elements (assigner, period, type)",
+        "comment": "Element `Coverage.subscriberId` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Coverage.subscriberId` is mapped to FHIR R4 element `Coverage.subscriberId` as `SourceIsBroaderThanTarget`.\nThe mappings for `Coverage.subscriberId` do not cover the following types: Identifier.\nThe mappings for `Coverage.subscriberId` do not cover the following types based on type expansion: assigner, period, type.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.subscriberId"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "ID assigned to the subscriber",
+        "definition": "The insurer assigned ID for the Subscriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

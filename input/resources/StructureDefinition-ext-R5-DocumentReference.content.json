@@ -1,0 +1,303 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-DocumentReference.content",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content",
+  "version": "0.1.1",
+  "name": "ExtensionDocumentReference_Content",
+  "title": "R5: Document referenced",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `DocumentReference.content`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `DocumentReference.content` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`DocumentReference.content` 1..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `DocumentReference.content` 1..* `BackboneElement`\n*  R4B: `Media.content` 1..1 `Attachment`\n*  R4: `Media.content` 1..1 `Attachment`\n*  R5: `DocumentReference.content` 1..* `BackboneElement`\n*  R4B: `DocumentReference.content` 1..* `BackboneElement`\n*  R4: `DocumentReference.content` 1..* `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `DocumentReference.content` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.content` is mapped to FHIR R4 element `DocumentReference.content` as `Equivalent`.\nElement `DocumentReference.content` is mapped to FHIR R4 element `Media.content` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "DocumentReference"
+    },
+    {
+      "type": "element",
+      "expression": "Media"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Document referenced",
+        "definition": "R5: `DocumentReference.content`",
+        "comment": "Element `DocumentReference.content` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.content` is mapped to FHIR R4 element `DocumentReference.content` as `Equivalent`.\nElement `DocumentReference.content` is mapped to FHIR R4 element `Media.content` as `SourceIsBroaderThanTarget`.\ncontent element shall not contain different versions of the same content. For version handling use multiple DocumentReference with .relatesTo.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:attachment",
+        "path": "Extension.extension",
+        "sliceName": "attachment",
+        "short": "R5: attachment",
+        "definition": "R5: `DocumentReference.content.attachment`",
+        "comment": "Element `DocumentReference.content.attachment` is part of an existing definition because parent element `DocumentReference.content` requires an extension for additional cardinality.\nElement `DocumentReference.content.attachment` is mapped to FHIR R4 element `DocumentReference.content.attachment` as `Equivalent`.",
+        "requirements": "Element `DocumentReference.content.attachment` is part of an existing definition because parent element `DocumentReference.content` requires an extension for additional cardinality.\nElement `DocumentReference.content.attachment` is mapped to FHIR R4 element `DocumentReference.content.attachment` as `Equivalent`.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:attachment.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "attachment"
+      },
+      {
+        "id": "Extension.extension:attachment.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Where to access the document",
+        "definition": "The document or URL of the document along with critical metadata to prove content has integrity.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:profile",
+        "path": "Extension.extension",
+        "sliceName": "profile",
+        "short": "R5: Content profile rules for the document (new)",
+        "definition": "R5: `DocumentReference.content.profile` (new:BackboneElement)",
+        "comment": "Element `DocumentReference.content.profile` is part of an existing definition because parent element `DocumentReference.content` requires an extension for additional cardinality.\nElement `DocumentReference.content.profile` has a context of DocumentReference.content based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.content.profile` has a context of Media.content based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.content.profile` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nNote that IHE often issues URNs for formatCode codes, not all documents can be identified by a URI.\n\nFor FHIR content, .profile should indicate the structureDefinition profile canonical URI(s) that the content complies with.",
+        "requirements": "Element `DocumentReference.content.profile` is part of an existing definition because parent element `DocumentReference.content` requires an extension for additional cardinality.\nElement `DocumentReference.content.profile` has a context of DocumentReference.content based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.content.profile` has a context of Media.content based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.content.profile` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:profile.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:profile.extension:value",
+        "path": "Extension.extension.extension",
+        "sliceName": "value",
+        "short": "R5: Code|uri|canonical (new)",
+        "definition": "R5: `DocumentReference.content.profile.value[x]` (new:canonical, Coding, uri)",
+        "comment": "Element `DocumentReference.content.profile.value[x]` is part of an existing definition because parent element `DocumentReference.content.profile` requires a cross-version extension.\nElement `DocumentReference.content.profile.value[x]` has a context of DocumentReference.content based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.content.profile.value[x]` has a context of Media.content based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.content.profile.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `DocumentReference.content.profile.value[x]` is part of an existing definition because parent element `DocumentReference.content.profile` requires a cross-version extension.\nElement `DocumentReference.content.profile.value[x]` has a context of DocumentReference.content based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.content.profile.value[x]` has a context of Media.content based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.content.profile.value[x]` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:profile.extension:value.url",
+        "path": "Extension.extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "value"
+      },
+      {
+        "id": "Extension.extension:profile.extension:value.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "short": "Code|uri|canonical",
+        "definition": "Code|uri|canonical.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "uri"
+          },
+          {
+            "code": "canonical"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Document Format Codes.",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-v3-HL7FormatCodes-for-R4"
+        }
+      },
+      {
+        "id": "Extension.extension:profile.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "profile"
+      },
+      {
+        "id": "Extension.extension:profile.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

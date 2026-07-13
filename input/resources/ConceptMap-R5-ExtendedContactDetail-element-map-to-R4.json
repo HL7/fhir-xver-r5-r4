@@ -1,0 +1,1422 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-ExtendedContactDetail-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-ExtendedContactDetail-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5ExtendedContactDetailElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 ExtendedContactDetail to FHIR R4 no direct target type",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7630172-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 ExtendedContactDetail to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.defaultValue",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.fixed",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.pattern",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ElementDefinition.example.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExtendedContactDetail",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Extension.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-VirtualServiceDetail",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.virtualService",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.virtualService",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-HealthcareService.contact",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Location.contact",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Location.virtualService",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:address.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-OrganizationAffiliation.contact",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Parameters.parameter.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-PractitionerRole.contact",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.input.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.output.value",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.input",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/ExtendedContactDetail",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Transport.output",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "ExtendedContactDetail.purpose",
+          "display": "purpose",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:purpose",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.purpose` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.purpose` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.purpose` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf no purpose is defined, then these contact details may be used for any purpose."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.name",
+          "display": "name",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:name",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.name` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.name` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf there is no named individual, the telecom/address information is not generally monitored by a specific individual."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.telecom",
+          "display": "telecom",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:telecom",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.telecom` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.telecom` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.telecom` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.address",
+          "display": "address",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:address",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.address` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.address` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.address` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nMore than 1 address would be for different purposes, and thus should be entered as a different entry,."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.organization",
+          "display": "organization",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:organization",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.organization` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.organization` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.organization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+            }
+          ]
+        },
+        {
+          "code": "ExtendedContactDetail.period",
+          "display": "period",
+          "target": [
+            {
+              "code": "Extension.extension:value:extension:valueExtendedContactDetail.extension:period",
+              "equivalence": "wider",
+              "comment": "Element `ExtendedContactDetail.period` is part of an existing definition because parent element `ExtendedContactDetail` requires a cross-version extension.\nElement `ExtendedContactDetail.period` is not mapped to FHIR R4, since FHIR R5 `ExtendedContactDetail` is not mapped.\nElement `ExtendedContactDetail.period` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nIf the details have multiple periods, then enter in a new ExtendedContact with the new period."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

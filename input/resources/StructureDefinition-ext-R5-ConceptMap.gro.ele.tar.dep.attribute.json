@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-ConceptMap.gro.ele.tar.dep.attribute",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConceptMap.group.element.target.dependsOn.attribute",
+  "version": "0.1.1",
+  "name": "ExtensionConceptMap_Group_Element_Target_DependsOn_Attribute",
+  "title": "R5: A reference to a mapping attribute defined in ConceptMap.additionalAttribute additional types",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `ConceptMap.group.element.target.dependsOn.attribute` additional types (code) additional types from child elements (value)",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `ConceptMap.group.element.target.dependsOn.attribute` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`ConceptMap.group.element.target.dependsOn.attribute` 1..1 `code`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `ConceptMap.group.element.target.dependsOn.attribute` 1..1 `code`\n*  R4B: `ConceptMap.group.element.target.dependsOn.property` 1..1 `uri`\n*  R4: `ConceptMap.group.element.target.dependsOn.property` 1..1 `uri`\r\n\r\nFollowing are the generation technical comments:\r\nElement `ConceptMap.group.element.target.dependsOn.attribute` is mapped to FHIR R4 element `ConceptMap.group.element.target.dependsOn.property` as `SourceIsBroaderThanTarget`.\nThe mappings for `ConceptMap.group.element.target.dependsOn.attribute` do not cover the following types: code.\nThe mappings for `ConceptMap.group.element.target.dependsOn.attribute` do not cover the following types based on type expansion: value.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ConceptMap.group.element.target.dependsOn.property"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: A reference to a mapping attribute defined in ConceptMap.additionalAttribute additional types",
+        "definition": "R5: `ConceptMap.group.element.target.dependsOn.attribute` additional types (code) additional types from child elements (value)",
+        "comment": "Element `ConceptMap.group.element.target.dependsOn.attribute` is mapped to FHIR R4 element `ConceptMap.group.element.target.dependsOn.property` as `SourceIsBroaderThanTarget`.\nThe mappings for `ConceptMap.group.element.target.dependsOn.attribute` do not cover the following types: code.\nThe mappings for `ConceptMap.group.element.target.dependsOn.attribute` do not cover the following types based on type expansion: value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ConceptMap.group.element.target.dependsOn.attribute"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "A reference to a mapping attribute defined in ConceptMap.additionalAttribute",
+        "definition": "A reference to the additional attribute that holds a value the map depends on.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  }
+}

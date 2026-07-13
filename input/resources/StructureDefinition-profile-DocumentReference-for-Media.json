@@ -1,0 +1,368 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-DocumentReference-for-Media",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-DocumentReference-for-Media",
+  "version": "0.1.1",
+  "name": "Profile_R5_DocumentReference_R4_Media",
+  "title": "Cross-version Profile for R5.DocumentReference resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.6700544-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 DocumentReference resource content to be represented via FHIR R4 Media resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Media",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Media",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Media",
+        "path": "Media",
+        "short": "Cross-version Profile for R5.DocumentReference resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 DocumentReference resource content to be represented via FHIR R4 Media resources.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "xvpc-R5-R4-DocumentReference-modality",
+            "requirements": "Cardinality constraints for modality from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Media.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality').exists() implies Media.modality.exists()"
+          },
+          {
+            "key": "xvpc-R5-R4-DocumentReference-content",
+            "requirements": "Cardinality constraints for content from R5 for use in FHIR R4",
+            "severity": "warning",
+            "expression": "Media.extension.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content').exists() implies DocumentReference.content.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Media.extension",
+        "path": "Media.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Media.extension:version",
+        "path": "Media.extension",
+        "sliceName": "version",
+        "short": "R5: An explicitly assigned identifer of a variation of the content in the DocumentReference (new)",
+        "definition": "R5: `DocumentReference.version` (new:string)",
+        "comment": "Element `DocumentReference.version` has a context of DocumentReference based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.version` has a context of Media based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.version` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nWhile each resource, including the DocumentReference itself, has its own version identifier, this is a formal identifier for the logical version of the DocumentReference as a whole. It would remain constant if the resources were moved to a new server, and all got new individual resource versions, for example.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.extension:modality",
+        "path": "Media.extension",
+        "sliceName": "modality",
+        "short": "R5: Imaging modality used",
+        "definition": "R5: `DocumentReference.modality`",
+        "comment": "Element `DocumentReference.modality` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.modality` is mapped to FHIR R4 element `Media.modality` as `SourceIsBroaderThanTarget`.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-DocumentReference-modality"
+        ]
+      },
+      {
+        "id": "Media.extension:bodySite",
+        "path": "Media.extension",
+        "sliceName": "bodySite",
+        "short": "R5: Body part included additional types",
+        "definition": "R5: `DocumentReference.bodySite` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/BodyStructure)) additional types from child elements (reference)",
+        "comment": "Element `DocumentReference.bodySite` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.bodySite` is mapped to FHIR R4 element `Media.bodySite` as `SourceIsBroaderThanTarget`.\nThe mappings for `DocumentReference.bodySite` do not cover the following types: CodeableReference.\nThe mappings for `DocumentReference.bodySite` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.extension:attester",
+        "path": "Media.extension",
+        "sliceName": "attester",
+        "short": "R5: Attests to accuracy of the document (new)",
+        "definition": "R5: `DocumentReference.attester` (new:BackboneElement)",
+        "comment": "Element `DocumentReference.attester` has a context of DocumentReference based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.attester` has a context of Media based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.attester` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nOnly list each attester once.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.extension:content",
+        "path": "Media.extension",
+        "sliceName": "content",
+        "short": "R5: Document referenced",
+        "definition": "R5: `DocumentReference.content`",
+        "comment": "Element `DocumentReference.content` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.content` is mapped to FHIR R4 element `DocumentReference.content` as `Equivalent`.\nElement `DocumentReference.content` is mapped to FHIR R4 element `Media.content` as `SourceIsBroaderThanTarget`.\ncontent element shall not contain different versions of the same content. For version handling use multiple DocumentReference with .relatesTo.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content"
+            ]
+          }
+        ],
+        "condition": [
+          "xvpc-R5-R4-DocumentReference-content"
+        ]
+      },
+      {
+        "id": "Media.basedOn.extension",
+        "path": "Media.basedOn.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Media.basedOn.extension:basedOn",
+        "path": "Media.basedOn.extension",
+        "sliceName": "basedOn",
+        "short": "R5: basedOn",
+        "definition": "R5: `DocumentReference.basedOn`",
+        "comment": "Element `DocumentReference.basedOn` is mapped to FHIR R4 element `Media.basedOn` as `SourceIsBroaderThanTarget`.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `DocumentReference.basedOn` with unmapped reference targets: Appointment, AppointmentResponse, Claim, CommunicationRequest, Contract, CoverageEligibilityRequest, DeviceRequest, EnrollmentRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, RequestOrchestration, SupplyRequest, VisionPrescription.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.subject.extension",
+        "path": "Media.subject.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Media.subject.extension:subject",
+        "path": "Media.subject.extension",
+        "sliceName": "subject",
+        "short": "R5: Who/what is the subject of the document additional types",
+        "definition": "R5: `DocumentReference.subject` additional types from child elements (display, identifier, reference, type)",
+        "comment": "Element `DocumentReference.subject` is mapped to FHIR R4 element `DocumentReference.subject` as `SourceIsBroaderThanTarget`.\nElement `DocumentReference.subject` is mapped to FHIR R4 element `Media.subject` as `SourceIsBroaderThanTarget`.\nThe mappings for `DocumentReference.subject` do not cover the following types based on type expansion: display, identifier, reference, type.\nThe standard extension `alternate-reference` has been mapped as the representation of FHIR R5 element `DocumentReference.subject` with unmapped reference targets: Resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/alternate-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.bodySite.extension",
+        "path": "Media.bodySite.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Media.bodySite.extension:bodySite",
+        "path": "Media.bodySite.extension",
+        "sliceName": "bodySite",
+        "short": "R5: Body part included additional types",
+        "definition": "R5: `DocumentReference.bodySite` additional types (CodeableReference(http://hl7.org/fhir/StructureDefinition/BodyStructure)) additional types from child elements (reference)",
+        "comment": "Element `DocumentReference.bodySite` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `DocumentReference.bodySite` is mapped to FHIR R4 element `Media.bodySite` as `SourceIsBroaderThanTarget`.\nThe mappings for `DocumentReference.bodySite` do not cover the following types: CodeableReference.\nThe mappings for `DocumentReference.bodySite` do not cover the following types based on type expansion: reference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Media.content.extension",
+        "path": "Media.content.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Media.content.extension:profile",
+        "path": "Media.content.extension",
+        "sliceName": "profile",
+        "short": "R5: Content profile rules for the document (new)",
+        "definition": "R5: `DocumentReference.content.profile` (new:BackboneElement)",
+        "comment": "Element `DocumentReference.content.profile` is part of an existing definition because parent element `DocumentReference.content` requires an extension for additional cardinality.\nElement `DocumentReference.content.profile` has a context of DocumentReference.content based on following the parent source element upwards and mapping to `DocumentReference`.\nElement `DocumentReference.content.profile` has a context of Media.content based on following the parent source element upwards and mapping to `Media`.\nElement `DocumentReference.content.profile` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).\nNote that IHE often issues URNs for formatCode codes, not all documents can be identified by a URI.\n\nFor FHIR content, .profile should indicate the structureDefinition profile canonical URI(s) that the content complies with.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

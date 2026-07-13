@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Slot.appointmentType",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        },
+        {
+          "url": "uri",
+          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "extension": [
+        {
+          "url": "startFhirVersion",
+          "valueCode": "4.0"
+        },
+        {
+          "url": "endFhirVersion",
+          "valueCode": "4.0"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.appointmentType",
+  "version": "0.1.1",
+  "name": "ExtensionSlot_AppointmentType",
+  "title": "R5: appointmentType",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T21:41:14.2230772+00:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Slot.appointmentType`",
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Slot.appointmentType` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Slot.appointmentType` 0..* `CodeableConcept`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Slot.appointmentType` 0..* `CodeableConcept`\n*  R4B: `Slot.appointmentType` 0..1 `CodeableConcept`\n*  R4: `Slot.appointmentType` 0..1 `CodeableConcept`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Slot.appointmentType` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Slot.appointmentType` is mapped to FHIR R4 element `Slot.appointmentType` as `SourceIsBroaderThanTarget`.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Slot"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: appointmentType",
+        "definition": "R5: `Slot.appointmentType`",
+        "comment": "Element `Slot.appointmentType` allows multiple values in the source, but is mapped to an element that does not allow multiple values in the target.\nElement `Slot.appointmentType` is mapped to FHIR R4 element `Slot.appointmentType` as `SourceIsBroaderThanTarget`.\nA slot may be allow multiple appointment types, but when booked, would only be used for one of the given appointment types.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.appointmentType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "The style of appointment or patient that may be booked in the slot (not service type)",
+        "definition": "The style of appointment or patient that may be booked in the slot (not service type).",
+        "comment": "A slot may be allow multiple appointment types, but when booked, would only be used for one of the given appointment types.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0276|2.9"
+        }
+      }
+    ]
+  }
+}

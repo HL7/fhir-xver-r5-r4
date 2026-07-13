@@ -1,0 +1,133 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "R5-Duration-element-map-to-R4",
+  "url": "http://hl7.org/fhir/uv/xver/ConceptMap/R5-Duration-element-map-to-R4",
+  "version": "0.1.1",
+  "name": "R5DurationElementMapToR4",
+  "title": "Cross-version mapping for FHIR R5 Duration to FHIR R4 Duration",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:50.7324922-05:00",
+  "description": "This ConceptMap represents cross-version mappings for elements from a FHIR R5 Duration to FHIR R4.",
+  "sourceCanonical": "http://hl7.org/fhir/5.0",
+  "targetUri": "http://hl7.org/fhir/4.0",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Duration",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/StructureDefinition/Duration",
+      "targetVersion": "4.0.1",
+      "element": [
+        {
+          "code": "Duration.value",
+          "display": "value",
+          "target": [
+            {
+              "code": "Duration.value",
+              "display": "Duration.value",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.value` is mapped to FHIR R4 element `Duration.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            },
+            {
+              "code": "Duration",
+              "display": "Duration",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.value` is mapped to FHIR R4 element `Duration.value` as `Equivalent`.\nThe implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."
+            }
+          ]
+        },
+        {
+          "code": "Duration.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Duration.comparator",
+              "display": "Duration.comparator",
+              "equivalence": "wider",
+              "comment": "Element `Duration.comparator` is mapped to FHIR R4 element `Duration.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Duration.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            },
+            {
+              "code": "Duration",
+              "display": "Duration",
+              "equivalence": "wider",
+              "comment": "Element `Duration.comparator` is mapped to FHIR R4 element `Duration.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Duration.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        },
+        {
+          "code": "Duration.unit",
+          "display": "unit",
+          "target": [
+            {
+              "code": "Duration.unit",
+              "display": "Duration.unit",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.unit` is mapped to FHIR R4 element `Duration.unit` as `Equivalent`."
+            },
+            {
+              "code": "Duration",
+              "display": "Duration",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.unit` is mapped to FHIR R4 element `Duration.unit` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Duration.system",
+          "display": "system",
+          "target": [
+            {
+              "code": "Duration.system",
+              "display": "Duration.system",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.system` is mapped to FHIR R4 element `Duration.system` as `Equivalent`."
+            },
+            {
+              "code": "Duration",
+              "display": "Duration",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.system` is mapped to FHIR R4 element `Duration.system` as `Equivalent`."
+            }
+          ]
+        },
+        {
+          "code": "Duration.code",
+          "display": "code",
+          "target": [
+            {
+              "code": "Duration.code",
+              "display": "Duration.code",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.code` is mapped to FHIR R4 element `Duration.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            },
+            {
+              "code": "Duration",
+              "display": "Duration",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.code` is mapped to FHIR R4 element `Duration.code` as `Equivalent`.\nThe preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/StructureDefinition/Duration",
+      "sourceVersion": "5.0.0",
+      "target": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Duration.comparator",
+      "targetVersion": "0.1.1",
+      "element": [
+        {
+          "code": "Duration.comparator",
+          "display": "comparator",
+          "target": [
+            {
+              "code": "Extension",
+              "equivalence": "equivalent",
+              "comment": "Element `Duration.comparator` is mapped to FHIR R4 element `Duration.comparator` as `SourceIsBroaderThanTarget`.\nThe target context `Duration.comparator` is a modifier element, so this extension does not need to be defined as a modifier."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

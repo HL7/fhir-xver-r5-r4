@@ -1,0 +1,432 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-InventoryItem",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "hl7.fhir.uv.xver-r5.r4"
+        },
+        {
+          "url": "version",
+          "valueString": "0.1.1"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
+    }
+  ],
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/profile-InventoryItem",
+  "version": "0.1.1",
+  "name": "Profile_R5_InventoryItem_R4",
+  "title": "Cross-version Profile for R5.InventoryItem resource for use in FHIR R4",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-12T16:41:40.8266354-05:00",
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "This cross-version profile allows R5 InventoryItem resource content to be represented via FHIR R4 Basic resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "short": "Cross-version Profile for R5.InventoryItem resource for use in FHIR R4",
+        "definition": "This cross-version profile allows R5 InventoryItem resource content to be represented via FHIR R4 Basic resources.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension",
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Basic.extension:status",
+        "path": "Basic.extension",
+        "sliceName": "status",
+        "short": "R5: active | inactive | entered-in-error | unknown (new)",
+        "definition": "R5: `InventoryItem.status` (new:code)",
+        "comment": "Element `InventoryItem.status` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.status` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:category",
+        "path": "Basic.extension",
+        "sliceName": "category",
+        "short": "R5: Category or class of the item (new)",
+        "definition": "R5: `InventoryItem.category` (new:CodeableConcept)",
+        "comment": "Element `InventoryItem.category` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.category` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.category"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:code",
+        "path": "Basic.extension",
+        "sliceName": "code",
+        "short": "R5: Code designating the specific type of item (new)",
+        "definition": "R5: `InventoryItem.code` (new:CodeableConcept)",
+        "comment": "Element `InventoryItem.code` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.code` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.code"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:name",
+        "path": "Basic.extension",
+        "sliceName": "name",
+        "short": "R5: The item name(s) - the brand name, or common name, functional name, generic name or others (new)",
+        "definition": "R5: `InventoryItem.name` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.name` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.name` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:responsibleOrganization",
+        "path": "Basic.extension",
+        "sliceName": "responsibleOrganization",
+        "short": "R5: Organization(s) responsible for the product (new)",
+        "definition": "R5: `InventoryItem.responsibleOrganization` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.responsibleOrganization` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.responsibleOrganization` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.responsibleOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:description",
+        "path": "Basic.extension",
+        "sliceName": "description",
+        "short": "R5: Descriptive characteristics of the item (new)",
+        "definition": "R5: `InventoryItem.description` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.description` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.description` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:inventoryStatus",
+        "path": "Basic.extension",
+        "sliceName": "inventoryStatus",
+        "short": "R5: The usage status like recalled, in use, discarded (new)",
+        "definition": "R5: `InventoryItem.inventoryStatus` (new:CodeableConcept)",
+        "comment": "Element `InventoryItem.inventoryStatus` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.inventoryStatus` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.inventoryStatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:baseUnit",
+        "path": "Basic.extension",
+        "sliceName": "baseUnit",
+        "short": "R5: The base unit of measure - the unit in which the product is used or counted (new)",
+        "definition": "R5: `InventoryItem.baseUnit` (new:CodeableConcept)",
+        "comment": "Element `InventoryItem.baseUnit` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.baseUnit` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.baseUnit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:netContent",
+        "path": "Basic.extension",
+        "sliceName": "netContent",
+        "short": "R5: Net content or amount present in the item (new)",
+        "definition": "R5: `InventoryItem.netContent` (new:Quantity[SimpleQuantity])",
+        "comment": "Element `InventoryItem.netContent` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.netContent` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.netContent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:association",
+        "path": "Basic.extension",
+        "sliceName": "association",
+        "short": "R5: Association with other items or products (new)",
+        "definition": "R5: `InventoryItem.association` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.association` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.association` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.association"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:characteristic",
+        "path": "Basic.extension",
+        "sliceName": "characteristic",
+        "short": "R5: Characteristic of the item (new)",
+        "definition": "R5: `InventoryItem.characteristic` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.characteristic` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.characteristic` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.characteristic"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:instance",
+        "path": "Basic.extension",
+        "sliceName": "instance",
+        "short": "R5: Instances or occurrences of the product (new)",
+        "definition": "R5: `InventoryItem.instance` (new:BackboneElement)",
+        "comment": "Element `InventoryItem.instance` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.instance` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.instance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.extension:productReference",
+        "path": "Basic.extension",
+        "sliceName": "productReference",
+        "short": "R5: Link to a product resource used in clinical workflows (new)",
+        "definition": "R5: `InventoryItem.productReference` (new:Reference(Medication,Device,NutritionProduct,BiologicallyDerivedProduct))",
+        "comment": "Element `InventoryItem.productReference` is not mapped to FHIR R4, since FHIR R5 `InventoryItem` is not mapped.\nElement `InventoryItem.productReference` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-InventoryItem.productReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Basic.code.coding",
+        "path": "Basic.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            },
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource",
+        "path": "Basic.code.coding",
+        "sliceName": "XVerResource",
+        "base": {
+          "path": "Coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.system",
+        "path": "Basic.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedUri": "http://hl7.org/fhir/fhir-types"
+      },
+      {
+        "id": "Basic.code.coding:XVerResource.code",
+        "path": "Basic.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedCode": "InventoryItem"
+      }
+    ]
+  }
+}
