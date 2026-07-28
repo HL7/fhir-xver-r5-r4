@@ -1,0 +1,18 @@
+### Lookup for [FHIR R5](https://hl7.org/fhir/R5/) ValueSet ActConsentType:[`http://terminology.hl7.org/ValueSet/v3-ActConsentType`](https://hl7.org/fhir/R5/valueset-v3-ActConsentType.html) for use in [FHIR R4](https://hl7.org/fhir/R4/)
+
+The FHIR R5 ValueSet ActConsentType has no mapping  to FHIR R4.
+
+| Source System | Code | Display | Has XVer | Target System | Code | Display |
+| -------------- | ---- | ------- | -------- | ------------- | ---- | ------- |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `ICOL` | information collection | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `IDSCL` | information disclosure | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `INFA` | information access | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `INFAO` | access only | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `INFASO` | access and save only | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `IRDSCL` | information redisclosure | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `RESEARCH` | research information access | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `RSDID` | de-identified information access | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `RSREID` | re-identifiable information access | Yes |  |  |  |
+| `http://terminology.hl7.org/CodeSystem/v3-ActCode` | `_ActConsentType` | ActConsentType | Yes |  |  |  |
+{: .grid }
+

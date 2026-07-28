@@ -1,0 +1,10 @@
+### Lookup for [FHIR R5](https://hl7.org/fhir/R5/) ValueSet SpecimenContainedPreference:[`http://hl7.org/fhir/ValueSet/specimen-contained-preference`](https://hl7.org/fhir/R5/valueset-specimen-contained-preference.html) for use in [FHIR R4](https://hl7.org/fhir/R4/)
+
+The FHIR R5 ValueSet SpecimenContainedPreference maps to the  FHIR R4 ValueSet SpecimenContainedPreference:[`http://hl7.org/fhir/ValueSet/specimen-contained-preference`](https://hl7.org/fhir/R4/valueset-specimen-contained-preference.html)
+
+| Source System | Code | Display | Has XVer | Target System | Code | Display |
+| -------------- | ---- | ------- | -------- | ------------- | ---- | ------- |
+| `http://hl7.org/fhir/specimen-contained-preference` | `alternate` | Alternate | No | `http://hl7.org/fhir/specimen-contained-preference` | `alternate` | Alternate |
+| `http://hl7.org/fhir/specimen-contained-preference` | `preferred` | Preferred | No | `http://hl7.org/fhir/specimen-contained-preference` | `preferred` | Preferred |
+{: .grid }
+
